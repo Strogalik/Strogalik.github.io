@@ -1,0 +1,90 @@
+money=2000
+
+print("Я всех приветствую, это симулятор театра.")
+print("В начале вы получите некоторое количество денег.")
+print("Но не переживайте вам на всё хватит!")
+input("Для продолжения Нажмите ENTER.")
+print("И вы получаете", money, "р.")
+print("А теперь не могли ли вы представить ваше имя?")
+name = input("Введите имя\n")
+print("Отлично", name, ",еще хотелось узнать вашу вашу Фамилию.\n")
+surname = input("Введите вашу Фамилию\n")
+print("Я думаю вы прекрасно понимаете", name, "что спектакль в театре долгий.")
+print("По этому я предлагаю сделать выбор")
+print("Если вы хотите взять еду из дома то нажмите 1.\n Если в театре 2.")
+choise_food = input("Введите ваш выбор\n")
+choise_food = int(choise_food)
+if choise_food == 1:
+	money = money - 150
+	print("Отлично вы потратили 150 р на перекус с собой.")
+	print("Остаток ваших денег составляет:", money, "р.")
+elif choise_food == 2:
+	print("Хорошо, когда будете в театре вы купите покушать.")
+print("Теперь пора выбрать театр в котрый вы пойдёте.")
+print("1. Государственный академический Большой театр.")
+print("2. Театр имени Евгения Вахтангова.")
+print("3. Государственный академический Малый театр.")
+choise_theatre = input("Выберите из 3-х.\n")
+choise_theatre = int(choise_theatre)
+if choise_theatre == 1:
+	print("Хороший выбор.")
+	print("Перед выбором спектакля надо понять сколько вам лет?")
+	age = input("Введите ваш возраст.\n")
+	age = int(age)
+	print("Хорошо вот список спектаклей Большого театра:")
+	print("1. Опера Борис Годунов.")
+	print("2. Балет Цепь души.")
+	print("3. Опер Дон Жуан.")
+	choise_perfomance = input("Выберите один из трёх.\n")
+	choise_perfomance = int(choise_perfomance)
+	if choise_perfomance == 1:
+		input("")
+	elif choise_perfomance == 2:
+		input("")
+	elif choise_perfomance == 3:
+		if age >= 18:
+			input("")
+		elif age < 18:
+			print("Извините вы еще молоды.")
+			print("Вы можете выбрать 2 других спектакля.")
+			print("Выберите 1 если хотите уйти")
+			print("2 Чтобы выбрать бругой спектакль")
+			choise_other_or_no = input("Сделайте выбор\n")
+			choise_other_or_no = int(choise_other_or_no)
+			if choise_other_or_no == 1:
+				print("Игра окончена.")
+				input("Для завершения нажмите ENTER.")
+elif choise_theatre == 2:
+	print("Хороший выбор.")
+	print("Перед выбором спектакля надо понять сколько вам лет?")
+	age = input("Введите ваш возраст.\n")
+	age = int(age)
+	print("Хорошо вот список спектаклей Театра имени Вахтангова:")
+	print("1. ")
+	print("2. ")
+	print("3. ")
+	choise_perfomance = input("Выберите один из трёх.")
+	choise_perfomance = int(choise_perfomance)
+	if choise_perfomance == 1:
+		input("")
+	elif choise_perfomance == 2:
+		input("")
+	elif choise_perfomance == 3:
+		input("")
+elif choise_theatre == 3:
+	print("Хороший выбор.")
+	print("Перед выбором спектакля надо понять сколько вам лет?")
+	age = input("Введите ваш возраст.\n")
+	age = int(age)
+	print("Хорошо вот список спектаклей Малого театра:")
+	print("1. ")
+	print("2. ")
+	print("3. ")
+	choise_perfomance = input("Выберите один из трёх.")
+	choise_perfomance = int(choise_perfomance)
+	if choise_perfomance == 1:
+		input("")
+	if choise_perfomance == 2:
+		input("")
+	if choise_perfomance == 3:
+		input("")
