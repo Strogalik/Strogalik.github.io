@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="Image/x-icon" href="./media/movie-logo.svg" rel="icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Moviegram</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <img class="header_logo" src="./media/movie-logo.svg" alt="Moviegram">
+            <nav class="header_nav">
+                <ul class="nav_list">
+                    <li class="nav_list-elem"><a class="nav_list-link" href="#">Home</a></li>
+                    <li class="nav_list-elem"><a class="nav_list-link" href="#">About</a></li>
+                    <li class="nav_list-elem"><a class="nav_list-link" href="#">Telegram</a></li>
+                    <li class="nav_list-elem"><a class="nav_list-link" href="#">Pricing</a></li>
+                </ul>
+            </nav>  
+        </header>
+        <div class="container-right" id="container-right">
+                    <div class="header-intro" >
+        
+                        <div class="intro-text">
+                            <h1 class="intro-title">Moviegram — <span class="color_text">watch & enjoy!<span/></h1>
+        
+                            <div class="intro-subtitle" id="scene_2">
+                                <div class="dash"></div>
+                                <p class="intro-subtitle-p">When it comes to movies, we've got you covered.</p>
+                            </div>
+        
+                            <form action="#!" class="header-from" onsubmit="onSendEmail(event)">
+                                <input type="email" placeholder="Enter your email" class="header-form-input" required id="emailInput">
+                                <button type="submit"  class="header-form-btn">Try for 1$</button>
+                            </form>
+                        </div>
+                        <div><img class="intro_img" src="./media/phone.svg" alt="phone"></div>
+        
+                    </div>
+        </div>
+    </div>
+
+    <section class="security">
+        <img class="security_img" src="./media/secure-img.svg" alt="Secure">
+        <h2 class="security_title">We are Moviegram, and our goal is to deliver the most high-quality service possible.</h2>
+        <p class="security_text">We designed our Telegram bot to provide safety and anonimity to all our clients.</p>
+    </section>
+
+    <div class="wrapper">
+
+        <section class="map">
+            <h2 class="map_title">More than 11000 users all over the globe</h2>
+            <img class="map_img" src="./media/map.svg" alt="Map">
+        </section>
+
+        <section class="plans">
+            <div><span class="plans-color_text">Pricing plans 🤑<span></div>
+            <h2 class="plans_title">Choose a plan for a better viewing experience</h2>
+            <p class="plans_text">The first payment is always 1 $</p>
+        </section>
+
+        <section class="cards">
+
+            <div class="cards-cnt">
+
+                <div class="best-offer-cnt">
+
+                    <div class="heart">
+                        <img class="heart_img" src="./media/heart.svg" alt="heart" width="20px" height="18px">
+                    </div>
+
+                    <div><span class="best-offer">Best Offers 🔥<span></div>
+
+                </div>
+                
+                <div class="cards_content">
+                    <h3 class="cards_title">Starter</h3>
+                    <p class="cards_text">Just starting to be a movie fan!</p>
+                    <span class="cards_price">$7</span>
+                    <h4 class="cards_list-title">What’s included:</h4>
+                    <ul class="cards_list">
+                        <li class="cards_list-item">Anonymity</li>
+                        <li class="cards_list-item">4500+ movies</li>
+                        <li class="cards_list-item">Reviews</li>
+                        <li class="cards_list-item">Referral program </li>
+                        <li class="cards_list-item">1080p quality</li>
+                        <li class="cards_list-item disable"><del>4K quality</del></li>
+                        <li class="cards_list-item disable"><del>Сontests</del></li>
+                    </ul>
+                    <a href="#container-right" class="cards_btn-pay">Chose Plan</a>
+                </div>
+                
+
+            </div>
+
+            <div class="cards-cnt">
+
+                <div class="best-offer-cnt">
+
+                    <div class="heart">
+                        <img class="heart_img" src="./media/lightning.svg" alt="lightning" width="20px" height="18px">
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="cards_content">
+                    <h3 class="cards_title">Premium</h3>
+                    <p class="cards_text">You are already a gifted film critic!</p>
+                    <span class="cards_price">$15</span>
+                    <h4 class="cards_list-title">What’s included:</h4>
+                    <ul class="cards_list">
+                        <li class="cards_list-item">Anonymity</li>
+                        <li class="cards_list-item">4500+ movies</li>
+                        <li class="cards_list-item">Reviews</li>
+                        <li class="cards_list-item">Referral program </li>
+                        <li class="cards_list-item">1080p quality</li>
+                        <li class="cards_list-item">4K quality</li>
+                        <li class="cards_list-item disable"><del>Сontests</del></li>
+                    </ul>
+                    <a href="#container-right" class="cards_btn-pay">Chose Plan</a>
+                </div>
+                
+
+            </div>
+
+            <div class="cards-cnt">
+
+                <div class="best-offer-cnt">
+
+                    <div class="heart">
+                        <img class="heart_img" src="./media/crown.svg" alt="crown" width="20px" height="18px">
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="cards_content">
+                    <h3 class="cards_title">Premium +</h3>
+                    <p class="cards_text">You are ready to share your expert opinion!</p>
+                    <span class="cards_price">$21</span>
+                    <h4 class="cards_list-title">What’s included:</h4>
+                    <ul class="cards_list">
+                        <li class="cards_list-item">Anonymity</li>
+                        <li class="cards_list-item">4500+ movies</li>
+                        <li class="cards_list-item">Reviews</li>
+                        <li class="cards_list-item">Referral program </li>
+                        <li class="cards_list-item">1080p quality</li>
+                        <li class="cards_list-item">4K quality</li>
+                        <li class="cards_list-item">Сontests</li>
+                    </ul>
+                    <a href="#container-right" class="cards_btn-pay cards_btn-pay-margin">Chose Plan</a>
+                </div>
+                
+
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer_cnt-first">
+                <h2 class="footer_title">Start right now!</h2>
+                <div class="footer_text-cnt">
+                    <p class="footer_text">Immerse yourself in the world of cinema and enjoy watching</p>
+                    <a href="#container-right" class="footer_btn">Try for 1$</a>
+                </div>
+            </div>
+            
+            <div class="footer_cnt-second">
+                <div class="footer_flex-item">
+                    <img class="footer_img" src="./media/movie-logo.svg" alt="MOVIEGRAM" width="73px" height="56px">
+                    <p class="footer_flex-item_text">
+                        We built an elegant solution. Our team created a fully integrated sales and marketing solution for SMBs
+                    </p>
+                    
+                </div>
+                <div class="footer_flex-item">
+                    <h4 class="footer_list-title">Sign in</h4>
+                    <ul class="footer_list">
+                        <li class="footer_list-item">Privacy Policy</li>
+                        <li class="footer_list-item">Terms of Use</li>
+                    </ul>
+                </div>
+                <form action="#!" class="footer_flex-item none" onsubmit="onSendEmailFooter(event)">
+                    <input class="footer_input" type="email" placeholder="Your email here" required id="emailInputFooter">
+                    <button class="footer_form-btn" type="submit">Subscribe</button>
+                </form>
+            </div>
+
+        </footer>
+    </div>
+
+    <script src='./js/getPayLink.js'></script>
+    
+</body>
+
+</html>
