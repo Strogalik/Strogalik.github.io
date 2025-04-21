@@ -1,0 +1,252 @@
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #222b45;
+  color: #eeeeef;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Светлая тема */
+body.light-theme {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Навигация (navbar) в шапке */
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+  background-color: #444c63;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
+.lang-btn,
+.theme-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background: #444c63;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.lang-btn.active,
+.lang-btn:hover,
+.theme-btn:hover {
+  background: #666f81;
+}
+
+/* Шапка */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Блок "Hero" */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero .header-info {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero .main-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  margin-bottom: 20px;
+}
+
+.hero .search-wrapper {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.hero .search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+body.light-theme .hero .search-input {
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.hero .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Теги (общие) */
+.tag {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #444c63;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.tag:hover {
+  background: #666f81;
+}
+
+/* Блок "Обо мне" */
+.about-teacher {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.about-teacher h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-teacher-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.teacher-photo img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.teacher-info p {
+  text-align: center;
+
+  @media (min-width: 769px) {
+    text-align: left;
+  }
+}
+
+/* Карточки курсов */
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.course-card {
+  width: 380px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-2px);
+}
+
+.card-image img {
+  width: 100%;
+  display: block;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.course-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.course-description {
+  font-size: 16px;
+  line-height: 24px;
+  color: #aeb0b4;
+  margin-bottom: 15px;
+}
+
+/* Инструктор */
+.instructor {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.instructor-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.instructor-name {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.instructor-bio {
+  font-size: 14px;
+  color: #aeb0b4;
+}
+
+/* Кнопка скидки */
+.discount-button {
+  width: 100%;
+  padding: 10px 0;
+  background: #c2185b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  box-shadow: 0 12px 15px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s;
+}
+
+.discount-button:hover {
+  opacity: 0.9;
+}
+
+/* Styling for course images */
+.course-card .card-image img {
+    height: 214px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.course-card:hover .card-image img {
+    transform: scale(1.05);
+}

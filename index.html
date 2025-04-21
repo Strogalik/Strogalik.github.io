@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Скидки на курсы</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Навигационная панель (только navbar) -->
+    <header class="header">
+      <nav class="top-nav">
+        <button class="lang-btn active" data-lang="ru">Русский</button>
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="theme-btn" id="themeToggle">
+          Сменить тему (тёмная)
+        </button>
+      </nav>
+    </header>
+    <!-- Семантический блок "О преподавателе" -->
+    <section class="about-teacher">
+      <h2>Обо мне</h2>
+      <div class="about-teacher-wrapper">
+        <div class="teacher-photo">
+          <img src="img/close-up-young-business-person-doing-internship.jpg" alt="Фото преподавателя" />
+        </div>
+
+        <div class="teacher-info">
+          <p>
+            Привет! Меня зовут Игорь, я программист и уже несколько лет преподаю
+            курсы по полному стеку веб-разработки (Full Stack). В своих курсах
+            делаю упор на реальную практику, чтобы каждый студент сразу видел
+            результат своего труда и был готов к работе над реальными проектами.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок "Hero" с информацией, поиском и тегами -->
+    <section class="hero">
+      <div class="header-info">30+ курсов</div>
+      <h1 class="main-title">
+        Получите любой из моих курсов<br />
+        по самой низкой цене
+      </h1>
+      <div class="search-wrapper">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Найти курсы по ключевому слову"
+        />
+      </div>
+      <div class="tags">
+        <span class="tag top-tag">Python</span>
+        <span class="tag top-tag">JavaScript</span>
+        <span class="tag top-tag">Java</span>
+        <span class="tag top-tag">React</span>
+        <span class="tag top-tag">Node.js</span>
+        <span class="tag top-tag">Git</span>
+        <span class="tag top-tag">Docker</span>
+        <span class="tag top-tag">MongoDB</span>
+        <span class="tag top-tag">SQL</span>
+        <span class="tag top-tag">ChatGPT</span>
+      </div>
+    </section>
+
+    <!-- Основной контент с карточками курсов -->
+    <main class="courses">
+      <!-- ====== Карточка 1: Python ====== -->
+      <article
+        class="course-card"
+        data-tags="python, django, ml, data science, machine learning"
+      >
+          <button class="discount-button">
+            🏷 Получите со скидкой на Udemy
+          </button>       <figure class="card-image">
+          <img src="img/article-03440000002019214749270.webp" alt="Изображение курса Python" />
+        </figure>
+
+        <div class="card-content">
+          <h2 class="course-title">
+            Python — Полное руководство по Python, Django, Data Science и ML
+          </h2>
+          <p class="course-description">
+            Изучите самый популярный язык программирования Python, включая
+            Django, Pygame, Jupyter, Data Science и машинное обучение.
+          </p>
+          <div class="instructor">
+            <figure class="instructor-avatar">
+              <img src="img/close-up-young-business-person-doing-internship.jpg" alt="Аватар инструктора" />
+            </figure>
+            <div class="instructor-info">
+              <p class="instructor-name">Богдан Сташчук</p>
+              <p class="instructor-bio">
+                Инженер-программист, кандидат наук, MBA
+              </p>
+            </div>
+          </div>
+          <div class="card-tags">
+            <span class="tag card-tag">Python</span>
+            <span class="tag card-tag">ML</span>
+            <span class="tag card-tag">Django</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Остальные карточки курсов (Карточка 2 – Карточка 6) остаются без изменений -->
+      <!-- ... (код карточек) ... -->
+      <!-- Карточка 2: Git -->
+      <article class="course-card" data-tags="git, github, version control">
+          <button class="discount-button">
+            🏷 Получите со скидкой на Udemy
+          </button>
+        <figure class="card-image">
+          <img src="img/Github-Logo-PNG-Image-HD.png" alt="Изображение курса JavaScript" />
+        </figure>
+        <div class="card-content">
+          <h2 class="course-title">Полное руководство по Git и GitHub</h2>
+          <p class="course-description">
+            Освойте базовые и продвинутые возможности Git: коммиты, ветвление,
+            слияние, ребейзинг, сквошинг и совместную работу в GitHub.
+          </p>
+          <div class="instructor">
+            <figure class="instructor-avatar">
+              <img src="img/close-up-young-business-person-doing-internship.jpg" alt="Аватар инструктора" />
+            </figure>
+            <div class="instructor-info">
+              <p class="instructor-name">Богдан Сташчук</p>
+              <p class="instructor-bio">
+                Инженер-программист, кандидат наук, MBA
+              </p>
+            </div>
+          </div>
+          <div class="card-tags">
+            <span class="tag card-tag">Git</span>
+            <span class="tag card-tag">GitHub</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Карточка 3: Docker -->
+      <article class="course-card" data-tags="docker, devops, containers">
+          <button class="discount-button">
+            🏷 Получите со скидкой на Udemy
+          </button>
+        <figure class="card-image">
+          <img src="img/maxresdefault.jpg" alt="Изображение курса Git" />
+        </figure>
+        <div class="card-content">
+          <h2 class="course-title">Docker для DevOps и разработчиков</h2>
+          <p class="course-description">
+            Научитесь контейнеризировать приложения с помощью Docker, создавать
+            образы и разворачивать контейнеры. Идеально для начинающих в DevOps.
+          </p>
+          <div class="instructor">
+            <figure class="instructor-avatar">
+              <img src="img/close-up-young-business-person-doing-internship.jpg" alt="Аватар инструктора" />
+            </figure>
+            <div class="instructor-info">
+              <p class="instructor-name">Богдан Сташчук</p>
+              <p class="instructor-bio">
+                Инженер-программист, кандидат наук, MBA
+              </p>
+            </div>
+          </div>
+          <div class="card-tags">
+            <span class="tag card-tag">Docker</span>
+            <span class="tag card-tag">DevOps</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Карточка 4: JavaScript -->
+      <article
+        class="course-card"
+        data-tags="javascript, js, es6, frontend, react, web"
+      >
+          <button class="discount-button">
+            🏷 Получите со скидкой на Udemy
+          </button>
+        <figure class="card-image">
+          <img src="img/diploma.webp" alt="Изображение курса Docker" />
+        </figure>
+        <div class="card-content">
+          <h2 class="course-title">
+            Библия JavaScript — интенсив по JavaScript
+          </h2>
+          <p class="course-description">
+            Всеобъемлющий интенсив по JavaScript: от основ и ES6 до продвинутых
+            инструментов, таких как NPM, Babel, Webpack, Node.js, React и
+            других.
+          </p>
+          <div class="instructor">
+            <figure class="instructor-avatar">
+              <img src="img/close-up-young-business-person-doing-internship.jpg" alt="Аватар инструктора" />
+            </figure>
+            <div class="instructor-info">
+              <p class="instructor-name">Богдан Сташчук</p>
+              <p class="instructor-bio">
+                Инженер-программист, кандидат наук, MBA
+              </p>
+            </div>
+          </div>
+          <div class="card-tags">
+            <span class="tag card-tag">JavaScript</span>
+            <span class="tag card-tag">React</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Карточка 5: Node.js -->
+      <article
+        class="course-card"
+        data-tags="node.js, backend, express, javascript"
+      >
+          <button class="discount-button">
+            🏷 Получите со скидкой на Udemy
+          </button>
+        <figure class="card-image">
+          <img src="img/69e5a8e9ee850bc227270065dd39a90f.jpg" alt="Изображение курса React" />
+        </figure>
+        <div class="card-content">
+          <h2 class="course-title">Основы Node.js и Express</h2>
+          <p class="course-description">
+            Погрузитесь в разработку серверной части с Node.js и Express, а
+            также интеграцию с базами данных. Идеально для создания
+            масштабируемых приложений.
+          </p>
+          <div class="instructor">
+            <figure class="instructor-avatar">
+              <img src="img/close-up-young-business-person-doing-internship.jpg" alt="Аватар инструктора" />
+            </figure>
+            <div class="instructor-info">
+              <p class="instructor-name">Богдан Сташчук</p>
+              <p class="instructor-bio">
+                Инженер-программист, кандидат наук, MBA
+              </p>
+            </div>
+          </div>
+          <div class="card-tags">
+            <span class="tag card-tag">Node.js</span>
+            <span class="tag card-tag">Backend</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Карточка 6: React -->
+      <article
+        class="course-card"
+        data-tags="react, frontend, javascript, hooks"
+      >
+          <button class="discount-button">
+            🏷 Получите со скидкой на Udemy
+          </button>        <figure class="card-image">
+          <img src="img/react.jpg" alt="Изображение курса Node.js" />
+        </figure>
+        <div class="card-content">
+          <h2 class="course-title">React — Полное руководство</h2>
+          <p class="course-description">
+            Создавайте мощные приложения на React с использованием Hooks, Redux
+            и продвинутых паттернов. Идеально для фронтенд-разработчиков.
+          </p>
+          <div class="instructor">
+            <figure class="instructor-avatar">
+              <img src="img/close-up-young-business-person-doing-internship.jpg" alt="Аватар инструктора" />
+            </figure>
+            <div class="instructor-info">
+              <p class="instructor-name">Богдан Сташчук</p>
+              <p class="instructor-bio">
+                Инженер-программист, кандидат наук, MBA
+              </p>
+            </div>
+          </div>
+          <div class="card-tags">
+            <span class="tag card-tag">React</span>
+            <span class="tag card-tag">JavaScript</span>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
