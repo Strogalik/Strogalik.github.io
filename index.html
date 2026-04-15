@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TMS — коммерческое предложение | TMS + Odoo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="deck">
+    <!-- PRESENTATION 1: TMS -->
+    <section class="slide slide-dark hero" id="tms-hero">
+      <div class="bg-glow"></div>
+      <div class="slide-labels">
+        <span class="deck-label">Презентация 01 / TMS</span>
+        <span class="slide-number">01</span>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="brand-lockup">
+            <img src="assets/tms-logo.png" alt="TMS" class="brand-logo" />
+            <div>
+              <div class="brand-name">ООО «ТМС»</div>
+              <div class="brand-subtitle">Система автоматизации бизнеса для порядка, прозрачности и управляемого роста</div>
+            </div>
+          </div>
+          <div class="eyebrow">Коммерческое предложение для ИП Масибут Анны Алексеевны</div>
+          <h1>Автоматизация оптовых продаж, склада и логистики в одной системе</h1>
+          <p class="lead">
+            От заявки дилера до счета, оплаты и отгрузки — в одном рабочем контуре.
+            Без ручных разрывов между менеджерами, складами, 1С и логистикой.
+          </p>
+          <div class="hero-mini-grid">
+            <article class="mini-card">
+              <h3>Дилеры и компания</h3>
+              <p>Личный кабинет компании до 10 пользователей и кабинет дилеров до 100+ пользователей.</p>
+            </article>
+            <article class="mini-card">
+              <h3>Склады и производство</h3>
+              <p>Остатки по двум складам, резервирование и учет планируемого производства.</p>
+            </article>
+            <article class="mini-card">
+              <h3>Счета и логистика</h3>
+              <p>Счета, оплаты из 1С, дропшиппинг, календарь отгрузок и реестр заказов.</p>
+            </article>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="#tms-price">Обсудить внедрение</a>
+            <span class="meta-note">Модель поставки: выкуп решения под ваш контур бизнеса</span>
+          </div>
+        </div>
+
+        <div class="hero-diagram glass-panel">
+          <div class="diagram-node node-top left">
+            <span class="node-tag">вход / 01</span>
+            <strong>Кабинет дилеров</strong>
+            <span>Заказ, статус, история взаимодействия</span>
+          </div>
+          <div class="diagram-node node-top center">
+            <span class="node-tag">вход / 02</span>
+            <strong>Кабинет компании</strong>
+            <span>Менеджеры, счета, контроль исполнения</span>
+          </div>
+          <div class="diagram-node node-top right">
+            <span class="node-tag">вход / 03</span>
+            <strong>1С и оплаты</strong>
+            <span>Финансовый статус заказа в едином контуре</span>
+          </div>
+
+          <div class="diagram-center">
+            <img src="assets/tms-logo.png" alt="TMS logo" />
+            <h2>TMS core</h2>
+            <p>
+              Реестр заказов, расчет в упаковках и м², остатки, производство, счета, логистика и аналитика
+              в одном интерфейсе.
+            </p>
+          </div>
+
+          <div class="diagram-node node-bottom left">
+            <span class="node-tag">выход / 01</span>
+            <strong>Склад</strong>
+            <span>Остатки, резервы, готовность к отгрузке</span>
+          </div>
+          <div class="diagram-node node-bottom center-left">
+            <span class="node-tag">выход / 02</span>
+            <strong>Производство</strong>
+            <span>Планируемые объемы и контроль дефицита</span>
+          </div>
+          <div class="diagram-node node-bottom center-right">
+            <span class="node-tag">выход / 03</span>
+            <strong>Логистика</strong>
+            <span>Календарь, дропшиппинг, дата отгрузки</span>
+          </div>
+          <div class="diagram-node node-bottom right">
+            <span class="node-tag">выход / 04</span>
+            <strong>Аналитика</strong>
+            <span>Отчеты по продажам и единый контроль заказа</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-light" id="tms-context">
+      <div class="slide-labels">
+        <span class="deck-label blue">Презентация 01 / TMS</span>
+        <span class="slide-number dark">02</span>
+      </div>
+      <div class="split-layout">
+        <div class="section-copy">
+          <div class="eyebrow blue">Ваш контур задач</div>
+          <h2>Нужна не отдельная функция, а вся цепочка заказа целиком</h2>
+          <p>
+            В вашей модели бизнеса заказ проходит через несколько связанных зон: дилер, менеджер,
+            расчет в нужных единицах, остатки по складам, планируемое производство, счет, оплата и отгрузка.
+            Если хотя бы один этап выпадает из общей логики, бизнес начинает терять скорость и управляемость.
+          </p>
+        </div>
+        <div class="photo-stack">
+          <div class="photo-card large"><img src="assets/building-materials-warehouse.jpg" alt="Склад строительных материалов" /></div>
+          <div class="photo-card small glass-lite">
+            <h3>Оптовая модель</h3>
+            <p>Дилеры, прямые заказы, отгрузки, складской контур и логистика.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-grid six-col compact-top">
+        <article class="info-card light">
+          <span class="card-kicker">01</span>
+          <h3>Кабинет компании</h3>
+          <p>До 10 пользователей: менеджеры, счета, статусы, логистика и контроль исполнения.</p>
+        </article>
+        <article class="info-card light">
+          <span class="card-kicker">02</span>
+          <h3>Кабинет дилеров</h3>
+          <p>До 100 пользователей с возможностью роста без потери логики процессов.</p>
+        </article>
+        <article class="info-card light">
+          <span class="card-kicker">03</span>
+          <h3>Калькулятор</h3>
+          <p>Упаковки как единица заказа и автоматический расчет цены за м².</p>
+        </article>
+        <article class="info-card light">
+          <span class="card-kicker">04</span>
+          <h3>Склады и производство</h3>
+          <p>Остатки по 2 складам плюс учет планируемого производства.</p>
+        </article>
+        <article class="info-card light">
+          <span class="card-kicker">05</span>
+          <h3>1С и оплаты</h3>
+          <p>Интеграция по счетам и оплатам без двойного ручного ввода.</p>
+        </article>
+        <article class="info-card light">
+          <span class="card-kicker">06</span>
+          <h3>Логистика</h3>
+          <p>Календарь отгрузок, дропшиппинг, реестр заказов и отчетность.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide slide-dark" id="tms-problem">
+      <div class="bg-glow subtle"></div>
+      <div class="slide-labels">
+        <span class="deck-label">Презентация 01 / TMS</span>
+        <span class="slide-number">03</span>
+      </div>
+      <div class="problem-layout">
+        <div class="problem-copy glass-panel">
+          <div class="eyebrow">Почему это нужно сейчас</div>
+          <h2>Рост тормозится не спросом, а ручной связкой процессов</h2>
+          <p>
+            Когда цена считается отдельно, остатки проверяются вручную, статус заказа собирается из переписки,
+            а отгрузки ведутся вне общего календаря, менеджеры тратят время на сверки вместо продаж,
+            склад и логистика работают с задержкой, а дилер не получает прозрачного сервиса.
+          </p>
+        </div>
+        <div class="problem-cluster">
+          <article class="micro-card dark">
+            <h3>Потери времени</h3>
+            <p>Менеджеры и склад тратят ресурс на сверки, уточнения и ручную сборку статуса заказа.</p>
+          </article>
+          <article class="micro-card dark">
+            <h3>Ошибки в заказах</h3>
+            <p>Единицы заказа, цена за м², остатки и срок отгрузки расходятся между участниками процесса.</p>
+          </article>
+          <article class="center-issue">Нет единого контура исполнения заказа</article>
+          <article class="micro-card dark">
+            <h3>Разрозненный поток</h3>
+            <p>Заказ проходит через разные таблицы, чаты и файлы вместо одной управляемой системы.</p>
+          </article>
+          <article class="micro-card dark">
+            <h3>Слабый контроль отгрузки</h3>
+            <p>Нет общей точки, где видно дату, готовность, оплату и исполнение по каждому заказу.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-light" id="tms-impact">
+      <div class="slide-labels">
+        <span class="deck-label blue">Презентация 01 / TMS</span>
+        <span class="slide-number dark">04</span>
+      </div>
+      <div class="section-head compact">
+        <div>
+          <div class="eyebrow blue">Бизнес-эффект</div>
+          <h2>Это влияет напрямую на скорость, качество и экономику процесса</h2>
+        </div>
+        <p>
+          Ваша задача — не просто “автоматизировать кабинет”, а сократить операционный шум в ядре бизнеса:
+          заказ, склад, счет, оплата и отгрузка.
+        </p>
+      </div>
+      <div class="metric-grid">
+        <article class="metric-card primary">
+          <span class="metric-value">до 70%</span>
+          <span class="metric-label">снижение времени обработки заказа</span>
+        </article>
+        <article class="metric-card">
+          <span class="metric-value">до 90%</span>
+          <span class="metric-label">снижение ошибок в заказах и статусах</span>
+        </article>
+        <article class="metric-card">
+          <span class="metric-value">до 37%</span>
+          <span class="metric-label">снижение ФОТ за счет снятия ручной нагрузки</span>
+        </article>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-col">
+          <span class="timeline-step">До внедрения</span>
+          <p>Заказ собирается из разных действий: расчет, остатки, счет, оплата, логистика.</p>
+        </div>
+        <div class="timeline-divider"></div>
+        <div class="timeline-col">
+          <span class="timeline-step active">После внедрения</span>
+          <p>Один маршрут заказа: единый расчет, остатки, оплата, отгрузка и контроль исполнения.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-dark" id="tms-solution">
+      <div class="bg-glow"></div>
+      <div class="slide-labels">
+        <span class="deck-label">Презентация 01 / TMS</span>
+        <span class="slide-number">05</span>
+      </div>
+      <div class="section-head on-dark">
+        <div>
+          <div class="eyebrow">Рекомендуемое решение</div>
+          <h2>TMS собирает продажи, склад, 1С и логистику в один рабочий контур</h2>
+        </div>
+        <p>
+          Один заказ проходит через один маршрут: расчет → остатки → резерв / производство → счет → оплата → отгрузка → отчетность.
+        </p>
+      </div>
+      <div class="horizontal-flow glass-panel">
+        <div class="flow-item">
+          <span class="flow-index">01</span>
+          <h3>Заказ</h3>
+          <p>Дилер или менеджер оформляет заказ в системе</p>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-item">
+          <span class="flow-index">02</span>
+          <h3>Расчет</h3>
+          <p>Упаковки, цена за м², проверка состава заказа</p>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-item accent">
+          <span class="flow-index">03</span>
+          <h3>TMS core</h3>
+          <p>Остатки, реестр, статусы, маршрутизация задачи</p>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-item">
+          <span class="flow-index">04</span>
+          <h3>Счет / 1С</h3>
+          <p>Выставление счета и контроль оплаты</p>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-item">
+          <span class="flow-index">05</span>
+          <h3>Отгрузка</h3>
+          <p>Календарь, логистика, дропшиппинг и дата отгрузки</p>
+        </div>
+      </div>
+      <div class="dark-bottom-band">
+        Вместо набора ручных действий — единая управляемая цепочка исполнения заказа.
+      </div>
+    </section>
+
+    <section class="slide slide-light" id="tms-modules">
+      <div class="slide-labels">
+        <span class="deck-label blue">Презентация 01 / TMS</span>
+        <span class="slide-number dark">06</span>
+      </div>
+      <div class="section-head compact">
+        <div>
+          <div class="eyebrow blue">Функциональные блоки</div>
+          <h2>Все ключевые задачи закрываются внутри одной системы</h2>
+        </div>
+        <p>
+          Не “кусочные модули”, а связанный контур ролей, статусов и данных.
+        </p>
+      </div>
+      <div class="card-grid three-col tall">
+        <article class="info-card feature light">
+          <h3>Кабинет компании</h3>
+          <p>Единое рабочее пространство для менеджеров и внутренних пользователей: заказы, счета, статусы, логистика и контроль исполнения.</p>
+        </article>
+        <article class="info-card feature light">
+          <h3>Кабинет дилеров</h3>
+          <p>Понятный цифровой канал, где дилер сам оформляет заказ, видит статус и не тратит время на ручные уточнения.</p>
+        </article>
+        <article class="info-card feature light">
+          <h3>Калькулятор заказа</h3>
+          <p>Работа с упаковками как единицей заказа и автоматический расчет цены за м² без ручного пересчета.</p>
+        </article>
+        <article class="info-card feature light">
+          <h3>Остатки и производство</h3>
+          <p>Остатки по двум складам, резервирование и учет планируемого производства в единой логике заказа.</p>
+        </article>
+        <article class="info-card feature light">
+          <h3>Счета и оплаты</h3>
+          <p>Формирование счетов и интеграция с 1С по счетам и оплатам без двойного ручного ввода.</p>
+        </article>
+        <article class="info-card feature light">
+          <h3>Логистика и отчетность</h3>
+          <p>Календарь отгрузок, дропшиппинг, реестр заказов, продажи и управленческая прозрачность.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide slide-light photo-slide" id="tms-warehouse">
+      <div class="slide-labels">
+        <span class="deck-label blue">Презентация 01 / TMS</span>
+        <span class="slide-number dark">07</span>
+      </div>
+      <div class="split-layout middle">
+        <div class="section-copy narrow">
+          <div class="eyebrow blue">Склад и производство</div>
+          <h2>Решение должно видеть не только заказ, но и реальную возможность его исполнить</h2>
+          <p>
+            Система проверяет остатки по двум складам, учитывает резервирование и планируемое производство,
+            чтобы команда принимала решение по заказу на основе факта, а не на основе ручных догадок.
+          </p>
+          <div class="bullet-list">
+            <div class="bullet-item">Остатки по 2 складам в одном окне</div>
+            <div class="bullet-item">Планируемое производство в логике заказа</div>
+            <div class="bullet-item">Резервирование под конкретный заказ</div>
+          </div>
+        </div>
+        <div class="visual-combo">
+          <div class="photo-card full"><img src="assets/worker-tablet.jpg" alt="Сотрудник склада с планшетом" /></div>
+          <div class="overlay-ui">
+            <div class="ui-chip">Склад 01 — 438 поз.</div>
+            <div class="ui-chip">Склад 02 — 219 поз.</div>
+            <div class="ui-chip accent">Планируемое производство — 14 поз.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-dark" id="tms-logistics">
+      <div class="bg-glow subtle"></div>
+      <div class="slide-labels">
+        <span class="deck-label">Презентация 01 / TMS</span>
+        <span class="slide-number">08</span>
+      </div>
+      <div class="section-head on-dark compact">
+        <div>
+          <div class="eyebrow">Логистика и отгрузка</div>
+          <h2>После счета и оплаты заказ не теряется — он управляется до фактической отгрузки</h2>
+        </div>
+        <p>
+          Календарь отгрузок, дропшиппинг, логистический статус и контроль даты становятся частью заказа, а не отдельным ручным процессом.
+        </p>
+      </div>
+      <div class="logistics-grid">
+        <div class="photo-card dark-photo"><img src="assets/truck-dock.jpg" alt="Грузовик у склада" /></div>
+        <div class="glass-panel schedule-card">
+          <div class="schedule-head">
+            <h3>Календарь отгрузок</h3>
+            <span>Неделя / 14–20</span>
+          </div>
+          <div class="schedule-list">
+            <div><strong>Пн</strong><span>3 отгрузки / 1 дропшиппинг</span></div>
+            <div><strong>Вт</strong><span>5 отгрузок / 2 переноса</span></div>
+            <div><strong>Ср</strong><span>4 отгрузки / контроль оплаты</span></div>
+            <div><strong>Чт</strong><span>6 отгрузок / 1 сборный рейс</span></div>
+          </div>
+        </div>
+        <div class="micro-card dark wide">
+          <h3>Дропшиппинг</h3>
+          <p>Отдельный сценарий отгрузки со своей логикой исполнения внутри единого заказа.</p>
+        </div>
+        <div class="micro-card dark wide">
+          <h3>Точная дата отгрузки</h3>
+          <p>Статус заказа связан с датой, логистикой и фактом готовности, а не живет отдельно от них.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-light" id="tms-analytics">
+      <div class="slide-labels">
+        <span class="deck-label blue">Презентация 01 / TMS</span>
+        <span class="slide-number dark">09</span>
+      </div>
+      <div class="section-head compact">
+        <div>
+          <div class="eyebrow blue">Реестр и аналитика</div>
+          <h2>Собственник и команда получают один источник правды по заказам</h2>
+        </div>
+        <p>
+          В системе видно, что происходит с каждым заказом: кто создал, что заказано, какой склад задействован,
+          выставлен ли счет, есть ли оплата и когда назначена отгрузка.
+        </p>
+      </div>
+      <div class="analytics-layout">
+        <div class="table-card">
+          <div class="table-head">
+            <span>Реестр заказов</span>
+            <span>Обновлено 11:42</span>
+          </div>
+          <div class="table-row header">
+            <span>Заказ</span><span>Клиент</span><span>Склад</span><span>Оплата</span><span>Отгрузка</span>
+          </div>
+          <div class="table-row"><span>№ 4812</span><span>Дилер А</span><span>Склад 01</span><span class="status paid">Оплачен</span><span>16.06</span></div>
+          <div class="table-row"><span>№ 4813</span><span>Дилер Б</span><span>Склад 02</span><span class="status wait">Ожидание</span><span>17.06</span></div>
+          <div class="table-row"><span>№ 4814</span><span>Прямой клиент</span><span>Производство</span><span class="status progress">В работе</span><span>18.06</span></div>
+          <div class="table-row"><span>№ 4815</span><span>Дилер В</span><span>Склад 01</span><span class="status paid">Оплачен</span><span>19.06</span></div>
+        </div>
+        <div class="analytics-side">
+          <article class="chart-card">
+            <h3>Продажи по каналам</h3>
+            <div class="bars">
+              <span style="height: 42%"></span>
+              <span style="height: 68%"></span>
+              <span style="height: 84%"></span>
+              <span style="height: 61%"></span>
+            </div>
+            <div class="legend"><span>Дилеры</span><span>Прямые</span><span>Повторные</span><span>Логистика</span></div>
+          </article>
+          <article class="chart-card soft">
+            <h3>Контроль исполнения</h3>
+            <p>Заказы, оплаты, отгрузки и динамика продаж — в одном интерфейсе без ручных сводок.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-dark" id="tms-price">
+      <div class="bg-glow"></div>
+      <div class="slide-labels">
+        <span class="deck-label">Презентация 01 / TMS</span>
+        <span class="slide-number">10</span>
+      </div>
+      <div class="pricing-layout">
+        <div class="pricing-copy">
+          <div class="eyebrow">Наша рекомендация</div>
+          <h2>TMS — оптимальный сценарий запуска под ваш текущий контур задач</h2>
+          <p>
+            Ваш запрос уже хорошо определен: кабинет компании, кабинет дилеров, расчет, склады, производство,
+            1С, логистика, реестр заказов и отчеты. Здесь важнее быстро запустить рабочую систему под понятные процессы,
+            чем заходить в тяжелый ERP-сценарий на старте.
+          </p>
+          <div class="recommendation-list">
+            <div>Быстрее выйти в рабочий контур</div>
+            <div>Проще обучить команду на старте</div>
+            <div>Понятнее состав решения за фиксированную стоимость</div>
+          </div>
+        </div>
+        <div class="pricing-panel glass-panel">
+          <div class="price-tag">150 000 ₽</div>
+          <h3>Внедрение TMS под ваш бизнес-контур</h3>
+          <ul>
+            <li>Личный кабинет компании до 10 пользователей</li>
+            <li>Кабинет дилеров до 100 пользователей</li>
+            <li>Калькулятор в упаковках и цена за м²</li>
+            <li>Остатки по 2 складам + планируемое производство</li>
+            <li>Счета, оплаты и интеграция с 1С</li>
+            <li>Дропшиппинг, календарь отгрузок, реестр заказов и отчеты</li>
+          </ul>
+          <div class="ownership-note">Формат поставки: выкуп решения под ваш контур бизнеса</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-dark ending" id="tms-cta">
+      <div class="bg-glow"></div>
+      <div class="slide-labels">
+        <span class="deck-label">Презентация 01 / TMS</span>
+        <span class="slide-number">11</span>
+      </div>
+      <div class="ending-card glass-panel">
+        <img src="assets/tms-logo.png" alt="TMS" class="ending-logo" />
+        <div class="eyebrow">Следующий шаг</div>
+        <h2>Если задача — быстро получить управляемую систему под текущий бизнес-контур, начинаем с TMS</h2>
+        <p>
+          Согласуем финальный состав ролей и сценариев, фиксируем контур внедрения и переходим к запуску проекта.
+          На выходе вы получаете рабочий инструмент, который объединяет дилеров, заказы, склады, счета и логистику в одной системе.
+        </p>
+        <div class="ending-actions">
+          <a class="button primary" href="#odoo-divider">Посмотреть альтернативу на Odoo</a>
+          <span class="meta-note light">tmsasub@yandex.ru · tmsasub.store</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <section class="slide slide-dark divider" id="odoo-divider">
+      <div class="bg-glow"></div>
+      <div class="slide-labels">
+        <span class="deck-label alt">Презентация 02 / Odoo</span>
+        <span class="slide-number">12</span>
+      </div>
+      <div class="divider-card glass-panel alt-accent">
+        <span class="divider-label">Альтернативный сценарий</span>
+        <h2>Внедрение на базе Odoo</h2>
+        <p>
+          Второй вариант для компании, которой нужен более широкий ERP-контур и дополнительный запас на дальнейшее развитие процессов.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRESENTATION 2: ODOO -->
+    <section class="slide slide-dark odoo-hero" id="odoo-hero">
+      <div class="bg-glow alt"></div>
+      <div class="slide-labels">
+        <span class="deck-label alt">Презентация 02 / Odoo</span>
+        <span class="slide-number">13</span>
+      </div>
+      <div class="split-layout middle dark-mode">
+        <div class="section-copy narrow on-dark">
+          <div class="eyebrow alt">Odoo + внедрение TMS</div>
+          <h2>ERP-подход для более широкого контура управления</h2>
+          <p>
+            Это сценарий для компании, которая хочет строить более широкую архитектуру управления процессами
+            и закладывать запас на дальнейшее развитие ERP-контура глубже текущего набора задач.
+          </p>
+          <div class="bullet-list dark">
+            <div class="bullet-item">Более широкий ERP-контур</div>
+            <div class="bullet-item">Больше пространства для кастомизации</div>
+            <div class="bullet-item">Запас на расширение процессов</div>
+          </div>
+        </div>
+        <div class="visual-combo">
+          <div class="photo-card full dark-photo"><img src="assets/warehouse-team.jpg" alt="Команда на складе" /></div>
+          <div class="overlay-ui alt-ui">
+            <div class="ui-chip">ERP-контур</div>
+            <div class="ui-chip">Кастомизация</div>
+            <div class="ui-chip accent alt-accent-fill">Шире горизонт развития</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-light" id="odoo-fit">
+      <div class="slide-labels">
+        <span class="deck-label alt-light">Презентация 02 / Odoo</span>
+        <span class="slide-number dark">14</span>
+      </div>
+      <div class="section-head compact">
+        <div>
+          <div class="eyebrow alt-light">Когда этот путь уместен</div>
+          <h2>Odoo подходит, если вы сразу смотрите на более широкую ERP-архитектуру</h2>
+        </div>
+        <p>
+          Этот вариант оправдан, если задача — не только быстро закрыть текущий прикладной контур,
+          но и закладывать глубже платформу под будущее расширение ролей, процессов и модулей.
+        </p>
+      </div>
+      <div class="card-grid three-col alt-cards">
+        <article class="info-card light alt-tone">
+          <h3>Широкий контур</h3>
+          <p>Подходит для сценария, где компания хочет двигаться к более широкому ERP-подходу.</p>
+        </article>
+        <article class="info-card light alt-tone">
+          <h3>Глубже кастомизация</h3>
+          <p>Больше проектной глубины в описании ролей, статусов, модулей и будущих связок.</p>
+        </article>
+        <article class="info-card light alt-tone">
+          <h3>Запас на рост</h3>
+          <p>Лучше, когда уже на старте важен горизонт расширения процессов дальше текущей задачи.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide slide-light" id="odoo-scope">
+      <div class="slide-labels">
+        <span class="deck-label alt-light">Презентация 02 / Odoo</span>
+        <span class="slide-number dark">15</span>
+      </div>
+      <div class="section-head compact">
+        <div>
+          <div class="eyebrow alt-light">Состав внедрения</div>
+          <h2>На Odoo закрываем тот же прикладной контур задач</h2>
+        </div>
+        <p>
+          Разница не в перечне задач, а в платформе, глубине настройки и масштабе будущего развития.
+        </p>
+      </div>
+      <div class="scope-layout">
+        <div class="scope-list glass-lite alt-tone">
+          <div class="scope-item"><span>01</span><p>Личный кабинет компании</p></div>
+          <div class="scope-item"><span>02</span><p>Кабинет дилеров</p></div>
+          <div class="scope-item"><span>03</span><p>Калькулятор заказа в упаковках и м²</p></div>
+          <div class="scope-item"><span>04</span><p>Склады, остатки и планируемое производство</p></div>
+          <div class="scope-item"><span>05</span><p>Счета, оплаты и интеграция с 1С</p></div>
+          <div class="scope-item"><span>06</span><p>Логистика, календарь отгрузок, дропшиппинг и реестр заказов</p></div>
+        </div>
+        <div class="scope-note alt-surface">
+          <h3>Ключевая разница</h3>
+          <p>
+            Это тот же прикладной контур бизнеса, но на более тяжелой платформе,
+            где глубже проектируется логика модулей, ролей и дальнейшего расширения.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-dark" id="odoo-consider">
+      <div class="bg-glow alt"></div>
+      <div class="slide-labels">
+        <span class="deck-label alt">Презентация 02 / Odoo</span>
+        <span class="slide-number">16</span>
+      </div>
+      <div class="section-head on-dark compact">
+        <div>
+          <div class="eyebrow alt">Особенности сценария</div>
+          <h2>Odoo — более широкий, но и более тяжелый путь внедрения</h2>
+        </div>
+        <p>
+          Этот путь оправдан, когда компании действительно нужен запас на более широкий ERP-контур.
+          Но он требует большей глубины настройки, более детальной проработки ролей и более сложного пути к финальному рабочему состоянию.
+        </p>
+      </div>
+      <div class="card-grid three-col alt-dark-grid">
+        <article class="micro-card dark alt-tone">
+          <h3>Больше настройки</h3>
+          <p>Нужно глубже проектировать состав модулей, ролей и логики обмена данными.</p>
+        </article>
+        <article class="micro-card dark alt-tone">
+          <h3>Длиннее запуск</h3>
+          <p>Путь до финального рабочего контура обычно длиннее, чем у точечного внедрения.</p>
+        </article>
+        <article class="micro-card dark alt-tone">
+          <h3>Шире горизонт</h3>
+          <p>Именно поэтому Odoo уместен там, где важен запас на дальнейшее усложнение бизнес-процессов.</p>
+        </article>
+      </div>
+      <div class="dark-bottom-band alt-band">
+        Это не минус платформы, а характеристика более широкого ERP-подхода.
+      </div>
+    </section>
+
+    <section class="slide slide-light" id="odoo-price">
+      <div class="slide-labels">
+        <span class="deck-label alt-light">Презентация 02 / Odoo</span>
+        <span class="slide-number dark">17</span>
+      </div>
+      <div class="pricing-layout light-pricing">
+        <div class="pricing-copy">
+          <div class="eyebrow alt-light">Коммерческое предложение</div>
+          <h2>Внедрение на базе Odoo под ваш контур задач</h2>
+          <p>
+            Этот вариант стоит рассматривать, если вы хотите сразу строить более широкую ERP-архитектуру
+            и готовы заходить в более глубокую проектную настройку под текущие и будущие процессы.
+          </p>
+          <div class="recommendation-list alt-list">
+            <div>Подходит для более широкого масштаба задач</div>
+            <div>Дает запас на дальнейшее расширение контура</div>
+            <div>Требует более глубокого проектирования на старте</div>
+          </div>
+        </div>
+        <div class="pricing-panel light alt-tone">
+          <div class="price-tag dark-tag">200 000 ₽</div>
+          <h3>Odoo + внедрение TMS</h3>
+          <ul>
+            <li>Кабинет компании и кабинет дилеров</li>
+            <li>Калькулятор заказа и цена за м²</li>
+            <li>Склады, остатки и планируемое производство</li>
+            <li>Счета, оплаты и интеграция с 1С</li>
+            <li>Логистика, календарь отгрузок и дропшиппинг</li>
+            <li>Реестр заказов и отчетность</li>
+          </ul>
+          <div class="ownership-note light-note">Формат поставки: внедрение платформы под ваш контур бизнеса</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-dark ending" id="odoo-cta">
+      <div class="bg-glow alt"></div>
+      <div class="slide-labels">
+        <span class="deck-label alt">Презентация 02 / Odoo</span>
+        <span class="slide-number">18</span>
+      </div>
+      <div class="ending-card glass-panel alt-accent">
+        <div class="eyebrow alt">Следующий шаг</div>
+        <h2>Если нужен более широкий ERP-сценарий, можем запускать внедрение на базе Odoo</h2>
+        <p>
+          Фиксируем роли, состав модулей и сценарии интеграции, после чего переходим к проектированию и внедрению.
+          Это путь для бизнеса, который выбирает более широкий ERP-подход и смотрит дальше текущего контура задач.
+        </p>
+        <div class="ending-actions">
+          <a class="button primary alt-button" href="#tms-hero">Вернуться к TMS</a>
+          <span class="meta-note light">ООО «ТМС» · tmsasub@yandex.ru · tmsasub.store</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
