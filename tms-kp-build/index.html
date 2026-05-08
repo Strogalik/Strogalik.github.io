@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920,height=1080,initial-scale=1.0" />
+<title>TMS — коммерческое предложение</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<style>
+:root{
+  --ice:#D6E6F3;
+  --powder:#A6C5D7;
+  --navy:#000926;
+  --sapphire:#0F52BA;
+  --white:#ffffff;
+  --muted:#B8CAE0;
+  --glass:rgba(214,230,243,.13);
+  --stroke:rgba(214,230,243,.28);
+}
+*{box-sizing:border-box}
+html{width:1920px;height:1080px;background:#000926;overflow:hidden}
+body{
+  margin:0;
+  width:1920px;
+  height:1080px;
+  overflow:hidden;
+  font-family:Inter,Arial,sans-serif;
+  color:var(--white);
+  background:var(--navy);
+}
+.deck{width:1920px;height:1080px;overflow:hidden;position:relative}
+.track{width:17280px;height:1080px;display:flex;transition:transform .55s cubic-bezier(.22,.8,.22,1)}
+.slide{
+  width:1920px;
+  height:1080px;
+  flex:0 0 1920px;
+  position:relative;
+  overflow:hidden;
+  padding:86px 110px;
+  background:
+    radial-gradient(circle at 85% 88%, rgba(15,82,186,.9), transparent 32%),
+    radial-gradient(circle at 16% 10%, rgba(166,197,215,.55), transparent 28%),
+    linear-gradient(135deg,#000926 0%,#061d4d 45%,#0F52BA 100%);
+}
+.slide.light{
+  color:#06142e;
+  background:
+    radial-gradient(circle at 83% 12%, rgba(166,197,215,.6), transparent 34%),
+    linear-gradient(135deg,#F5FAFF 0%,#D6E6F3 100%);
+}
+.bg-photo{
+  position:absolute;
+  border-radius:42px;
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 36px 90px rgba(0,9,38,.38);
+}
+.bg-photo:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:42px;
+  background:linear-gradient(135deg,rgba(0,9,38,.68),rgba(15,82,186,.18));
+}
+.top{
+  position:absolute;
+  left:110px;
+  top:52px;
+  width:1700px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:22px;
+  color:rgba(255,255,255,.72);
+}
+.light .top{color:rgba(0,9,38,.58)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:800;letter-spacing:.04em}
+.logo-img{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+  filter:drop-shadow(0 14px 28px rgba(15,82,186,.42));
+}
+.brand span{font-size:24px}
+.kicker{
+  display:inline-flex;
+  padding:12px 20px;
+  border:1px solid var(--stroke);
+  border-radius:999px;
+  background:rgba(214,230,243,.12);
+  color:var(--ice);
+  font-weight:700;
+  font-size:20px;
+  margin-bottom:28px;
+}
+.light .kicker{background:rgba(15,82,186,.09);color:#0F52BA;border-color:rgba(15,82,186,.18)}
+h1,h2,h3{font-family:Montserrat,Inter,Arial,sans-serif;margin:0;line-height:1.04}
+h1{font-size:82px;letter-spacing:-2.6px;max-width:930px}
+h2{font-size:68px;letter-spacing:-2px;max-width:880px}
+h3{font-size:38px;letter-spacing:-.8px}
+p{font-size:27px;line-height:1.48;margin:0;color:rgba(255,255,255,.76)}
+.light p{color:rgba(0,9,38,.7)}
+.hero-text{width:800px;margin-top:30px}
+.glass{
+  background:linear-gradient(135deg,rgba(214,230,243,.18),rgba(166,197,215,.08));
+  border:1px solid var(--stroke);
+  border-radius:38px;
+  box-shadow:0 32px 90px rgba(0,9,38,.28);
+  backdrop-filter:blur(18px);
+}
+.light .glass{
+  background:rgba(255,255,255,.72);
+  border-color:rgba(15,82,186,.14);
+}
+.hero-card{
+  position:absolute;
+  right:110px;
+  top:180px;
+  width:610px;
+  height:670px;
+  padding:34px;
+}
+.metric-row{display:flex;gap:18px;margin-top:24px}
+.metric{
+  width:166px;height:132px;border-radius:28px;
+  padding:20px;background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.15)
+}
+.metric strong{font-size:38px;color:#fff}
+.metric span{display:block;margin-top:12px;color:var(--muted);font-size:17px}
+.mock-chart{
+  position:absolute;left:34px;right:34px;bottom:34px;height:280px;
+  border-radius:30px;background:rgba(0,9,38,.42);padding:26px
+}
+.bars{height:180px;display:flex;align-items:end;gap:18px}
+.bars i{display:block;width:48px;border-radius:14px 14px 4px 4px;background:linear-gradient(180deg,#D6E6F3,#0F52BA)}
+.bars i:nth-child(1){height:80px}.bars i:nth-child(2){height:130px}.bars i:nth-child(3){height:110px}.bars i:nth-child(4){height:170px}.bars i:nth-child(5){height:140px}.bars i:nth-child(6){height:200px}
+.price-strip{
+  position:absolute;left:110px;bottom:110px;display:flex;gap:18px
+}
+.pill{
+  height:86px;padding:0 30px;border-radius:26px;display:flex;align-items:center;
+  background:rgba(214,230,243,.14);border:1px solid var(--stroke);font-size:23px
+}
+.pill b{font-size:34px;margin-left:14px;color:#fff}
+
+.problem-layout{display:grid;grid-template-columns:760px 820px;gap:90px;margin-top:95px}
+.problem-card{width:390px;height:220px;padding:28px;display:inline-block;margin:0 24px 24px 0;vertical-align:top}
+.problem-card h3{font-size:30px;margin-bottom:18px}
+.problem-card p{font-size:21px}
+.big-statement{
+  width:820px;height:190px;border-radius:38px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:Montserrat,Inter,sans-serif;font-size:48px;font-weight:800;text-align:center
+}
+
+.goal-grid{display:grid;grid-template-columns:760px 760px;gap:90px;margin-top:70px}
+.goal-list{padding:36px}
+.goal-item{
+  height:76px;display:flex;align-items:center;gap:20px;
+  border-bottom:1px solid rgba(214,230,243,.18);font-size:25px
+}
+.goal-item b{
+  width:42px;height:42px;border-radius:14px;background:#0F52BA;display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.device{
+  width:760px;height:610px;border-radius:44px;background:#07163a;border:1px solid rgba(214,230,243,.24);
+  padding:26px;box-shadow:0 30px 90px rgba(0,9,38,.35)
+}
+.device-head{height:58px;display:flex;gap:10px;align-items:center}
+.device-head i{width:15px;height:15px;border-radius:50%;background:#D6E6F3;opacity:.75}
+.table-row{
+  height:70px;border-radius:20px;background:rgba(255,255,255,.08);
+  margin-bottom:14px;display:grid;grid-template-columns:260px 150px 150px 110px;align-items:center;padding:0 22px;font-size:18px;color:#D6E6F3
+}
+.table-row.head{background:rgba(15,82,186,.55);font-weight:800;color:#fff}
+.badge{padding:8px 12px;border-radius:999px;background:rgba(214,230,243,.15);font-weight:700}
+
+.modules{display:grid;grid-template-columns:440px 440px 440px;gap:28px;margin-top:74px}
+.module{height:210px;padding:28px}
+.module h3{font-size:31px;margin-bottom:16px}
+.module p{font-size:20px}
+.module small{display:block;margin-bottom:18px;color:#A6C5D7;font-size:18px;font-weight:800}
+
+.norm-layout{display:grid;grid-template-columns:740px 820px;gap:90px;margin-top:74px}
+.norm-card{height:560px;padding:44px}
+.quote{
+  font-family:Montserrat,Inter,sans-serif;font-size:43px;line-height:1.18;font-weight:800;margin-bottom:30px
+}
+.norm-points{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+.norm-point{height:160px;padding:24px;border-radius:28px;background:rgba(255,255,255,.11);font-size:23px;line-height:1.3}
+.water-diagram{height:560px;padding:42px}
+.diagram-line{height:6px;background:linear-gradient(90deg,#D6E6F3,#0F52BA);border-radius:10px;margin:68px 0 44px}
+.diagram-steps{display:flex;gap:22px}
+.diagram-step{width:160px;text-align:center;font-size:18px;color:#D6E6F3}
+.diagram-dot{width:52px;height:52px;border-radius:50%;background:#D6E6F3;margin:0 auto 18px;box-shadow:0 0 36px rgba(214,230,243,.75)}
+
+.timeline{margin-top:78px;display:grid;grid-template-columns:repeat(3,500px);gap:28px}
+.stage{height:230px;padding:30px;position:relative}
+.stage-num{font-size:18px;color:#0F52BA;font-weight:900;margin-bottom:18px}
+.stage h3{font-size:30px;margin-bottom:14px}
+.stage p{font-size:20px}
+.month{
+  position:absolute;right:110px;bottom:94px;width:500px;height:108px;border-radius:34px;
+  display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:900
+}
+
+.result-layout{display:grid;grid-template-columns:720px 840px;gap:90px;margin-top:76px}
+.result-list{display:grid;gap:22px}
+.result-item{height:118px;padding:28px;border-radius:30px;background:rgba(255,255,255,.72);border:1px solid rgba(15,82,186,.14);font-size:24px;font-weight:800;color:#06142e}
+.before-after{height:570px;padding:38px}
+.ba-cols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.ba{height:420px;border-radius:32px;padding:30px;background:rgba(0,9,38,.08)}
+.ba.dark{background:linear-gradient(135deg,#000926,#0F52BA);color:white}
+.ba h3{font-size:34px;margin-bottom:24px}
+.ba li{font-size:23px;margin-bottom:18px;line-height:1.35}
+
+.terms-grid{display:grid;grid-template-columns:620px 620px;gap:36px;margin-top:70px}
+.terms-card{height:300px;padding:38px}
+.terms-card strong{font-family:Montserrat,Inter,sans-serif;font-size:58px;display:block;margin-bottom:18px}
+.terms-card span{font-size:25px;color:rgba(255,255,255,.74)}
+.scope{position:absolute;right:110px;top:230px;width:520px;height:600px;padding:38px}
+.scope h3{margin-bottom:24px}
+.scope li{font-size:23px;line-height:1.38;margin-bottom:18px;color:rgba(255,255,255,.78)}
+
+.final-card{
+  position:absolute;left:190px;top:190px;width:760px;height:680px;padding:54px
+}
+.final-card h2{font-size:62px;margin-bottom:28px}
+.final-card p{font-size:26px}
+.contact{margin-top:48px;font-size:23px;color:#D6E6F3;line-height:1.8}
+.form-card{
+  position:absolute;right:190px;top:190px;width:620px;height:680px;padding:44px
+}
+.form-card h3{font-size:42px;margin-bottom:16px}
+.form-card p{font-size:21px;margin-bottom:30px}
+label{display:block;margin-bottom:22px;font-size:18px;color:#D6E6F3;font-weight:800}
+input{
+  width:532px;height:70px;margin-top:10px;border:1px solid rgba(214,230,243,.28);
+  border-radius:22px;background:rgba(0,9,38,.34);color:white;
+  font-size:23px;padding:0 22px;outline:none
+}
+input:focus{border-color:#D6E6F3;box-shadow:0 0 0 4px rgba(214,230,243,.12)}
+button.submit{
+  width:532px;height:76px;border:0;border-radius:24px;background:linear-gradient(135deg,#D6E6F3,#0F52BA);
+  color:#000926;font-size:24px;font-weight:900;cursor:pointer
+}
+
+.nav{
+  position:absolute;left:760px;bottom:30px;width:400px;height:54px;display:flex;align-items:center;justify-content:center;gap:16px;z-index:10
+}
+.arrow{
+  width:54px;height:54px;border-radius:50%;border:1px solid rgba(255,255,255,.25);
+  background:rgba(0,9,38,.5);color:white;font-size:28px;cursor:pointer
+}
+.dots{display:flex;gap:8px}
+.dot{
+  width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.28);border:0;cursor:pointer
+}
+.dot.active{width:34px;border-radius:999px;background:#D6E6F3}
+.progress{
+  position:absolute;left:0;bottom:0;height:5px;width:213px;background:#D6E6F3;z-index:20;transition:left .55s
+}
+.photo-one{right:110px;top:180px;width:610px;height:670px;background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=85')}
+.photo-two{right:105px;bottom:100px;width:580px;height:360px;background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85')}
+.photo-three{left:110px;bottom:100px;width:620px;height:300px;background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=85')}
+</style>
+</head>
+<body>
+<div class="deck">
+  <div class="track" id="track">
+
+    <section class="slide">
+      <div class="top"><div class="brand"><img class="logo-img" src="assets/favicon.svg" alt="TMS"><span>TMS</span></div><div>Коммерческое предложение · MVP</div></div>
+      <div style="position:absolute;left:110px;top:180px">
+        <div class="kicker">Desktop-решение для Windows</div>
+        <h1>Разработка приложения для сбора данных и аналитики очистных сооружений</h1>
+        <p class="hero-text">MVP exe-приложения для сбора, хранения, анализа и визуализации эксплуатационных данных по нескольким объектам.</p>
+      </div>
+      <div class="hero-card glass">
+        <h3>Ключевые параметры</h3>
+        <div class="metric-row">
+          <div class="metric"><strong>exe</strong><span>формат поставки</span></div>
+          <div class="metric"><strong>1 мес.</strong><span>срок реализации</span></div>
+          <div class="metric"><strong>320К</strong><span>стоимость, ₽</span></div>
+        </div>
+        <div class="mock-chart">
+          <p style="font-size:20px;margin-bottom:18px">Аналитика по расходу и показателям</p>
+          <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="pill">Целевая аудитория: <b>проектировщик</b></div>
+        <div class="pill">Период анализа: <b>3 года</b></div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="top"><div class="brand"><img class="logo-img" src="assets/favicon.svg" alt="TMS"><span>TMS</span></div><div>01 · Задача проекта</div></div>
+      <div class="problem-layout">
+        <div>
+          <div class="kicker">Какую задачу решает система</div>
+          <h2>Данные разрознены, анализ занимает время, а отклонения сложно видеть сразу</h2>
+          <p style="margin-top:34px">Часть информации хранится в таблицах, часть — в отчетах, часть — в архивных измерениях. Это мешает быстро готовить материалы для реконструкции.</p>
+        </div>
+        <div>
+          <div class="problem-card glass"><h3>Таблицы</h3><p>Данные есть, но нет единого рабочего контура.</p></div>
+          <div class="problem-card glass"><h3>Отчеты</h3><p>Информация сложна для быстрого сравнения.</p></div>
+          <div class="big-statement glass">Нужен единый инструмент проектировщика</div>
+          <div class="problem-card glass"><h3>Архивы</h3><p>Долгие ряды наблюдений трудно обрабатывать вручную.</p></div>
+          <div class="problem-card glass"><h3>Отклонения</h3><p>Факт и проект не всегда сопоставлены в одном окне.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide light">
+      <div class="top"><div class="brand"><img class="logo-img" src="assets/favicon.svg" alt="TMS"><span>TMS</span></div><div>02 · Цель MVP</div></div>
+      <div class="goal-grid">
+        <div>
+          <div class="kicker">Цель разработки</div>
+          <h2>Создать прикладной desktop-инструмент для инженерной аналитики</h2>
+          <p style="margin-top:34px">Система помогает вести несколько объектов, анализировать данные минимум за последние 3 года и быстро формировать Excel-выгрузки.</p>
+        </div>
+        <div class="goal-list glass">
+          <div class="goal-item"><b>1</b>Ведение нескольких объектов</div>
+          <div class="goal-item"><b>2</b>Расход, температура и 7 показателей</div>
+          <div class="goal-item"><b>3</b>Коэффициенты неравномерности</div>
+          <div class="goal-item"><b>4</b>Сравнение факта и проекта</div>
+          <div class="goal-item"><b>5</b>Индикация сильных отклонений</div>
+          <div class="goal-item"><b>6</b>Аналитическая выгрузка в Excel</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="top"><div class="brand"><img class="logo-img" src="assets/favicon.svg" alt="TMS"><span>TMS</span></div><div>03 · Функциональность</div></div>
+      <div class="kicker">Что войдет в MVP</div>
+      <h2>Модули приложения</h2>
+      <div class="modules">
+        <div class="module glass"><small>01</small><h3>Карточки объектов</h3><p>Несколько очистных сооружений в одной системе.</p></div>
+        <div class="module glass"><small>02</small><h3>Хранение данных</h3><p>Расчетные данные, показатели и проектные параметры.</p></div>
+        <div class="module glass"><small>03</small><h3>Аналитика периодов</h3><p>Суточный, месячный, сезонный и трехгодичный срез.</p></div>
+        <div class="module glass"><small>04</small><h3>Графики</h3><p>Визуализация расхода и 7 основных показателей.</p></div>
+        <div class="module glass"><small>05</small><h3>Журнал действий</h3><p>Фиксация действий инженера внутри приложения.</p></div>
+        <div class="module glass"><small>06</small><h3>Excel-экспорт</h3><p>Формирование аналитических выгрузок для работы.</p></div>
+      </div>
+      <div class="bg-photo photo-two"></div>
+    </section>
+
+    <section class="slide">
+      <div class="top"><div class="brand"><img class="logo-img" src="assets/favicon.svg" alt="TMS"><span>TMS</span></div><div>04 · Нормативная основа</div></div>
+      <div class="norm-layout">
+        <div class="norm-card glass">
+          <div class="kicker">Логика решения</div>
+          <div class="quote">Опора на фактические эксплуатационные данные и длительные ряды наблюдений</div>
+          <p>Для действующих объектов используется подход с анализом данных не менее чем за 3 года.</p>
+          <div class="norm-points">
+            <div class="norm-point">СП 32.13330</div>
+            <div class="norm-point">Приложение Г</div>
+            <div class="norm-point">Факт против проекта</div>
+            <div class="norm-point">Расчетные показатели</div>
+          </div>
+        </div>
+        <div class="water-diagram glass">
+          <h3>Инженерная цепочка анализа</h3>
+          <div class="diagram-line"></div>
+          <div class="diagram-steps">
+            <div class="diagram-step"><div class="diagram-dot"></div>Исходные данные</div>
+            <div class="diagram-step"><div class="diagram-dot"></div>Нормируемые показатели</div>
+            <div class="diagram-step"><div class="diagram-dot"></div>Коэффициенты</div>
+            <div class="diagram-step"><div class="diagram-dot"></div>Отклонения</div>
+            <div class="diagram-step"><div class="diagram-dot"></div>Excel-отчет</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide light">
+      <div class="top"><div class="brand"><img class="logo-img" src="assets/favicon.svg" alt="TMS"><span>TMS</span></div><div>05 · Этапы работ</div></div>
+      <div class="kicker">План реализации</div>
+      <h2>Работы выполняются поэтапно в течение 1 месяца</h2>
+      <div class="timeline">
+        <div class="stage glass"><div class="stage-num">01 · 3 дня</div><h3>ТЗ и проработка</h3><p>Фиксация экранов, данных, расчетов и отчетов.</p></div>
+        <div class="stage glass"><div class="stage-num">02 · 4 дня</div><h3>Архитектура и UI</h3><p>Проектирование структуры приложения и сценариев.</p></div>
+        <div class="stage glass"><div class="stage-num">03 · 5 дней</div><h3>Ядро системы</h3><p>Объекты, показатели, проектные параметры.</p></div>
+        <div class="stage glass"><div class="stage-num">04 · 6 дней</div><h3>Аналитика</h3><p>Расчеты, коэффициенты, сравнения и сценарии.</p></div>
+        <div class="stage glass"><div class="stage-num">05 · 4 дня</div><h3>Графики и Excel</h3><p>Визуализация и аналитические выгрузки.</p></div>
+        <div class="stage glass"><div class="stage-num">06 · 3 дня</div><h3>Тестирование</h3><p>Отладка, сборка exe и передача результата.</p></div>
+      </div>
+      <div class="month glass">Итого: 1 месяц</div>
+    </section>
+
+    <section class="slide light">
+      <div class="top"><div class="brand"><img class="logo-img" src="assets/favicon.svg" alt="TMS"><span>TMS</span></div><div>06 · Результат</div></div>
+      <div class="result-layout">
+        <div>
+          <div class="kicker">Что получает заказчик</div>
+          <h2>Рабочее exe-приложение для внутреннего инженерного использования</h2>
+          <p style="margin-top:30px">Решение сокращает время анализа, упрощает подготовку материалов и повышает удобство работы с эксплуатационными данными.</p>
+        </div>
+        <div class="before-after glass">
+          <div class="ba-cols">
+            <div class="ba">
+              <h3>До</h3>
+              <ul>
+                <li>Разные таблицы и отчеты</li>
+                <li>Ручное сравнение данных</li>
+                <li>Сложно увидеть отклонения</li>
+                <li>Долгая подготовка выгрузок</li>
+              </ul>
+            </div>
+            <div class="ba dark">
+              <h3>После</h3>
+              <ul>
+                <li>Единый контур данных</li>
+                <li>Графики и расчеты в одном окне</li>
+                <li>Быстрая индикация отклонений</li>
+                <li>Готовый Excel-экспорт</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="result-list" style="position:absolute;left:110px;bottom:90px;width:1700px;grid-template-columns:repeat(4,1fr)">
+        <div class="result-item">Централизованное ведение объектов</div>
+        <div class="result-item">Трехлетняя динамика</div>
+        <div class="result-item">Факт / проект</div>
+        <div class="result-item">Аналитические выгрузки</div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="top"><div class="brand"><img class="logo-img" src="assets/favicon.svg" alt="TMS"><span>TMS</span></div><div>07 · Условия</div></div>
+      <div class="kicker">Срок и стоимость</div>
+      <h2>Условия реализации MVP</h2>
+      <div class="terms-grid">
+        <div class="terms-card glass"><strong>exe</strong><span>Формат поставки: desktop-приложение для Windows</span></div>
+        <div class="terms-card glass"><strong>1 месяц</strong><span>С даты согласования ТЗ и предоставления исходных данных</span></div>
+        <div class="terms-card glass"><strong>320 000 ₽</strong><span>Стоимость разработки MVP-приложения</span></div>
+        <div class="terms-card glass"><strong>MVP</strong><span>Проектирование, разработка, аналитика, графики, тестирование</span></div>
+      </div>
+      <div class="scope glass">
+        <h3>В стоимость входят</h3>
+        <ul>
+          <li>Проектирование решения</li>
+          <li>Разработка desktop-приложения</li>
+          <li>Аналитический блок</li>
+          <li>Построение графиков</li>
+          <li>Excel-выгрузки</li>
+          <li>Тестирование и передача exe-сборки</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="top"><div class="brand"><img class="logo-img" src="assets/favicon.svg" alt="TMS"><span>TMS</span></div><div>08 · Контакт</div></div>
+      <div class="bg-photo photo-three"></div>
+      <div class="final-card glass">
+        <div class="kicker">Итоговое предложение</div>
+        <h2>Готовы разработать прикладной инструмент для проектировщика</h2>
+        <p>Приложение объединит сбор данных, аналитику, расчетные сценарии и графическое представление статистики в одном desktop-решении.</p>
+        <div class="contact">
+          ООО «ТМС»<br>
+          tmsasub@yandex.ru<br>
+          tmsasub.store
+        </div>
+      </div>
+      <form class="form-card glass" id="leadForm">
+        <h3>Оставить заявку</h3>
+        <p>Заполните форму — появится alert-уведомление об отправке.</p>
+        <label>Имя<input name="name" type="text" required placeholder="Ваше имя"></label>
+        <label>Email<input name="email" type="email" required placeholder="example@mail.ru"></label>
+        <label>Телефон<input name="phone" type="tel" required placeholder="+7 (999) 999-99-99"></label>
+        <button class="submit" type="submit">Отправить заявку</button>
+      </form>
+    </section>
+
+  </div>
+
+  <div class="nav">
+    <button class="arrow" id="prev">‹</button>
+    <div class="dots" id="dots"></div>
+    <button class="arrow" id="next">›</button>
+  </div>
+  <div class="progress" id="progress"></div>
+</div>
+
+<script>
+const track=document.getElementById('track');
+const dotsBox=document.getElementById('dots');
+const progress=document.getElementById('progress');
+const total=9;
+let current=0;
+
+for(let i=0;i<total;i++){
+  const b=document.createElement('button');
+  b.className='dot'+(i===0?' active':'');
+  b.addEventListener('click',()=>goTo(i));
+  dotsBox.appendChild(b);
+}
+
+function goTo(i){
+  current=(i+total)%total;
+  track.style.transform=`translateX(-${current*1920}px)`;
+  document.querySelectorAll('.dot').forEach((d,idx)=>d.classList.toggle('active',idx===current));
+  progress.style.left=(current*213.333)+'px';
+}
+
+document.getElementById('next').onclick=()=>goTo(current+1);
+document.getElementById('prev').onclick=()=>goTo(current-1);
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight')goTo(current+1);
+  if(e.key==='ArrowLeft')goTo(current-1);
+});
+
+document.getElementById('leadForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const form=e.currentTarget;
+  if(!form.checkValidity()){
+    alert('Пожалуйста, заполните имя, email и телефон.');
+    return;
+  }
+  const name=form.name.value.trim()||'клиент';
+  alert(`Спасибо, ${name}! Заявка отправлена.`);
+  form.reset();
+});
+</script>
+</body>
+</html>
