@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1920, initial-scale=1" />
+  <title>TMS · КП для тендерной автоматизации</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background:#101114; font-family: Inter, Arial, sans-serif; }
+    body { width: 1920px; color: #fff; overflow-x: hidden; }
+    .deck { width: 1920px; }
+    .slide { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+    .dark {
+      background:
+        radial-gradient(circle at 82% 12%, rgba(15,82,186,.55) 0, rgba(15,82,186,.14) 360px, transparent 760px),
+        radial-gradient(circle at 77% 82%, rgba(0,194,255,.55) 0, rgba(15,82,186,.22) 330px, transparent 620px),
+        radial-gradient(circle at 36% 91%, rgba(0,137,255,.45) 0, rgba(15,82,186,.2) 280px, transparent 580px),
+        linear-gradient(135deg, #000926 0%, #081A45 47%, #0F52BA 100%);
+    }
+    .light {
+      color:#000926;
+      background:
+        radial-gradient(circle at 72% 5%, rgba(15,82,186,.15) 0, rgba(214,230,243,.35) 360px, transparent 680px),
+        radial-gradient(circle at 30% 92%, rgba(42,198,255,.2) 0, rgba(214,230,243,.28) 360px, transparent 650px),
+        linear-gradient(135deg, #FFFFFF 0%, #ECF5FC 52%, #D6E6F3 100%);
+    }
+    .glow-line { position:absolute; border-radius: 999px; pointer-events:none; filter: blur(1px); opacity:.55; }
+    .dark .glow-line.one { width: 1020px; height: 220px; left: 650px; bottom: -30px; border-top: 4px solid rgba(42,198,255,.9); transform: rotate(-13deg); box-shadow: 0 0 45px #0ea5ff, 0 0 140px rgba(37,199,247,.65); }
+    .dark .glow-line.two { width: 710px; height: 160px; right: -160px; top: 90px; border-bottom: 2px solid rgba(166,197,215,.45); transform: rotate(-10deg); }
+    .light .glow-line.one { width: 1050px; height: 180px; left: -120px; bottom: 55px; border-top: 3px solid rgba(37,199,247,.45); transform: rotate(-12deg); filter: blur(2px); }
+    .light .glow-line.two { width: 760px; height: 120px; right: -90px; top: 210px; border-bottom: 2px solid rgba(15,82,186,.12); transform: rotate(-8deg); }
+    .logo { position: absolute; left: 72px; top: 58px; display: flex; align-items:center; gap: 18px; z-index: 4; }
+    .logo img { width: 64px; height: 64px; object-fit: contain; filter: drop-shadow(0 12px 24px rgba(0,150,255,.25)); }
+    .logo .brand { font-size: 34px; line-height: 34px; font-weight: 800; letter-spacing: .4px; }
+    .logo .sub { display:block; margin-top:5px; font-size: 12px; color: rgba(214,230,243,.72); font-weight:500; letter-spacing:.4px; }
+    .light .logo .brand { color:#000926; }
+    .light .logo .sub { color:rgba(0,9,38,.52); }
+    .pill { display: inline-flex; height: 48px; align-items:center; gap:12px; padding:0 24px; border-radius: 18px; background: rgba(214,230,243,.11); border:1px solid rgba(214,230,243,.22); color:#fff; font-size: 19px; font-weight: 600; backdrop-filter: blur(12px); }
+    .light .pill { background: rgba(214,230,243,.55); border:1px solid rgba(15,82,186,.18); color:#0F52BA; }
+    .left { position:absolute; left:72px; top:154px; width:850px; z-index:3; }
+    .right { position:absolute; right:78px; top:124px; width:890px; z-index:3; }
+    h1 { margin: 46px 0 0; font-family: Montserrat, Inter, Arial, sans-serif; font-size: 68px; line-height: .99; letter-spacing: -2.7px; font-weight: 900; }
+    .dark h1 { color:#fff; text-shadow: 0 16px 54px rgba(0,0,0,.18); }
+    .light h1 { color:#000926; }
+    .lead { margin: 36px 0 0; width:790px; font-size: 25px; line-height: 1.45; color: rgba(255,255,255,.82); font-weight: 450; }
+    .light .lead { color: rgba(0,9,38,.78); }
+    .micro-list { margin-top: 32px; display:grid; gap: 13px; width: 815px; }
+    .micro-row { height: 82px; display:flex; align-items:center; gap:24px; padding:0 24px; border-radius:20px; background: linear-gradient(90deg, rgba(214,230,243,.12), rgba(15,82,186,.11)); border:1px solid rgba(214,230,243,.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.08); }
+    .micro-icon { width:54px; height:54px; display:grid; place-items:center; border-radius:18px; background:linear-gradient(145deg, rgba(37,199,247,.95), rgba(15,82,186,.72)); box-shadow:0 8px 30px rgba(15,82,186,.42); }
+    .micro-row span { font-size: 23px; font-weight: 650; }
+    .price-card { width: 890px; height: 850px; border-radius: 34px; padding: 76px 52px 46px; background: linear-gradient(145deg, rgba(214,230,243,.17), rgba(15,82,186,.22)); border: 1px solid rgba(214,230,243,.32); box-shadow: 0 36px 110px rgba(0,0,0,.20), inset 0 1px 0 rgba(255,255,255,.12); backdrop-filter: blur(16px); }
+    .price-box { height:156px; border-radius:28px; display:flex; align-items:center; justify-content:center; font-size:76px; font-weight:900; letter-spacing: -2px; color:#081A45; background:linear-gradient(100deg,#FFE4E8 0%, #F5F7FF 42%, #BFE2FF 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.72), 0 24px 50px rgba(0,0,0,.1); }
+    .card-title { margin-top:46px; font-size:40px; line-height:1.1; font-weight:850; letter-spacing:-1.4px; }
+    ul.clean { margin: 28px 0 0; padding:0; list-style:none; display:grid; gap:19px; }
+    ul.clean li { position:relative; padding-left: 34px; font-size:25px; line-height: 1.28; color:rgba(255,255,255,.9); }
+    ul.clean li:before { content:''; position:absolute; left:0; top:10px; width:10px; height:10px; border-radius:50%; background:#A6C5D7; box-shadow:0 0 18px rgba(37,199,247,.75); }
+    .divider { height:1px; margin:40px 0 24px; background:linear-gradient(90deg, transparent, rgba(214,230,243,.42), transparent); }
+    .footer-meta { display:flex; align-items:center; gap:22px; color:rgba(214,230,243,.82); font-size:20px; }
+    .dot { width:5px; height:5px; border-radius:50%; background:rgba(214,230,243,.55); }
+    .meta-icon { width:24px; height:24px; color:#A6C5D7; }
+    .light-left { position:absolute; left:72px; top:60px; width:810px; }
+    .light-right { position:absolute; right:72px; top:70px; width:890px; }
+    .feature-stack { margin-top: 34px; display:grid; gap:15px; width: 790px; }
+    .feature-card { height:112px; display:flex; align-items:center; gap:24px; padding:0 26px; background:rgba(255,255,255,.76); border:1px solid rgba(15,82,186,.12); border-radius:20px; box-shadow:0 18px 40px rgba(15,82,186,.08); }
+    .feature-icon { width:70px; height:70px; border-radius:20px; display:grid; place-items:center; background:linear-gradient(145deg, rgba(214,230,243,.9), rgba(235,248,255,.9)); border:1px solid rgba(15,82,186,.12); color:#0F52BA; flex:0 0 70px; }
+    .feature-card b { display:block; font-size:23px; margin-bottom:7px; }
+    .feature-card p { margin:0; color:rgba(0,9,38,.72); font-size:19px; line-height:1.28; }
+    .team-panel { height: 500px; padding: 54px 50px; border-radius:32px; background:linear-gradient(145deg,rgba(255,255,255,.62), rgba(214,230,243,.50)); border:1px solid rgba(15,82,186,.18); box-shadow:0 28px 90px rgba(15,82,186,.12); }
+    .team-panel h2 { margin:0 0 32px; font-size:38px; font-weight:900; letter-spacing:-1.2px; }
+    .benefit-grid { display:grid; grid-template-columns: 370px 370px; gap:16px; }
+    .benefit { height:158px; display:grid; grid-template-columns:94px 1fr; gap:22px; align-items:center; padding:18px 22px; border-radius:20px; background:rgba(255,255,255,.78); border:1px solid rgba(15,82,186,.11); box-shadow:0 12px 36px rgba(8,26,69,.07); }
+    .benefit .ico { width:72px; height:72px; border-radius:18px; display:grid; place-items:center; background:#EAF4FB; color:#0F52BA; border:1px solid rgba(15,82,186,.12); }
+    .benefit b { font-size:25px; display:block; margin-bottom:8px; }
+    .benefit p { margin:0; font-size:18px; line-height:1.28; color:rgba(0,9,38,.72); }
+    .table-panel { position:absolute; right:72px; bottom:70px; width:890px; height:360px; padding:28px 32px; border-radius:28px; background:linear-gradient(145deg, rgba(255,255,255,.78), rgba(214,230,243,.58)); border:1px solid rgba(15,82,186,.18); box-shadow:0 28px 90px rgba(15,82,186,.13); }
+    .table-title { font-size:28px; font-weight:900; margin-bottom:18px; color:#000926; }
+    .tender-table { width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border-radius:16px; font-size:18px; box-shadow:0 10px 32px rgba(15,82,186,.09); }
+    .tender-table th { height:44px; background:#0F52BA; color:#fff; text-align:left; padding:0 16px; font-size:17px; font-weight:800; }
+    .tender-table td { height:45px; background:rgba(255,255,255,.9); border-bottom:1px solid rgba(15,82,186,.12); color:#000926; padding:0 16px; }
+    .tender-table tr:last-child td { border-bottom:none; }
+    .status { display:inline-flex; align-items:center; justify-content:center; min-width:64px; height:28px; border-radius:16px; font-size:15px; font-weight:800; }
+    .ok { background:#D7F5E2; color:#098C44; }
+    .check { background:#D9ECFF; color:#0F52BA; }
+    .risk { background:#FFE2C7; color:#D36C00; }
+    .slide-label { position:absolute; right:28px; top:18px; color:rgba(255,255,255,.35); font-size:14px; letter-spacing:.08em; }
+    .light .slide-label { color:rgba(0,9,38,.26); }
+    .nav { position:fixed; right:24px; bottom:24px; z-index:50; display:flex; gap:10px; }
+    .nav button { border:1px solid rgba(255,255,255,.2); background:rgba(0,9,38,.55); color:#fff; border-radius:14px; padding:12px 16px; cursor:pointer; font-weight:700; backdrop-filter: blur(10px); }
+    @media print { .nav { display:none; } body { background:white; } .slide { page-break-after: always; } }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <section id="slide-1" class="slide dark">
+      <div class="slide-label">SLIDE 01 / OFFER</div>
+      <div class="glow-line one"></div><div class="glow-line two"></div>
+      <div class="logo"><img src="assets/tms-logo.png" alt="TMS"><div><div class="brand">TMS</div><span class="sub">commercial offer</span></div></div>
+      <div class="left">
+        <div class="pill">Наше предложение</div>
+        <h1>TMS — оптимальный<br>сценарий запуска под ваш<br>текущий контур задач</h1>
+        <div class="lead">Ваш запрос уже хорошо определён: кабинет компании, кабинет дилеров, расчёт, склады, производство, 1С, логистика, реестр заказов и отчёты. Здесь важно быстро запустить рабочую систему под понятные процессы, чем заходить в тяжёлый ERP-сценарий на старте.</div>
+        <div class="micro-list">
+          <div class="micro-row"><div class="micro-icon">⚡</div><span>Быстрый выход в рабочий контур</span></div>
+          <div class="micro-row"><div class="micro-icon">◷</div><span>MVP за 1–2 недели</span></div>
+          <div class="micro-row"><div class="micro-icon">◇</div><span>Готовый продукт за 2–3 недели</span></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="price-card">
+          <div class="price-box">120 000 ₽</div>
+          <div class="card-title">Внедрение TMS под ваш бизнес-контур</div>
+          <ul class="clean">
+            <li>Личный кабинет компании до 10 пользователей</li>
+            <li>Кабинет дилеров до 100 пользователей</li>
+            <li>Калькулятор в упаковках и цена за м²</li>
+            <li>Остатки по 2 складам + планируемое производство</li>
+            <li>Счета, оплаты и интеграция с 1С</li>
+            <li>Дропшиппинг, календарь отгрузок, реестр заказов и отчёты</li>
+          </ul>
+          <div class="divider"></div>
+          <div class="footer-meta">
+            <span>⌖ Тверь</span><span class="dot"></span><span>Срок MVP: 1–2 недели</span><span class="dot"></span><span>Готовый продукт: 2–3 недели</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slide-2" class="slide light">
+      <div class="slide-label">SLIDE 02 / BRM</div>
+      <div class="glow-line one"></div><div class="glow-line two"></div>
+      <div class="logo"><img src="assets/tms-logo.png" alt="TMS"><div><div class="brand">TMS</div><span class="sub">tender automation</span></div></div>
+      <div class="light-left">
+        <div class="pill">⌑ Автоматизация тендеров</div>
+        <h1>BRM-система<br>для управления<br>тендерным циклом</h1>
+        <div class="lead">Решение собирает поиск, отбор, анализ и контроль закупок в единый рабочий контур. Система помогает команде быстрее находить релевантные тендеры, оценивать условия участия, управлять сроками и фиксировать статус каждой закупки.</div>
+        <div class="feature-stack">
+          <div class="feature-card"><div class="feature-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="2.2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div><div><b>Мониторинг закупок</b><p>ЕИС, ЭТП и коммерческие площадки в одном контуре.</p></div></div>
+          <div class="feature-card"><div class="feature-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M7 5.5c-2 1-3.5 3-3.5 5.5 0 3.5 2.6 6.1 6 6.5M17 5.5c2 1 3.5 3 3.5 5.5 0 3.5-2.6 6.1-6 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 10h8M8 14h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div><b>AI-анализ документации</b><p>Требования, сроки, риски и ключевые условия участия.</p></div></div>
+          <div class="feature-card"><div class="feature-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M5 6h5a4 4 0 010 8H8a4 4 0 000 8h11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="5" cy="6" r="2" fill="currentColor"/><circle cx="19" cy="22" r="2" fill="currentColor"/></svg></div><div><b>Статусы и маршруты</b><p>Единая логика обработки от поиска до решения по участию.</p></div></div>
+        </div>
+      </div>
+      <div class="light-right">
+        <div class="team-panel">
+          <h2>Что получает команда</h2>
+          <div class="benefit-grid">
+            <div class="benefit"><div class="ico"><svg width="42" height="42" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="2.2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div><div><b>Поиск</b><p>Автоматический сбор и фильтрация тендеров по заданным критериям.</p></div></div>
+            <div class="benefit"><div class="ico"><svg width="42" height="42" viewBox="0 0 24 24" fill="none"><path d="M4 5h16l-6 7v6l-4 2v-8L4 5z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></svg></div><div><b>Отбор</b><p>Приоритизация закупок по релевантности, срокам и объёму.</p></div></div>
+            <div class="benefit"><div class="ico"><svg width="42" height="42" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.7-2.8 8-7 10-4.2-2-7-5.3-7-10V6l7-3z" stroke="currentColor" stroke-width="2"/><path d="M8.5 12l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><b>Контроль</b><p>Дедлайны, ответственные, согласования и история решений.</p></div></div>
+            <div class="benefit"><div class="ico"><svg width="42" height="42" viewBox="0 0 24 24" fill="none"><path d="M5 19V9M10 19V5M15 19v-7M20 19V8" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/><path d="M3 19h19" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></svg></div><div><b>Аналитика</b><p>Реестр закупок, воронка участия и причины отказа.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="table-panel">
+        <div class="table-title">TMS ASUB · AI-анализ тендеров</div>
+        <table class="tender-table">
+          <thead><tr><th>Тендер</th><th>НМЦК</th><th>Срок</th><th>AI Score</th><th>Статус</th></tr></thead>
+          <tbody>
+            <tr><td>Серверное оборудование</td><td>8,4 млн ₽</td><td>12 дн</td><td>92%</td><td><span class="status ok">OK</span></td></tr>
+            <tr><td>Внедрение ERP</td><td>12,8 млн ₽</td><td>7 дн</td><td>87%</td><td><span class="status check">Check</span></td></tr>
+            <tr><td>Разработка ПО</td><td>5,6 млн ₽</td><td>18 дн</td><td>95%</td><td><span class="status ok">OK</span></td></tr>
+            <tr><td>Техподдержка ИТ</td><td>2,1 млн ₽</td><td>4 дн</td><td>64%</td><td><span class="status risk">Risk</span></td></tr>
+            <tr><td>Облачная инфраструктура</td><td>9,3 млн ₽</td><td>9 дн</td><td>89%</td><td><span class="status ok">OK</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <div class="nav"><button onclick="document.getElementById('slide-1').scrollIntoView()">Слайд 1</button><button onclick="document.getElementById('slide-2').scrollIntoView()">Слайд 2</button></div>
+  <script>
+    document.addEventListener('keydown', function(e){
+      if(e.key === '1') document.getElementById('slide-1').scrollIntoView();
+      if(e.key === '2') document.getElementById('slide-2').scrollIntoView();
+    });
+  </script>
+</body>
+</html>
