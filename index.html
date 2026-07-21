@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>TMS — мобильная адаптация магазина</title>
+<style>
+  *{box-sizing:border-box} html,body{margin:0;padding:0;background:#eaf4ff;font-family:Inter,Arial,sans-serif;color:#071638} body{width:1920px;overflow-x:hidden}.slide{width:1920px;height:1080px;position:relative;overflow:hidden;padding:92px 128px}.light{background:radial-gradient(circle at 86% 18%,#dff4ff 0,#eef8ff 29%,#f7fbff 60%,#edf6ff 100%)}.dark{background:radial-gradient(circle at 78% 74%,#1472ff 0,#113f95 25%,#0b2763 62%,#06183b 100%);color:#fff}.bg-noise:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 13% 18%,rgba(126,203,255,.28),transparent 17%),radial-gradient(circle at 65% 52%,rgba(255,255,255,.12),transparent 17%);filter:blur(14px)}.topline{display:flex;align-items:center;gap:16px;font-size:22px;font-weight:800;letter-spacing:.01em}.logo{width:48px;height:48px;border-radius:14px;background:#fff;box-shadow:0 12px 30px rgba(7,22,56,.12);display:grid;place-items:center}.logo:after{content:"";width:22px;height:14px;border:5px solid #145dcd;border-radius:6px;transform:skew(-18deg)}.badge{display:inline-flex;align-items:center;border:1px solid rgba(20,93,205,.18);background:#fff;border-radius:999px;padding:10px 22px;font-size:18px;font-weight:800;color:#1767db;box-shadow:0 10px 30px rgba(7,22,56,.06)}.dark .badge{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.16);color:#cfe5ff}.h1{font-size:76px;line-height:1.04;font-weight:900;letter-spacing:-.055em;margin:42px 0 24px;max-width:920px}.h2{font-size:58px;line-height:1.08;font-weight:900;letter-spacing:-.04em;margin:18px 0 20px}.p{font-size:25px;line-height:1.45;color:#607086;max-width:760px}.dark .p{color:#c4d8ff}.grid{display:grid;gap:28px}.two{grid-template-columns:1fr 1fr}.three{grid-template-columns:repeat(3,1fr)}.card{background:rgba(255,255,255,.86);border:1px solid rgba(7,22,56,.08);border-radius:34px;box-shadow:0 24px 70px rgba(23,82,154,.12);padding:36px}.dark .card{background:rgba(18,59,138,.34);border-color:rgba(255,255,255,.13);box-shadow:0 24px 70px rgba(0,0,0,.18)}.card h3{font-size:30px;margin:0 0 12px;line-height:1.15}.card p{font-size:21px;line-height:1.38;margin:0;color:#67758b}.dark .card p{color:#bed2f7}.phone{width:394px;height:810px;border-radius:54px;background:#061634;border:10px solid #0b1731;box-shadow:0 35px 90px rgba(3,14,36,.45);padding:18px;position:relative}.phone:before{content:"";position:absolute;top:13px;left:50%;transform:translateX(-50%);width:118px;height:24px;background:#061634;border-radius:0 0 18px 18px;z-index:5}.screen{width:100%;height:100%;border-radius:38px;background:linear-gradient(180deg,#f8fbff,#edf6ff);overflow:hidden;position:relative}.status{height:52px;display:flex;justify-content:space-between;align-items:center;padding:0 26px;font-size:14px;font-weight:800;color:#071638}.mobile-head{padding:24px 26px 16px}.mobile-head h4{font-size:26px;margin:0 0 6px}.mobile-head p{font-size:14px;color:#718099;margin:0}.tabs{display:flex;gap:8px;padding:0 20px 18px;white-space:nowrap}.tab{font-size:12px;font-weight:800;border-radius:14px;background:#edf1f7;padding:10px 12px;color:#445169}.tab.active{background:#071638;color:white}.mobile-card{margin:0 20px 14px;background:white;border:1px solid #e0e6ef;border-radius:22px;padding:16px;box-shadow:0 10px 30px rgba(16,47,91,.08)}.row{display:flex;align-items:center;justify-content:space-between;gap:14px}.chip{display:inline-flex;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}.green{background:#d8f8e6;color:#0b7b45}.yellow{background:#fff1be;color:#8a6210}.blue{background:#dbeafe;color:#1155d9}.mobile-btn{position:absolute;bottom:22px;left:22px;right:22px;height:56px;background:#071638;color:white;border-radius:18px;display:grid;place-items:center;font-weight:900;font-size:16px}.desktop-frame{position:absolute;right:120px;bottom:115px;width:940px;height:560px;border-radius:36px;background:white;box-shadow:0 30px 90px rgba(23,82,154,.16);overflow:hidden;border:1px solid rgba(7,22,56,.08)}.desktop-frame img{width:100%;height:100%;object-fit:cover;object-position:left top}.mock-row{position:absolute;right:150px;top:128px;display:flex;gap:40px;align-items:flex-start}.flow{display:flex;gap:24px;margin-top:48px}.flow .step{width:292px;height:178px;border-radius:30px;background:#fff;padding:28px;border:1px solid rgba(7,22,56,.08);box-shadow:0 18px 48px rgba(23,82,154,.1)}.num{width:42px;height:42px;border-radius:14px;background:#1767db;color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:20px}.bigstat{font-size:62px;font-weight:900;color:#7acbff;line-height:1}.label{font-size:20px;color:#bcd2f7;margin-top:8px}.wire{position:absolute;border:1px solid rgba(255,255,255,.17);border-radius:42px}.mini-table{background:#fff;border:1px solid #dce4ef;border-radius:24px;overflow:hidden}.mini-table .tr{display:grid;grid-template-columns:1.2fr 1fr 1fr .8fr;padding:18px 22px;border-bottom:1px solid #edf1f6;font-size:18px}.mini-table .head{background:#f6f8fb;color:#6b778c;font-weight:900;text-transform:uppercase;font-size:14px;letter-spacing:.06em}.split{display:grid;grid-template-columns:720px 1fr;gap:80px;align-items:center;height:100%}.timeline{display:flex;align-items:center;margin-top:70px}.dot{width:22px;height:22px;border-radius:999px;background:#1c77ff;box-shadow:0 0 0 12px rgba(28,119,255,.14)}.line{height:3px;background:#cfe2f8;width:280px}.small-note{font-size:18px;color:#718099;line-height:1.4}.dark .small-note{color:#a9c2ee}.phone-stack{position:absolute;right:210px;top:150px;display:flex;gap:38px}.phone.small{transform:scale(.84);transform-origin:top left}.pillbar{display:inline-flex;gap:12px;border-radius:24px;padding:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14)}.pillbar span{padding:12px 18px;border-radius:16px;background:rgba(255,255,255,.1);font-weight:800;color:#dceaff}.pillbar span.active{background:#fff;color:#071638}.finalbox{position:absolute;right:128px;top:220px;width:720px}.check{display:flex;gap:18px;align-items:flex-start;margin:22px 0;font-size:24px;line-height:1.25}.check:before{content:"✓";width:34px;height:34px;border-radius:12px;background:#d8f8e6;color:#008a4e;display:grid;place-items:center;font-weight:900;flex:none}
+</style>
+</head>
+<body>
+<section class="slide light">
+  <div class="topline"><div class="logo"></div><div>TMS · мобильная адаптация</div></div>
+  <div class="badge" style="margin-top:120px">Производство · склад · заказы · аналитика</div>
+  <h1 class="h1">Переносим готовый модуль магазина в удобную мобильную версию</h1>
+  <p class="p">Десктопная система уже закрывает заказы, склады, коллекции, товары, остатки и контрагентов. Следующий шаг — дать руководителям и сотрудникам быстрый доступ с телефона без потери логики продукта.</p>
+  <div class="desktop-frame"><img src="assets/kanban.png" /></div>
+</section>
+
+<section class="slide dark bg-noise">
+  <div class="badge">Зачем мобильная версия</div>
+  <h2 class="h2" style="max-width:940px">Операционные решения не должны ждать, пока сотрудник сядет за компьютер</h2>
+  <div class="grid three" style="margin-top:72px;width:1120px">
+    <div class="card"><h3>Заказы всегда под рукой</h3><p>Проверить статус, дату, склад, контрагента и текущую отгрузку можно прямо с телефона.</p></div>
+    <div class="card"><h3>Склад без лишних звонков</h3><p>Остатки, товары и коллекции доступны в мобильном интерфейсе для быстрых уточнений.</p></div>
+    <div class="card"><h3>Меньше ручного контроля</h3><p>Менеджер видит, что требует внимания, а руководитель получает прозрачную картину.</p></div>
+  </div>
+  <div class="phone-stack">
+    <div class="phone"><div class="screen"><div class="status"><span>9:41</span><span>●●●</span></div><div class="mobile-head"><h4>Магазин</h4><p>Управление заказами</p></div><div class="tabs"><span class="tab active">Канбан</span><span class="tab">Склад</span><span class="tab">Товары</span></div><div class="mobile-card"><div class="row"><b>Заказ #1042</b><span class="chip yellow">Оплачен</span></div><p class="small-note">Москва · 21.07.2026</p></div><div class="mobile-card"><div class="row"><b>River House</b><span class="chip green">Готов</span></div><p class="small-note">3 пачки · склад ОБРАЗЦЫ</p></div><div class="mobile-btn">Открыть заказ</div></div></div>
+  </div>
+</section>
+
+<section class="slide light">
+  <div class="badge">Что переносим</div>
+  <h2 class="h2" style="max-width:920px">Сохраняем всю бизнес-логику десктопа, но упаковываем ее в быстрые мобильные сценарии</h2>
+  <div class="flow">
+    <div class="step"><div class="num">1</div><h3>Канбан заказов</h3><p class="small-note">Статусы, даты, фильтры, карточки заказов.</p></div>
+    <div class="step"><div class="num">2</div><h3>Склады</h3><p class="small-note">Создание складов, города, контакты, статусы.</p></div>
+    <div class="step"><div class="num">3</div><h3>Товары</h3><p class="small-note">Артикулы, коллекции, цена за м², изображения.</p></div>
+    <div class="step"><div class="num">4</div><h3>Остатки</h3><p class="small-note">Наличие, резерв, доступное количество.</p></div>
+    <div class="step"><div class="num">5</div><h3>Контрагенты</h3><p class="small-note">Юрлица, города, магазины, реквизиты.</p></div>
+  </div>
+  <div class="desktop-frame" style="right:128px;bottom:88px;width:760px;height:440px"><img src="assets/analytics.png" /></div>
+</section>
+
+<section class="slide dark bg-noise">
+  <div class="split">
+    <div>
+      <div class="badge">Мобильный канбан</div>
+      <h2 class="h2">Заказы отображаются как понятная лента действий</h2>
+      <p class="p">На телефоне не нужно копировать широкую таблицу. Мы превращаем канбан в список карточек: статус, контрагент, склад, город, даты и следующее действие.</p>
+      <div class="pillbar" style="margin-top:42px"><span class="active">Новый</span><span>Оплачен</span><span>Готов</span><span>Завершён</span></div>
+    </div>
+    <div class="phone"><div class="screen"><div class="status"><span>9:41</span><span>5G 82%</span></div><div class="mobile-head"><h4>Канбан заказов</h4><p>Сегодня · все склады</p></div><div class="mobile-card"><div class="row"><b>Поставка оборудования</b><span class="chip blue">Новый</span></div><p class="small-note">АвтоМаг · Москва</p><div class="row" style="margin-top:12px"><b>450K ₽</b><span>21.07</span></div></div><div class="mobile-card"><div class="row"><b>Продажа River House</b><span class="chip green">Завершён</span></div><p class="small-note">Алексей Малев · склад 1</p><div class="row" style="margin-top:12px"><b>1.0M ₽</b><span>02.04</span></div></div><div class="mobile-btn">Добавить заказ</div></div></div>
+  </div>
+</section>
+
+<section class="slide light">
+  <div class="badge">Склад и товары</div>
+  <h2 class="h2" style="max-width:860px">Формы становятся короче: сначала главное, детали — по раскрытию</h2>
+  <p class="p">На десктопе модальные окна широкие и подробные. В мобильной версии мы разделяем их на понятные блоки, чтобы сотрудник мог быстро добавить склад, товар или остаток без горизонтальной прокрутки.</p>
+  <div class="mock-row">
+    <div class="phone small"><div class="screen"><div class="status"><span>9:41</span><span>•••</span></div><div class="mobile-head"><h4>Добавить склад</h4><p>Основная информация</p></div><div class="mobile-card"><b>Название</b><p class="small-note">Склад ОБРАЗЦЫ</p></div><div class="mobile-card"><b>Город</b><p class="small-note">Москва</p></div><div class="mobile-card"><b>Доставка</b><p class="small-note">✓ доступна · ✓ самовывоз</p></div><div class="mobile-btn">Сохранить</div></div></div>
+    <div class="phone small"><div class="screen"><div class="status"><span>9:41</span><span>•••</span></div><div class="mobile-head"><h4>Добавить товар</h4><p>Карточка товара</p></div><div class="mobile-card"><b>Артикул</b><p class="small-note">00-0000302</p></div><div class="mobile-card"><b>Наименование</b><p class="small-note">Стенд 4 панели</p></div><div class="mobile-card"><b>Цена за м²</b><p class="small-note">1000.00 ₽</p></div><div class="mobile-btn">Сохранить</div></div></div>
+  </div>
+</section>
+
+<section class="slide dark bg-noise">
+  <div class="badge">Контрагенты</div>
+  <h2 class="h2" style="max-width:860px">Юрлица, магазины и реквизиты — в одном мобильном сценарии</h2>
+  <p class="p">Для контрагентов оставляем структуру десктопа, но разбиваем сложную форму на блоки: юрданные, города, видимые коллекции, магазины, реквизиты, склад, пользователь и доп. информация.</p>
+  <div class="grid three" style="position:absolute;left:128px;bottom:120px;width:1050px">
+    <div class="card"><h3>1. Юридические данные</h3><p>ИНН, КПП, ОГРН, юридический и фактический адрес.</p></div>
+    <div class="card"><h3>2. Торговая структура</h3><p>Города, магазины, склады и видимые коллекции.</p></div>
+    <div class="card"><h3>3. Доступы</h3><p>Пользователь, верификация, доп. информация и статусы.</p></div>
+  </div>
+  <div class="phone" style="position:absolute;right:230px;top:135px"><div class="screen"><div class="status"><span>9:41</span><span>LTE</span></div><div class="mobile-head"><h4>Контрагент</h4><p>Юридическое лицо</p></div><div class="mobile-card"><b>Юридическое имя</b><p class="small-note">ООО Ромашка</p></div><div class="mobile-card"><b>ИНН / КПП</b><p class="small-note">7700000000 · 770001001</p></div><div class="mobile-card"><b>Магазины</b><p class="small-note">+ Добавить магазин</p></div><div class="mobile-card"><b>Реквизиты</b><p class="small-note">+ Добавить реквизит</p></div><div class="mobile-btn">Сохранить</div></div></div>
+</section>
+
+<section class="slide light">
+  <div class="badge">Принцип интерфейса</div>
+  <h2 class="h2" style="max-width:900px">Не «уменьшаем десктоп», а собираем мобильный рабочий процесс</h2>
+  <div class="timeline"><div class="dot"></div><div class="line"></div><div class="dot"></div><div class="line"></div><div class="dot"></div><div class="line"></div><div class="dot"></div></div>
+  <div class="grid four" style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:48px">
+    <div class="card"><h3>Список</h3><p>Быстро найти объект: заказ, товар, склад, контрагента.</p></div>
+    <div class="card"><h3>Карточка</h3><p>Посмотреть ключевые данные без перегруза.</p></div>
+    <div class="card"><h3>Действие</h3><p>Создать, изменить, подтвердить или сохранить.</p></div>
+    <div class="card"><h3>Контроль</h3><p>Вернуться к статусам, аналитике и остаткам.</p></div>
+  </div>
+  <div class="mini-table" style="position:absolute;right:128px;bottom:120px;width:820px">
+    <div class="tr head"><div>Экран</div><div>Десктоп</div><div>Мобилка</div><div>Результат</div></div>
+    <div class="tr"><div>Заказы</div><div>Канбан</div><div>Лента</div><div>быстрее</div></div>
+    <div class="tr"><div>Товары</div><div>Таблица</div><div>Карточки</div><div>яснее</div></div>
+    <div class="tr"><div>Формы</div><div>Модалка</div><div>Шаги</div><div>меньше ошибок</div></div>
+  </div>
+</section>
+
+<section class="slide dark bg-noise">
+  <div class="badge">План работ</div>
+  <h2 class="h2" style="max-width:850px">Мобильная адаптация без остановки текущего десктопного модуля</h2>
+  <div class="grid two" style="width:980px;margin-top:54px">
+    <div class="card"><h3>01. Аудит экранов</h3><p>Фиксируем все состояния: списки, формы, таблицы, пустые состояния, фильтры, модалки.</p></div>
+    <div class="card"><h3>02. Мобильные сценарии</h3><p>Пересобираем UX под телефон: карточки, bottom actions, последовательные формы.</p></div>
+    <div class="card"><h3>03. Верстка и логика</h3><p>Подключаем мобильные компоненты к текущему функционалу и данным.</p></div>
+    <div class="card"><h3>04. Тестирование</h3><p>Проверяем реальные сценарии: заказ, склад, товар, остаток, контрагент.</p></div>
+  </div>
+  <div class="finalbox">
+    <div class="check">Сохраняем текущую структуру раздела «Магазин»</div>
+    <div class="check">Добавляем мобильные представления под ключевые задачи</div>
+    <div class="check">Делаем интерфейс пригодным для работы руководителя, менеджера и склада с телефона</div>
+  </div>
+</section>
+
+</body>
+</html>
