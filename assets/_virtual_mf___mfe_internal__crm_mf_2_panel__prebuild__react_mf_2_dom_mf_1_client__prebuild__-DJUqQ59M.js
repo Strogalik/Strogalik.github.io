@@ -1,0 +1,1 @@
+import{a as e,i as t,n,r}from"./_virtual_mf___mfe_internal__crm_mf_2_panel__loadShare__react_mf_2_dom_mf_1_client__loadShare__.mjs-WmiF2eOh.js";export{r as createRoot,n as default,t as hydrateRoot,e as version};

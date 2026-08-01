@@ -1,0 +1,1 @@
+import{t as e}from"./virtual_mf-exposes___mfe_internal__crm-panel__remoteEntry-_hash_-By6cZZqy.js";export{e as default};

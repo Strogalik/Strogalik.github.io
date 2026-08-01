@@ -1,0 +1,1 @@
+import{n as e,t}from"./virtual_mf-REMOTE_ENTRY_ID___mfe_internal__crm-panel__remoteEntry-_hash_-d9DfLbjU.js";export{t as get,e as init};

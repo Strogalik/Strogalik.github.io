@@ -1,0 +1,1 @@
+import{n as e,t}from"./_virtual_mf___mfe_internal__crm_mf_2_panel__H_A_I__hostAutoInit__H_A_I__-BfaqwOCt.js";export{t as hostInitPromise,e as initHost};

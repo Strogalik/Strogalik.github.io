@@ -1,0 +1,1 @@
+import{_n as e,gn as t,hn as n,vn as r}from"./_virtual_mf___mfe_internal__crm_mf_2_panel__loadShare___mf_0_tanstack_mf_1_react_mf_2_query__loadShare__.mjs-Cx9ut8Pn.js";export{n as Fragment,t as default,e as jsx,r as jsxs};
