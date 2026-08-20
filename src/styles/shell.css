@@ -1,0 +1,45 @@
+.app-shell { min-height: 100vh; display: grid; grid-template-columns: var(--sidebar) minmax(0, 1fr); }
+.sidebar { position: fixed; inset: 0 auto 0 0; width: var(--sidebar); background: linear-gradient(180deg, #030d2c 0%, var(--navy) 100%); color: white; padding: 24px 16px 18px; display: flex; flex-direction: column; z-index: 40; }
+.brand-block { display: flex; align-items: center; gap: 12px; padding: 2px 8px 28px; }
+.brand-mark { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 14px; background: rgba(255,255,255,.08); }
+.brand-mark img { width: 38px; }
+.brand-copy strong { display: block; font-size: 15px; letter-spacing: .01em; }
+.brand-copy span { display: block; font-size: 11px; color: rgba(255,255,255,.55); margin-top: 3px; }
+.side-nav { display: grid; gap: 4px; }
+.side-nav__item { min-height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 13px; border-radius: 13px; color: rgba(255,255,255,.62); font-size: 13px; font-weight: 600; transition: .16s ease; }
+.side-nav__item svg { width: 19px; height: 19px; }
+.side-nav__item:hover { background: rgba(255,255,255,.06); color: white; }
+.side-nav__item.is-active { background: linear-gradient(135deg, rgba(23,104,242,.95), rgba(15,82,186,.9)); color: white; box-shadow: 0 10px 25px rgba(15,82,186,.28); }
+.sidebar__bottom { margin-top: auto; display: grid; gap: 4px; }
+.nav-dot { margin-left: auto; min-width: 21px; height: 21px; display: grid; place-items: center; font-style: normal; font-size: 10px; border-radius: 999px; background: #ec5d67; color: #fff; }
+.profile-card { margin-top: 12px; padding: 11px; border-radius: 16px; background: rgba(255,255,255,.07); display: grid; grid-template-columns: 38px 1fr 18px; align-items: center; gap: 10px; }
+.profile-avatar, .top-avatar { background: linear-gradient(135deg, #1b54ac, #0f52ba); color: #fff; display: grid; place-items: center; font-size: 11px; font-weight: 700; }
+.profile-avatar { width: 38px; height: 38px; border-radius: 12px; }
+.profile-card strong { display: block; font-size: 11px; }
+.profile-card span { display: block; margin-top: 3px; font-size: 9px; color: rgba(255,255,255,.52); }
+.profile-card > svg { color: rgba(255,255,255,.45); width: 16px; }
+.main-area { grid-column: 2; min-width: 0; }
+.topbar { height: var(--topbar); position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,.92); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(227,231,239,.86); padding: 0 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.topbar__title { font-size: 15px; font-weight: 700; }
+.topbar__actions { display: flex; align-items: center; gap: 8px; }
+.global-search { height: 42px; min-width: 290px; border: 1px solid var(--line); background: var(--surface-soft); border-radius: 13px; color: var(--muted); display: flex; align-items: center; gap: 9px; padding: 0 11px; font-size: 11px; }
+.global-search svg { width: 17px; }
+.global-search kbd { margin-left: auto; border: 1px solid var(--line); background: white; border-radius: 7px; padding: 3px 6px; color: var(--muted); font-family: inherit; font-size: 9px; }
+.org-switch { height: 42px; border: 1px solid var(--line); background: white; border-radius: 13px; padding: 0 12px; display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; }
+.org-switch svg { width: 16px; }
+.org-switch svg:last-child { transform: rotate(90deg); width: 14px; color: var(--muted); }
+.icon-btn { width: 42px; height: 42px; border-radius: 13px; border: 1px solid var(--line); background: white; display: grid; place-items: center; position: relative; }
+.icon-btn svg { width: 18px; }
+.icon-btn.has-badge::after { content: ''; position: absolute; top: 8px; right: 8px; width: 7px; height: 7px; border-radius: 50%; background: var(--danger); border: 2px solid white; }
+.top-avatar { width: 42px; height: 42px; border-radius: 13px; }
+.workspace { min-height: calc(100vh - var(--topbar)); }
+.mobile-nav, .mobile-brand { display: none; }
+
+/* Mobile quick access: keep secondary destinations reachable without overloading
+   the five-item bottom navigation. Notifications remain available on every device. */
+.mobile-quick-link { display: none; }
+.icon-btn.is-active {
+  background: var(--surface-blue);
+  border-color: #d9e5f5;
+  color: var(--blue);
+}

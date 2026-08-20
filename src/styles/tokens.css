@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
+
+:root {
+  --bg: #f3f5f9;
+  --surface: #ffffff;
+  --surface-soft: #f8f9fc;
+  --surface-blue: #eef4ff;
+  --ink: #091532;
+  --muted: #6c7791;
+  --muted-2: #9aa4b8;
+  --line: #e3e7ef;
+  --navy: #000926;
+  --navy-2: #071744;
+  --blue: #0f52ba;
+  --blue-bright: #1768f2;
+  --powder: #a6c5d7;
+  --ice: #d6e6f3;
+  --success: #168f60;
+  --success-bg: #e4f7ee;
+  --warning: #9a6800;
+  --warning-bg: #fff2cf;
+  --danger: #d64b58;
+  --danger-bg: #ffe8ea;
+  --shadow: 0 16px 45px rgba(18, 36, 77, .08);
+  --shadow-soft: 0 8px 26px rgba(18, 36, 77, .055);
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 20px;
+  --r-xl: 24px;
+  --sidebar: 250px;
+  --topbar: 72px;
+}

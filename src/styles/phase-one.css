@@ -1,0 +1,474 @@
+/* TMS ASUB v0.5 — expansion screens + hard layout guardrails.
+   This file is intentionally loaded last. It contains only rules that must win
+   over earlier prototype styles. */
+
+/* --------------------------------------------------------------------------
+   Hard containment rules
+   -------------------------------------------------------------------------- */
+
+.panel,
+.registry-card,
+.report-card,
+.report-two-col > *,
+.reports-grid > *,
+.report-entity-list > *,
+.status-overview > *,
+.distribution-row,
+.mobile-doc-card,
+.mobile-trip-card {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Dashboard status donut: the content has its own bounded inner wrapper.
+   The label can never drift outside the white hole, even after mobile type
+   scaling. */
+.status-ring {
+  --status-ring-size: 116px;
+  --status-ring-hole: 82px;
+  inline-size: var(--status-ring-size);
+  block-size: var(--status-ring-size);
+  flex: 0 0 var(--status-ring-size);
+  overflow: hidden;
+}
+
+.status-ring::before {
+  inline-size: var(--status-ring-hole);
+  block-size: var(--status-ring-hole);
+}
+
+.status-ring > div {
+  z-index: 1;
+  inline-size: calc(var(--status-ring-hole) - 10px);
+  block-size: calc(var(--status-ring-hole) - 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.status-ring strong {
+  margin: 0;
+  line-height: 1;
+}
+
+.status-ring span {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  line-height: 1.15;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Stable EDO registry. Long legal names get room, statuses never collide. */
+.data-table--edo {
+  min-width: 1110px;
+  table-layout: fixed;
+}
+.data-table--edo th:nth-child(1), .data-table--edo td:nth-child(1) { width: 145px; }
+.data-table--edo th:nth-child(2), .data-table--edo td:nth-child(2) { width: 90px; }
+.data-table--edo th:nth-child(3), .data-table--edo td:nth-child(3) { width: 230px; }
+.data-table--edo th:nth-child(4), .data-table--edo td:nth-child(4) { width: 125px; }
+.data-table--edo th:nth-child(5), .data-table--edo td:nth-child(5) { width: 175px; }
+.data-table--edo th:nth-child(6), .data-table--edo td:nth-child(6) { width: 140px; }
+.data-table--edo th:nth-child(7), .data-table--edo td:nth-child(7) { width: 130px; }
+.data-table--edo th:nth-child(8), .data-table--edo td:nth-child(8) { width: 48px; }
+.data-table--edo td:nth-child(3) .table-main {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Reports hub
+   -------------------------------------------------------------------------- */
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.report-card {
+  position: relative;
+  min-height: 210px;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  grid-template-rows: 1fr auto;
+  gap: 16px;
+  padding: 22px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-2px);
+  border-color: #d4deed;
+  box-shadow: var(--shadow);
+}
+
+.report-card__icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: #e7f0ff;
+  color: var(--blue);
+}
+.report-card__icon svg { width: 22px; }
+.report-card__icon--green { background: var(--success-bg); color: var(--success); }
+.report-card__icon--navy { background: #e9ecf4; color: var(--navy-2); }
+.report-card__icon--amber { background: var(--warning-bg); color: var(--warning); }
+
+.report-card__copy { min-width: 0; }
+.report-card__copy .eyebrow { margin-bottom: 7px; }
+.report-card__copy h2 { margin-bottom: 8px; }
+.report-card__copy p {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: var(--text-body);
+  line-height: 1.55;
+}
+
+.report-card__metric {
+  grid-column: 2;
+  align-self: end;
+  min-width: 0;
+}
+.report-card__metric strong {
+  display: block;
+  font-size: 22px;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+}
+.report-card__metric span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-family: var(--font-data);
+  font-size: var(--text-small);
+  line-height: 1.35;
+}
+.report-card__arrow {
+  grid-column: 3;
+  grid-row: 1 / -1;
+  align-self: end;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--surface-blue);
+  color: var(--blue);
+}
+.report-card__arrow svg { width: 18px; }
+
+.reports-principle-panel {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.reports-principle-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--surface-blue);
+  color: var(--blue);
+}
+.reports-principle-icon svg { width: 22px; }
+.reports-principle-panel p {
+  max-width: 840px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: var(--text-body);
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   Report detail primitives
+   -------------------------------------------------------------------------- */
+
+.report-detail-page .metric-grid { margin-bottom: 14px; }
+.report-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.distribution-list { display: grid; gap: 17px; }
+.distribution-row { display: grid; gap: 7px; }
+.distribution-row__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.distribution-row__head > div {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.distribution-row__head span {
+  min-width: 0;
+  color: var(--ink);
+  font-size: var(--text-body);
+  line-height: 1.35;
+}
+.distribution-row__head strong {
+  flex: 0 0 auto;
+  font-size: var(--text-body);
+}
+.distribution-dot {
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.distribution-track {
+  width: 100%;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #edf1f6;
+}
+.distribution-fill {
+  display: block;
+  height: 100%;
+  min-width: 4px;
+  border-radius: inherit;
+  background: var(--blue);
+}
+.distribution-row small {
+  color: var(--muted);
+  font-family: var(--font-data);
+  font-size: var(--text-caption);
+}
+.distribution-dot--blue,.distribution-fill--blue{background:var(--blue)}
+.distribution-dot--powder,.distribution-fill--powder{background:#7fa8c3}
+.distribution-dot--green,.distribution-fill--green{background:#2fa878}
+.distribution-dot--amber,.distribution-fill--amber{background:#d49a2a}
+.distribution-dot--red,.distribution-fill--red{background:var(--danger)}
+.distribution-dot--navy,.distribution-fill--navy{background:var(--navy-2)}
+.distribution-dot--gray,.distribution-fill--gray{background:#c8cfdb}
+
+.report-insight-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 315px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #f6f9ff, #ffffff 68%);
+}
+.report-insight-card::after {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -65px;
+  top: -70px;
+  border-radius: 50%;
+  background: rgba(15,82,186,.08);
+}
+.report-insight-card--amber::after { background: rgba(212,154,42,.11); }
+.report-insight-card--navy::after { background: rgba(0,9,38,.08); }
+.report-insight-card > * { position: relative; z-index: 1; }
+.report-insight-card > strong {
+  margin-top: 3px;
+  font-size: clamp(34px, 3vw, 48px);
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+.report-insight-card h2 { margin-top: 5px; }
+.report-insight-card p {
+  margin: 14px 0 22px;
+  color: var(--muted);
+  font-size: var(--text-body);
+  line-height: 1.55;
+}
+.report-insight-card .btn { margin-top: auto; align-self: flex-start; }
+
+.report-entity-list { display: grid; }
+.report-entity-list > a {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) max-content minmax(180px, .8fr) minmax(120px, .5fr) 18px;
+  gap: 18px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+.report-entity-list > a:last-child { border-bottom: 0; }
+.report-entity-list > a > div { min-width: 0; }
+.report-entity-list > a > div:first-child strong { display:block; font-size:var(--text-body); }
+.report-entity-list > a > div:first-child span,
+.report-entity-list__meta span {
+  display:block;
+  margin-top:4px;
+  color:var(--muted);
+  font-family:var(--font-data);
+  font-size:var(--text-caption);
+  line-height:1.35;
+}
+.report-entity-list__meta strong {
+  display:block;
+  margin-top:4px;
+  overflow-wrap:anywhere;
+  font-size:var(--text-small);
+  line-height:1.35;
+}
+.report-risk-label {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  color:var(--warning);
+  font-size:var(--text-small);
+  font-weight:700;
+}
+.report-risk-label svg { width:16px; flex:0 0 16px; }
+.report-entity-list > a > svg { width:16px; color:var(--muted-2); }
+
+/* --------------------------------------------------------------------------
+   Responsive composition
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1180px) {
+  .report-two-col { grid-template-columns: 1fr; }
+  .report-insight-card { min-height: 250px; }
+  .report-entity-list > a { grid-template-columns: minmax(150px,1fr) max-content minmax(150px,.8fr) 18px; }
+  .report-entity-list > a > div:nth-child(4) { display: none; }
+}
+
+@media (max-width: 860px) {
+  .status-ring {
+    --status-ring-size: 108px;
+    --status-ring-hole: 78px;
+  }
+  .status-ring strong { font-size: 25px; }
+  .status-ring span { font-size: 13px; }
+
+  .reports-grid { grid-template-columns: 1fr; gap: 11px; }
+  .report-card {
+    min-height: 0;
+    grid-template-columns: 46px minmax(0,1fr) 38px;
+    grid-template-rows: auto auto;
+    gap: 13px;
+    padding: 17px;
+    border-radius: 19px;
+  }
+  .report-card__icon { width:46px;height:46px;border-radius:14px; }
+  .report-card__copy p { font-size: 15px; }
+  .report-card__metric { grid-column:2; }
+  .report-card__metric strong { font-size:20px; }
+  .report-card__metric span { font-size:14px; }
+  .report-card__arrow { grid-column:3;grid-row:1/-1;align-self:center;width:38px;height:38px; }
+
+  .reports-principle-panel { grid-template-columns:46px minmax(0,1fr);padding:17px; }
+  .reports-principle-icon { width:46px;height:46px;border-radius:14px; }
+  .reports-principle-panel p { font-size:15px; }
+
+  .report-two-col { grid-template-columns:1fr; }
+  .distribution-row__head span,
+  .distribution-row__head strong { font-size:15px; }
+  .distribution-row small { font-size:13px; }
+  .report-insight-card { min-height:0; }
+  .report-insight-card p { font-size:15px; }
+
+  .report-entity-list > a {
+    grid-template-columns: minmax(0,1fr) max-content 16px;
+    gap:10px;
+    padding:14px 0;
+  }
+  .report-entity-list__meta,
+  .report-risk-label { grid-column:1 / 3; }
+  .report-entity-list > a > svg { grid-column:3;grid-row:1;align-self:center; }
+  .report-entity-list > a > div:first-child strong { font-size:15px; }
+  .report-entity-list > a > div:first-child span,
+  .report-entity-list__meta span { font-size:13px; }
+  .report-entity-list__meta strong,
+  .report-risk-label { font-size:14px; }
+
+  /* New EDO cards use the same identity-left / status-right rule as EPD. */
+  .mobile-doc-card__head {
+    grid-template-columns:42px minmax(0,1fr) max-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-overview { gap: 18px; }
+  .status-ring {
+    --status-ring-size: 104px;
+    --status-ring-hole: 76px;
+  }
+  .status-ring strong { font-size:24px; }
+  .status-ring span { font-size:13px; }
+
+  .report-card {
+    grid-template-columns:44px minmax(0,1fr) 36px;
+    padding:15px;
+  }
+  .report-card__icon { width:44px;height:44px; }
+  .report-card__copy h2 { font-size:18px; }
+  .report-card__copy p { font-size:15px;line-height:1.5; }
+  .report-card__metric strong { font-size:19px; }
+
+  .reports-principle-panel { grid-template-columns:1fr; }
+  .reports-principle-icon { width:44px;height:44px; }
+
+  .report-entity-list > a { grid-template-columns:minmax(0,1fr) 16px; }
+  .report-entity-list > a > .status-pill { grid-column:1;grid-row:2;justify-self:start; }
+  .report-entity-list__meta,
+  .report-risk-label { grid-column:1 / -1; }
+  .report-entity-list > a > svg { grid-column:2;grid-row:1; }
+}
+
+@media (max-width: 350px) {
+  .status-overview { flex-direction:column;align-items:flex-start; }
+  .mobile-doc-card__head { grid-template-columns:42px minmax(0,1fr); }
+  .mobile-doc-card__head .status-pill { grid-column:2;justify-self:start;margin-top:5px; }
+}
+
+/* Mobile document metadata rows: labels keep a stable readable column and
+   values own the flexible/wrapping column. This prevents words such as
+   «Контрагент» from being broken just to preserve right-aligned values. */
+@media (max-width: 860px) {
+  .mobile-doc-card__body span {
+    display: grid;
+    grid-template-columns: 104px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    justify-content: normal;
+  }
+  .mobile-doc-card__body b {
+    min-width: 0;
+    white-space: nowrap;
+  }
+  .mobile-doc-card__body em {
+    min-width: 0;
+    color: var(--muted);
+    font-style: normal;
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 350px) {
+  .mobile-doc-card__body span { grid-template-columns: 94px minmax(0,1fr); gap: 10px; }
+}

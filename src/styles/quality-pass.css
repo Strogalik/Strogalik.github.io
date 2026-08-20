@@ -1,0 +1,954 @@
+/* TMS ASUB quality pass v0.3
+   Goals: readable information density, safe responsive containment,
+   stable document tables, and a collapsible desktop sidebar. */
+
+:root {
+  --font-display: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-data: 'Inter', system-ui, -apple-system, sans-serif;
+  --text-caption: .75rem;   /* 12px */
+  --text-small: .8125rem;   /* 13px */
+  --text-body: .875rem;     /* 14px */
+  --text-body-lg: 1rem;     /* 16px */
+  --text-title-sm: 1.125rem;/* 18px */
+  --text-title: 1.25rem;    /* 20px */
+  --sidebar-collapsed: 82px;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: var(--text-body);
+  line-height: 1.45;
+}
+
+/* Readability: the first prototype was visually too small for a data-heavy product. */
+h1 { font-size: clamp(30px, 2.25vw, 38px); line-height: 1.08; }
+h2 { font-size: var(--text-title); line-height: 1.25; }
+h3 { font-size: var(--text-body-lg); line-height: 1.3; }
+
+.page,
+.page > *,
+.main-area,
+.workspace,
+.panel,
+.registry-card,
+.panel__header,
+.detail-header,
+.detail-header__title,
+.detail-title-line,
+.edo-summary-grid > *,
+.trip-content-grid > *,
+.trip-hero-grid > *,
+.dashboard-main-grid > *,
+.dashboard-bottom-grid > *,
+.finance-report-grid > *,
+.info-grid > *,
+.relation-grid > *,
+.mobile-card-list > *,
+.mobile-doc-card__head > *,
+.mobile-doc-card__body > *,
+.mobile-trip-card__top > *,
+.mobile-trip-card__bottom > *,
+.edo-document-head > *,
+.approval-step,
+.entity-summary > *,
+.doc-row > * {
+  min-width: 0;
+}
+
+.page {
+  width: min(100%, 1540px);
+  max-width: 100%;
+}
+
+.page-header p {
+  font-size: var(--text-body);
+  line-height: 1.55;
+}
+
+.page-kicker,
+.eyebrow {
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.btn { font-size: var(--text-small); }
+.text-link { font-size: var(--text-small); }
+
+.metric-card__label { font-size: var(--text-caption); }
+.metric-card__meta { font-size: var(--text-caption); line-height: 1.4; }
+
+.status-pill {
+  min-height: 28px;
+  max-width: 100%;
+  padding: 0 10px;
+  font-size: 11px;
+  line-height: 1.2;
+  flex: 0 0 auto;
+}
+
+.search-field input,
+.chip,
+.segmented-tabs button,
+.detail-tabs button {
+  font-size: var(--text-small);
+}
+
+.back-link { font-size: var(--text-small); }
+.detail-header__title p { font-size: var(--text-body); }
+
+.info-grid > div > span { font-size: var(--text-caption); }
+.info-grid > div > strong,
+.info-grid > div > a { font-size: var(--text-body); line-height: 1.45; overflow-wrap: anywhere; }
+
+/* Dense data uses Inter, but stays at readable product sizes. */
+.data-table th {
+  font-family: var(--font-data);
+  font-size: var(--text-caption);
+  line-height: 1.3;
+  padding: 13px 14px;
+}
+
+.data-table td {
+  font-size: var(--text-small);
+  line-height: 1.35;
+  padding: 14px;
+}
+
+.entity-link strong,
+.table-main { font-size: var(--text-small); }
+.entity-link span,
+.table-muted { font-size: var(--text-caption); line-height: 1.35; }
+
+/* Registry containment. Never let an unbreakable pill collapse adjacent columns. */
+.desktop-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-gutter: stable;
+}
+
+.data-table {
+  min-width: 940px;
+}
+
+.data-table--epd {
+  min-width: 1080px;
+  table-layout: fixed;
+}
+
+.data-table--epd th:nth-child(1), .data-table--epd td:nth-child(1) { width: 145px; }
+.data-table--epd th:nth-child(2), .data-table--epd td:nth-child(2) { width: 90px; }
+.data-table--epd th:nth-child(3), .data-table--epd td:nth-child(3) { width: 220px; }
+.data-table--epd th:nth-child(4), .data-table--epd td:nth-child(4) { width: 150px; }
+.data-table--epd th:nth-child(5), .data-table--epd td:nth-child(5) { width: 125px; }
+.data-table--epd th:nth-child(6), .data-table--epd td:nth-child(6) { width: 150px; }
+.data-table--epd th:nth-child(7), .data-table--epd td:nth-child(7) { width: 130px; }
+.data-table--epd th:nth-child(8), .data-table--epd td:nth-child(8) { width: 48px; }
+
+.data-table--epd td:nth-child(3) .table-main,
+.data-table--epd td:nth-child(5) .table-main,
+.data-table--epd td:nth-child(6) > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-table--epd td:nth-child(4) .status-pill {
+  justify-content: center;
+}
+
+/* Collapsible sidebar: frees ~168px without changing the information architecture. */
+.app-shell.is-sidebar-collapsed {
+  --sidebar: var(--sidebar-collapsed);
+}
+
+.sidebar {
+  transition: width .2s ease, padding .2s ease;
+}
+
+.sidebar-collapse {
+  position: absolute;
+  top: 31px;
+  right: -14px;
+  width: 29px;
+  height: 29px;
+  border: 1px solid rgba(227,231,239,.95);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--navy);
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  box-shadow: 0 7px 20px rgba(8,20,48,.12);
+}
+
+.sidebar-collapse svg {
+  width: 15px;
+  height: 15px;
+  transform: rotate(180deg);
+  transition: transform .2s ease;
+}
+
+.is-sidebar-collapsed .sidebar-collapse svg { transform: none; }
+
+.side-nav__item { font-size: var(--text-small); }
+.brand-copy strong { font-size: var(--text-body); }
+.brand-copy span { font-size: var(--text-caption); }
+.profile-card strong { font-size: 12px; }
+.profile-card span { font-size: 11px; }
+.topbar__title { font-size: var(--text-body-lg); }
+.global-search,
+.org-switch { font-size: var(--text-caption); }
+
+.is-sidebar-collapsed .sidebar {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.is-sidebar-collapsed .brand-block {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.is-sidebar-collapsed .brand-copy,
+.is-sidebar-collapsed .side-nav__item > span,
+.is-sidebar-collapsed .profile-card > div:nth-child(2) {
+  display: none;
+}
+
+.is-sidebar-collapsed .side-nav__item {
+  width: 48px;
+  min-height: 48px;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.is-sidebar-collapsed .side-nav__item svg { width: 20px; height: 20px; }
+.is-sidebar-collapsed .nav-dot {
+  position: absolute;
+  right: 7px;
+  top: 6px;
+  min-width: 8px;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  font-size: 0;
+  border: 2px solid var(--navy);
+}
+.is-sidebar-collapsed .sidebar__bottom .side-nav__item { position: relative; }
+.is-sidebar-collapsed .profile-card {
+  grid-template-columns: 38px;
+  justify-content: center;
+  padding: 8px 0;
+}
+.is-sidebar-collapsed .profile-card > svg { display: none; }
+
+/* General overflow safety for long Russian legal/document text. */
+.edo-document-head h2,
+.edo-document-head p,
+.relation-grid strong,
+.relation-grid small,
+.entity-summary strong,
+.doc-row strong,
+.doc-row span,
+.mobile-doc-card strong,
+.mobile-doc-card span,
+.mobile-trip-card strong,
+.mobile-trip-card span,
+.approval-step strong,
+.approval-step small {
+  overflow-wrap: anywhere;
+}
+
+.relation-grid > a,
+.relation-grid > div {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.approval-card,
+.approval-flow {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* A little more legibility in operational content. */
+.entity-summary span,
+.finance-strip span,
+.document-version,
+.identity-card span,
+.identity-card small,
+.check-card span,
+.check-card small,
+.readiness-score span,
+.readiness-card li,
+.saby-info > div,
+.error-banner span,
+.edo-document-head p,
+.edo-amount span,
+.relation-grid span,
+.relation-grid small,
+.event-time,
+.event-list div div span,
+.profitability-list span,
+.chart-summary span,
+.attention-item span:not(.attention-item__marker),
+.status-ring span,
+.legend {
+  font-size: var(--text-caption);
+}
+
+.entity-summary strong,
+.doc-row strong,
+.identity-card strong,
+.check-card strong,
+.error-banner strong,
+.relation-grid strong,
+.event-list strong,
+.profitability-list strong,
+.doc-health-row strong {
+  font-size: var(--text-small);
+}
+
+.approval-step span { font-size: 11px; }
+.approval-step strong { font-size: 12px; line-height: 1.3; }
+.approval-step small { font-size: 11px; }
+
+@media (max-width: 1180px) and (min-width: 861px) {
+  /* Collapsing is especially useful on laptop widths; keep the control always available. */
+  .page { padding-left: 26px; padding-right: 26px; }
+}
+
+@media (max-width: 860px) {
+  body { font-size: var(--text-body); }
+
+  .page {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+    overflow-x: clip;
+  }
+
+  .sidebar-collapse { display: none; }
+
+  .mobile-brand strong { font-size: var(--text-small); }
+  .mobile-brand span { font-size: 11px; }
+  .mobile-nav__item { font-size: 10px; }
+
+  .page-header p { font-size: var(--text-small); }
+
+  .metric-card__label,
+  .metric-card__meta { font-size: var(--text-caption); }
+
+  .mobile-card-list {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mobile-trip-card,
+  .mobile-doc-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .mobile-trip-card__top {
+    flex-wrap: wrap;
+  }
+
+  .mobile-trip-card__top > div > span { font-size: 11px; }
+  .mobile-trip-card__top > div > strong { font-size: var(--text-body); line-height: 1.35; }
+  .mobile-trip-card__meta span { font-size: var(--text-caption); }
+  .mobile-trip-card__bottom div span { font-size: 11px; }
+  .mobile-trip-card__bottom div strong { font-size: var(--text-small); }
+
+  .mobile-doc-card__head {
+    grid-template-columns: 42px minmax(0, 1fr) auto;
+  }
+  .mobile-doc-card__head > div:nth-child(2) > span { font-size: 11px; }
+  .mobile-doc-card__head > div:nth-child(2) > strong { font-size: var(--text-body); line-height: 1.3; }
+  .mobile-doc-card__body span,
+  .mobile-doc-card__foot { font-size: var(--text-caption); }
+
+  .detail-title-line {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .detail-header__title { max-width: 100%; }
+
+  .edo-document-head {
+    min-width: 0;
+  }
+
+  .edo-document-head > div:last-child {
+    min-width: 0;
+  }
+
+  .edo-amount strong { font-size: 22px; }
+
+  /* Mobile EDO approval is a vertical timeline rather than a horizontally overflowing desktop flow. */
+  .approval-flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: 0;
+    overflow: visible;
+    padding: 2px 0;
+  }
+
+  .approval-flow > i {
+    width: 2px;
+    height: 18px;
+    flex: none;
+    margin: 2px 0 2px 20px;
+    background: var(--line);
+  }
+
+  .approval-step {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex: none;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    row-gap: 2px;
+    align-items: center;
+    text-align: left;
+    padding: 4px 0;
+  }
+
+  .approval-step > div {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 42px;
+    height: 42px;
+    margin: 0;
+  }
+
+  .approval-step > span {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .approval-step > strong {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .approval-step > small {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    align-self: center;
+    margin: 0;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .relation-grid > a,
+  .relation-grid > div {
+    grid-template-columns: 42px minmax(0,1fr) 16px;
+    width: 100%;
+  }
+
+  .finance-strip,
+  .segmented-tabs,
+  .detail-tabs {
+    max-width: 100%;
+    overscroll-behavior-x: contain;
+  }
+
+  .document-sheet__header {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 28px; }
+
+  .mobile-doc-card__head {
+    grid-template-columns: 42px minmax(0,1fr);
+  }
+
+  .mobile-doc-card__head .status-pill {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 4px;
+  }
+
+  .mobile-trip-card__top .status-pill {
+    max-width: 100%;
+  }
+
+  .approval-step {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .approval-step > small {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: left;
+    margin-top: 2px;
+  }
+
+  .edo-document-head {
+    gap: 12px;
+  }
+}
+
+/* Sticky <th> inside a horizontally scrollable registry creates a second scroll container
+   in Chromium and can make the header paint over the first data row. Keep the registry
+   header stable and non-overlapping; page/topbar remains sticky. */
+.desktop-table-wrap .data-table th {
+  position: static;
+  top: auto;
+}
+
+/* Remaining microcopy normalization: no routine operational content at 7–10px. */
+.status-pill { font-size: var(--text-caption); }
+.chart-label { font: 11px var(--font-data); }
+.status-breakdown > div { font-size: var(--text-caption); }
+.doc-health-row span { font-size: var(--text-caption); }
+.route-hero__cities > div:first-child span,
+.route-hero__cities > div:last-child span { font-size: 11px; }
+.route-hero__meta { font: var(--text-caption) var(--font-data); }
+.doc-row div > span { font-size: var(--text-caption); }
+.timeline-step span { font: var(--text-caption) var(--font-data); }
+.timeline-step strong { font-size: var(--text-caption); line-height: 1.4; }
+.timeline-step small { font: 11px var(--font-data); }
+.saby-info strong { font-size: var(--text-caption); }
+.cost-ring span { font-size: var(--text-caption); }
+.cost-list > div { font-size: var(--text-caption); }
+.global-search kbd { font-size: 10px; }
+
+.app-shell { transition: grid-template-columns .2s ease; }
+
+@media (max-width: 860px) {
+  .mobile-nav__item { font-size: 11px; }
+  .toolbar > * { min-width: 0; }
+  .status-overview { flex-wrap: wrap; }
+  .status-breakdown { min-width: 0; }
+  .route-hero,
+  .finance-strip,
+  .document-sheet,
+  .document-side,
+  .relation-panel,
+  .approval-card { width: 100%; max-width: 100%; min-width: 0; }
+  .route-hero__cities > div { min-width: 0; }
+  .route-hero__cities strong { display: block; overflow-wrap: anywhere; }
+  .person-vehicle-grid > *,
+  .checklist-grid > *,
+  .document-side > * { min-width: 0; max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .document-sheet__header { flex-wrap: wrap; }
+  .document-version { text-align: left; }
+}
+
+
+/* --------------------------------------------------------------------------
+   v0.3 — KPI tile composition + mobile legibility
+
+   KPI decision:
+   - metric icons are supportive, not leading content;
+   - labels, values and deltas share one left scan line;
+   - icon sits in the top-right corner so an expanded sidebar cannot steal the
+     text column from the metric itself;
+   - the tile remains visually identical whether the sidebar is open or closed.
+   -------------------------------------------------------------------------- */
+.metric-card {
+  position: relative;
+  display: block;
+  min-height: 132px;
+  padding: 17px 18px 16px;
+  overflow: hidden;
+}
+
+.metric-card__content {
+  min-width: 0;
+  width: 100%;
+}
+
+.metric-card__icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  opacity: .92;
+}
+
+.metric-card__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.metric-card__label {
+  max-width: calc(100% - 48px);
+  min-height: 34px;
+  margin: 0;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.metric-card__value {
+  width: 100%;
+  margin-top: 8px;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.metric-card__meta {
+  max-width: 100%;
+  margin-top: 8px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+/* Slightly denser card geometry while the full sidebar is visible on laptop
+   widths. Content still keeps a full-width metric line instead of becoming a
+   narrow icon + text two-column component. */
+@media (max-width: 1480px) and (min-width: 861px) {
+  .app-shell:not(.is-sidebar-collapsed) .metric-card {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .app-shell:not(.is-sidebar-collapsed) .metric-card__icon {
+    right: 12px;
+  }
+
+  .app-shell:not(.is-sidebar-collapsed) .metric-card__value {
+    font-size: clamp(20px, 1.6vw, 24px);
+  }
+}
+
+/* Mobile legibility pass.
+   For mobile we use a 16px reading baseline and keep ordinary secondary copy
+   at 13–14px. The layout is allowed to grow vertically instead of shrinking
+   text. This is deliberate for users with reduced visual acuity. */
+@media (max-width: 860px) {
+  :root {
+    --text-caption: .8125rem;   /* 13px */
+    --text-small: .875rem;      /* 14px */
+    --text-body: 1rem;          /* 16px */
+    --text-body-lg: 1.0625rem;  /* 17px */
+    --text-title-sm: 1.125rem;  /* 18px */
+    --text-title: 1.25rem;      /* 20px */
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    font-size: var(--text-body);
+    line-height: 1.5;
+  }
+
+  h1 { font-size: 30px; line-height: 1.12; }
+  h2 { font-size: 20px; line-height: 1.28; }
+  h3 { font-size: 17px; line-height: 1.35; }
+
+  .page-header p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .page-kicker,
+  .eyebrow {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .btn {
+    min-height: 46px;
+    font-size: 15px;
+  }
+
+  .text-link { font-size: 14px; }
+
+  .status-pill {
+    min-height: 30px;
+    padding-inline: 11px;
+    font-size: 13px;
+  }
+
+  .search-field input,
+  .search-field input::placeholder {
+    font-size: 16px;
+  }
+
+  .chip,
+  .segmented-tabs button,
+  .detail-tabs button {
+    font-size: 14px;
+  }
+
+  .mobile-brand strong { font-size: 14px; }
+  .mobile-brand span { font-size: 12px; }
+  .mobile-nav__item { font-size: 11px; }
+
+  .metric-card {
+    min-height: 126px;
+    padding: 15px;
+    border-radius: 18px;
+  }
+
+  .metric-card__icon {
+    top: 13px;
+    right: 13px;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .metric-card__label {
+    max-width: calc(100% - 44px);
+    min-height: 34px;
+    font-size: 13px;
+  }
+
+  .metric-card__value {
+    margin-top: 7px;
+    font-size: 23px;
+    line-height: 1.08;
+  }
+
+  .metric-card__meta {
+    margin-top: 7px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .mobile-trip-card__top > div > span { font-size: 13px; }
+  .mobile-trip-card__top > div > strong { font-size: 16px; line-height: 1.35; }
+  .mobile-trip-card__meta span { font-size: 14px; line-height: 1.4; }
+  .mobile-trip-card__bottom div span { font-size: 12px; }
+  .mobile-trip-card__bottom div strong { font-size: 14px; line-height: 1.35; }
+
+  .mobile-doc-card__head > div:nth-child(2) > span { font-size: 12px; }
+  .mobile-doc-card__head > div:nth-child(2) > strong { font-size: 16px; line-height: 1.35; }
+  .mobile-doc-card__body span { font-size: 14px; line-height: 1.45; }
+  .mobile-doc-card__foot { font-size: 13px; line-height: 1.4; }
+
+  .info-grid > div > span { font-size: 13px; }
+  .info-grid > div > strong,
+  .info-grid > div > a { font-size: 15px; line-height: 1.5; }
+
+  .entity-summary span,
+  .finance-strip span,
+  .document-version,
+  .identity-card span,
+  .identity-card small,
+  .check-card span,
+  .check-card small,
+  .readiness-score span,
+  .readiness-card li,
+  .saby-info > div,
+  .error-banner span,
+  .edo-document-head p,
+  .edo-amount span,
+  .relation-grid span,
+  .relation-grid small,
+  .event-time,
+  .event-list div div span,
+  .profitability-list span,
+  .chart-summary span,
+  .attention-item span:not(.attention-item__marker),
+  .status-ring span,
+  .legend {
+    font-size: 13px;
+  }
+
+  .entity-summary strong,
+  .doc-row strong,
+  .identity-card strong,
+  .check-card strong,
+  .error-banner strong,
+  .relation-grid strong,
+  .event-list strong,
+  .profitability-list strong,
+  .doc-health-row strong {
+    font-size: 14px;
+  }
+
+  .approval-step span { font-size: 12px; }
+  .approval-step strong { font-size: 14px; }
+  .approval-step small { font-size: 12px; }
+
+  .timeline-step span { font-size: 13px; }
+  .timeline-step strong { font-size: 14px; }
+  .timeline-step small { font-size: 12px; }
+
+  .route-hero__cities > div:first-child span,
+  .route-hero__cities > div:last-child span { font-size: 13px; }
+  .route-hero__meta { font-size: 13px; }
+  .doc-row div > span { font-size: 13px; }
+  .saby-info strong { font-size: 13px; }
+  .cost-list > div { font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 29px; }
+
+  /* Keep a two-column KPI rhythm, but never shrink the text to make it fit. */
+  .metric-grid--5,
+  .metric-grid--4 {
+    gap: 10px;
+  }
+
+  .metric-card {
+    min-height: 132px;
+    padding: 14px;
+  }
+
+  .metric-card__value { font-size: 22px; }
+}
+
+
+/* --------------------------------------------------------------------------
+   v0.4 — targeted polish: finance cost panel + status lozenges + mobile EPD
+   -------------------------------------------------------------------------- */
+
+/* Finance / cost structure
+   The right-hand finance card can be only ~280px wide even on a large desktop.
+   Treat the card itself as the responsive boundary instead of relying only on
+   viewport breakpoints. All labels stay inside the panel and may wrap rather
+   than pushing percentages beyond the card edge. */
+.cost-structure {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  container-type: inline-size;
+  grid-template-columns: minmax(96px, 120px) minmax(0, 1fr);
+}
+
+.cost-structure .cost-ring,
+.cost-structure .cost-list {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.cost-list {
+  width: 100%;
+}
+
+.cost-list > div {
+  min-width: 0;
+  width: 100%;
+  grid-template-columns: 8px minmax(0, 1fr) max-content;
+}
+
+.cost-list span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+}
+
+.cost-list strong {
+  min-width: max-content;
+  justify-self: end;
+  white-space: nowrap;
+}
+
+/* A narrow finance card stacks the ring over the legend. Container queries
+   make this work when the card is narrow on a wide desktop as well as mobile. */
+@container (max-width: 330px) {
+  .cost-structure .cost-ring {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 108px;
+    height: 108px;
+  }
+
+  .cost-structure .cost-ring::before {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cost-structure .cost-list {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+/* Status lozenges
+   Status width is content-driven. Horizontal padding is symmetrical and does
+   not depend on the table column. Carbon uses the same content-width model for
+   tags; TMS keeps a slightly roomier 10px inset. */
+.status-pill {
+  width: max-content;
+  min-width: 0;
+  max-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Give the EPD status column enough content width so a correct, content-sized
+   lozenge never borrows visual space from Signature or Saby. */
+.data-table--epd {
+  min-width: 1110px;
+}
+
+.data-table--epd th:nth-child(4),
+.data-table--epd td:nth-child(4) {
+  width: 170px;
+}
+
+/* Mobile EPD cards
+   Keep the short document status in the trailing position on normal phones.
+   This produces a faster one-row scan: document identity on the left, state on
+   the right. We only drop the status under the title on very narrow screens. */
+@media (max-width: 480px) {
+  .mobile-doc-card__head {
+    grid-template-columns: 42px minmax(0, 1fr) max-content;
+    align-items: center;
+  }
+
+  .mobile-doc-card__head .status-pill {
+    grid-column: auto;
+    justify-self: end;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .mobile-doc-card__head {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .mobile-doc-card__head .status-pill {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 5px;
+  }
+}
