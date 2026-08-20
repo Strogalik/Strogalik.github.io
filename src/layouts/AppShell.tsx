@@ -64,7 +64,7 @@ export function AppShell() {
   const [orgOpen, setOrgOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [organization, setOrganization] = useState(productConfig.organizationLabel);
+  const [organization, setOrganization] = useState<string>(productConfig.organizationLabel);
 
   useEffect(() => {
     window.localStorage.setItem('tms-sidebar-collapsed', sidebarCollapsed ? '1' : '0');
