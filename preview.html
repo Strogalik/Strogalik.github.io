@@ -1,174 +1,307 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TMS Commercial — 14 screens</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="src/styles.css"><style>@page{size:1920px 1080px;margin:0}.frame{break-after:page}.frame:last-child{break-after:auto}</style></head><body><main class="deck"><section class="frame hero" data-screen="01">
-  <div class="hero-copy">
-    <div class="eyebrow">АГЕНТСКАЯ ПРОГРАММА TMS</div>
-    <h1>Знаете бизнес, который уже не помещается в голове владельца?</h1>
-    <p class="hero-support">Помогите предпринимателю перейти от ручного управления к системе — и получайте долю платежей клиента 3 года.</p>
-    <div class="hero-finance">3 года · 20% → 15% → 10%</div>
-  </div>
-  <div class="hero-field" aria-hidden="true">
-    <svg class="hero-lines" viewBox="0 0 730 1080" preserveAspectRatio="none">
-      <path d="M110 205 H255 V270"/><path class="accent" d="M420 305 H555 V370"/>
-      <path d="M150 505 H290"/><path d="M430 575 H590"/>
-      <path d="M100 785 H255 V745"/><path class="accent" d="M445 855 H600"/>
-    </svg>
-    <div class="entity e-client"><i></i>Клиент</div>
-    <div class="entity e-comms accent"><i></i>Коммуникация</div>
-    <div class="entity e-task"><i></i>Задача</div>
-    <div class="entity e-owner"><i></i>Ответственный</div>
-    <div class="entity e-doc"><i></i>Документ</div>
-    <div class="entity e-pay accent"><i></i>Оплата</div>
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=1920"><title>TMS Commercial v0.5</title><style>:root{
+  --navy:#000926;
+  --sapphire:#0F52BA;
+  --sapphire-2:#226ED8;
+  --powder:#A6C5D7;
+  --ice:#D6E6F3;
+  --canvas:#F3F5F9;
+  --ink:#000926;
+  --muted:#51627a;
+  --line:#D9E3EB;
+  --shadow:0 20px 55px rgba(0,9,38,.09);
+  --shadow-soft:0 14px 36px rgba(0,9,38,.07);
+}
+*{box-sizing:border-box}
+html,body,#root{margin:0;min-width:1920px;background:#dde5ec;color:var(--ink);font-family:Montserrat,Arial,sans-serif}
+body{overflow-x:auto}
+.deck{width:1920px;margin:0 auto}
+.frame{position:relative;width:1920px;height:1080px;overflow:hidden;background:#fff}
+.safe{position:relative;width:1632px;height:1080px;margin:0 auto}
+.brand-mark{position:absolute;z-index:20;right:72px;top:58px;width:34px;height:34px;object-fit:contain}
+.brand-mark-hero{width:50px;height:50px;top:54px}
+.eyebrow{font-family:Montserrat,Arial,sans-serif;font-weight:600;font-size:20px;line-height:26px;letter-spacing:.045em;color:var(--sapphire);text-transform:uppercase}
+.eyebrow-light{color:var(--powder)}
+h1,h2,p{margin:0}
+h1,h2{font-family:Montserrat,Arial,sans-serif;font-weight:700;color:var(--navy);letter-spacing:-.035em}
+h1{font-size:92px;line-height:1.03}
+h2{font-size:68px;line-height:1.08}
+.support{font-family:Montserrat,Arial,sans-serif;font-weight:500;font-size:27px;line-height:1.46;color:#263550;letter-spacing:-.012em}
+.support-light{color:var(--ice)}
+
+/* 01 HERO */
+.hero{background:#fff}.hero-grid{display:grid;grid-template-columns:940px 1fr;gap:94px}.hero-copy{position:relative;padding-top:98px;height:1080px}.hero-copy h1{margin-top:42px;width:900px}.hero-support{margin-top:54px;width:760px}.hero-finance{position:absolute;left:0;bottom:78px;font-family:Montserrat,Arial,sans-serif;font-size:30px;line-height:38px;font-weight:600;color:var(--sapphire)}
+.hero-system{position:relative;margin-top:138px;height:788px;border-radius:24px;background:#f6f8fb;border:1px solid #e8eef3}
+.hero-system::before{content:"";position:absolute;inset:34px;border:1px solid rgba(166,197,215,.34);border-radius:16px;pointer-events:none}
+.fragment{position:absolute;background:#fff;border:1px solid #dfe8ef;border-radius:20px;box-shadow:var(--shadow-soft);padding:28px 30px;min-width:260px;min-height:126px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.fragment strong,.fragment span{font-family:Montserrat,Arial,sans-serif}.fragment strong{font-size:28px;line-height:34px;font-weight:600;color:var(--navy)}.fragment span{font-size:23px;line-height:30px;font-weight:500;color:#52627a}.fragment-a{left:64px;top:80px;width:310px}.fragment-b{right:52px;top:262px;width:300px}.fragment-c{left:74px;bottom:196px;width:286px}.fragment-d{right:66px;bottom:60px;width:270px}.accent-fragment{border-top:5px solid var(--sapphire)}
+
+/* 02 GROWTH */
+.growth{background:var(--canvas)}.split-head{display:grid;grid-template-columns:780px 1fr;gap:116px;padding-top:88px}.split-head h2{margin-top:28px}.split-head .support{padding-top:46px}.growth-stages{position:absolute;left:0;top:420px;width:1632px;height:325px;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;align-items:end}.growth-card{position:relative;height:100%;padding:0 10px 0 6px}.metric{font-family:Montserrat,Arial,sans-serif;font-size:84px;line-height:.95;font-weight:700;color:var(--navy);letter-spacing:-.04em}.micro{margin-top:10px;font-family:Montserrat,Arial,sans-serif;font-size:21px;line-height:28px;font-weight:500;color:#53637a}.growth-bars{position:absolute;left:8px;bottom:12px;width:88%;height:180px;border-left:4px solid var(--sapphire);border-bottom:4px solid var(--sapphire);padding:28px 0 0 22px}.growth-bars i{display:block;height:2px;background:var(--powder);margin:17px 0}.g1 .growth-bars{height:92px}.g2 .growth-bars{height:130px}.g3 .growth-bars{height:166px}.g4 .growth-bars{height:204px}.growth-categories{position:absolute;left:22px;top:770px;width:1544px;display:grid;grid-template-columns:1fr 1fr 2fr;font-family:Montserrat,Arial,sans-serif;font-weight:500;font-size:23px;line-height:30px;color:#526279}.manual-constant{position:absolute;left:0;bottom:80px;width:1632px;height:92px;border-top:1px solid #dbe5ed;display:flex;align-items:center;justify-content:space-between}.manual-items{display:flex;gap:42px;font-family:Montserrat,Arial,sans-serif;font-size:23px;line-height:30px;font-weight:500;color:#33445c}.manual-constant strong{font-family:Montserrat,Arial,sans-serif;font-size:24px;line-height:30px;font-weight:600;color:var(--sapphire)}
+
+/* 03 CHAOS */
+.chaos{background:var(--navy);color:#fff}.chaos-head{display:grid;grid-template-columns:930px 1fr;gap:120px;padding-top:82px}.chaos-head h2{margin-top:26px;color:#fff;font-size:66px}.chaos-head .support{padding-top:44px;font-size:27px}.chaos-steps{position:absolute;left:0;top:420px;width:1632px;height:560px}.chaos-band{position:absolute;height:104px;border-radius:18px;color:#fff;padding:0 30px;display:grid;grid-template-columns:minmax(480px,1fr) auto;align-items:center;gap:30px;box-shadow:0 16px 38px rgba(0,0,0,.16);border:1px solid rgba(166,197,215,.16)}.chaos-band strong{font-family:Montserrat,Arial,sans-serif;font-size:34px;line-height:42px;font-weight:600;letter-spacing:-.02em}.chaos-band>div{display:flex;justify-content:flex-end;gap:24px;flex-wrap:wrap}.chaos-band span{font-family:Montserrat,Arial,sans-serif;font-size:21px;line-height:28px;font-weight:500;color:var(--ice)}
+.cb1{top:0;left:486px;width:880px;background:#10265a}.cb2{top:112px;left:344px;width:1048px;background:#0d214f}.cb3{top:224px;left:208px;width:1194px;background:#0b1d49}.cb4{top:336px;left:98px;width:1316px;background:#091943}.cb5{top:448px;left:0;width:1432px;background:#07153a;border-left:5px solid var(--sapphire)}
+
+/* 04 FRAGMENTED */
+.fragmented{background:#fff}.fragmented-layout{display:grid;grid-template-columns:690px 1fr;gap:110px}.fragmented-copy{padding-top:88px}.fragmented-copy h2{margin-top:28px;font-size:66px}.fragmented-copy .support{margin-top:42px;font-size:26px}.fragmented-workspace{position:relative;margin-top:190px;height:720px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:48px}.f-window{background:var(--canvas);border:1px solid #d9e4ec;border-radius:24px;box-shadow:var(--shadow-soft);padding:34px 36px;display:flex;flex-direction:column;justify-content:center;gap:16px}.f-window strong,.f-window span{font-family:Montserrat,Arial,sans-serif}.f-window strong{font-size:30px;line-height:38px;font-weight:600;color:var(--navy)}.f-window span{font-size:23px;line-height:30px;font-weight:500;color:#4b5c73}.owner-summary{position:absolute;left:50%;top:50%;width:294px;height:192px;transform:translate(-50%,-50%);background:var(--navy);border-radius:24px;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 24px 58px rgba(0,9,38,.16);z-index:5}.owner-summary strong{font-size:34px;line-height:42px;font-weight:700}.owner-summary span{font-family:Montserrat,Arial,sans-serif;font-size:22px;line-height:28px;font-weight:500;color:var(--ice);margin-top:6px}
+
+/* 05 PRODUCT REVEAL */
+.reveal{background:var(--canvas)}.reveal-head{display:grid;grid-template-columns:700px 1fr;gap:120px;padding-top:76px}.reveal-head h2{margin-top:24px;font-size:70px}.reveal-copy{padding-top:42px}.reveal-copy .support{font-size:26px}.reveal-copy>strong{display:block;margin-top:24px;font-size:24px;line-height:32px;font-weight:600;color:var(--sapphire)}.system-window{position:absolute;left:0;top:344px;width:1632px;height:650px;background:#fff;border-radius:28px;box-shadow:var(--shadow);overflow:hidden;border:1px solid #dce5ed}.system-topbar{height:82px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 30px}.traffic{display:flex;gap:10px}.traffic i{width:13px;height:13px;border-radius:50%;display:block}.traffic i:nth-child(1){background:#FF5F57}.traffic i:nth-child(2){background:#FEBC2E}.traffic i:nth-child(3){background:#28C840}.ai-label{font-family:Inter,Arial,sans-serif;font-size:20px;line-height:28px;font-weight:500;color:var(--ice);padding:8px 12px;border:1px solid rgba(166,197,215,.28);border-radius:10px}.system-body{height:568px;display:grid;grid-template-columns:1fr 1fr 1fr;background:#f7f9fb}.system-area{position:relative;padding:34px 34px;border-right:1px solid #dce5ed}.system-area:last-child{border-right:0}.area-label{font-family:Inter,Arial,sans-serif;font-weight:600;font-size:20px;line-height:26px;letter-spacing:.055em;color:#53647a;margin-bottom:26px}.context-list{border-top:1px solid #d7e1e9;border-bottom:1px solid #d7e1e9}.primary-list{border-top:4px solid var(--sapphire)}.context-row{min-height:92px;border-bottom:1px solid #dce5ed;display:flex;align-items:center;padding:0 22px;font-family:Montserrat,Arial,sans-serif;font-size:24px;line-height:31px;font-weight:500;color:#4d5e75;background:rgba(255,255,255,.48)}.context-row:last-child{border-bottom:0}.context-row.main-row{font-weight:600;color:var(--navy);background:#fff}.analytics-row{display:flex;justify-content:space-between;gap:22px}.spark{display:flex;gap:6px;align-items:flex-end;height:28px}.spark i{display:block;width:7px;background:var(--sapphire);border-radius:3px}.spark i:nth-child(1){height:10px}.spark i:nth-child(2){height:18px}.spark i:nth-child(3){height:13px}.spark i:nth-child(4){height:25px}.spark i:nth-child(5){height:21px}
+
+/* 06 OWNER */
+.owner-result{background:#fff}.calm-layout{text-align:center}.calm-head{padding-top:108px}.calm-head h2{margin-top:28px;font-size:72px;line-height:1.08}.calm-head .support{margin-top:32px;font-size:27px}.transformation-grid{position:absolute;left:0;bottom:150px;width:1632px;display:grid;grid-template-columns:1fr 72px 1fr 72px 1fr;align-items:center;gap:16px;text-align:left}.transformation{min-height:168px;display:flex;align-items:center;font-family:Montserrat,Arial,sans-serif;color:var(--navy)}.t1{font-size:26px;line-height:35px;font-weight:500;padding:30px;background:var(--canvas);border:1px solid #dfe8ee;border-radius:22px}.t2{font-size:30px;line-height:39px;font-weight:600;padding:30px;background:#fff;border:1px solid #dbe5ed;border-radius:22px;box-shadow:var(--shadow-soft)}.t3{font-size:46px;line-height:1.16;font-weight:700;letter-spacing:-.025em;padding-left:12px}.simple-arrow{font-family:Montserrat,Arial,sans-serif;font-size:38px;line-height:1;color:var(--powder);text-align:center}
+
+/* 07 AGENT */
+.agent-role{background:var(--canvas)}.agent-copy{padding-top:78px}.agent-copy h2{margin-top:26px;font-size:64px}.agent-copy .support{margin-top:28px;font-size:26px}.agent-rail{position:absolute;left:0;top:500px;width:1632px;height:384px;background:#fff;border:1px solid #d9e4ec;border-radius:26px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);overflow:hidden}.rail-stage{position:relative;padding:62px 34px 26px;display:flex;align-items:flex-start;border-right:1px solid #dce5ed;border-bottom:1px solid #dce5ed}.rail-stage:nth-child(3),.rail-stage:nth-child(6){border-right:0}.rail-stage:nth-child(n+4){border-bottom:0}.rail-stage::before{content:attr(data-step);position:absolute;left:34px;top:24px;font-family:Montserrat,Arial,sans-serif;font-size:30px;line-height:34px;font-weight:700;color:var(--sapphire)}.rail-stage span{font-family:Montserrat,Arial,sans-serif;font-size:26px;line-height:34px;font-weight:600;color:#263851}.rail-final{background:var(--sapphire);display:block;color:#fff}.rail-final::before,.rail-final span{color:#fff}.rail-final blockquote{margin:16px 0 0;font-family:Montserrat,Arial,sans-serif;font-size:20px;line-height:28px;font-weight:500;color:#fff}.anti-band{position:absolute;left:0;bottom:58px;height:90px;width:1010px;background:var(--navy);border-radius:18px;color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px;box-shadow:0 18px 44px rgba(0,9,38,.11)}.anti-band span,.anti-band strong{font-family:Montserrat,Arial,sans-serif;font-size:23px;line-height:30px}.anti-band b{font-size:32px;color:var(--sapphire-2)}.anti-band strong{font-weight:600}
+
+/* 08 RESPONSIBILITY */
+.responsibility{background:#fff}.responsibility-head{padding-top:78px}.responsibility-head h2{font-size:64px}.responsibility-head .support{font-size:27px;padding-top:45px}.responsibility-grid{position:absolute;left:0;top:480px;width:1632px;height:430px;display:grid;grid-template-columns:560px 210px 1fr;gap:28px;align-items:center}.role-surface{height:365px;border-radius:26px;padding:34px 38px;box-shadow:var(--shadow-soft);border:1px solid #dce5ec}.agent-surface{background:var(--canvas)}.tms-surface{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 22px 52px rgba(0,9,38,.14)}.role-label{font-family:Montserrat,Arial,sans-serif;font-size:22px;line-height:28px;font-weight:600;letter-spacing:.055em;color:var(--sapphire);margin-bottom:30px}.tms-surface .role-label{color:var(--powder)}.role-list{display:flex;flex-direction:column;gap:8px}.role-list span{font-family:Montserrat,Arial,sans-serif;font-size:30px;line-height:38px;font-weight:600;color:var(--navy)}.meeting-surface{height:196px;background:#fff;border:1px solid var(--powder);border-top:5px solid var(--sapphire);border-radius:20px;display:flex;flex-direction:column;justify-content:center;align-items:center;box-shadow:var(--shadow)}.meeting-surface strong{font-size:36px;line-height:42px;font-weight:700}.meeting-surface span{font-family:Montserrat,Arial,sans-serif;font-size:21px;line-height:28px;font-weight:500;color:#58687e;margin-top:12px}.tms-role-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:44px;row-gap:14px}.tms-role-grid span{font-family:Montserrat,Arial,sans-serif;font-size:29px;line-height:36px;font-weight:500;color:#fff}.tms-last{grid-column:1/-1}
+
+/* 09 REWARD */
+.reward{background:var(--navy)}.reward-head{display:grid;grid-template-columns:1050px 1fr;gap:80px;padding-top:80px}.reward-head h2{color:#fff;margin-top:26px;font-size:64px;line-height:1.12}.reward-head .support{padding-top:48px;font-size:27px}.reward-cards{position:absolute;left:0;top:500px;width:1632px;height:392px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}.reward-card{background:#10265a;border:1px solid rgba(166,197,215,.18);border-radius:28px;padding:34px 38px;color:#fff;box-shadow:0 20px 50px rgba(0,0,0,.16);position:relative;overflow:hidden}.reward-card::after{content:"";position:absolute;right:-42px;top:-62px;width:180px;height:180px;border-radius:50%;background:rgba(166,197,215,.07)}.sapphire-card{background:var(--sapphire)}.year-label{font-family:Montserrat,Arial,sans-serif;font-size:24px;line-height:30px;font-weight:600;color:var(--powder);letter-spacing:.035em}.reward-card strong{display:block;font-family:Montserrat,Arial,sans-serif;font-size:154px;line-height:.92;font-weight:700;letter-spacing:-.06em;margin-top:48px}.reward-card span{position:absolute;left:38px;bottom:38px;font-family:Montserrat,Arial,sans-serif;font-size:21px;line-height:28px;font-weight:500;color:var(--ice)}
+
+/* 10 ECONOMICS */
+.economics{background:#fff}.economics-head{display:grid;grid-template-columns:840px 1fr;gap:140px;padding-top:74px}.economics-head h2{margin-top:24px;font-size:62px}.calc-note{padding-top:42px}.calc-note strong{display:block;font-family:Montserrat,Arial,sans-serif;font-size:24px;line-height:32px;font-weight:600;color:var(--navy)}.calc-note span{display:block;margin-top:12px;font-family:Montserrat,Arial,sans-serif;font-size:21px;line-height:30px;font-weight:500;color:#53637a}.economics-main{position:absolute;left:0;top:378px;width:1632px}.payment-block{display:flex;align-items:baseline;gap:28px}.payment-block span{font-family:Montserrat,Arial,sans-serif;font-size:21px;line-height:28px;font-weight:500;color:#53637a}.payment-block strong{font-family:Montserrat,Arial,sans-serif;font-size:50px;line-height:58px;font-weight:700;letter-spacing:-.035em}.year-math{display:grid;grid-template-columns:1fr 64px 1fr 64px 1fr;gap:14px;margin-top:30px;align-items:center}.money-block{height:128px;background:var(--canvas);border:1px solid #e0e8ee;border-radius:20px;padding:22px 26px;box-shadow:0 12px 32px rgba(0,9,38,.05)}.money-block strong{display:block;font-family:Montserrat,Arial,sans-serif;font-size:50px;line-height:55px;font-weight:700;letter-spacing:-.035em;white-space:nowrap}.money-block span{display:block;margin-top:14px;font-family:Montserrat,Arial,sans-serif;font-size:21px;line-height:28px;font-weight:500;color:#53637a}.math-sign{font-family:Montserrat,Arial,sans-serif;font-size:50px;font-weight:700;text-align:center;color:var(--sapphire)}.result-math{display:flex;align-items:baseline;margin-top:26px;gap:24px}.result-math .equals{font-family:Montserrat,Arial,sans-serif;font-size:58px;font-weight:700;color:var(--powder)}.result-math strong{font-family:Montserrat,Arial,sans-serif;font-size:124px;line-height:.96;font-weight:700;letter-spacing:-.055em}.result-math span{font-family:Montserrat,Arial,sans-serif;font-size:27px;line-height:34px;font-weight:600;color:var(--sapphire)}.economics-summary{position:absolute;left:0;bottom:62px;width:1632px;height:110px;background:var(--navy);border-radius:20px;display:grid;grid-template-columns:1fr 1fr;color:#fff;box-shadow:0 18px 42px rgba(0,9,38,.11)}.economics-summary div{display:flex;align-items:center;padding:0 36px;gap:20px}.economics-summary div+div{border-left:1px solid rgba(166,197,215,.22)}.economics-summary span{font-family:Montserrat,Arial,sans-serif;font-size:23px;line-height:30px;font-weight:500;color:var(--powder)}.economics-summary strong{font-family:Montserrat,Arial,sans-serif;font-size:37px;line-height:44px;font-weight:700}
+
+/* 11 MOSCOW */
+.moscow{background:var(--canvas)}.region-layout{display:grid;grid-template-columns:680px 1fr;gap:100px}.region-copy{padding-top:82px}.region-copy h2{font-size:62px;margin-top:24px;line-height:1.13}.region-copy .support{font-size:26px;margin-top:32px}.business-board{margin-top:118px;height:840px;display:flex;flex-direction:column;gap:22px}.business-six{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,112px);gap:16px}.business-window{background:#fff;border:1px solid #dfe7ee;border-radius:20px;box-shadow:var(--shadow-soft);padding:26px 28px;font-family:Montserrat,Arial,sans-serif;font-size:26px;line-height:34px;font-weight:600;color:#34455c;display:flex;align-items:center}.selected-owner{flex:1;background:var(--navy);color:#fff;border-radius:24px;padding:32px 36px;box-shadow:0 22px 52px rgba(0,9,38,.14)}.selected-owner>span{font-family:Montserrat,Arial,sans-serif;font-size:23px;line-height:30px;font-weight:600;color:var(--powder)}.selected-owner>strong{display:block;margin-top:22px;font-size:40px;line-height:1.12;font-weight:700;letter-spacing:-.03em}.owner-facts{display:flex;gap:14px;margin-top:32px}.owner-facts i{font-family:Montserrat,Arial,sans-serif;font-style:normal;font-size:21px;line-height:28px;font-weight:500;color:var(--ice);padding:0;background:none}.owner-facts i+i::before{content:"·";color:var(--powder);margin-right:14px}
+
+/* 12 TVER */
+.tver{background:#dfeaf2}.tver-layout{display:grid;grid-template-columns:760px 1fr;gap:120px}.known-companies{padding-top:100px}.known-title{font-family:Montserrat,Arial,sans-serif;font-size:20px;line-height:28px;font-weight:600;letter-spacing:.035em;color:#53647a}.known-grid{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,150px);gap:18px}.known-window,.tms-transition{background:#fff;border:1px solid rgba(166,197,215,.65);border-radius:20px;box-shadow:var(--shadow-soft);padding:28px;display:flex;align-items:center;font-family:Montserrat,Arial,sans-serif;font-size:26px;line-height:34px;font-weight:600;color:#34455c}.selected-known{display:block;border-left:6px solid var(--sapphire);padding-left:26px}.selected-known strong{display:block;font-size:30px;line-height:38px;color:var(--navy)}.selected-known span{display:block;margin-top:12px;font-size:21px;line-height:28px;font-weight:500;color:var(--sapphire)}.tms-transition{background:var(--navy);color:#fff;display:block}.tms-transition strong{display:block;font-size:32px;line-height:38px}.tms-transition span{display:block;margin-top:12px;font-size:21px;line-height:28px;font-weight:500;color:var(--powder)}.tver-copy{padding-top:82px}.tver-copy h2{margin-top:26px;font-size:61px;line-height:1.12}.tver-copy .support{margin-top:30px;font-size:26px}
+
+/* 13 PAYOUT */
+.payout{background:#fff}.payout-head{padding-top:80px}.payout-head h2{font-size:64px;margin-top:24px}.payout-head .support{margin-top:28px;font-size:26px}.operation-window{position:absolute;left:0;top:520px;width:1632px;height:390px;background:var(--canvas);border:1px solid #dfe7ee;border-radius:26px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);overflow:hidden}.operation-stage{position:relative;padding:62px 34px 30px;display:flex;align-items:flex-start;border-right:1px solid #d9e2e9;border-bottom:1px solid #d9e2e9}.operation-stage:nth-child(3),.operation-stage:nth-child(6){border-right:0}.operation-stage:nth-child(n+4){border-bottom:0}.operation-stage::before{content:attr(data-step);position:absolute;left:34px;top:24px;font-family:Montserrat,Arial,sans-serif;font-size:21px;line-height:28px;font-weight:600;color:var(--sapphire)}.operation-stage span{font-family:Montserrat,Arial,sans-serif;font-size:26px;line-height:34px;font-weight:600;color:#34455c}.payout-stage{background:var(--sapphire);display:block;color:#fff}.payout-stage::before,.payout-stage span{color:#fff}.payout-stage strong{display:block;margin-top:12px;font-family:Montserrat,Arial,sans-serif;font-size:38px;line-height:44px;font-weight:700;color:#fff}.payout-note{position:absolute;left:0;bottom:68px;font-family:Montserrat,Arial,sans-serif;font-size:21px;line-height:28px;font-weight:500;color:#53637a}
+
+/* 14 FINALE */
+.finale{background:var(--navy);color:#fff}.finale-layout{text-align:center}.final-kicker{padding-top:64px;font-family:Montserrat,Arial,sans-serif;font-size:28px;line-height:1.38;font-weight:600;color:#fff}.win-grid{margin-top:42px;display:grid;grid-template-columns:repeat(3,1fr);gap:70px;text-align:center}.win-grid>div{position:relative;padding:0 18px 44px}.win-grid span{font-family:Montserrat,Arial,sans-serif;font-size:21px;line-height:28px;font-weight:600;color:var(--powder)}.win-grid p{margin-top:12px;font-family:Montserrat,Arial,sans-serif;font-size:25px;line-height:1.4;font-weight:500;color:var(--ice)}.win-grid i{position:absolute;left:50%;bottom:0;transform:translateX(-50%);font-family:Montserrat,Arial,sans-serif;font-style:normal;font-size:28px;color:var(--sapphire-2)}.brand-statement{margin-top:24px}.brand-statement h2{font-size:94px;line-height:.99;color:#fff;letter-spacing:-.055em}.final-logo{display:block;width:50px;height:50px;object-fit:contain;margin:20px auto 0}.brand-statement p{margin-top:12px;font-family:Montserrat,Arial,sans-serif;font-size:23px;line-height:30px;color:var(--powder);font-weight:500}.presentation-cta{margin-top:34px;display:flex;flex-direction:column;align-items:center}.presentation-cta span{font-family:Montserrat,Arial,sans-serif;font-size:29px;line-height:1.35;font-weight:500;color:var(--ice)}.presentation-cta strong{margin-top:10px;font-family:Montserrat,Arial,sans-serif;font-size:43px;line-height:1.15;font-weight:700;color:#fff}
+
+.single-screen .frame{display:none}.single-screen .frame[data-screen="01"]{display:block}
+@page{size:20in 11.25in;margin:0}
+@media print{html,body{min-width:0!important;background:#fff!important}.deck{width:1920px!important;margin:0!important}.frame{break-after:page;page-break-after:always}.frame:last-child{break-after:auto;page-break-after:auto}}
+</style></head><body><main class="deck">
+<section class="frame hero" data-screen="01">
+  <img class="brand-mark brand-mark-hero" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">АГЕНТСКАЯ ПРОГРАММА TMS</div>
+      <h1>Знаете бизнес,<br>который уже не<br>помещается в<br>голове владельца?</h1>
+      <p class="support hero-support">Помогите предпринимателю перейти от ручного<br>управления к системе — и получайте долю<br>платежей клиента 3 года.</p>
+      <div class="hero-finance">3 года · 20% → 15% → 10%</div>
+    </div>
+    <div class="hero-system">
+      <div class="fragment fragment-a"><strong>Клиент</strong><span>Коммуникация</span></div>
+      <div class="fragment fragment-b"><strong>Задача</strong><span>Ответственный</span></div>
+      <div class="fragment fragment-c"><strong>Документ</strong></div>
+      <div class="fragment fragment-d accent-fragment"><strong>Оплата</strong></div>
+    </div>
   </div>
 </section>
+
 <section class="frame growth" data-screen="02">
-  <div class="growth-head">
-    <div><div class="eyebrow">РОСТ БИЗНЕСА</div><h2>Бизнес вырос. Способ управления остался прежним.</h2></div>
-    <p>Клиентов, людей и процессов становится больше. А компания всё ещё держится на памяти владельца, таблицах, чатах и ручных договорённостях.</p>
-  </div>
-  <div class="growth-visual">
-    <div class="growth-axis"></div>
-    <div class="growth-stage gs1"><strong>5</strong><span>человек</span><div class="stack s1"></div></div>
-    <div class="growth-stage gs2"><strong>15</strong><span>человек</span><div class="stack s2"></div></div>
-    <div class="growth-stage gs3"><strong>40</strong><span>человек</span><div class="stack s3"></div></div>
-    <div class="growth-stage gs4"><strong>80</strong><span>человек</span><div class="stack s4"></div></div>
-    <div class="growth-label gl1">Клиенты</div><div class="growth-label gl2">Люди</div><div class="growth-label gl3">Процессы</div>
-    <div class="manual-strip"><span>голова владельца</span><span>чаты</span><span>Excel</span><span>1С</span><b>тот же способ управления</b></div>
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe">
+    <div class="split-head">
+      <div>
+        <div class="eyebrow">РОСТ БИЗНЕСА</div>
+        <h2>Бизнес вырос. Способ<br>управления остался<br>прежним.</h2>
+      </div>
+      <p class="support">Клиентов, людей и процессов становится<br>больше. А компания всё ещё держится на<br>памяти владельца, таблицах, чатах и<br>ручных договорённостях.</p>
+    </div>
+    <div class="growth-stages">
+      <div class="growth-card g1"><div class="metric">5</div><div class="micro">человек</div><div class="growth-bars"><i></i><i></i></div></div>
+      <div class="growth-card g2"><div class="metric">15</div><div class="micro">человек</div><div class="growth-bars"><i></i><i></i><i></i></div></div>
+      <div class="growth-card g3"><div class="metric">40</div><div class="micro">человек</div><div class="growth-bars"><i></i><i></i><i></i><i></i></div></div>
+      <div class="growth-card g4"><div class="metric">80</div><div class="micro">человек</div><div class="growth-bars"><i></i><i></i><i></i><i></i><i></i></div></div>
+    </div>
+    <div class="growth-categories"><span>Клиенты</span><span>Люди</span><span>Процессы</span></div>
+    <div class="manual-constant"><div class="manual-items"><span>голова владельца</span><span>чаты</span><span>Excel</span><span>1С</span></div><strong>тот же способ управления</strong></div>
   </div>
 </section>
+
 <section class="frame chaos" data-screen="03">
-  <div class="chaos-head">
-    <div class="eyebrow eyebrow-light">РУЧНОЕ УПРАВЛЕНИЕ ПЕРЕСТАЁТ СПРАВЛЯТЬСЯ</div>
-    <h2>Если это звучит знакомо — бизнес начинает перерастать ручное управление.</h2>
-    <p>Не диагноз. Сигналы того, что привычный способ управления перестаёт выдерживать сложность компании.</p>
-  </div>
-  <div class="chaos-field">
-    <svg class="chaos-lines" viewBox="0 0 1640 620" preserveAspectRatio="none">
-      <path d="M98 132 H255 V188"/><path class="accent" d="M1225 110 H1375 V175"/>
-      <path d="M590 300 H790 V250"/><path class="accent" d="M235 490 H390"/>
-      <path d="M1240 472 H1395 V420"/><path d="M910 535 H1045"/>
-    </svg>
-    <div class="cq large cq1">«Что там с клиентом?»</div>
-    <div class="cq medium cq2">«Спроси у Олега»</div>
-    <div class="cq large cq3">«Я думал, он уже сделал»</div>
-    <div class="cq medium cq4">«Где последняя версия?»</div>
-    <div class="cq medium cq5">«Я забыл перезвонить»</div>
-    <div class="cf cf1"><i></i>Клиент</div><div class="cf cf2 accent"><i></i>Коммуникация</div>
-    <div class="cf cf3"><i></i>Задача</div><div class="cf cf4"><i></i>Ответственный</div>
-    <div class="cf cf5"><i></i>Документ</div><div class="cf cf6"><i></i>Оплата</div>
-    <div class="cf op op1">15 чатов</div><div class="cf op op2">Excel + 1С</div>
-    <div class="cf op op3">задачи на словах</div><div class="cf op op4">договорённости в личке</div>
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe">
+    <div class="chaos-head">
+      <div>
+        <div class="eyebrow eyebrow-light">РУЧНОЕ УПРАВЛЕНИЕ ПЕРЕСТАЁТ СПРАВЛЯТЬСЯ</div>
+        <h2>Если это звучит знакомо —<br>бизнес начинает перерастать<br>ручное управление.</h2>
+      </div>
+      <p class="support support-light">Не диагноз. Сигналы того, что<br>привычный способ управления<br>перестаёт выдерживать сложность<br>компании.</p>
+    </div>
+    <div class="chaos-steps">
+      <div class="chaos-band cb1"><strong>«Спроси у Олега»</strong><div><span>Excel + 1С</span><span>Коммуникация</span></div></div>
+      <div class="chaos-band cb2"><strong>«Что там с клиентом?»</strong><div><span>Клиент</span><span>Задача</span></div></div>
+      <div class="chaos-band cb3"><strong>«Я думал, он уже сделал»</strong><div><span>Ответственный</span></div></div>
+      <div class="chaos-band cb4"><strong>«Где последняя версия?»</strong><div><span>Оплата</span><span>задачи на словах</span></div></div>
+      <div class="chaos-band cb5"><strong>«Я забыл перезвонить»</strong><div><span>Документ</span><span>15 чатов</span><span>договорённости в личке</span></div></div>
+    </div>
   </div>
 </section>
+
 <section class="frame fragmented" data-screen="04">
-  <div class="fragmented-copy">
-    <div class="eyebrow">РАЗРОЗНЕННЫЙ БИЗНЕС</div>
-    <h2>Проблема не в том, что сервисов мало. Они не работают как одна система.</h2>
-    <p>CRM знает одно. 1С — другое. Чаты хранят договорённости. А общую картину по-прежнему собирает человек.</p>
-  </div>
-  <div class="islands">
-    <svg viewBox="0 0 980 700" preserveAspectRatio="none"><path d="M455 330 L220 175"/><path d="M470 345 L730 160"/><path d="M460 370 L250 525"/><path d="M490 375 L760 535"/></svg>
-    <div class="island ia"><span>Клиент</span><span>Коммуникация</span></div>
-    <div class="island ib"><span>Задача</span><span>Ответственный</span></div>
-    <div class="island ic"><span>Документ</span></div>
-    <div class="island id"><span>Оплата</span></div>
-    <div class="manual-owner"><b>Владелец</b><small>собирает контекст вручную</small></div>
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe fragmented-layout">
+    <div class="fragmented-copy">
+      <div class="eyebrow">РАЗРОЗНЕННЫЙ БИЗНЕС</div>
+      <h2>Проблема не в том,<br>что сервисов мало.<br>Они не работают как<br>одна система.</h2>
+      <p class="support">CRM знает одно. 1С — другое. Чаты хранят<br>договорённости. А общую картину по-<br>прежнему собирает человек.</p>
+    </div>
+    <div class="fragmented-workspace">
+      <div class="f-window fw1"><strong>Клиент</strong><span>Коммуникация</span></div>
+      <div class="f-window fw2"><strong>Задача</strong><span>Ответственный</span></div>
+      <div class="f-window fw3"><strong>Документ</strong></div>
+      <div class="f-window fw4"><strong>Оплата</strong></div>
+      <div class="owner-summary"><strong>Владелец</strong><span>собирает контекст</span><span>вручную</span></div>
+    </div>
   </div>
 </section>
+
 <section class="frame reveal" data-screen="05">
-  <div class="reveal-head">
-    <div><div class="eyebrow">TMS</div><h2>Один бизнес. Одна система.</h2></div>
-    <div class="reveal-copy"><p>TMS связывает весь рабочий контур бизнеса. Все части работают в общем контексте.</p><strong>TMS — операционная система для малого бизнеса.</strong></div>
-  </div>
-  <div class="system-field">
-    <div class="zone-label zl1">CLIENT CONTEXT</div><div class="zone-label zl2">EXECUTION CONTEXT</div><div class="zone-label zl3">BUSINESS CONTEXT</div>
-    <div class="zone-divider zd1"></div><div class="zone-divider zd2"></div>
-    <div class="ai-context"><i></i>AI понимает общий контекст</div>
-    <svg class="system-links" viewBox="0 0 1600 600" preserveAspectRatio="none">
-      <path d="M240 230 L430 175"/><path class="accent" d="M240 230 L455 390"/>
-      <path class="cross" d="M455 390 L690 205"/><path d="M690 205 L760 390"/>
-      <path d="M760 390 L1000 390"/><path class="cross" d="M1000 390 L1190 330"/>
-      <path d="M1190 330 L1390 315"/><path class="cross" d="M1390 315 L1270 455"/>
-      <path class="aihint" d="M760 62 v38"/><path class="aihint" d="M820 62 v38"/><path class="aihint" d="M880 62 v38"/>
-    </svg>
-    <div class="sn n-client"><i></i>Клиент</div><div class="sn n-comms"><i></i>Коммуникация</div><div class="sn n-deal accent"><i></i>Сделка</div>
-    <div class="sn n-meeting"><i></i>Встреча</div><div class="sn n-task"><i></i>Задача</div><div class="sn n-resp"><i></i>Ответственный</div>
-    <div class="sn n-doc accent"><i></i>Документ</div><div class="sn n-payment"><i></i>Оплата</div><div class="sn n-analytics accent"><i></i>Аналитика / результат</div>
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe">
+    <div class="reveal-head">
+      <div><div class="eyebrow">TMS</div><h2>Один бизнес. Одна<br>система.</h2></div>
+      <div class="reveal-copy"><p class="support">TMS связывает весь рабочий контур бизнеса.<br>Все части работают в общем контексте.</p><strong>TMS — операционная система для малого бизнеса.</strong></div>
+    </div>
+    <div class="system-window">
+      <div class="system-topbar"><div class="traffic" aria-hidden="true"><i></i><i></i><i></i></div><div class="ai-label">AI понимает общий контекст</div></div>
+      <div class="system-body">
+        <section class="system-area client-area"><div class="area-label">CLIENT CONTEXT</div><div class="context-list primary-list"><div class="context-row main-row">Клиент</div><div class="context-row">Коммуникация</div><div class="context-row">Сделка</div></div></section>
+        <section class="system-area execution-area"><div class="area-label">EXECUTION CONTEXT</div><div class="context-list"><div class="context-row main-row">Встреча</div><div class="context-row">Задача</div><div class="context-row">Ответственный</div></div></section>
+        <section class="system-area business-area"><div class="area-label">BUSINESS CONTEXT</div><div class="context-list"><div class="context-row main-row">Документ</div><div class="context-row">Оплата</div><div class="context-row analytics-row"><span>Аналитика / результат</span><div class="spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div></div></section>
+      </div>
+    </div>
   </div>
 </section>
-<section class="frame calm" data-screen="06">
-  <div class="calm-center">
-    <div class="eyebrow">РЕЗУЛЬТАТ ДЛЯ СОБСТВЕННИКА</div>
-    <h2>Бизнес под контролем.<br/>Без постоянного контроля.</h2>
-    <p>Компания перестаёт держаться на одном человеке — процессы понятны команде и видимы владельцу.</p>
-  </div>
-  <div class="calm-journey"><span>«Я всё контролирую сам»</span><b>→</b><span>«Команда работает как система»</span><b>→</b><strong>«Я управляю бизнесом,<br/>а не бизнес управляет мной»</strong></div>
-</section>
-<section class="frame agent" data-screen="07">
-  <div class="agent-head"><div class="eyebrow">РОЛЬ АГЕНТА</div><h2>Вы замечаете момент, когда ручное управление начинает мешать бизнесу расти.</h2><p>Помогаете собственнику увидеть проблему, понять её цену и всерьёз захотеть перейти к системе.</p></div>
-  <div class="agent-journey">
-    <div class="journey-line"></div>
-    <div class="js j1"><i></i><span>увидел проблему</span></div><div class="js j2"><i></i><span>поговорил с собственником</span></div>
-    <div class="js j3"><i></i><span>помог увидеть цену</span></div><div class="js j4"><i></i><span>объяснил идею одной системы</span></div>
-    <div class="js j5"><i></i><span>сформировал серьёзный интерес</span></div><div class="js j6 accent"><i></i><span>встреча с TMS</span></div>
-    <div class="client-state">«Проблема понятна. Она мешает бизнесу. Хочу обсудить решение».</div>
-  </div>
-  <div class="anti-example">«Вот телефон знакомого» <b>≠</b> качественно приведённый клиент</div>
-</section>
-<section class="frame handoff" data-screen="08">
-  <div class="handoff-head"><div class="eyebrow">ГРАНИЦА ОТВЕТСТВЕННОСТИ</div><h2>Вам не нужно внедрять TMS. Нужно правильно начать разговор.</h2><p>Вы создаёте понимание и интерес. Всё, что требует продуктовой и технической экспертизы, берёт на себя TMS.</p></div>
-  <div class="relay">
-    <div class="relay-side agent-side"><label>АГЕНТ</label><div class="relay-steps"><span>найти</span><b>→</b><span>поговорить</span><b>→</b><span>заинтересовать</span><b>→</b><span>познакомить</span></div></div>
-    <div class="relay-handoff"><i></i><strong>Встреча</strong><small>точка передачи</small></div>
-    <div class="relay-side tms-side"><label>TMS</label><div class="relay-steps"><span>диагностика</span><b>→</b><span>решение</span><b>→</b><span>демо</span><b>→</b><span>расчёт</span><b>→</b><span>договор</span><b>→</b><span>внедрение</span><b>→</b><span>сопровождение</span></div></div>
+
+<section class="frame owner-result" data-screen="06">
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe calm-layout">
+    <div class="calm-head">
+      <div class="eyebrow">РЕЗУЛЬТАТ ДЛЯ СОБСТВЕННИКА</div>
+      <h2>Бизнес под контролем.<br>Без постоянного контроля.</h2>
+      <p class="support">Компания перестаёт держаться на одном человеке —<br>процессы понятны команде и видимы владельцу.</p>
+    </div>
+    <div class="transformation-grid">
+      <div class="transformation t1">«Я всё контролирую сам»</div><div class="simple-arrow">→</div>
+      <div class="transformation t2">«Команда работает как<br>система»</div><div class="simple-arrow">→</div>
+      <div class="transformation t3">«Я управляю<br>бизнесом,<br>а не бизнес управляет<br>мной»</div>
+    </div>
   </div>
 </section>
-<section class="frame timeline" data-screen="09">
-  <div class="timeline-head"><div><div class="eyebrow eyebrow-light">ВОЗНАГРАЖДЕНИЕ</div><h2>Привели сильного клиента — получаете долю его платежей 3 года.</h2></div><p>Отсчёт начинается с первого оплачиваемого периода клиента.</p></div>
-  <div class="years">
-    <div class="year y1"><small>1-Й ГОД</small><strong>20%</strong><span>месяцы 1–12</span></div>
-    <div class="year y2"><small>2-Й ГОД</small><strong>15%</strong><span>месяцы 13–24</span></div>
-    <div class="year y3"><small>3-Й ГОД</small><strong>10%</strong><span>месяцы 25–36</span></div>
-    <div class="months-line"><i class="m0"></i><i class="m12"></i><i class="m24"></i><i class="m36"></i></div>
+
+<section class="frame agent-role" data-screen="07">
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe">
+    <div class="agent-copy"><div class="eyebrow">РОЛЬ АГЕНТА</div><h2>Вы замечаете момент, когда<br>ручное управление начинает<br>мешать бизнесу расти.</h2><p class="support">Помогаете собственнику увидеть проблему, понять<br>её цену и всерьёз захотеть перейти к системе.</p></div>
+    <div class="agent-rail">
+      <div class="rail-stage" data-step="01"><span>увидел проблему</span></div>
+      <div class="rail-stage" data-step="02"><span>поговорил с<br>собственником</span></div>
+      <div class="rail-stage" data-step="03"><span>помог увидеть цену</span></div>
+      <div class="rail-stage" data-step="04"><span>объяснил идею одной<br>системы</span></div>
+      <div class="rail-stage" data-step="05"><span>сформировал<br>серьёзный интерес</span></div>
+      <div class="rail-stage rail-final" data-step="06"><span>встреча с TMS</span><blockquote>«Проблема понятна. Она мешает<br>бизнесу. Хочу обсудить<br>решение».</blockquote></div>
+    </div>
+    <div class="anti-band"><span>«Вот телефон знакомого»</span><b>≠</b><strong>качественно приведённый клиент</strong></div>
   </div>
 </section>
-<section class="frame finance" data-screen="10">
-  <div class="finance-head"><div><div class="eyebrow">ПРИМЕР ЭКОНОМИКИ</div><h2>Один хороший клиент уже даёт ощутимый результат.</h2></div><div class="disclaimer"><strong>Пример расчёта. Не тариф TMS.</strong><span>При сохранении указанного размера платежей клиента.</span></div></div>
-  <div class="finance-input"><span>Платёж клиента</span><strong>100 000 ₽ / мес.</strong></div>
-  <div class="formula-row"><div class="term"><strong>240 000 ₽</strong><span>1-й год</span></div><div class="operator">+</div><div class="term"><strong>180 000 ₽</strong><span>2-й год</span></div><div class="operator">+</div><div class="term"><strong>120 000 ₽</strong><span>3-й год</span></div></div>
-  <div class="formula-result"><span class="equals">=</span><strong>540 000 ₽</strong><span class="result-period">за 3 года</span></div>
-  <div class="portfolio-row"><div><span>1 клиент</span><b>→</b><strong>540 000 ₽</strong></div><div><span>3 клиента</span><b>→</b><strong>1 620 000 ₽</strong></div></div>
+
+<section class="frame responsibility" data-screen="08">
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe">
+    <div class="split-head responsibility-head"><div><div class="eyebrow">ГРАНИЦА ОТВЕТСТВЕННОСТИ</div><h2>Вам не нужно внедрять<br>TMS. Нужно правильно<br>начать разговор.</h2></div><p class="support">Вы создаёте понимание и интерес. Всё,<br>что требует продуктовой и технической<br>экспертизы, берёт на себя TMS.</p></div>
+    <div class="responsibility-grid">
+      <div class="role-surface agent-surface"><div class="role-label">АГЕНТ</div><div class="role-list"><span>найти</span><span>поговорить</span><span>заинтересовать</span><span>познакомить</span></div></div>
+      <div class="meeting-surface"><strong>Встреча</strong><span>точка передачи</span></div>
+      <div class="role-surface tms-surface"><div class="role-label">TMS</div><div class="tms-role-grid"><span>диагностика</span><span>решение</span><span>демо</span><span>расчёт</span><span>договор</span><span>внедрение</span><span class="tms-last">сопровождение</span></div></div>
+    </div>
+  </div>
 </section>
+
+<section class="frame reward" data-screen="09">
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe">
+    <div class="reward-head"><div><div class="eyebrow eyebrow-light">ВОЗНАГРАЖДЕНИЕ</div><h2>Привели сильного клиента —<br>получаете долю его платежей<br>3 года.</h2></div><p class="support support-light">Отсчёт начинается с первого<br>оплачиваемого периода клиента.</p></div>
+    <div class="reward-cards">
+      <div class="reward-card"><div class="year-label">1-Й ГОД</div><strong>20%</strong><span>месяцы 1–12</span></div>
+      <div class="reward-card"><div class="year-label">2-Й ГОД</div><strong>15%</strong><span>месяцы 13–24</span></div>
+      <div class="reward-card sapphire-card"><div class="year-label">3-Й ГОД</div><strong>10%</strong><span>месяцы 25–36</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="frame economics" data-screen="10">
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe">
+    <div class="economics-head"><div><div class="eyebrow">ПРИМЕР ЭКОНОМИКИ</div><h2>Один хороший клиент<br>уже даёт ощутимый<br>результат.</h2></div><div class="calc-note"><strong>Пример расчёта. Не тариф TMS.</strong><span>При сохранении указанного размера платежей клиента.</span></div></div>
+    <div class="economics-main">
+      <div class="payment-block"><span>Платёж клиента</span><strong>100 000 ₽ / мес.</strong></div>
+      <div class="year-math">
+        <div class="money-block"><strong>240 000 ₽</strong><span>1-й год</span></div><div class="math-sign">+</div>
+        <div class="money-block"><strong>180 000 ₽</strong><span>2-й год</span></div><div class="math-sign">+</div>
+        <div class="money-block"><strong>120 000 ₽</strong><span>3-й год</span></div>
+      </div>
+      <div class="result-math"><div class="equals">=</div><strong>540 000 ₽</strong><span>за 3 года</span></div>
+    </div>
+    <div class="economics-summary"><div><span>1 клиент →</span><strong>540 000 ₽</strong></div><div><span>3 клиента →</span><strong>1 620 000 ₽</strong></div></div>
+  </div>
+</section>
+
 <section class="frame moscow" data-screen="11">
-  <div class="region-copy"><div class="eyebrow">МОСКВА</div><h2>В Москве важен не список контактов. Важен доступ к подходящим собственникам.</h2><p>Один качественный разговор с владельцем растущей компании ценнее десятков формальных знакомств.</p></div>
-  <div class="wide-field">
-    <div class="biz bz1">Производство</div><div class="biz bz2">Дистрибуция</div><div class="biz bz3">Сервисный бизнес</div><div class="biz bz4">B2B-услуги</div><div class="biz bz5">Оптовая компания</div><div class="biz bz6">Проектный бизнес</div>
-    <div class="owner-target"><span>Подходящий собственник</span><strong>Компания уже выросла<br/>из ручного управления</strong><div class="mini-contour"><i>клиенты</i><i>процессы</i><i>команда</i></div></div>
-    <svg viewBox="0 0 880 820" preserveAspectRatio="none"><path d="M135 150 L430 350"/><path d="M195 355 L430 350"/><path d="M215 610 L430 350"/><path class="accent" d="M430 350 L680 480"/></svg>
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe region-layout">
+    <div class="region-copy"><div class="eyebrow">МОСКВА</div><h2>В Москве важен не<br>список контактов.<br>Важен доступ к<br>подходящим<br>собственникам.</h2><p class="support">Один качественный разговор с владельцем<br>растущей компании ценнее десятков<br>формальных знакомств.</p></div>
+    <div class="business-board">
+      <div class="business-six">
+        <div class="business-window">Производство</div><div class="business-window">B2B-услуги</div>
+        <div class="business-window">Дистрибуция</div><div class="business-window">Оптовая компания</div>
+        <div class="business-window">Сервисный бизнес</div><div class="business-window">Проектный бизнес</div>
+      </div>
+      <div class="selected-owner"><span>Подходящий собственник</span><strong>Компания уже<br>выросла<br>из ручного<br>управления</strong><div class="owner-facts"><i>клиенты</i><i>процессы</i><i>команда</i></div></div>
+    </div>
   </div>
 </section>
+
 <section class="frame tver" data-screen="12">
-  <div class="local-field">
-    <div class="local-title">КОМПАНИИ, КОТОРЫЕ ВЫ ДЕЙСТВИТЕЛЬНО ЗНАЕТЕ</div>
-    <div class="local-company lc1">Производство</div><div class="local-company lc2">Оптовая компания</div><div class="local-company lc3 selected">Сервисный бизнес <small>подходящий момент</small></div><div class="local-company lc4">B2B-услуги</div><div class="local-company lc5">Проектная компания</div>
-    <div class="local-tms"><i></i><strong>TMS</strong><span>переход к системе</span></div>
-    <svg viewBox="0 0 780 760" preserveAspectRatio="none"><path class="accent" d="M410 360 H620"/></svg>
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe tver-layout">
+    <div class="known-companies"><div class="known-title">КОМПАНИИ, КОТОРЫЕ ВЫ ДЕЙСТВИТЕЛЬНО ЗНАЕТЕ</div>
+      <div class="known-grid">
+        <div class="known-window">Производство</div><div class="known-window">Оптовая компания</div>
+        <div class="known-window selected-known"><strong>Сервисный бизнес</strong><span>подходящий момент</span></div><div class="known-window">B2B-услуги</div>
+        <div class="known-window">Проектная компания</div><div class="tms-transition"><strong>TMS</strong><span>переход к системе</span></div>
+      </div>
+    </div>
+    <div class="tver-copy"><div class="eyebrow">ТВЕРЬ</div><h2>Не нужен широкий<br>охват. Нужны<br>несколько компаний,<br>которые вы<br>действительно<br>хорошо знаете.</h2><p class="support">Если вы понимаете, где в их бизнесе ручное<br>управление уже стало ограничением, этого<br>достаточно для правильного первого<br>разговора.</p></div>
   </div>
-  <div class="tver-copy"><div class="eyebrow">ТВЕРЬ</div><h2>Не нужен широкий охват. Нужны несколько компаний, которые вы действительно хорошо знаете.</h2><p>Если вы понимаете, где в их бизнесе ручное управление уже стало ограничением, этого достаточно для правильного первого разговора.</p></div>
 </section>
+
 <section class="frame payout" data-screen="13">
-  <div class="payout-head"><div class="eyebrow">КЛИЕНТ И ВЫПЛАТЫ</div><h2>Клиент принят TMS — дальше всё прозрачно.</h2><p>Вы подготовили клиента к серьёзному разговору. TMS подтвердил его — клиент закрепляется за вами и начинается работа.</p></div>
-  <div class="payout-flow"><div class="p-line"></div>
-    <div class="ps p1"><i></i><span>подготовили<br/>клиента</span></div><div class="ps p2"><i></i><span>TMS<br/>подтвердил</span></div><div class="ps p3"><i></i><span>клиент<br/>закреплён</span></div><div class="ps p4"><i></i><span>клиент<br/>платит</span></div><div class="ps p5"><i></i><span>комиссия<br/>начисляется</span></div><div class="ps p6 accent"><i></i><span>выплата<br/><strong>раз в квартал</strong></span></div>
+  <img class="brand-mark" src="public/TMS.svg" alt="" aria-hidden="true">
+  <div class="safe">
+    <div class="payout-head"><div class="eyebrow">КЛИЕНТ И ВЫПЛАТЫ</div><h2>Клиент принят TMS — дальше<br>всё прозрачно.</h2><p class="support">Вы подготовили клиента к серьёзному разговору. TMS<br>подтвердил его — клиент закрепляется за вами и<br>начинается работа.</p></div>
+    <div class="operation-window">
+      <div class="operation-stage" data-step="01"><span>подготовили<br>клиента</span></div>
+      <div class="operation-stage" data-step="02"><span>TMS<br>подтвердил</span></div>
+      <div class="operation-stage" data-step="03"><span>клиент<br>закреплён</span></div>
+      <div class="operation-stage" data-step="04"><span>клиент<br>платит</span></div>
+      <div class="operation-stage" data-step="05"><span>комиссия<br>начисляется</span></div>
+      <div class="operation-stage payout-stage" data-step="06"><span>выплата</span><strong>раз в квартал</strong></div>
+    </div>
+    <div class="payout-note">Пока сделка активно ведётся, закрепление сохраняется.</div>
   </div>
-  <div class="payout-note">Пока сделка активно ведётся, закрепление сохраняется.</div>
 </section>
-<section class="frame final" data-screen="14">
-  <div class="final-kicker">Помогаете бизнесу перейти от хаоса к системе. Получаете долю результата.</div>
-  <div class="win-bridge">
-    <div class="win w1"><span>Предприниматель</span><p>Бизнес меньше зависит<br/>от ручного контроля</p></div>
-    <div class="win w2"><span>Агент</span><p>Получает долю результата,<br/>который помог создать</p></div>
-    <div class="win w3"><span>TMS</span><p>Получает клиента,<br/>которому нужна система</p></div>
-    <svg viewBox="0 0 1420 240" preserveAspectRatio="none"><path d="M110 20 C260 120 500 150 710 205"/><path d="M710 20 V205"/><path d="M1310 20 C1160 120 920 150 710 205"/></svg><i class="junction"></i>
+
+<section class="frame finale" data-screen="14">
+  <div class="safe finale-layout">
+    <div class="final-kicker">Помогаете бизнесу перейти от хаоса к системе. Получаете<br>долю результата.</div>
+    <div class="win-grid">
+      <div><span>Предприниматель</span><p>Бизнес меньше зависит<br>от ручного контроля</p><i aria-hidden="true">↓</i></div>
+      <div><span>Агент</span><p>Получает долю результата,<br>который помог создать</p><i aria-hidden="true">↓</i></div>
+      <div><span>TMS</span><p>Получает клиента,<br>которому нужна система</p><i aria-hidden="true">↓</i></div>
+    </div>
+    <div class="brand-statement"><h2>Один бизнес.<br>Одна система.</h2><img class="final-logo" src="public/TMS.svg" alt="" aria-hidden="true"><p>TMS · операционная система для малого бизнеса</p></div>
+    <div class="presentation-cta"><span>Есть бизнес, который уже вырос из ручного управления?</span><strong>Обсудим его с TMS.</strong></div>
   </div>
-  <div class="final-brand"><h2>Один бизнес.<br/>Одна система.</h2><p>TMS · операционная система для малого бизнеса</p></div>
-  <div class="final-contact"><span>Есть бизнес, который уже вырос из ручного управления?</span><strong>Обсудим его с TMS.</strong></div>
-</section></main><script>const p=new URLSearchParams(location.search);const s=p.get('screen');if(s){document.querySelectorAll('.frame').forEach(el=>{if(el.dataset.screen!==s)el.style.display='none'});document.body.classList.add('single')};</script></body></html>
+</section>
+</main></body></html>

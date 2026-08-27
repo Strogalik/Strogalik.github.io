@@ -1,7 +1,7 @@
 {
-  "name": "tms-commercial-deck-v0-3",
+  "name": "tms-commercial-deck-v0-5",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.5.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,13 +10,10 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "react": "latest",
-    "react-dom": "latest",
+    "vite": "latest",
     "typescript": "latest",
-    "vite": "latest"
+    "react": "latest",
+    "react-dom": "latest"
   },
-  "devDependencies": {
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.5"
-  }
+  "devDependencies": {}
 }

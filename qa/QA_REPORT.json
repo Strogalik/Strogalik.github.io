@@ -1,0 +1,559 @@
+[
+  {
+    "screen": 1,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": [
+      {
+        "cls": "",
+        "text": "Знаете бизнес,который уже непомещается вголове владельца?",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "support hero-support",
+        "text": "Помогите предпринимателю перейти от ручногоуправления к системе — и получайте до",
+        "ratio": 1.71,
+        "color": "rgb(38, 53, 80)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "screen": 2,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": [
+      {
+        "cls": "",
+        "text": "Бизнес вырос. Способуправления осталсяпрежним.",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "support",
+        "text": "Клиентов, людей и процессов становитсябольше. А компания всё ещё держится напамя",
+        "ratio": 1.71,
+        "color": "rgb(38, 53, 80)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "metric",
+        "text": "5",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "metric",
+        "text": "15",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "metric",
+        "text": "40",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "metric",
+        "text": "80",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "голова владельца",
+        "ratio": 2.12,
+        "color": "rgb(51, 68, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "чаты",
+        "ratio": 2.12,
+        "color": "rgb(51, 68, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "Excel",
+        "ratio": 2.12,
+        "color": "rgb(51, 68, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "1С",
+        "ratio": 2.12,
+        "color": "rgb(51, 68, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "screen": 3,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": []
+  },
+  {
+    "screen": 4,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": [
+      {
+        "cls": "",
+        "text": "Проблема не в том,что сервисов мало.Они не работают какодна система.",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "support",
+        "text": "CRM знает одно. 1С — другое. Чаты хранятдоговорённости. А общую картину по-прежн",
+        "ratio": 1.71,
+        "color": "rgb(38, 53, 80)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "screen": 5,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": [
+      {
+        "cls": "",
+        "text": "Один бизнес. Однасистема.",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "support",
+        "text": "TMS связывает весь рабочий контур бизнеса.Все части работают в общем контексте.",
+        "ratio": 1.71,
+        "color": "rgb(38, 53, 80)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "context-row main-row",
+        "text": "Клиент",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "context-row main-row",
+        "text": "Встреча",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "context-row main-row",
+        "text": "Документ",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "screen": 6,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": [
+      {
+        "cls": "",
+        "text": "Бизнес под контролем.Без постоянного контроля.",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "support",
+        "text": "Компания перестаёт держаться на одном человеке —процессы понятны команде и видим",
+        "ratio": 1.71,
+        "color": "rgb(38, 53, 80)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "transformation t1",
+        "text": "«Я всё контролирую сам»",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "transformation t2",
+        "text": "«Команда работает каксистема»",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "transformation t3",
+        "text": "«Я управляюбизнесом,а не бизнес управляетмной»",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "screen": 7,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": [
+      {
+        "cls": "",
+        "text": "Вы замечаете момент, когдаручное управление начинаетмешать бизнесу расти.",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "support",
+        "text": "Помогаете собственнику увидеть проблему, понятьеё цену и всерьёз захотеть перейт",
+        "ratio": 1.71,
+        "color": "rgb(38, 53, 80)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "увидел проблему",
+        "ratio": 1.77,
+        "color": "rgb(38, 56, 81)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "поговорил ссобственником",
+        "ratio": 1.77,
+        "color": "rgb(38, 56, 81)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "помог увидеть цену",
+        "ratio": 1.77,
+        "color": "rgb(38, 56, 81)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "объяснил идею однойсистемы",
+        "ratio": 1.77,
+        "color": "rgb(38, 56, 81)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "сформировалсерьёзный интерес",
+        "ratio": 1.77,
+        "color": "rgb(38, 56, 81)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "screen": 8,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": [
+      {
+        "cls": "",
+        "text": "Вам не нужно внедрятьTMS. Нужно правильноначать разговор.",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "support",
+        "text": "Вы создаёте понимание и интерес. Всё,что требует продуктовой и техническойэкспер",
+        "ratio": 1.71,
+        "color": "rgb(38, 53, 80)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "найти",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "поговорить",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "заинтересовать",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "познакомить",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "screen": 9,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": []
+  },
+  {
+    "screen": 10,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": [
+      {
+        "cls": "",
+        "text": "Один хороший клиентуже даёт ощутимыйрезультат.",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "Пример расчёта. Не тариф TMS.",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "100 000 ₽ / мес.",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "540 000 ₽",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "screen": 11,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": [
+      {
+        "cls": "",
+        "text": "В Москве важен несписок контактов.Важен доступ кподходящимсобственникам.",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "support",
+        "text": "Один качественный разговор с владельцемрастущей компании ценнее десятковформальн",
+        "ratio": 1.71,
+        "color": "rgb(38, 53, 80)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "business-window",
+        "text": "Производство",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "business-window",
+        "text": "B2B-услуги",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "business-window",
+        "text": "Дистрибуция",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "business-window",
+        "text": "Оптовая компания",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "business-window",
+        "text": "Сервисный бизнес",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "business-window",
+        "text": "Проектный бизнес",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "screen": 12,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": [
+      {
+        "cls": "known-window",
+        "text": "Производство",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "known-window",
+        "text": "Оптовая компания",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "known-window",
+        "text": "B2B-услуги",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "known-window",
+        "text": "Проектная компания",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "Не нужен широкийохват. Нужнынесколько компаний,которые выдействительнохорошо зна",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "support",
+        "text": "Если вы понимаете, где в их бизнесе ручноеуправление уже стало ограничением, это",
+        "ratio": 1.71,
+        "color": "rgb(38, 53, 80)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "screen": 13,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": [
+      {
+        "cls": "",
+        "text": "Клиент принят TMS — дальшевсё прозрачно.",
+        "ratio": 1.07,
+        "color": "rgb(0, 9, 38)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "support",
+        "text": "Вы подготовили клиента к серьёзному разговору. TMSподтвердил его — клиент закреп",
+        "ratio": 1.71,
+        "color": "rgb(38, 53, 80)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "подготовиликлиента",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "TMSподтвердил",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "клиентзакреплён",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "клиентплатит",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "cls": "",
+        "text": "комиссияначисляется",
+        "ratio": 2.15,
+        "color": "rgb(52, 69, 92)",
+        "bg": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "screen": 14,
+    "missing": {},
+    "extra": {},
+    "out_of_bounds": [],
+    "text_under_20px": [],
+    "low_contrast_candidates": []
+  }
+]

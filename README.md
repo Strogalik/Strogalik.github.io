@@ -1,20 +1,23 @@
-# TMS Commercial — Agent Program Deck v0.3
+# TMS Commercial Agent Program v0.5
 
-Full 14-screen desktop commercial presentation prototype.
+Static 14-screen commercial presentation, 1920×1080 per screen.
 
-- Format: 1920×1080 per section, vertical stack
-- Implementation source: React + TypeScript + Vite + custom CSS
-- Static PDF-friendly preview: `preview.html`
-- No navigation, forms, hover-dependent meaning, fake buttons, or application UI
-- Visuals use DOM text, CSS geometry, and simple SVG only
-- Display font source-of-truth: Montserrat 500/600/700
-- Data/fine-print font: Inter 500/600/700/800
+- React + TypeScript + Vite
+- Custom CSS only
+- PDF-first, no interactive UI semantics
+- Copy frozen to `Оффер_ТМС(1).pdf`
+- Brand mark uses the supplied `TMS.svg`
+- Montserrat is the primary presentation typeface; Inter is reserved for dense system-window data.
 
-Run the React source after installing dependencies:
+## Run
 
 ```bash
 npm install
 npm run dev
 ```
 
-QA screenshots are in `qa/screens/`.
+## Build
+
+```bash
+npm run build
+```
