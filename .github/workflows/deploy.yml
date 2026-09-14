@@ -1,36 +1,57 @@
-name: Deploy Vite site to GitHub Pages
-
+name: Deploy TMS management contour
 on:
   push:
     branches: [main]
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: pages
   cancel-in-progress: true
-
 jobs:
   build-and-deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run build
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - run: npm run build && npm run export:html
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install playwright==1.55.0 Pillow==11.3.0 PyMuPDF==1.26.4
+      - run: python -m playwright install --with-deps chromium
+      - name: Validate presentation and export PDF
+        run: |
+          python -m http.server 4173 --directory dist >/tmp/tms-http.log 2>&1 &
+          python scripts/qa.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tms-management-visual-qa
+          path: qa-output
+          retention-days: 14
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-      - id: deployment
+      - name: Deploy
+        id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify public page
+        run: |
+          for attempt in $(seq 1 12); do
+            if curl -fsSL "${{ steps.deployment.outputs.page_url }}?v=${{ github.sha }}" | grep -q 'management-contour-v1'; then
+              echo 'Public page verified'
+              exit 0
+            fi
+            sleep 10
+          done
+          exit 1
