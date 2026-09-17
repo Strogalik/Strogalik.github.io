@@ -1,0 +1,68 @@
+{
+  "pages": 12,
+  "ratio": 1.7777777777777777,
+  "copy_comparison": [
+    {
+      "page": 1,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 2,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 3,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 4,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 5,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 6,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 7,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 8,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 9,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 10,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 11,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "page": 12,
+      "missing": {},
+      "extra": {}
+    }
+  ],
+  "logo_original_sha256": "d29a73e7bcd2ea9b33c988a4bdc91f792cef0418b4c0ae435fc5dca92df8bc59",
+  "logo_project_sha256": "d29a73e7bcd2ea9b33c988a4bdc91f792cef0418b4c0ae435fc5dca92df8bc59"
+}

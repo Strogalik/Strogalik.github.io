@@ -1,4 +1,4 @@
-name: Deploy TMS management contour
+name: Deploy TMS SaaS Growth presentation
 on:
   push:
     branches: [main]
@@ -35,7 +35,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: tms-management-visual-qa
+          name: tms-saas-growth-visual-qa
           path: qa-output
           retention-days: 14
       - uses: actions/configure-pages@v5
@@ -48,7 +48,7 @@ jobs:
       - name: Verify public page
         run: |
           for attempt in $(seq 1 12); do
-            if curl -fsSL "${{ steps.deployment.outputs.page_url }}?v=${{ github.sha }}" | grep -q 'management-contour-v1'; then
+            if curl -fsSL "${{ steps.deployment.outputs.page_url }}?v=${{ github.sha }}" | grep -q 'tms-saas-growth-v1'; then
               echo 'Public page verified'
               exit 0
             fi
