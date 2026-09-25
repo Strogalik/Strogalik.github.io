@@ -1,5 +1,3 @@
 # TMS Marketing Creatives
 
-GitHub Pages gallery and clean one-frame URLs for Code to Figma / html.to.design.
-
-The source archive contains the real-estate package: 70 main screens, 16 carousel frames, 30 Stories frames. Every frame is a standalone HTML page with editable DOM/CSS and local assets.
+Static GitHub Pages deployment generated from `TMS_MARKETING_LEGIBLE_v2_FULL.zip`. Each HTML page contains exactly one editable creative frame, uses root-based assets, and is ready for Code to Figma / html.to.design.

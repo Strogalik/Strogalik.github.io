@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+/* Local faces keep an installed Montserrat usable offline. Font binaries are not bundled. */
+@font-face{font-family:'Montserrat';src:local('Montserrat Medium'),local('Montserrat-Medium');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Montserrat';src:local('Montserrat SemiBold'),local('Montserrat-SemiBold');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Montserrat';src:local('Montserrat Bold'),local('Montserrat-Bold');font-weight:700;font-style:normal;font-display:swap}
