@@ -1,0 +1,37 @@
+{
+  "revision": "V6-A4.2",
+  "stage": "A",
+  "status": "awaiting_owner_approval",
+  "ownerApproved": false,
+  "stageBStarted": false,
+  "editorialStatus": "candidate_for_local_review",
+  "checkedAt": "2026-10-09T06:47:09.375898+00:00",
+  "sourceSha256": {
+    "components/review-v6/HeroStory.tsx": "88b80f63c292b95acf7d2c9796db5701fcbc8415de9b6312789c6260b52b0918",
+    "components/review-v6/ReviewV6.tsx": "df2d3d6cb08cb32dd97f26309b12b75885a2bcb3243909f0e9a7483578945d48",
+    "components/review-v6/StoryCopy.tsx": "fa991877fc754993c9da8bd85ca199140b7e7ef64997369a6d4dc09f35c8b86d",
+    "components/review-v6/StoryExperience.tsx": "e6cd0e841d352a13a31cbb0e5f23677fc9c76b0fc0870068c984e0bfe1549394",
+    "components/review-v6/StoryScene.tsx": "2094bcfc746c29491bfbcf57c5f90347e3a6471868ee992bbd7efa1046ca1f6b",
+    "components/review-v6/content.module.css": "14e7566d3377e857171022f55c3e04d836538145bec413b03583010d56668d75",
+    "components/review-v6/review.module.css": "478a1142f3eefd68993156db47ad88af41333a9027f2befe38759caa3672216f",
+    "components/review-v6/story-content.ts": "bc870f28ee66c23f5df47a301b862c41fc58b86ce11e798564d97f14168026aa",
+    "components/review-v6/story.module.css": "828c18116478e8166ea07c9d3ff32e876212fef1fbcd2b2fbcd1a769d7a868c9"
+  },
+  "checks": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "unitPassed": 11,
+    "browserPassed": 35,
+    "browserSkipped": 0,
+    "browserFlaky": 0,
+    "focusRegressionRepeatsPassed": 5,
+    "sceneViewports": 108
+  },
+  "notVerified": [
+    "Safari/WebKit",
+    "Physical devices",
+    "Screen reader",
+    "Actual browser zoom"
+  ]
+}

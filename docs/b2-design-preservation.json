@@ -1,0 +1,329 @@
+{
+  "date": "2026-10-11T02:18:50.404113+00:00",
+  "sourceFiles": [
+    {
+      "path": "app/api/lead/route.ts",
+      "before": "cd87575d6758f9ee5b833a7a4bac62b8e74e29a38a48f40ee09face29f0a9ce1",
+      "after": "cd87575d6758f9ee5b833a7a4bac62b8e74e29a38a48f40ee09face29f0a9ce1",
+      "identical": true
+    },
+    {
+      "path": "app/fonts.ts",
+      "before": "97eb67da9c055f28db8cf5dcbd869eec36a6eda0bb3671538b3668681bf131bf",
+      "after": "97eb67da9c055f28db8cf5dcbd869eec36a6eda0bb3671538b3668681bf131bf",
+      "identical": true
+    },
+    {
+      "path": "app/globals.css",
+      "before": "e6cbd3b34e3c98bf64546eaad20dec4a95af9143ac7956453e820b37e9b2dd65",
+      "after": "e6cbd3b34e3c98bf64546eaad20dec4a95af9143ac7956453e820b37e9b2dd65",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/HeroStory.tsx",
+      "before": "3f506ce320a437be2ccf3aee610a2327eb2179f8f9d13918619c2e90bf2c9c94",
+      "after": "3f506ce320a437be2ccf3aee610a2327eb2179f8f9d13918619c2e90bf2c9c94",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/ReviewV6.tsx",
+      "before": "f2965d18d1192bb4e5c1ec545bc3f3d86d14e5fff8c17f9b79ddae799412d46c",
+      "after": "f2965d18d1192bb4e5c1ec545bc3f3d86d14e5fff8c17f9b79ddae799412d46c",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/StoryAtmosphere.tsx",
+      "before": "3b3ae888c464e1f96d8f2724a851449504f459456fdade50dc84fbf8d695dcbb",
+      "after": "3b3ae888c464e1f96d8f2724a851449504f459456fdade50dc84fbf8d695dcbb",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/StoryCopy.tsx",
+      "before": "fa991877fc754993c9da8bd85ca199140b7e7ef64997369a6d4dc09f35c8b86d",
+      "after": "fa991877fc754993c9da8bd85ca199140b7e7ef64997369a6d4dc09f35c8b86d",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/StoryExperience.tsx",
+      "before": "08144445ac1abcbd0bd630d3004e61e90ea8ee3e6e0d7a8cf0ba28127b85c9c6",
+      "after": "08144445ac1abcbd0bd630d3004e61e90ea8ee3e6e0d7a8cf0ba28127b85c9c6",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/StoryScene.tsx",
+      "before": "2094bcfc746c29491bfbcf57c5f90347e3a6471868ee992bbd7efa1046ca1f6b",
+      "after": "2094bcfc746c29491bfbcf57c5f90347e3a6471868ee992bbd7efa1046ca1f6b",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/content.module.css",
+      "before": "cc68198ea7eba9bb18ccea971c27820f00657e9e7a299d9a9b748b69d8ea1814",
+      "after": "cc68198ea7eba9bb18ccea971c27820f00657e9e7a299d9a9b748b69d8ea1814",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/glass/StoryBackdrop.tsx",
+      "before": "69cff510d77e6ae3f13b06a1e066a13b1fa1e7527dd4afbb571dbbb833715c58",
+      "after": "69cff510d77e6ae3f13b06a1e066a13b1fa1e7527dd4afbb571dbbb833715c58",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/glass/hero-motion.ts",
+      "before": "48dbbe7ff8dcc0e5065862833978376c844b0b6d317c55a14bfcb3b78408e508",
+      "after": "48dbbe7ff8dcc0e5065862833978376c844b0b6d317c55a14bfcb3b78408e508",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/glass/session.ts",
+      "before": "c5f0b6ca329a3237e900df9d52440522831dc345cd44558850891a4f24d05cb7",
+      "after": "c5f0b6ca329a3237e900df9d52440522831dc345cd44558850891a4f24d05cb7",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/glass/useHeroGlass.ts",
+      "before": "107300e8024326db1a5970222ed8245b14ba782d4db12d16b64b98249095bd6f",
+      "after": "107300e8024326db1a5970222ed8245b14ba782d4db12d16b64b98249095bd6f",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/review.module.css",
+      "before": "016b26d624329612a85c3a8b8e1cd9a14ea5a33fade1f4e3798fa9b79e3b9d5f",
+      "after": "016b26d624329612a85c3a8b8e1cd9a14ea5a33fade1f4e3798fa9b79e3b9d5f",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/story-content.ts",
+      "before": "bc870f28ee66c23f5df47a301b862c41fc58b86ce11e798564d97f14168026aa",
+      "after": "bc870f28ee66c23f5df47a301b862c41fc58b86ce11e798564d97f14168026aa",
+      "identical": true
+    },
+    {
+      "path": "components/review-v6/story.module.css",
+      "before": "828c18116478e8166ea07c9d3ff32e876212fef1fbcd2b2fbcd1a769d7a868c9",
+      "after": "828c18116478e8166ea07c9d3ff32e876212fef1fbcd2b2fbcd1a769d7a868c9",
+      "identical": true
+    },
+    {
+      "path": "components/site-v6/B1Sections.tsx",
+      "before": "50b71a9946ffb745c09e0712ec149e968c40b66180c1664f23f3e21a8850bd79",
+      "after": "50b71a9946ffb745c09e0712ec149e968c40b66180c1664f23f3e21a8850bd79",
+      "identical": true
+    },
+    {
+      "path": "components/site-v6/Calculator.tsx",
+      "before": "2f1ddef262bf284da9679fef0180953701380fa5a693ea56a39ed33af37cfccb",
+      "after": "2f1ddef262bf284da9679fef0180953701380fa5a693ea56a39ed33af37cfccb",
+      "identical": true
+    },
+    {
+      "path": "components/site-v6/Home.tsx",
+      "before": "9036903fb3982f32d4ae27bd15468ef900c4158a6bc4afc2a35aed9affb9fa61",
+      "after": "9036903fb3982f32d4ae27bd15468ef900c4158a6bc4afc2a35aed9affb9fa61",
+      "identical": true
+    },
+    {
+      "path": "components/site-v6/Sections.tsx",
+      "before": "070cc9149ba13e642fbd015ff32e262f33a2b067c19dd66c401703af58de0a85",
+      "after": "070cc9149ba13e642fbd015ff32e262f33a2b067c19dd66c401703af58de0a85",
+      "identical": true
+    },
+    {
+      "path": "components/site-v6/b1.module.css",
+      "before": "9c41a89e400e5bc2de10a8a4f1c7aeb7988225d13283899558809e960bbb670d",
+      "after": "9c41a89e400e5bc2de10a8a4f1c7aeb7988225d13283899558809e960bbb670d",
+      "identical": true
+    },
+    {
+      "path": "components/site-v6/sections.module.css",
+      "before": "8fb95217274e70f8cca268e73b2ab7d50de03498d84d56f79d38a9fe23200b3a",
+      "after": "8fb95217274e70f8cca268e73b2ab7d50de03498d84d56f79d38a9fe23200b3a",
+      "identical": true
+    },
+    {
+      "path": "content/calculator-spec.json",
+      "before": "2f953daf17aec8105a03ce6ced3e0289b9278882bfbb89f0170921f8e9df2c21",
+      "after": "2f953daf17aec8105a03ce6ced3e0289b9278882bfbb89f0170921f8e9df2c21",
+      "identical": true
+    },
+    {
+      "path": "content/cases.public.json",
+      "before": "d5c29d992518d2e0010a0e759e9b0da1b13a7d77fe2a0d2ba5a509a7324f48b9",
+      "after": "d5c29d992518d2e0010a0e759e9b0da1b13a7d77fe2a0d2ba5a509a7324f48b9",
+      "identical": true
+    },
+    {
+      "path": "content/cases.ts",
+      "before": "1cf982bf420f86346b97a4da02ce49c5bb98250809ba64f485af0afd19703dc3",
+      "after": "1cf982bf420f86346b97a4da02ce49c5bb98250809ba64f485af0afd19703dc3",
+      "identical": true
+    },
+    {
+      "path": "content/demo.scenarios.json",
+      "before": "2db835d637a5290ffd621237302f0c80393065a2554bb330e6dcff41bb2ef133",
+      "after": "2db835d637a5290ffd621237302f0c80393065a2554bb330e6dcff41bb2ef133",
+      "identical": true
+    },
+    {
+      "path": "content/demo.seed.json",
+      "before": "d27f42cf430897678564c95128c3cfb1af8880a062bd162f1d7849bf15c0cde7",
+      "after": "d27f42cf430897678564c95128c3cfb1af8880a062bd162f1d7849bf15c0cde7",
+      "identical": true
+    },
+    {
+      "path": "content/products.ts",
+      "before": "1c4aa63f902dce694246b3830d5e6202fdcdea40d9df407c18e72f313bccd8be",
+      "after": "1c4aa63f902dce694246b3830d5e6202fdcdea40d9df407c18e72f313bccd8be",
+      "identical": true
+    },
+    {
+      "path": "content/site-copy.ru.json",
+      "before": "18195a9a7b21ef3935b010ef079e111d0773be8fa7ecf815d16c51d7749651bb",
+      "after": "18195a9a7b21ef3935b010ef079e111d0773be8fa7ecf815d16c51d7749651bb",
+      "identical": true
+    },
+    {
+      "path": "content/site.ts",
+      "before": "d650ab1f1f16f5c5d301847b1f1771376468f679484a6a720a404952e824fb1c",
+      "after": "d650ab1f1f16f5c5d301847b1f1771376468f679484a6a720a404952e824fb1c",
+      "identical": true
+    },
+    {
+      "path": "content/stage-b.json",
+      "before": "5d4aa12b5077728dd0c02d5a8c10ef1643e00ff2b9b73e935b7fca0b1cd4a5a0",
+      "after": "5d4aa12b5077728dd0c02d5a8c10ef1643e00ff2b9b73e935b7fca0b1cd4a5a0",
+      "identical": true
+    },
+    {
+      "path": "lib/analytics.ts",
+      "before": "c594b07e78dc40b1d092e9ea6c013ff8d684f5393fed7a1a26de695f24722314",
+      "after": "c594b07e78dc40b1d092e9ea6c013ff8d684f5393fed7a1a26de695f24722314",
+      "identical": true
+    },
+    {
+      "path": "lib/calculator-extension.ts",
+      "before": "8d3b30e12df4c979656602cdf06355328a980f07aefd9f67dddb7d3d6f15ebe0",
+      "after": "8d3b30e12df4c979656602cdf06355328a980f07aefd9f67dddb7d3d6f15ebe0",
+      "identical": true
+    },
+    {
+      "path": "lib/calculator.ts",
+      "before": "c8a73ff713e58b4f68e9f24161b48c0982cb78219ac3c5e10963f8b198a7231e",
+      "after": "c8a73ff713e58b4f68e9f24161b48c0982cb78219ac3c5e10963f8b198a7231e",
+      "identical": true
+    },
+    {
+      "path": "lib/case-demo.ts",
+      "before": "7519f45ef6fb02ba87cb9329f3f5e11921028fc09918c4ee58afecbd0a5ee20b",
+      "after": "7519f45ef6fb02ba87cb9329f3f5e11921028fc09918c4ee58afecbd0a5ee20b",
+      "identical": true
+    },
+    {
+      "path": "lib/constants.ts",
+      "before": "39c649cb02eddc76fa480a95d6b49b31b40fceb787464ac95f71572920a2fcdb",
+      "after": "39c649cb02eddc76fa480a95d6b49b31b40fceb787464ac95f71572920a2fcdb",
+      "identical": true
+    },
+    {
+      "path": "lib/demo-navigation.ts",
+      "before": "460eda45944eda3ef6fc71784436b5de65773343f1f80f8192a1d7cfe4d922b7",
+      "after": "460eda45944eda3ef6fc71784436b5de65773343f1f80f8192a1d7cfe4d922b7",
+      "identical": true
+    },
+    {
+      "path": "lib/demo-state.ts",
+      "before": "fd77851d48412b2ae5810a2f8dbf51861f907d3c4bc3874a5ae6793dbb411f09",
+      "after": "fd77851d48412b2ae5810a2f8dbf51861f907d3c4bc3874a5ae6793dbb411f09",
+      "identical": true
+    },
+    {
+      "path": "lib/design-review.ts",
+      "before": "bb7642e1e1e31ba3d15ac84aa08ae5ea06f08194e9d625082a22860193eef813",
+      "after": "bb7642e1e1e31ba3d15ac84aa08ae5ea06f08194e9d625082a22860193eef813",
+      "identical": true
+    },
+    {
+      "path": "lib/lead-handler.ts",
+      "before": "acbb1a403c3b8e34b09df4324986be8c49925552095fcb42556046a665fd4682",
+      "after": "acbb1a403c3b8e34b09df4324986be8c49925552095fcb42556046a665fd4682",
+      "identical": true
+    },
+    {
+      "path": "lib/rate-limit.ts",
+      "before": "3f4286e0d2a8e8c4ce15d253236e785872e2a650c73409e4c6a9dbed053b0333",
+      "after": "3f4286e0d2a8e8c4ce15d253236e785872e2a650c73409e4c6a9dbed053b0333",
+      "identical": true
+    },
+    {
+      "path": "lib/seo.ts",
+      "before": "551d1a4048a9cb47d515b196fe3168c0650435509e9838be153b54e09f949447",
+      "after": "551d1a4048a9cb47d515b196fe3168c0650435509e9838be153b54e09f949447",
+      "identical": true
+    },
+    {
+      "path": "lib/utm.ts",
+      "before": "9bd84bd7e85d11203b6ea124f4b0c71389427c00dc274c259ec2e2fa45a60297",
+      "after": "9bd84bd7e85d11203b6ea124f4b0c71389427c00dc274c259ec2e2fa45a60297",
+      "identical": true
+    },
+    {
+      "path": "lib/validation.ts",
+      "before": "178c97222b3b379b36a75f81bf2378449a7117a6e230fce09c0ab1dcdd8a4ced",
+      "after": "178c97222b3b379b36a75f81bf2378449a7117a6e230fce09c0ab1dcdd8a4ced",
+      "identical": true
+    },
+    {
+      "path": "package-lock.json",
+      "before": "d5ee611fd07f4316c539dcfbc710a32545a9c98d06f52e274a3a6b86b10468c8",
+      "after": "d5ee611fd07f4316c539dcfbc710a32545a9c98d06f52e274a3a6b86b10468c8",
+      "identical": true
+    },
+    {
+      "path": "package.json",
+      "before": "0b1ddb778cad7ff7abc09ce282f33f9c9365b7432121dd73c32e05ccb723ef68",
+      "after": "0b1ddb778cad7ff7abc09ce282f33f9c9365b7432121dd73c32e05ccb723ef68",
+      "identical": true
+    },
+    {
+      "path": "public/fonts/Inter-LICENSE.txt",
+      "before": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
+      "after": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
+      "identical": true
+    },
+    {
+      "path": "public/fonts/Inter.ttf",
+      "before": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "after": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "identical": true
+    },
+    {
+      "path": "public/fonts/Inter.woff2",
+      "before": "c5246db5f5d672480b81c6b7c152b48926aa1d26a7ce03f74640bb581f2fe086",
+      "after": "c5246db5f5d672480b81c6b7c152b48926aa1d26a7ce03f74640bb581f2fe086",
+      "identical": true
+    },
+    {
+      "path": "public/fonts/Montserrat-LICENSE.txt",
+      "before": "f429f739351287574c0c3175a9222bb3e49c7cad3f568a04f2c08d74c107724e",
+      "after": "f429f739351287574c0c3175a9222bb3e49c7cad3f568a04f2c08d74c107724e",
+      "identical": true
+    },
+    {
+      "path": "public/fonts/Montserrat.ttf",
+      "before": "0f7b311b2f3279e4eef9b2f968bcdbab6e28f4daeb1f049f4f278a902bcd82f7",
+      "after": "0f7b311b2f3279e4eef9b2f968bcdbab6e28f4daeb1f049f4f278a902bcd82f7",
+      "identical": true
+    },
+    {
+      "path": "public/fonts/Montserrat.woff2",
+      "before": "e4cb0587f8628d629ec6f3021e33812418cc355a9aaf22095d547124a2a273a8",
+      "after": "e4cb0587f8628d629ec6f3021e33812418cc355a9aaf22095d547124a2a273a8",
+      "identical": true
+    }
+  ],
+  "protectedComparisons": "168/168 pixel identical, fresh B1 to B2",
+  "b1Scenes": "36/36 pixel identical",
+  "a48Seal": "9dbc9d221eccb3eee301ae92a4cd3263540f1b93c1025de17fd38320af0fe80c",
+  "a48Lock": "PASS, zero locked violations",
+  "authorizedTechnicalException": "ApprovedViews.tsx: hrefs, focus, native menu lifecycle only; visible design and protected CSS unchanged",
+  "historicalFooterRasterDeltas": "Four B1 deltas retained as unresolved history, not replaced or claimed fixed"
+}

@@ -1,0 +1,3 @@
+import {chromium} from 'playwright';import{mkdir}from'node:fs/promises';
+const b=await chromium.launch();await mkdir('qa/v6-b7/before-extra',{recursive:true});
+for(const width of[1440,390,320])for(const port of[3200,3208]){const c=await b.newContext({viewport:{width,height:width===1440?900:844}});await c.route('**/*',r=>new URL(r.request().url()).hostname==='127.0.0.1'?r.continue():r.abort());const p=await c.newPage();await p.goto(`http://127.0.0.1:${port}/`);await p.locator('[data-cookie-notice]').waitFor();await p.evaluate(()=>document.fonts.ready);await p.screenshot({path:`qa/v6-b7/before-extra/cookies-${port}-${width}.png`});await c.close();}await b.close();

@@ -1,0 +1,1164 @@
+{
+  "date": "2026-10-11T02:18:50.404113+00:00",
+  "sharedNavigation": {
+    "Решение": "/#solution",
+    "Продукты": "/#products",
+    "Кейсы": "/#cases",
+    "Сотрудничество": "/#cooperation"
+  },
+  "before": [
+    {
+      "route": "/products/crm",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Продажи, в которых понятен следующий шаг",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/products/oms",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Заказы, у которых есть сроки и ответственные",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/products/crm-oms",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Продали — передали в работу — сохранили контекст",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Кейсы внедрения",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/b2b-wholesale",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Клиентская база, с которой продолжают работать",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/flooring-manufacturer",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Заказ — в кабинете контрагента, а не в переписке",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/online-school",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "От рекламного обращения до пробного занятия — связанный процесс",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/custom-development",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Система под ваш процесс, а не процесс под систему",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Создаём систему, на которую можно опереться",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/partners",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Обсудим совместную работу с бизнесом",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/privacy",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Данные вашего обращения",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/products/crm",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Продажи, в которых понятен следующий шаг",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/products/oms",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Заказы, у которых есть сроки и ответственные",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/products/crm-oms",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Продали — передали в работу — сохранили контекст",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Кейсы внедрения",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/b2b-wholesale",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Клиентская база, с которой продолжают работать",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/flooring-manufacturer",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Заказ — в кабинете контрагента, а не в переписке",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/online-school",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "От рекламного обращения до пробного занятия — связанный процесс",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/custom-development",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Система под ваш процесс, а не процесс под систему",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/about",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Создаём систему, на которую можно опереться",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/partners",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Обсудим совместную работу с бизнесом",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/privacy",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Данные вашего обращения",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/partners"
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "after": [
+    {
+      "route": "/products/crm",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Продажи, в которых понятен следующий шаг",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/products/oms",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Заказы, у которых есть сроки и ответственные",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/products/crm-oms",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Продали — передали в работу — сохранили контекст",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Кейсы внедрения",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/b2b-wholesale",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Клиентская база, с которой продолжают работать",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/flooring-manufacturer",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Заказ — в кабинете контрагента, а не в переписке",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/online-school",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "От рекламного обращения до пробного занятия — связанный процесс",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/custom-development",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Система под ваш процесс, а не процесс под систему",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Создаём систему, на которую можно опереться",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/partners",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Обсудим совместную работу с бизнесом",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/privacy",
+      "width": 1440,
+      "height": 760,
+      "status": 200,
+      "title": "Данные вашего обращения",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/products/crm",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Продажи, в которых понятен следующий шаг",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/products/oms",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Заказы, у которых есть сроки и ответственные",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/products/crm-oms",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Продали — передали в работу — сохранили контекст",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Кейсы внедрения",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/b2b-wholesale",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Клиентская база, с которой продолжают работать",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/flooring-manufacturer",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Заказ — в кабинете контрагента, а не в переписке",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/cases/online-school",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "От рекламного обращения до пробного занятия — связанный процесс",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/custom-development",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Система под ваш процесс, а не процесс под систему",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/about",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Создаём систему, на которую можно опереться",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/partners",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Обсудим совместную работу с бизнесом",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/privacy",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Данные вашего обращения",
+      "navigation": [
+        {
+          "label": "Решение",
+          "href": "/#solution"
+        },
+        {
+          "label": "Продукты",
+          "href": "/#products"
+        },
+        {
+          "label": "Кейсы",
+          "href": "/#cases"
+        },
+        {
+          "label": "Сотрудничество",
+          "href": "/#cooperation"
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "clickEvidence": "qa/v6-b2/navigation: 12 shared routes × 2 viewports × 4 clicks = 96 paths, plus refresh and Back",
+  "services": {
+    "/demo": "preserved secondary synthetic example",
+    "/products/brm": "308 /custom-development",
+    "/review/v6": "404 in ordinary server",
+    "/auto/ and /nedv/": "external HTTP/2 200 HEAD; no Next replacement; hosting preservation unverified"
+  }
+}

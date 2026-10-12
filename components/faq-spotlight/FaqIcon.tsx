@@ -1,0 +1,4 @@
+import type {FaqId} from './content';
+export function FaqIcon({kind}:{kind:FaqId|'search'|'clear'}){
+ return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">{kind==='products'?<><rect x="3" y="4" width="7" height="7" rx="2"/><rect x="14" y="13" width="7" height="7" rx="2"/><path d="M14 7h3a2 2 0 0 1 2 2v1M10 17H7a2 2 0 0 1-2-2v-1"/></>:kind==='custom'?<><path d="M4 7h7m5 0h4M4 17h3m5 0h8"/><circle cx="13.5" cy="7" r="2.5"/><circle cx="9.5" cy="17" r="2.5"/></>:kind==='pricing'?<><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M8.5 7h7M9 12h1m4 0h1M9 16h1m4 0h1"/></>:kind==='meeting'?<><path d="M7 4h10a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-5l-5 3v-3a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4Z"/><path d="M8 9h8m-8 4h5"/></>:kind==='search'?<><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></>:<path d="m7 7 10 10M17 7 7 17"/>}</svg>;
+}

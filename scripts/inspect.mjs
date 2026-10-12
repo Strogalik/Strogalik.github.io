@@ -1,0 +1,10 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({headless:true});
+const page = await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:3000',{waitUntil:'networkidle'});
+await page.screenshot({path:'qa/screenshots/initial-desktop.png'});
+await page.setViewportSize({width:390,height:844});
+await page.screenshot({path:'qa/screenshots/initial-mobile.png'});
+console.log(JSON.stringify({errors,overflow:await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,width:innerWidth}))}));
+await browser.close();

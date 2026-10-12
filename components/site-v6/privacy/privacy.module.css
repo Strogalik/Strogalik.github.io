@@ -1,0 +1,13 @@
+.settings{margin-block:32px;scroll-margin-top:calc(var(--review-header,88px) + 24px);overflow-wrap:anywhere}
+.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:stretch;margin-top:16px;min-inline-size:0}
+.actions button{min-inline-size:0;max-inline-size:100%;flex:1 1 180px;background:var(--tms-sapphire);color:white;border:1px solid var(--tms-sapphire);border-radius:12px;padding:12px 18px;font:600 1rem/1.4 var(--font-inter),sans-serif;cursor:pointer;overflow-wrap:anywhere}
+.actions button:hover{background:var(--tms-navy);border-color:var(--tms-navy)}
+.actions button:focus-visible,.links a:focus-visible{outline:3px solid var(--tms-sapphire);outline-offset:4px}
+.actions button:disabled{cursor:wait;opacity:.7}
+.links{display:flex;gap:12px 20px;flex-wrap:wrap;margin-block:12px}
+.links a{color:var(--tms-sapphire);text-decoration:underline;text-underline-offset:3px}
+.availableNotice{display:block;max-height:45dvh}
+.availableNotice .actions{margin-top:12px}
+@media(max-width:700px){.availableNotice{display:block;max-height:45dvh}.availableNotice>div{overflow:visible}.availableNotice .actions button{margin:0;justify-self:stretch}}
+@media(forced-colors:active){.actions button{color:ButtonText;background:ButtonFace;border-color:ButtonText}.actions button:focus-visible{outline-color:Highlight}}
+@media print{.actions{display:none}}

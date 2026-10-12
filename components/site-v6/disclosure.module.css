@@ -1,0 +1,8 @@
+.trigger{display:grid;grid-template-columns:minmax(0,1fr) 32px;gap:20px;align-items:center;list-style:none;min-inline-size:0;min-block-size:44px;cursor:pointer;overflow-wrap:anywhere}
+.trigger::marker{content:''}
+.trigger::-webkit-details-marker{display:none}
+.icon{display:grid;place-items:center;inline-size:32px;block-size:32px;border-radius:50%;background:rgb(214 230 243 / 50%);color:var(--tms-sapphire)}
+.disclosure[open]>.trigger .vertical{display:none}
+.trigger:focus-visible{outline:3px solid var(--tms-sapphire);outline-offset:4px;border-radius:12px}
+.trigger:hover .icon{background:var(--tms-ice)}
+@media(forced-colors:active){.icon{border:1px solid ButtonText;color:ButtonText;background:Canvas}.trigger:focus-visible{outline-color:Highlight}}

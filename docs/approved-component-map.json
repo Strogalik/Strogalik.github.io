@@ -1,0 +1,64 @@
+{
+  "designBaseline": "A4.8",
+  "baselineManifestSha256": "9dbc9d221eccb3eee301ae92a4cd3263540f1b93c1025de17fd38320af0fe80c",
+  "entries": [
+    {
+      "view": "Header / Brand / Hero / Footer",
+      "source": "components/review-v6/ReviewV6.tsx",
+      "sourceSha256": "f2965d18d1192bb4e5c1ec545bc3f3d86d14e5fff8c17f9b79ddae799412d46c",
+      "target": "components/site-v6/ApprovedViews.tsx",
+      "targetSha256": "8b1c9056edbe647e027d1a32eb449abeddc562e482a2d7b961ca9450ce426c03",
+      "technicalDeltas": [
+        "Mechanical extraction; unchanged review CSS Module and visible approved copy.",
+        "Public hrefs and footer top-link aria; remove review mobile note.",
+        "Remove badge text, preserve exact em-sized aria-hidden slot.",
+        "Inject real consultation callback; no-JS service sentence points to footer email."
+      ]
+    },
+    {
+      "view": "Hero story",
+      "source": "components/review-v6/HeroStory.tsx",
+      "sourceSha256": "3f506ce320a437be2ccf3aee610a2327eb2179f8f9d13918619c2e90bf2c9c94",
+      "target": "components/site-v6/HeroStory.tsx",
+      "targetSha256": "12d41eb6a8d1f3bef435e10f68d6200a80ee0b1385cb1e5e7644492c83de3e0f",
+      "technicalDeltas": [
+        "Remove SDK stylesheet/hook and lg classes; equivalent structural CSS in adapter.module.css.",
+        "Reuse unchanged StoryBackdrop and hero-motion. Unchanged message DOM, copy, phase timing and scoped classes. Public SDK query ignored."
+      ]
+    },
+    {
+      "view": "Six topics",
+      "source": "components/review-v6/StoryExperience.tsx",
+      "sourceSha256": "08144445ac1abcbd0bd630d3004e61e90ea8ee3e6e0d7a8cf0ba28127b85c9c6",
+      "target": "components/review-v6/StoryExperience.tsx",
+      "targetSha256": "08144445ac1abcbd0bd630d3004e61e90ea8ee3e6e0d7a8cf0ba28127b85c9c6",
+      "technicalDeltas": [
+        "Import the unchanged original component directly; injected openForm now opens consultation."
+      ]
+    },
+    {
+      "view": "Form",
+      "source": "components/review-v6/ReviewV6.tsx",
+      "sourceSha256": "f2965d18d1192bb4e5c1ec545bc3f3d86d14e5fff8c17f9b79ddae799412d46c",
+      "target": "components/site-v6/Consultation.tsx",
+      "targetSha256": "73d362c316766ef64b89481a7a2eca1f86fd1549760a2b7f4fe16ba8809b3fe9",
+      "technicalDeltas": [
+        "Preserve approved field order, labels, optional status, dialog structure and CSS classes.",
+        "Replace review service warning, submit/result text with honest delivery wording.",
+        "Add consultation schema, allowlisted route context, first-touch UTM, pending guard, abort, server errors, focus trap and status focus.",
+        "Record actual clicked button for focus restoration in Safari."
+      ]
+    },
+    {
+      "view": "Composition",
+      "source": "app/layout.tsx",
+      "sourceSha256": "9af0fea1064f3e171eae67588f9d500745aa8ee248f77ae781789b5be5ed8b21",
+      "target": "app/layout.tsx",
+      "targetSha256": "782aa40208656947a54a839c5f7e225ddb6cc43ec6ad599fe4469fe52eb2e5e5",
+      "technicalDeltas": [
+        "Remove unused legacy global LeadProvider; scope public provider to SiteShell. Review retains isolated local form. Original fonts/globals unchanged."
+      ]
+    }
+  ],
+  "newSections": "New scoped sections.module.css; no frozen CSS changes."
+}

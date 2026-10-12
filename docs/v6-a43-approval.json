@@ -1,0 +1,14 @@
+{
+  "version": "V6-A4.3",
+  "status": "awaiting_owner_approval",
+  "stageBStarted": false,
+  "copyStatus": "A4.2 editorial candidate unchanged",
+  "checkedAt": "2026-10-09T07:39:14.641232+00:00",
+  "publicDeploy": false,
+  "tests": {
+    "unit": 11,
+    "browser": 38,
+    "skipped": 0,
+    "flaky": 0
+  }
+}

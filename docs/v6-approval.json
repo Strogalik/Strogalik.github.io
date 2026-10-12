@@ -1,0 +1,38 @@
+{
+  "revision": "V6-A-01",
+  "stage": "A",
+  "status": "awaiting_owner_approval",
+  "preparedAt": "2026-10-06T19:29:59.941802+00:00",
+  "ownerApproved": false,
+  "stageBStarted": false,
+  "previewUrl": "http://127.0.0.1:3200/review/v6",
+  "report": "docs/v6-design-review.md",
+  "gallery": "qa/v6/index.html",
+  "recording": "qa/v6/video/design-review.webm",
+  "scope": [
+    "Hero desktop/mobile",
+    "CRM / OMS / custom product section",
+    "compact dark footer",
+    "button states",
+    "glass material",
+    "isolated local form"
+  ],
+  "codeSha256": {
+    "app/review/v6/page.tsx": "dfb8d45fc355135dc0ae076a584750a107764113d18bc74bef6a204f0e7e6134",
+    "components/review-v6/ReviewV6.tsx": "f8027b8b9c3aaabef91b37daadba9551462fd7de1114c42313a0f83fdb7a40c1",
+    "components/review-v6/review.module.css": "29c103a3c742496232b337f46b8b26fde53dbe3fe157cf1ca4f523f913505f7b",
+    "lib/design-review.ts": "bb7642e1e1e31ba3d15ac84aa08ae5ea06f08194e9d625082a22860193eef813",
+    "components/Analytics.tsx": "e0a942e708b3c9b4bbfaa36f0499b62c2612ed3a69b43922ba71e4102644e667"
+  },
+  "verification": {
+    "build": "PASS",
+    "lint": "PASS",
+    "types": "PASS",
+    "unitPassed": 11,
+    "browserPassed": 18,
+    "contrastSamplesPassed": 12,
+    "webkit": "NOT RUN — executable unavailable",
+    "nativeBrowserZoom": "NOT RUN — tested 640 CSS px reflow + 200% root font and text spacing"
+  },
+  "nextAction": "Owner explicitly approves shown screens or provides Stage A revisions. Do not start Stage B automatically."
+}

@@ -1,0 +1,255 @@
+{
+  "iteration": "B8",
+  "status": "awaiting_owner_review",
+  "stageBStarted": true,
+  "faqPromotion": true,
+  "publicDeploy": false,
+  "source": "current local project; pre-B8 snapshot 387 files; no Git reset/init",
+  "protectedAudit": {
+    "status": "FAIL",
+    "changed": [
+      {
+        "path": "README.md",
+        "before": "e6e913c68f5a135e777fc2fe4d9f5e489b3ac75cce685eba2564e62d0b141a1a",
+        "after": "bda9c2db59b94ea4068220956f7f400f51718bdce6a432ecab3243b0de6a5ce1",
+        "allowed": true
+      },
+      {
+        "path": "RELEASE_MANIFEST.json",
+        "before": "763644c274c6cb9faf84913fa34241dfedd669b5188c9ce01b9293831bbcfb75",
+        "after": "15898352139e656ddd9e9718ef176dbd99a6ad2f085acd4a143e3b977b7c4248",
+        "allowed": true
+      },
+      {
+        "path": "components/case-motion/cases.module.css",
+        "before": null,
+        "after": "bd511f24b77edb1ebf236de94706b8a80c1a03371cab81630ea731e4b967c115",
+        "allowed": true
+      },
+      {
+        "path": "components/case-motion/useCaseMotion.ts",
+        "before": null,
+        "after": "12d1d3ea39ed8d5dc1882d379185081a3aa89f3bcd2ccc5993a77c2bb8a3927a",
+        "allowed": true
+      },
+      {
+        "path": "components/site-v6/B1Sections.tsx",
+        "before": "677c79e4cded023353618539c1cff6af3215965561cc38a0ef989debc175b88a",
+        "after": "832edb877ef34f44881fe33a2016fd3d9268f082cc18840ee71d13649079fac9",
+        "allowed": true
+      },
+      {
+        "path": "components/site-v6/Footer.tsx",
+        "before": "c43f34d99fcb0c904b5a14292518949ee699a7c40551f1e969a902eb4d7961e7",
+        "after": "9aca837a4e399060a6afe4b32ea5bde7f49f2ae5c0d2008d878bd06a9312fff2",
+        "allowed": true
+      },
+      {
+        "path": "components/site-v6/footer.module.css",
+        "before": "0297c6ffed13cc20c0bf23c11d4da596510748b72d67e35e9ce45a5d4eb8742e",
+        "after": "a21a18ca1222aaafedee5021f73bdade5f00b891b2407a162d10354ee840e38b",
+        "allowed": true
+      },
+      {
+        "path": "docs/b8-final-review.md",
+        "before": null,
+        "after": "5894d79893c3e1610ca22c5bc5745261be0b462607136dd613adfce8d1b2dcde",
+        "allowed": true
+      },
+      {
+        "path": "docs/b8-source-audit.json",
+        "before": null,
+        "after": "083162733d099ed393a1e847fb4500c482c88102d9cfaff63d9a6b42c9baa87f",
+        "allowed": true
+      },
+      {
+        "path": "scripts/b8-baseline-check.mjs",
+        "before": null,
+        "after": "d41ec9d721066c802c773054e029cc5e99afbd7a56e046eea81894df94ad5f2a",
+        "allowed": true
+      },
+      {
+        "path": "scripts/b8-capture-preserved.mjs",
+        "before": null,
+        "after": "610a15d85ac5873d483f8b14bcab631f6fd6eb338c999064e77cc54f8be7be1b",
+        "allowed": true
+      },
+      {
+        "path": "scripts/b8-compare.mjs",
+        "before": null,
+        "after": "77cb83781c9b48e669b10f3bfb30679850b46ccf02b64d39a0548b66e58ce248",
+        "allowed": true
+      },
+      {
+        "path": "scripts/b8-extra-evidence.mjs",
+        "before": null,
+        "after": "0fee2afea68a335d973e13a6582ef2e8ee4b9eb0df3efbdb451caf21ab610b72",
+        "allowed": true
+      },
+      {
+        "path": "scripts/b8-gallery-check.mjs",
+        "before": null,
+        "after": "79d218cb90b5376179f0c0372c8201faec32eac0854c2475f2b327099fb3e607",
+        "allowed": true
+      },
+      {
+        "path": "scripts/b8-gallery.mjs",
+        "before": null,
+        "after": "66c7a83fd6377b68b038c849cfff2fdb0261652055b541297d24c88653c4154b",
+        "allowed": true
+      },
+      {
+        "path": "scripts/b8-motion-evidence.mjs",
+        "before": null,
+        "after": "5fe5cf820a532347ca19267327d70ca0bd52d6426957b0f149a072529ce756a2",
+        "allowed": true
+      },
+      {
+        "path": "scripts/b8-smoke.mjs",
+        "before": null,
+        "after": "6a0ea662dcd01fbf490381cce0ea35ec7a2974653629d86e5f496fab0431b33c",
+        "allowed": true
+      },
+      {
+        "path": "scripts/b8-static.mjs",
+        "before": null,
+        "after": "6c3c10857b90c95b855d13cd0555a5319d33a4bc63b654b7ca1ea3cf4956113c",
+        "allowed": true
+      },
+      {
+        "path": "tests/b4.spec.ts",
+        "before": "3b547ed9a0bfdfeafcad2f7bedffb022f884730972553a0e477dca4a3eb2b664",
+        "after": "b3cf3c2044b83ac9c9b88363f7779894bfff3030d0897459376eaf0cf19b5596",
+        "allowed": false
+      },
+      {
+        "path": "tests/b8.playwright.config.ts",
+        "before": null,
+        "after": "323479c8379662e886784f77f14b956f81fee5b63e68940beb2d4092df6da969",
+        "allowed": true
+      },
+      {
+        "path": "tests/b8.spec.ts",
+        "before": null,
+        "after": "98bcfa336ff161dfa4c000f91ed09a7d72e357123503441a3508bb03ddda061f",
+        "allowed": true
+      }
+    ],
+    "unexpected": [
+      "tests/b4.spec.ts"
+    ],
+    "protected_region_changes": [],
+    "limits": "Scope check only, not visual/browser/accessibility or legal approval",
+    "manualReview": {
+      "status": "PASS",
+      "exception": "tests/b4.spec.ts: explicitly permitted replacement of old footer contacts/document shared axis with new document group axis; text/link/subtitle/overflow checks retained.",
+      "sourceGuardUnmodified": true
+    }
+  },
+  "packageAndLockUnchanged": true,
+  "fontsPreserved": true,
+  "changedFiles": [
+    {
+      "path": "README.md",
+      "before": "e6e913c68f5a135e777fc2fe4d9f5e489b3ac75cce685eba2564e62d0b141a1a",
+      "after": "bda9c2db59b94ea4068220956f7f400f51718bdce6a432ecab3243b0de6a5ce1"
+    },
+    {
+      "path": "RELEASE_MANIFEST.json",
+      "before": "763644c274c6cb9faf84913fa34241dfedd669b5188c9ce01b9293831bbcfb75",
+      "after": "15898352139e656ddd9e9718ef176dbd99a6ad2f085acd4a143e3b977b7c4248"
+    },
+    {
+      "path": "components/case-motion/cases.module.css",
+      "before": null,
+      "after": "bd511f24b77edb1ebf236de94706b8a80c1a03371cab81630ea731e4b967c115"
+    },
+    {
+      "path": "components/case-motion/useCaseMotion.ts",
+      "before": null,
+      "after": "12d1d3ea39ed8d5dc1882d379185081a3aa89f3bcd2ccc5993a77c2bb8a3927a"
+    },
+    {
+      "path": "components/site-v6/B1Sections.tsx",
+      "before": "677c79e4cded023353618539c1cff6af3215965561cc38a0ef989debc175b88a",
+      "after": "832edb877ef34f44881fe33a2016fd3d9268f082cc18840ee71d13649079fac9"
+    },
+    {
+      "path": "components/site-v6/Footer.tsx",
+      "before": "c43f34d99fcb0c904b5a14292518949ee699a7c40551f1e969a902eb4d7961e7",
+      "after": "9aca837a4e399060a6afe4b32ea5bde7f49f2ae5c0d2008d878bd06a9312fff2"
+    },
+    {
+      "path": "components/site-v6/footer.module.css",
+      "before": "0297c6ffed13cc20c0bf23c11d4da596510748b72d67e35e9ce45a5d4eb8742e",
+      "after": "a21a18ca1222aaafedee5021f73bdade5f00b891b2407a162d10354ee840e38b"
+    },
+    {
+      "path": "docs/b8-final-review.md",
+      "before": null,
+      "after": "5894d79893c3e1610ca22c5bc5745261be0b462607136dd613adfce8d1b2dcde"
+    },
+    {
+      "path": "scripts/b8-baseline-check.mjs",
+      "before": null,
+      "after": "d41ec9d721066c802c773054e029cc5e99afbd7a56e046eea81894df94ad5f2a"
+    },
+    {
+      "path": "scripts/b8-capture-preserved.mjs",
+      "before": null,
+      "after": "610a15d85ac5873d483f8b14bcab631f6fd6eb338c999064e77cc54f8be7be1b"
+    },
+    {
+      "path": "scripts/b8-compare.mjs",
+      "before": null,
+      "after": "77cb83781c9b48e669b10f3bfb30679850b46ccf02b64d39a0548b66e58ce248"
+    },
+    {
+      "path": "scripts/b8-extra-evidence.mjs",
+      "before": null,
+      "after": "0fee2afea68a335d973e13a6582ef2e8ee4b9eb0df3efbdb451caf21ab610b72"
+    },
+    {
+      "path": "scripts/b8-gallery-check.mjs",
+      "before": null,
+      "after": "79d218cb90b5376179f0c0372c8201faec32eac0854c2475f2b327099fb3e607"
+    },
+    {
+      "path": "scripts/b8-gallery.mjs",
+      "before": null,
+      "after": "66c7a83fd6377b68b038c849cfff2fdb0261652055b541297d24c88653c4154b"
+    },
+    {
+      "path": "scripts/b8-motion-evidence.mjs",
+      "before": null,
+      "after": "5fe5cf820a532347ca19267327d70ca0bd52d6426957b0f149a072529ce756a2"
+    },
+    {
+      "path": "scripts/b8-smoke.mjs",
+      "before": null,
+      "after": "6a0ea662dcd01fbf490381cce0ea35ec7a2974653629d86e5f496fab0431b33c"
+    },
+    {
+      "path": "scripts/b8-static.mjs",
+      "before": null,
+      "after": "6c3c10857b90c95b855d13cd0555a5319d33a4bc63b654b7ca1ea3cf4956113c"
+    },
+    {
+      "path": "tests/b4.spec.ts",
+      "before": "3b547ed9a0bfdfeafcad2f7bedffb022f884730972553a0e477dca4a3eb2b664",
+      "after": "b3cf3c2044b83ac9c9b88363f7779894bfff3030d0897459376eaf0cf19b5596"
+    },
+    {
+      "path": "tests/b8.playwright.config.ts",
+      "before": null,
+      "after": "323479c8379662e886784f77f14b956f81fee5b63e68940beb2d4092df6da969"
+    },
+    {
+      "path": "tests/b8.spec.ts",
+      "before": null,
+      "after": "98bcfa336ff161dfa4c000f91ed09a7d72e357123503441a3508bb03ddda061f"
+    }
+  ],
+  "excludedFromAuditSelfHash": true,
+  "generatedDeclarationExcludedFromPatch": "next-env.d.ts is generated by Next, excluded by the before seal; included unchanged in full source only"
+}

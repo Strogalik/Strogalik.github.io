@@ -1,0 +1,13 @@
+{
+  "release": "TMS V6 B10.1",
+  "status": "awaiting_owner_review",
+  "stageBStarted": true,
+  "faqPromotion": true,
+  "publicDeploy": false,
+  "analyticsLiveEnabled": false,
+  "launchReady": false,
+  "fontBinariesIncluded": false,
+  "fontBootstrap": "Pinned @fontsource fallback in clean source; original workspace fonts preserved.",
+  "sourceAudit": "docs/b10-1-source-audit.json",
+  "verification": "docs/b10-1-mobile-review.md"
+}

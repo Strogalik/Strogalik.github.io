@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-11T04:17:34.325577+00:00",
+  "status": "PASS",
+  "source": "TMS_V6_B3_source.zip",
+  "directory": "work/b3-clean/tms-site",
+  "checks": [
+    "npm ci",
+    "npm run build",
+    "npm run typecheck",
+    "20-route Chromium smoke"
+  ],
+  "fontBootstrap": "Original font binaries intentionally excluded. Only extracted app/fonts.ts generated to pinned npm imports. Original workspace fonts unchanged.",
+  "fontEvidence": {
+    "body": "Inter, Arial, sans-serif",
+    "h1": "Montserrat, sans-serif",
+    "status": "loaded"
+  },
+  "remoteRequests": 0,
+  "pageErrors": 0,
+  "visualLimit": "No claim of pixel equality between npm fallback and workspace original WOFF2.",
+  "finalVerification": "qa/v6-b3/final-source-verification.json in review archive"
+}

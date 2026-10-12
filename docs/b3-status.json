@@ -1,0 +1,20 @@
+{
+  "revision": "V6 B3",
+  "date": "2026-10-11T04:10:24.108456+00:00",
+  "status": "awaiting_owner_review",
+  "stageBStarted": true,
+  "stageBStatus": "continues_partial_qa",
+  "implementation": "locally_implemented",
+  "designBaseline": "A4.8 / B1 / B2 preserved with explicit B3 navigation/legal exceptions",
+  "qa": "136 PASS / 3 FAIL browser; 21 PASS unit",
+  "launch": "blocked",
+  "publicDeploy": false,
+  "legalChangesApproved": false,
+  "productionDeliveryVerified": false,
+  "remaining": [
+    "Pre-existing calculator overflow at 320/360/390 with text200% + spacing, reproduced unchanged on B2",
+    "L1–L4 owner legal/delivery decisions",
+    "Full native browser, physical phone and screen-reader matrix",
+    "One B2→B3 upper-footer raster delta at 1440 with identical measured geometry; four older B1 deltas remain historical"
+  ]
+}

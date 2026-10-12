@@ -1,0 +1,12 @@
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import { site } from '@/content/site';
+export function Header(){const [open,setOpen]=useState(false);const toggle=useRef<HTMLButtonElement>(null);const dropdown=useRef<HTMLDetailsElement>(null);const path=usePathname();
+ useEffect(()=>{function escape(e:KeyboardEvent){if(e.key==='Escape'){if(open){setOpen(false);toggle.current?.focus();}if(dropdown.current?.open){dropdown.current.open=false;dropdown.current.querySelector('summary')?.focus();}}}document.addEventListener('keydown',escape);return()=>document.removeEventListener('keydown',escape);},[open]);
+ const products=site.navigation.slice(0,3);const rest=site.navigation.slice(3).filter(l=>['/cases','/about'].includes(l.href));
+ const links=(items:typeof site.navigation)=>items.map(link=><Link href={link.href} key={link.href} aria-current={path===link.href?'page':undefined} onClick={()=>{setOpen(false);if(dropdown.current)dropdown.current.open=false;}}>{link.label}</Link>);
+ return <header className="site-header"><div className="container header-inner"><Link className="brand" href="/" aria-label="TMS — главная" onClick={()=>setOpen(false)}><Image src="/brand/tms-logo.png" alt="" width={48} height={44} priority/><span>TMS</span></Link><nav className="desktop-nav" aria-label="Основная навигация"><details ref={dropdown} className="nav-products"><summary className={path.startsWith('/products/')?'nav-current':undefined}>Продукты</summary><div>{links(products)}</div></details>{links(rest)}</nav><div className="header-actions"><Link className="button small" href="/demo" data-event="demo_view" onClick={()=>setOpen(false)}>Демо</Link><button ref={toggle} className="menu-toggle" aria-expanded={open} aria-controls="mobile-menu" onClick={()=>setOpen(!open)} type="button">{open?'Закрыть':'Меню'}</button></div></div><nav id="mobile-menu" aria-label="Мобильная навигация" className="mobile-nav" hidden={!open}>{links(site.navigation)}</nav><noscript><style>{`.site-header{height:auto;position:static}.header-inner{min-height:var(--header-height)}.menu-toggle{display:none}`}</style><nav className="nojs-nav" aria-label="Навигация без JavaScript">{links(site.navigation)}</nav><p className="container fineprint nojs-help">Описания демо и кейсы доступны. Действия с записями, расчёт и отправка требуют JavaScript.</p></noscript></header>;
+}

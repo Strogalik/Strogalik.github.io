@@ -1,0 +1,257 @@
+{
+  "iteration": "B10.1",
+  "status": "awaiting_owner_review",
+  "stageBStarted": true,
+  "faqPromotion": true,
+  "publicDeploy": false,
+  "source": "current local project; pre-B10.1 snapshot 440 files; no Git reset/init",
+  "protectedAudit": {
+    "ok": true,
+    "baselineFiles": 440,
+    "deleted": 0,
+    "changes": [
+      {
+        "path": "README.md",
+        "before": "6f33bc2e7d9cfd05efb780953e21e49f56b7d6a2ad8f6727ac0d277b52e9abda",
+        "after": "5d0d7b1359195244512c91055a196ffe0dff97b4997038309b97338b0f350169"
+      },
+      {
+        "path": "RELEASE_MANIFEST.json",
+        "before": "fcc3e432f5dcd8cda4b0c17bfeda475a5343e0313c53d0e04897bc7c137de928",
+        "after": "b42239df8b7102c53e42129929892ef48feb66b10d384e3987a8d77711e51516"
+      },
+      {
+        "path": "components/site-v6/Calculator.tsx",
+        "before": "818c808a995cf4a8a72d49a866edea33dce8743435eb3384fa17db7b43b8e308",
+        "after": "57559645cb47f567473ebc129a146ffdae7d43fd3823ae6b6a7dfc19d03a831a"
+      },
+      {
+        "path": "components/site-v6/calculator-motion.module.css",
+        "before": "a1a584600788f4d3e8f05daac2993d318f1eafd57373b9a798430732b4687f52",
+        "after": "e9e2184607ed40c793e03747596e92b1233d5f393c9bfd520b4f42ece71b32a3"
+      },
+      {
+        "path": "tests/b4.spec.ts",
+        "before": "b5ac4876252e44712a367199bbbd40f893bff689e73dd9da0bf7182b50e45b98",
+        "after": "4ded2a84be873faed293eb170cf15e043e8cc4f313755f310cbb9a7189237a57"
+      },
+      {
+        "path": "tests/b7.spec.ts",
+        "before": "bf69cccb13f460faa508da13273c2a9d5a4f16c25a4e8ba65a39a55adac4b163",
+        "after": "5b1b65ed00a276c242f3c76800d17f590e2fb1236228308c9e2ea975363360b8"
+      },
+      {
+        "path": "tests/b10-1-regression.config.ts",
+        "before": null,
+        "after": "fea4015525320e02426fe91f3f4964fd00f62f4d551fe006abe4d339603f5b81"
+      },
+      {
+        "path": "tests/b10-1-stability.config.ts",
+        "before": null,
+        "after": "4f33c94e3d3da6972ccadb96261a22caee24ea9799e828659762d278365033bc"
+      },
+      {
+        "path": "tests/b10-1.playwright.config.ts",
+        "before": null,
+        "after": "2769174a75bea13b40411cba88022ab99450b9976ca2ff0e55a2050507b346d7"
+      },
+      {
+        "path": "tests/b10-1.spec.ts",
+        "before": null,
+        "after": "fcf2bcd57ae1c8289120557eefb7d1b0953553ea2ff92eeec7b4d855669a54c4"
+      },
+      {
+        "path": "docs/b10-1-mobile-review.md",
+        "before": null,
+        "after": "0d49bb03f0283b895c66e65fbfa6219b3178810e438bf58762e4babbf1cc7e3c"
+      },
+      {
+        "path": "components/calculator-studio/useCompactEditorMotion.ts",
+        "before": null,
+        "after": "dbd0ab2d3f72b3a7a9d6ab4a4b485a65930268f918c070450bb2a7ac18c054a6"
+      },
+      {
+        "path": "components/site-v6/calculator-mobile.module.css",
+        "before": null,
+        "after": "9153d48e374b20b3b9e16849cfba278621e77936cc26cd57e735eaac45c37d0b"
+      },
+      {
+        "path": "scripts/b10-1-motion-evidence.mjs",
+        "before": null,
+        "after": "8b8f2c094fb9eb8443ded0c52c9c82f12ccbb9b0d1206f5d673e13b29e3bbcdf"
+      },
+      {
+        "path": "scripts/b10-1-extra-evidence.mjs",
+        "before": null,
+        "after": "b8642db2ee2e8efba741d0e4c3b11af6361fe662a681f68860540eb0be4009e8"
+      },
+      {
+        "path": "scripts/b10-1-compare-desktop.mjs",
+        "before": null,
+        "after": "769cbd56ce454722af3802a6809e4b92f50716e20d33aa585955d934694485d3"
+      },
+      {
+        "path": "scripts/b10-1-compare.mjs",
+        "before": null,
+        "after": "6f639faefc07e6aaab71ac49794a3fa4310a6e86600bc37f5178cc2cdf3045d8"
+      },
+      {
+        "path": "scripts/b10-1-capture.mjs",
+        "before": null,
+        "after": "73f7d8cb71da8481bbab6d8a4b1a4fa1cef7ee5b3dd69f56eabff559ff1d8140"
+      },
+      {
+        "path": "scripts/b10-1-gallery-check.mjs",
+        "before": null,
+        "after": "72dfbde41cbb757c697a9de8be931e0eabe39bfc68fbbc96b5671e658544e5ca"
+      },
+      {
+        "path": "scripts/b10-1-gallery.mjs",
+        "before": null,
+        "after": "32282c5bd3abfecd62f075dc07ca7badb61c25040dbb4aafb011551e9e24cad6"
+      },
+      {
+        "path": "scripts/b10-1-preserved.mjs",
+        "before": null,
+        "after": "e1b6fbac1e1d3f1f12c937af6b69358d4c6828a1a9f3368885531fd86af39333"
+      },
+      {
+        "path": "scripts/b10-1-mobile-evidence.mjs",
+        "before": null,
+        "after": "d6bdf82b06d551c5dbc42d3ec9bc641bcef0af43cc69146420d8f2a4e3da34aa"
+      }
+    ],
+    "protectedHashes": {
+      "lib/calculator.ts": "c8a73ff713e58b4f68e9f24161b48c0982cb78219ac3c5e10963f8b198a7231e",
+      "lib/calculator-extension.ts": "8d3b30e12df4c979656602cdf06355328a980f07aefd9f67dddb7d3d6f15ebe0",
+      "content/calculator-spec.json": "2f953daf17aec8105a03ce6ced3e0289b9278882bfbb89f0170921f8e9df2c21",
+      "content/calculator-ui.b9.ru.json": "d8886e01cebd5b6fba1ec1a03c4309543872990f60ddab485b0eee4a9bf93f1a",
+      "package.json": "0b1ddb778cad7ff7abc09ce282f33f9c9365b7432121dd73c32e05ccb723ef68",
+      "package-lock.json": "d5ee611fd07f4316c539dcfbc710a32545a9c98d06f52e274a3a6b86b10468c8",
+      "components/site-v6/B1Sections.tsx": "741c2f75562375447100f9f69a43af29c6a25606be0dd3f65f79b4f28cf92f9b",
+      "components/site-v6/calculator-studio.module.css": "67360d05ef112c400f1aa24c0040b844136656a918c340b2df6ecf50f2b281d0",
+      "components/motion/useLayoutMotion.ts": "6de63882e0380c5e30e611569f90b1a66d420bd9490b16387f6fc0b918c50849",
+      "components/b9-stability/IntrinsicSlot.tsx": "ba52333e44f7bf53de8b0fd05035c573d4f653bba3cfa34f0e8d5ea79bf2b249",
+      "components/b9-stability/intrinsic.module.css": "b3b0738e57d7597e008f791e2b11a3556ce916cbfbb910811a6946931cb9886d",
+      "components/b9-stability/scenes.module.css": "d47352178c9de62c4b89c0b90db0a4f74cc79edbf6ff258f15af9e67f947ba04"
+    },
+    "fontsUnchanged": true,
+    "note": "Only Calculator composition/compact range and local editor motion changed. All other baseline app/content/API/legal/cookies/fonts/routes/styles remain byte-identical. Existing b4/b7 calculator test thresholds updated 600→900; assertions retained. New QA/scripts/docs are B10.1-specific. TypeScript cache is generated and excluded."
+  },
+  "packageAndLockUnchanged": true,
+  "fontsPreserved": true,
+  "changedFiles": [
+    {
+      "path": "README.md",
+      "before": "6f33bc2e7d9cfd05efb780953e21e49f56b7d6a2ad8f6727ac0d277b52e9abda",
+      "after": "5d0d7b1359195244512c91055a196ffe0dff97b4997038309b97338b0f350169"
+    },
+    {
+      "path": "RELEASE_MANIFEST.json",
+      "before": "fcc3e432f5dcd8cda4b0c17bfeda475a5343e0313c53d0e04897bc7c137de928",
+      "after": "b42239df8b7102c53e42129929892ef48feb66b10d384e3987a8d77711e51516"
+    },
+    {
+      "path": "components/calculator-studio/useCompactEditorMotion.ts",
+      "before": null,
+      "after": "dbd0ab2d3f72b3a7a9d6ab4a4b485a65930268f918c070450bb2a7ac18c054a6"
+    },
+    {
+      "path": "components/site-v6/Calculator.tsx",
+      "before": "818c808a995cf4a8a72d49a866edea33dce8743435eb3384fa17db7b43b8e308",
+      "after": "57559645cb47f567473ebc129a146ffdae7d43fd3823ae6b6a7dfc19d03a831a"
+    },
+    {
+      "path": "components/site-v6/calculator-mobile.module.css",
+      "before": null,
+      "after": "9153d48e374b20b3b9e16849cfba278621e77936cc26cd57e735eaac45c37d0b"
+    },
+    {
+      "path": "components/site-v6/calculator-motion.module.css",
+      "before": "a1a584600788f4d3e8f05daac2993d318f1eafd57373b9a798430732b4687f52",
+      "after": "e9e2184607ed40c793e03747596e92b1233d5f393c9bfd520b4f42ece71b32a3"
+    },
+    {
+      "path": "docs/b10-1-mobile-review.md",
+      "before": null,
+      "after": "0d49bb03f0283b895c66e65fbfa6219b3178810e438bf58762e4babbf1cc7e3c"
+    },
+    {
+      "path": "scripts/b10-1-capture.mjs",
+      "before": null,
+      "after": "73f7d8cb71da8481bbab6d8a4b1a4fa1cef7ee5b3dd69f56eabff559ff1d8140"
+    },
+    {
+      "path": "scripts/b10-1-compare-desktop.mjs",
+      "before": null,
+      "after": "769cbd56ce454722af3802a6809e4b92f50716e20d33aa585955d934694485d3"
+    },
+    {
+      "path": "scripts/b10-1-compare.mjs",
+      "before": null,
+      "after": "6f639faefc07e6aaab71ac49794a3fa4310a6e86600bc37f5178cc2cdf3045d8"
+    },
+    {
+      "path": "scripts/b10-1-extra-evidence.mjs",
+      "before": null,
+      "after": "b8642db2ee2e8efba741d0e4c3b11af6361fe662a681f68860540eb0be4009e8"
+    },
+    {
+      "path": "scripts/b10-1-gallery-check.mjs",
+      "before": null,
+      "after": "72dfbde41cbb757c697a9de8be931e0eabe39bfc68fbbc96b5671e658544e5ca"
+    },
+    {
+      "path": "scripts/b10-1-gallery.mjs",
+      "before": null,
+      "after": "32282c5bd3abfecd62f075dc07ca7badb61c25040dbb4aafb011551e9e24cad6"
+    },
+    {
+      "path": "scripts/b10-1-mobile-evidence.mjs",
+      "before": null,
+      "after": "d6bdf82b06d551c5dbc42d3ec9bc641bcef0af43cc69146420d8f2a4e3da34aa"
+    },
+    {
+      "path": "scripts/b10-1-motion-evidence.mjs",
+      "before": null,
+      "after": "8b8f2c094fb9eb8443ded0c52c9c82f12ccbb9b0d1206f5d673e13b29e3bbcdf"
+    },
+    {
+      "path": "scripts/b10-1-preserved.mjs",
+      "before": null,
+      "after": "e1b6fbac1e1d3f1f12c937af6b69358d4c6828a1a9f3368885531fd86af39333"
+    },
+    {
+      "path": "tests/b10-1-regression.config.ts",
+      "before": null,
+      "after": "fea4015525320e02426fe91f3f4964fd00f62f4d551fe006abe4d339603f5b81"
+    },
+    {
+      "path": "tests/b10-1-stability.config.ts",
+      "before": null,
+      "after": "4f33c94e3d3da6972ccadb96261a22caee24ea9799e828659762d278365033bc"
+    },
+    {
+      "path": "tests/b10-1.playwright.config.ts",
+      "before": null,
+      "after": "2769174a75bea13b40411cba88022ab99450b9976ca2ff0e55a2050507b346d7"
+    },
+    {
+      "path": "tests/b10-1.spec.ts",
+      "before": null,
+      "after": "fcf2bcd57ae1c8289120557eefb7d1b0953553ea2ff92eeec7b4d855669a54c4"
+    },
+    {
+      "path": "tests/b4.spec.ts",
+      "before": "b5ac4876252e44712a367199bbbd40f893bff689e73dd9da0bf7182b50e45b98",
+      "after": "4ded2a84be873faed293eb170cf15e043e8cc4f313755f310cbb9a7189237a57"
+    },
+    {
+      "path": "tests/b7.spec.ts",
+      "before": "bf69cccb13f460faa508da13273c2a9d5a4f16c25a4e8ba65a39a55adac4b163",
+      "after": "5b1b65ed00a276c242f3c76800d17f590e2fb1236228308c9e2ea975363360b8"
+    }
+  ],
+  "excludedFromAuditSelfHash": true,
+  "generatedDeclarationExcludedFromPatch": "next-env.d.ts is generated by Next and unchanged; included in full source, omitted from the patch"
+}

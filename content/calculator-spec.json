@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.0",
+  "disclaimer": "Сценарный расчёт, не гарантия результата",
+  "leadGate": false,
+  "conversion": {
+    "label": "Конверсия",
+    "inputs": [
+      {
+        "key": "requests",
+        "label": "Обращений в месяц",
+        "default": 400,
+        "min": 0
+      },
+      {
+        "key": "baseRate",
+        "label": "Текущая конверсия, %",
+        "default": 10,
+        "min": 0,
+        "max": 100
+      },
+      {
+        "key": "scenarioRate",
+        "label": "Сценарная конверсия, %",
+        "default": 12,
+        "min": 0,
+        "max": 100
+      }
+    ],
+    "formula": {
+      "baseDeals": "requests * baseRate / 100",
+      "scenarioDeals": "requests * scenarioRate / 100",
+      "deltaDeals": "scenarioDeals - baseDeals",
+      "deltaPercentagePoints": "scenarioRate - baseRate"
+    },
+    "outputs": {
+      "baseDeals": "Ожидаемые сделки — текущий сценарий",
+      "scenarioDeals": "Ожидаемые сделки — новый сценарий",
+      "deltaDeals": "Изменение количества сделок",
+      "deltaPercentagePoints": "Изменение конверсии, процентные пункты"
+    },
+    "note": "Сценарная конверсия — ваше допущение, не прогноз TMS. Отрицательное изменение тоже показывается."
+  },
+  "manualWork": {
+    "label": "Ручная работа",
+    "inputs": [
+      {
+        "key": "people",
+        "label": "Сотрудников",
+        "default": 5,
+        "min": 0
+      },
+      {
+        "key": "minutesPerDay",
+        "label": "Минут в день на сотрудника",
+        "default": 30,
+        "min": 0
+      },
+      {
+        "key": "workingDays",
+        "label": "Рабочих дней в месяц",
+        "default": 22,
+        "min": 0
+      }
+    ],
+    "formula": "people * minutesPerDay * workingDays / 60",
+    "unit": "часов в месяц",
+    "note": "Это объём времени по вашим данным, не обещание денежной экономии или сокращения штата."
+  },
+  "validation": {
+    "finiteNumbersOnly": true,
+    "preserveFractions": true,
+    "roundForDisplayOnly": true,
+    "rejectNegativeInputs": true,
+    "doNotClampNegativeDelta": true,
+    "blankInput": "show_validation_or_incomplete_state_not_fake_zero"
+  },
+  "referenceTests": [
+    {
+      "kind": "conversion",
+      "input": {
+        "requests": 400,
+        "baseRate": 10,
+        "scenarioRate": 12
+      },
+      "expected": {
+        "baseDeals": 40,
+        "scenarioDeals": 48,
+        "deltaDeals": 8,
+        "deltaPercentagePoints": 2
+      }
+    },
+    {
+      "kind": "conversion",
+      "input": {
+        "requests": 400,
+        "baseRate": 12,
+        "scenarioRate": 10
+      },
+      "expected": {
+        "baseDeals": 48,
+        "scenarioDeals": 40,
+        "deltaDeals": -8,
+        "deltaPercentagePoints": -2
+      }
+    },
+    {
+      "kind": "conversion",
+      "input": {
+        "requests": 3,
+        "baseRate": 10,
+        "scenarioRate": 20
+      },
+      "expected": {
+        "baseDeals": 0.3,
+        "scenarioDeals": 0.6,
+        "deltaDeals": 0.3,
+        "deltaPercentagePoints": 10
+      }
+    },
+    {
+      "kind": "manualWork",
+      "input": {
+        "people": 5,
+        "minutesPerDay": 30,
+        "workingDays": 22
+      },
+      "expected": 55
+    },
+    {
+      "kind": "manualWork",
+      "input": {
+        "people": 0,
+        "minutesPerDay": 30,
+        "workingDays": 22
+      },
+      "expected": 0
+    }
+  ]
+}

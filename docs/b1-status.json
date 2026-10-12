@@ -1,0 +1,24 @@
+{
+  "designBaseline": "A4.8",
+  "designApproval": "approved_by_owner",
+  "stageBStarted": true,
+  "revision": "B1",
+  "newSectionsApproval": "awaiting_owner_approval",
+  "publicDeploy": false,
+  "scope": "Homepage cases, start/cooperation and calculator placement only",
+  "stageBStatus": "partial",
+  "blockingChecks": [
+    "Existing frozen footer overflow at 200% text plus text spacing"
+  ],
+  "visualReviewNotes": [
+    "Four footer screenshots contain text raster differences; source and internal geometry unchanged"
+  ],
+  "notRun": [
+    "Native Safari B1",
+    "Real browser zoom B1",
+    "Physical phone",
+    "Screen reader",
+    "Firefox",
+    "Playwright WebKit"
+  ]
+}

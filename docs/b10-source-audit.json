@@ -1,0 +1,333 @@
+{
+  "iteration": "B10",
+  "status": "awaiting_owner_review",
+  "stageBStarted": true,
+  "faqPromotion": true,
+  "publicDeploy": false,
+  "source": "current local project; pre-B10 snapshot 421 files; no Git reset/init",
+  "protectedAudit": {
+    "ok": true,
+    "rawPathGuardOk": false,
+    "manualExceptions": {
+      "README.md": "Requested B10 delivery/run instructions; older history retained.",
+      "RELEASE_MANIFEST.json": "Requested iteration/status/audit pointers only; launch gates unchanged.",
+      "tests/b1.spec.ts": "B10 explicitly allows natural calculator section height and neighboring section visibility. Only calculator next-heading exclusion removed; viewport/overflow checks retained, 12 new B10 growth/stability checks added.",
+      "tests/b7.spec.ts": "B10 brief/04 requires visible edit initiator focus when desktop input becomes hidden. Only this resize focus assertion changed; raw value assertion retained.",
+      "tsconfig.tsbuildinfo": "Generated TypeScript cache; excluded from deliverables."
+    },
+    "unreviewedOutOfScope": [],
+    "changes": [
+      {
+        "path": "README.md",
+        "status": "modified",
+        "before": "eabaad407ad0d0e71142d0c7002560d157883a05ae0f7deb721a4d6e72706617",
+        "after": "6f33bc2e7d9cfd05efb780953e21e49f56b7d6a2ad8f6727ac0d277b52e9abda",
+        "within_scope": false
+      },
+      {
+        "path": "RELEASE_MANIFEST.json",
+        "status": "modified",
+        "before": "b0c3cca56f40c56b0007289aa542bbf89834171306a604d18faaf0cca423a798",
+        "after": "fcc3e432f5dcd8cda4b0c17bfeda475a5343e0313c53d0e04897bc7c137de928",
+        "within_scope": false
+      },
+      {
+        "path": "components/calculator-studio/useCalculatorAnchor.ts",
+        "status": "added",
+        "before": null,
+        "after": "04c0f20afe51be62343d985fa972318e18d8ead317751b64bb96e7ac4ffcc277",
+        "within_scope": true
+      },
+      {
+        "path": "components/site-v6/B1Sections.tsx",
+        "status": "modified",
+        "before": "5817dbe7fa0f60ae4b6c23d91a0d5d1d691644c185622cf17b7d1f57d9d1a50a",
+        "after": "741c2f75562375447100f9f69a43af29c6a25606be0dd3f65f79b4f28cf92f9b",
+        "within_scope": true
+      },
+      {
+        "path": "components/site-v6/Calculator.tsx",
+        "status": "modified",
+        "before": "f27ec58b94e7c9e6dcc575676427f4c17133e16e66c26d04939cddac574528c4",
+        "after": "818c808a995cf4a8a72d49a866edea33dce8743435eb3384fa17db7b43b8e308",
+        "within_scope": true
+      },
+      {
+        "path": "components/site-v6/calculator-studio.module.css",
+        "status": "added",
+        "before": null,
+        "after": "67360d05ef112c400f1aa24c0040b844136656a918c340b2df6ecf50f2b281d0",
+        "within_scope": true
+      },
+      {
+        "path": "docs/b10-calculator-review.md",
+        "status": "added",
+        "before": null,
+        "after": "e577a497c316a9b4924fd61ebf5d520b3871f7b02edae4cf9d411de2d150d372",
+        "within_scope": true
+      },
+      {
+        "path": "scripts/b10-calculator-capture.mjs",
+        "status": "added",
+        "before": null,
+        "after": "b412a54c1dc794be6dd699c41dd3e821118dc1624077f1ec4de87b0c5309f48d",
+        "within_scope": true
+      },
+      {
+        "path": "scripts/b10-capture-preserved.mjs",
+        "status": "added",
+        "before": null,
+        "after": "c01b53586b70e1318d25b4ab1bf9079114d5996ce127b74f68283afef3fb5fac",
+        "within_scope": true
+      },
+      {
+        "path": "scripts/b10-compare-mobile.mjs",
+        "status": "added",
+        "before": null,
+        "after": "fb70d743eb8ce20ff57472b98406010b712ee401ea881b446ffbac008104d6e0",
+        "within_scope": true
+      },
+      {
+        "path": "scripts/b10-compare.mjs",
+        "status": "added",
+        "before": null,
+        "after": "53e153c8632a0c97a7f3dfbd846f784b133afb2daed8c506d8bb430a267e35c8",
+        "within_scope": true
+      },
+      {
+        "path": "scripts/b10-extra-evidence.mjs",
+        "status": "added",
+        "before": null,
+        "after": "3752fd72926f6c6e11f985feb5da0025f0ed1f44c4030118cebc9a65f9928179",
+        "within_scope": true
+      },
+      {
+        "path": "scripts/b10-gallery-check.mjs",
+        "status": "added",
+        "before": null,
+        "after": "1601cec65f8312f5aa04ff100157f59586b5157b4191e019baaca75be1ec5167",
+        "within_scope": true
+      },
+      {
+        "path": "scripts/b10-gallery.mjs",
+        "status": "added",
+        "before": null,
+        "after": "9b50673f436e3f3fa38faa033bd390bd1d88bffce88315c521310e1b2c79f6d4",
+        "within_scope": true
+      },
+      {
+        "path": "scripts/b10-motion-evidence.mjs",
+        "status": "added",
+        "before": null,
+        "after": "b59994a838a44ff5c5863237e21361a33eaa6c050de79cdf076fb6f79a3875c1",
+        "within_scope": true
+      },
+      {
+        "path": "scripts/b10-protected-states.mjs",
+        "status": "added",
+        "before": null,
+        "after": "1ce86eecb9c3a78aaf7f4c8661733a7f7df6261ad2a1ffaa6bb3ba3cee985b4c",
+        "within_scope": true
+      },
+      {
+        "path": "tests/b1.spec.ts",
+        "status": "modified",
+        "before": "a6c3d29fb6679ae2bfee4f341d9c391bef1ed2a858f685302c12fd92d05a8aa8",
+        "after": "494ca47ff43ccc4508c4af2dc1fd5c5cd596cab212c24b6e8ba44174ba45daf2",
+        "within_scope": false
+      },
+      {
+        "path": "tests/b10-math.test.ts",
+        "status": "added",
+        "before": null,
+        "after": "b48a8dbef616d74b48e4a3b180b4dff9e28ea7d4082becedee56988c260065ca",
+        "within_scope": true
+      },
+      {
+        "path": "tests/b10-regression.config.ts",
+        "status": "added",
+        "before": null,
+        "after": "300e32f3711be916b3114afa88ccf14e3a550f277f31217b81189dc5a265170f",
+        "within_scope": true
+      },
+      {
+        "path": "tests/b10-stability.config.ts",
+        "status": "added",
+        "before": null,
+        "after": "eb73bc542c0cac95b4e5f00395950e370b67c81ee87237d2c0ce43569685fa33",
+        "within_scope": true
+      },
+      {
+        "path": "tests/b10.playwright.config.ts",
+        "status": "added",
+        "before": null,
+        "after": "2d1685980e6697599761892821ac338e072d9580ec21236b977d30a54b211cdf",
+        "within_scope": true
+      },
+      {
+        "path": "tests/b10.spec.ts",
+        "status": "added",
+        "before": null,
+        "after": "ebeb2039a3d19777b7b3768952ff0cc7ef5c40107026790b04f8fd9794702f40",
+        "within_scope": true
+      },
+      {
+        "path": "tests/b10/math-vectors.json",
+        "status": "added",
+        "before": null,
+        "after": "eb3e209e6b8c0698e0fa16c12ee3c84ac1c66e30c70a53aad09c008388f3c44f",
+        "within_scope": true
+      },
+      {
+        "path": "tests/b7.spec.ts",
+        "status": "modified",
+        "before": "718aa7d6931f0d91fd65e3be2910dad818b054eba8c7ae7238b4009d677f255e",
+        "after": "bf69cccb13f460faa508da13273c2a9d5a4f16c25a4e8ba65a39a55adac4b163",
+        "within_scope": false
+      }
+    ],
+    "sharedB1OutsideCalculatorUnchanged": true,
+    "protectedHashes": {
+      "lib/calculator.ts": "c8a73ff713e58b4f68e9f24161b48c0982cb78219ac3c5e10963f8b198a7231e",
+      "lib/calculator-extension.ts": "8d3b30e12df4c979656602cdf06355328a980f07aefd9f67dddb7d3d6f15ebe0",
+      "content/calculator-spec.json": "2f953daf17aec8105a03ce6ced3e0289b9278882bfbb89f0170921f8e9df2c21",
+      "content/calculator-ui.b9.ru.json": "d8886e01cebd5b6fba1ec1a03c4309543872990f60ddab485b0eee4a9bf93f1a",
+      "package.json": "0b1ddb778cad7ff7abc09ce282f33f9c9365b7432121dd73c32e05ccb723ef68",
+      "package-lock.json": "d5ee611fd07f4316c539dcfbc710a32545a9c98d06f52e274a3a6b86b10468c8",
+      "components/site-v6/b1.module.css": "18c1a9fb0222e5dd110c204fe820555f9cb2defbf6ddb79597031d90339e2c20",
+      "components/site-v6/sections.module.css": "5292154bd2fb74257e21afedece5926095178a64e9c2d505657bd29dfdd22470",
+      "components/site-v6/calculator-motion.module.css": "a1a584600788f4d3e8f05daac2993d318f1eafd57373b9a798430732b4687f52",
+      "components/motion/useLayoutMotion.ts": "6de63882e0380c5e30e611569f90b1a66d420bd9490b16387f6fc0b918c50849",
+      "components/b9-stability/IntrinsicSlot.tsx": "ba52333e44f7bf53de8b0fd05035c573d4f653bba3cfa34f0e8d5ea79bf2b249",
+      "components/b9-stability/intrinsic.module.css": "b3b0738e57d7597e008f791e2b11a3556ce916cbfbb910811a6946931cb9886d",
+      "components/b9-stability/scenes.module.css": "d47352178c9de62c4b89c0b90db0a4f74cc79edbf6ff258f15af9e67f947ba04"
+    },
+    "note": "All other source files in the snapshot remain byte-identical except listed changes. New desktop styles are scoped at min-width 901px; reviewed Calculator diff only import/class and resize focus initiator."
+  },
+  "packageAndLockUnchanged": true,
+  "fontsPreserved": true,
+  "changedFiles": [
+    {
+      "path": "README.md",
+      "before": "eabaad407ad0d0e71142d0c7002560d157883a05ae0f7deb721a4d6e72706617",
+      "after": "6f33bc2e7d9cfd05efb780953e21e49f56b7d6a2ad8f6727ac0d277b52e9abda"
+    },
+    {
+      "path": "RELEASE_MANIFEST.json",
+      "before": "b0c3cca56f40c56b0007289aa542bbf89834171306a604d18faaf0cca423a798",
+      "after": "fcc3e432f5dcd8cda4b0c17bfeda475a5343e0313c53d0e04897bc7c137de928"
+    },
+    {
+      "path": "components/calculator-studio/useCalculatorAnchor.ts",
+      "before": null,
+      "after": "04c0f20afe51be62343d985fa972318e18d8ead317751b64bb96e7ac4ffcc277"
+    },
+    {
+      "path": "components/site-v6/B1Sections.tsx",
+      "before": "5817dbe7fa0f60ae4b6c23d91a0d5d1d691644c185622cf17b7d1f57d9d1a50a",
+      "after": "741c2f75562375447100f9f69a43af29c6a25606be0dd3f65f79b4f28cf92f9b"
+    },
+    {
+      "path": "components/site-v6/Calculator.tsx",
+      "before": "f27ec58b94e7c9e6dcc575676427f4c17133e16e66c26d04939cddac574528c4",
+      "after": "818c808a995cf4a8a72d49a866edea33dce8743435eb3384fa17db7b43b8e308"
+    },
+    {
+      "path": "components/site-v6/calculator-studio.module.css",
+      "before": null,
+      "after": "67360d05ef112c400f1aa24c0040b844136656a918c340b2df6ecf50f2b281d0"
+    },
+    {
+      "path": "docs/b10-calculator-review.md",
+      "before": null,
+      "after": "e577a497c316a9b4924fd61ebf5d520b3871f7b02edae4cf9d411de2d150d372"
+    },
+    {
+      "path": "scripts/b10-calculator-capture.mjs",
+      "before": null,
+      "after": "b412a54c1dc794be6dd699c41dd3e821118dc1624077f1ec4de87b0c5309f48d"
+    },
+    {
+      "path": "scripts/b10-capture-preserved.mjs",
+      "before": null,
+      "after": "c01b53586b70e1318d25b4ab1bf9079114d5996ce127b74f68283afef3fb5fac"
+    },
+    {
+      "path": "scripts/b10-compare-mobile.mjs",
+      "before": null,
+      "after": "fb70d743eb8ce20ff57472b98406010b712ee401ea881b446ffbac008104d6e0"
+    },
+    {
+      "path": "scripts/b10-compare.mjs",
+      "before": null,
+      "after": "53e153c8632a0c97a7f3dfbd846f784b133afb2daed8c506d8bb430a267e35c8"
+    },
+    {
+      "path": "scripts/b10-extra-evidence.mjs",
+      "before": null,
+      "after": "3752fd72926f6c6e11f985feb5da0025f0ed1f44c4030118cebc9a65f9928179"
+    },
+    {
+      "path": "scripts/b10-gallery-check.mjs",
+      "before": null,
+      "after": "1601cec65f8312f5aa04ff100157f59586b5157b4191e019baaca75be1ec5167"
+    },
+    {
+      "path": "scripts/b10-gallery.mjs",
+      "before": null,
+      "after": "9b50673f436e3f3fa38faa033bd390bd1d88bffce88315c521310e1b2c79f6d4"
+    },
+    {
+      "path": "scripts/b10-motion-evidence.mjs",
+      "before": null,
+      "after": "b59994a838a44ff5c5863237e21361a33eaa6c050de79cdf076fb6f79a3875c1"
+    },
+    {
+      "path": "scripts/b10-protected-states.mjs",
+      "before": null,
+      "after": "1ce86eecb9c3a78aaf7f4c8661733a7f7df6261ad2a1ffaa6bb3ba3cee985b4c"
+    },
+    {
+      "path": "tests/b1.spec.ts",
+      "before": "a6c3d29fb6679ae2bfee4f341d9c391bef1ed2a858f685302c12fd92d05a8aa8",
+      "after": "494ca47ff43ccc4508c4af2dc1fd5c5cd596cab212c24b6e8ba44174ba45daf2"
+    },
+    {
+      "path": "tests/b10/math-vectors.json",
+      "before": null,
+      "after": "eb3e209e6b8c0698e0fa16c12ee3c84ac1c66e30c70a53aad09c008388f3c44f"
+    },
+    {
+      "path": "tests/b10-math.test.ts",
+      "before": null,
+      "after": "b48a8dbef616d74b48e4a3b180b4dff9e28ea7d4082becedee56988c260065ca"
+    },
+    {
+      "path": "tests/b10-regression.config.ts",
+      "before": null,
+      "after": "300e32f3711be916b3114afa88ccf14e3a550f277f31217b81189dc5a265170f"
+    },
+    {
+      "path": "tests/b10-stability.config.ts",
+      "before": null,
+      "after": "eb73bc542c0cac95b4e5f00395950e370b67c81ee87237d2c0ce43569685fa33"
+    },
+    {
+      "path": "tests/b10.playwright.config.ts",
+      "before": null,
+      "after": "2d1685980e6697599761892821ac338e072d9580ec21236b977d30a54b211cdf"
+    },
+    {
+      "path": "tests/b10.spec.ts",
+      "before": null,
+      "after": "ebeb2039a3d19777b7b3768952ff0cc7ef5c40107026790b04f8fd9794702f40"
+    },
+    {
+      "path": "tests/b7.spec.ts",
+      "before": "718aa7d6931f0d91fd65e3be2910dad818b054eba8c7ae7238b4009d677f255e",
+      "after": "bf69cccb13f460faa508da13273c2a9d5a4f16c25a4e8ba65a39a55adac4b163"
+    }
+  ],
+  "excludedFromAuditSelfHash": true,
+  "generatedDeclarationExcludedFromPatch": "next-env.d.ts is generated by Next and unchanged; included in full source, omitted from the patch"
+}

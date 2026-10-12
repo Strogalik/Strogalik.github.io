@@ -1,0 +1,7 @@
+.startSummary{display:flex;align-items:center;min-height:60px;padding:20px 24px;font-size:1.25rem;font-weight:600;line-height:1.5;gap:20px}
+.startSummary::after{content:'';width:20px;flex-shrink:0}
+/* Only the calculator: expanded explanations grow downward from a stable top. */
+.calculatorScene{align-items:flex-start;padding-block:48px}
+@media(max-width:600px){.calculatorScene{padding-block:36px}}
+
+.measureChoice>p{display:block!important}

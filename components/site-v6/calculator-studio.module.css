@@ -1,0 +1,90 @@
+/* B10 is deliberately absent below the intrinsic two-pane desktop breakpoint.
+   Mobile/tablet retain every B9 declaration, including landscape. */
+@media (min-width:901px) {
+ .scene.scene {
+  background:var(--tms-white);
+  align-items:flex-start;
+  min-block-size:0;
+  /* Viewport-only rhythm: disclosure height never recentres the heading. */
+  padding-block:clamp(24px,calc(7svh - 12px),64px) 56px;
+ }
+ .scene.scene>div {max-width:1200px}
+ .scene.scene h2 {margin-bottom:28px}
+ .shell.shell {
+  grid-template-columns:minmax(0,.47fr) minmax(0,.53fr);
+  grid-template-rows:auto 1fr auto;
+  position:relative;
+  isolation:isolate;
+  border:1px solid rgb(166 197 215 / 55%);
+  border-radius:28px;
+  background:var(--tms-paper);
+  box-shadow:0 8px 24px rgb(0 9 38 / 8%),inset 0 1px 0 rgb(255 255 255 / 90%);
+ }
+ .shell.shell>div:first-child {padding:28px 32px 20px}
+ .shell.shell>[data-calc-inputs] {padding:0 32px 28px;border-radius:0;background:transparent}
+ .shell.shell>[data-calc-result] {
+  padding:32px 36px;
+  border-radius:0 27px 0 0;
+  background:rgb(255 255 255 / 90%);
+  box-shadow:none;
+  gap:14px;
+  justify-content:flex-start;
+ }
+ .shell.shell [data-calc-modes] {
+  width:min(100%,280px);position:relative;isolation:isolate;
+  padding:4px;gap:0;margin:0;border-radius:15px;
+  background:rgb(214 230 243 / 65%);
+ }
+ .shell.shell [data-calc-modes]::before {
+  content:'';position:absolute;inset:4px auto 4px 4px;
+  width:calc(50% - 4px);border-radius:11px;background:var(--tms-sapphire);
+  box-shadow:inset 0 1px 0 rgb(255 255 255 / 25%);
+  transition:translate 200ms cubic-bezier(.22,.75,.25,1);
+ }
+ .shell.shell [data-calc-modes]:has(button:last-child[aria-pressed=true])::before {translate:100% 0}
+ .shell.shell [data-calc-modes] button {
+  position:relative;z-index:1;min-height:44px;padding:9px 12px;
+  border:1px solid transparent;border-radius:11px;background:transparent;
+  font-size:1rem;line-height:1.5;color:var(--tms-navy);
+ }
+ .shell.shell [data-calc-modes] button[aria-pressed=true] {color:var(--tms-white)}
+ .shell.shell [data-calc-fields] {gap:16px 20px}
+ .shell.shell [data-calc-fields] label {grid-template-rows:1fr auto}
+ .shell.shell input {background:rgb(255 255 255 / 96%);font-variant-numeric:tabular-nums}
+ .shell.shell [data-calc-value] {font-size:4.5rem;line-height:1.12;margin-block:12px;opacity:1}
+ .shell.shell [data-calc-title],.shell.shell [data-calc-unit] {font-size:1.125rem;line-height:1.5;opacity:1}
+ .shell.shell [data-calc-note] {margin-top:12px!important}
+ .shell.shell [data-calc-method] {background:rgb(255 255 255 / 60%);border-radius:0 0 27px 27px;padding:10px 32px;margin:0}
+ .shell.shell [data-calc-method]>div {padding-bottom:20px}
+ .shell.shell[data-ready=false]>[data-calc-result] {border-radius:27px 27px 0 0}
+ .shell.shell noscript p {border-radius:0 0 27px 27px}
+ @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  .shell.shell {background:rgb(233 241 248 / 90%);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+ }
+ @supports (interpolate-size:allow-keywords) {
+  .shell [data-calc-method] {interpolate-size:allow-keywords}
+  .shell [data-calc-method]::details-content {block-size:0;overflow:clip;transition:block-size 280ms cubic-bezier(.22,.75,.25,1),content-visibility 280ms allow-discrete}
+  .shell [data-calc-method][open]::details-content {block-size:auto}
+ }
+}
+@media (min-width:901px) and (max-width:1100px) {
+ .shell.shell>div:first-child {padding:24px 24px 20px}
+ .shell.shell>[data-calc-inputs] {padding:0 24px 24px}
+ .shell.shell>[data-calc-result] {padding:28px}
+ .shell.shell [data-calc-fields] {gap:16px}
+ .shell.shell [data-calc-value] {font-size:4rem}
+}
+@media (min-width:901px) and (prefers-reduced-transparency:reduce) {
+ .shell.shell {background:var(--tms-paper);backdrop-filter:none;-webkit-backdrop-filter:none}
+ .shell.shell>[data-calc-result],.shell.shell [data-calc-method] {background:var(--tms-white)}
+}
+@media (min-width:901px) and (prefers-reduced-motion:reduce) {
+ .shell.shell [data-calc-modes]::before,.shell [data-calc-method]::details-content {transition:none}
+}
+@media (min-width:901px) and (forced-colors:active) {
+ .shell.shell {background:Canvas;border-color:CanvasText;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+ .shell.shell>[data-calc-result],.shell.shell [data-calc-method],.shell.shell [data-calc-modes] {background:Canvas}
+ .shell.shell [data-calc-modes]::before {background:Highlight;forced-color-adjust:none}
+ .shell.shell [data-calc-modes] button[aria-pressed=true] {color:HighlightText;forced-color-adjust:none}
+ .shell.shell input {background:Field;border-color:FieldText}
+}

@@ -1,0 +1,16 @@
+/* B7: finite native presence; unsupported engines close immediately. */
+[data-b7-dialog]{translate:0 6px;transition:translate 180ms cubic-bezier(.22,.75,.25,1),display 180ms allow-discrete,overlay 180ms allow-discrete}
+[data-b7-dialog][open]{translate:0 0}
+[data-b7-dialog]::backdrop{transition:background-color 180ms,display 180ms allow-discrete,overlay 180ms allow-discrete}
+@starting-style{[data-b7-dialog][open]{translate:0 8px}[data-b7-dialog][open]::backdrop{background-color:transparent}}
+body:has(dialog[open]) [data-b7-dialog]:not([open]){transition:none}
+[data-b7-menu][open]>nav{animation:tms-b7-menu-in 220ms cubic-bezier(.22,.75,.25,1)}
+@keyframes tms-b7-menu-in{from{translate:0 -5px}to{translate:0 0}}
+@media(prefers-reduced-motion:reduce){[data-b7-dialog],[data-b7-dialog]::backdrop,[data-b7-menu]::details-content{transition:none;translate:none}[data-b7-menu][open]>nav{animation:none}}
+[data-b7-menu]::details-content{transition:content-visibility 180ms allow-discrete}
+[data-b7-menu]>nav{translate:0 -5px;transition:translate 180ms cubic-bezier(.22,.75,.25,1)}
+[data-b7-menu][open]>nav{translate:0 0}
+@media(prefers-reduced-motion:reduce){[data-b7-menu]::details-content,[data-b7-menu]>nav{transition:none;translate:none}}
+
+[data-motion-leaving]::details-content{content-visibility:visible}
+@media(scripting:none){[data-b7-menu]::details-content,[data-b7-menu]>nav{transition:none;translate:none}[data-b7-menu][open]>nav{animation:none}}

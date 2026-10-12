@@ -1,0 +1,6 @@
+import {chromium} from 'playwright';
+import {mkdir,writeFile} from 'node:fs/promises';
+const phase=process.argv[2]||'after',root=`qa/v6-b2/routes-${phase}`,routes=['/products/crm','/products/oms','/products/crm-oms','/cases','/cases/b2b-wholesale','/cases/flooring-manufacturer','/cases/online-school','/custom-development','/about','/partners','/privacy'];
+await mkdir(root,{recursive:true});const b=await chromium.launch(),rows=[];
+for(const [width,height]of [[1440,760],[390,844]]){const p=await b.newPage({viewport:{width,height},reducedMotion:'reduce'});for(const route of routes){const response=await p.goto('http://127.0.0.1:3200'+route);await p.evaluate(()=>document.fonts.ready);const name=route.slice(1).replaceAll('/','-');await p.screenshot({path:`${root}/${name}-${width}.png`});await p.screenshot({path:`${root}/${name}-${width}-full.png`,fullPage:true});rows.push({route,width,height,status:response.status(),title:await p.locator('h1').innerText(),navigation:await p.locator('header nav').first().locator('a').evaluateAll(a=>a.map(e=>({label:e.textContent,href:e.getAttribute('href')}))),overflow:await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth)});}await p.close();}
+await b.close();await writeFile(`${root}/route-matrix.json`,JSON.stringify(rows,null,2));console.log(phase,rows.length,'route captures');

@@ -1,0 +1,11 @@
+.desktopVisual{display:none}
+@media(min-width:901px){
+ .root[data-case-ready] [data-case-inline]{display:none}
+ .root[data-case-ready]>.desktopVisual{display:flex}
+ .root[data-case-ready]>details{position:relative;flex-shrink:0}
+ .root [data-case-leaving]::details-content{content-visibility:visible}
+ .root [data-case-ghost]{display:block!important;pointer-events:none}
+ .root [data-case-ghost] [data-case-inline]{display:none}
+ .visualLayer{position:relative;display:grid;grid-template-rows:270px auto;align-content:start;gap:inherit;margin:0;min-height:0;width:100%;flex:1}
+}
+@media(min-width:1101px) and (max-height:800px){.visualLayer{grid-template-rows:180px auto}}

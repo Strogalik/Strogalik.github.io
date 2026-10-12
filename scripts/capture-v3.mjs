@@ -1,0 +1,7 @@
+import { chromium, webkit } from '@playwright/test';
+import { mkdir,writeFile } from 'node:fs/promises';
+await mkdir('qa/v3-video',{recursive:true});
+const b=await chromium.launch();const c=await b.newContext({viewport:{width:1280,height:720},recordVideo:{dir:'qa/v3-video',size:{width:1280,height:720}}});const p=await c.newPage();
+await p.goto('http://127.0.0.1:3000/#product-crm');await p.emulateMedia({reducedMotion:'no-preference'});const d=p.locator('#product-crm .demo');await d.getByRole('button',{name:'Повторить'}).click();await d.getByRole('button',{name:'Воспроизвести'}).click();await p.waitForTimeout(9000);await c.close();const nojs=await b.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const np=await nojs.newPage();await np.goto('http://127.0.0.1:3000');await np.screenshot({path:'qa/v3-screenshots/nojs-mobile.png',fullPage:true});await nojs.close();await b.close();
+let webkitResult;try{const w=await webkit.launch();const p=await w.newPage({viewport:{width:390,height:844}});await p.goto('http://127.0.0.1:3000');webkitResult={status:'PASS',overflow:await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)};await w.close();}catch(e){webkitResult={status:'NOT RUN',reason:e.message.includes("Executable doesn't exist") ? 'WebKit executable is not installed' : 'WebKit launch failed'};}
+await writeFile('qa/v3-webkit.json',JSON.stringify(webkitResult,null,2));console.log(webkitResult);

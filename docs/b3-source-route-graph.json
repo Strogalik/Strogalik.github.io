@@ -1,0 +1,662 @@
+{
+  "date": "2026-10-11T04:10:24.108456+00:00",
+  "method": "Static relative/@ imports from App Router entries plus root layout, sitemap and robots; dynamic runtime validation is separate. Includes closed review route source, not evidence it is publicly enabled.",
+  "entrypoints": [
+    "app/(marketing)/about/page.tsx",
+    "app/(marketing)/cases/[slug]/page.tsx",
+    "app/(marketing)/cases/page.tsx",
+    "app/(marketing)/consent/page.tsx",
+    "app/(marketing)/cookies/page.tsx",
+    "app/(marketing)/custom-development/page.tsx",
+    "app/(marketing)/page.tsx",
+    "app/(marketing)/partners/page.tsx",
+    "app/(marketing)/privacy/page.tsx",
+    "app/(marketing)/products/[slug]/page.tsx",
+    "app/api/lead/route.ts",
+    "app/demo/route.ts",
+    "app/layout.tsx",
+    "app/review/v6/page.tsx",
+    "app/robots.ts",
+    "app/sitemap.ts"
+  ],
+  "reachable": [
+    "app/(marketing)/about/page.tsx",
+    "app/(marketing)/cases/[slug]/page.tsx",
+    "app/(marketing)/cases/page.tsx",
+    "app/(marketing)/consent/page.tsx",
+    "app/(marketing)/cookies/page.tsx",
+    "app/(marketing)/custom-development/page.tsx",
+    "app/(marketing)/page.tsx",
+    "app/(marketing)/partners/page.tsx",
+    "app/(marketing)/privacy/page.tsx",
+    "app/(marketing)/products/[slug]/page.tsx",
+    "app/api/lead/route.ts",
+    "app/demo/route.ts",
+    "app/fonts.ts",
+    "app/globals.css",
+    "app/layout.tsx",
+    "app/review/v6/page.tsx",
+    "app/robots.ts",
+    "app/sitemap.ts",
+    "components/review-v6/HeroStory.tsx",
+    "components/review-v6/ReviewV6.tsx",
+    "components/review-v6/StoryAtmosphere.tsx",
+    "components/review-v6/StoryCopy.tsx",
+    "components/review-v6/StoryExperience.tsx",
+    "components/review-v6/content.module.css",
+    "components/review-v6/glass/StoryBackdrop.tsx",
+    "components/review-v6/glass/hero-motion.ts",
+    "components/review-v6/glass/session.ts",
+    "components/review-v6/glass/useHeroGlass.ts",
+    "components/review-v6/review.module.css",
+    "components/review-v6/story-content.ts",
+    "components/site-v6/ApprovedViews.tsx",
+    "components/site-v6/B1Sections.tsx",
+    "components/site-v6/Calculator.tsx",
+    "components/site-v6/CaseExplorer.tsx",
+    "components/site-v6/Consultation.tsx",
+    "components/site-v6/CookieNotice.tsx",
+    "components/site-v6/HeroStory.tsx",
+    "components/site-v6/Home.tsx",
+    "components/site-v6/InternalCases.tsx",
+    "components/site-v6/InternalTopics.tsx",
+    "components/site-v6/InternalViews.tsx",
+    "components/site-v6/LegalDocument.tsx",
+    "components/site-v6/Sections.tsx",
+    "components/site-v6/adapter.module.css",
+    "components/site-v6/b1.module.css",
+    "components/site-v6/content.ts",
+    "components/site-v6/internal.module.css",
+    "components/site-v6/legal.module.css",
+    "components/site-v6/sections.module.css",
+    "content/calculator-spec.json",
+    "content/cases.public.json",
+    "content/cases.ts",
+    "content/legal/consent.json",
+    "content/legal/cookies.json",
+    "content/legal/privacy.json",
+    "content/products.ts",
+    "content/site-copy.ru.json",
+    "content/site.ts",
+    "content/stage-b.json",
+    "lib/calculator-extension.ts",
+    "lib/calculator.ts",
+    "lib/consent.ts",
+    "lib/constants.ts",
+    "lib/demo-redirect.ts",
+    "lib/design-review.ts",
+    "lib/lead-handler.ts",
+    "lib/rate-limit.ts",
+    "lib/seo.ts",
+    "lib/utm.ts",
+    "lib/validation.ts"
+  ],
+  "edges": [
+    {
+      "from": "app/(marketing)/about/page.tsx",
+      "to": "content/site-copy.ru.json"
+    },
+    {
+      "from": "app/(marketing)/about/page.tsx",
+      "to": "lib/seo.ts"
+    },
+    {
+      "from": "lib/seo.ts",
+      "to": "content/site.ts"
+    },
+    {
+      "from": "content/site.ts",
+      "to": "content/site-copy.ru.json"
+    },
+    {
+      "from": "app/(marketing)/about/page.tsx",
+      "to": "components/site-v6/InternalViews.tsx"
+    },
+    {
+      "from": "components/site-v6/InternalViews.tsx",
+      "to": "components/site-v6/CaseExplorer.tsx"
+    },
+    {
+      "from": "components/site-v6/CaseExplorer.tsx",
+      "to": "content/cases.ts"
+    },
+    {
+      "from": "content/cases.ts",
+      "to": "content/cases.public.json"
+    },
+    {
+      "from": "components/site-v6/CaseExplorer.tsx",
+      "to": "components/site-v6/Consultation.tsx"
+    },
+    {
+      "from": "components/site-v6/Consultation.tsx",
+      "to": "lib/utm.ts"
+    },
+    {
+      "from": "lib/utm.ts",
+      "to": "lib/constants.ts"
+    },
+    {
+      "from": "components/site-v6/Consultation.tsx",
+      "to": "lib/consent.ts"
+    },
+    {
+      "from": "components/site-v6/Consultation.tsx",
+      "to": "lib/validation.ts"
+    },
+    {
+      "from": "lib/validation.ts",
+      "to": "lib/consent.ts"
+    },
+    {
+      "from": "lib/validation.ts",
+      "to": "lib/constants.ts"
+    },
+    {
+      "from": "components/site-v6/Consultation.tsx",
+      "to": "components/review-v6/review.module.css"
+    },
+    {
+      "from": "components/site-v6/Consultation.tsx",
+      "to": "components/site-v6/adapter.module.css"
+    },
+    {
+      "from": "components/site-v6/Consultation.tsx",
+      "to": "components/site-v6/HeroStory.tsx"
+    },
+    {
+      "from": "components/site-v6/HeroStory.tsx",
+      "to": "components/review-v6/glass/StoryBackdrop.tsx"
+    },
+    {
+      "from": "components/site-v6/HeroStory.tsx",
+      "to": "components/review-v6/review.module.css"
+    },
+    {
+      "from": "components/site-v6/HeroStory.tsx",
+      "to": "components/site-v6/adapter.module.css"
+    },
+    {
+      "from": "components/site-v6/HeroStory.tsx",
+      "to": "components/review-v6/glass/hero-motion.ts"
+    },
+    {
+      "from": "components/site-v6/CaseExplorer.tsx",
+      "to": "components/site-v6/b1.module.css"
+    },
+    {
+      "from": "components/site-v6/CaseExplorer.tsx",
+      "to": "components/review-v6/review.module.css"
+    },
+    {
+      "from": "components/site-v6/CaseExplorer.tsx",
+      "to": "components/site-v6/legal.module.css"
+    },
+    {
+      "from": "components/site-v6/InternalViews.tsx",
+      "to": "content/cases.ts"
+    },
+    {
+      "from": "components/site-v6/InternalViews.tsx",
+      "to": "components/site-v6/Consultation.tsx"
+    },
+    {
+      "from": "components/site-v6/InternalViews.tsx",
+      "to": "components/site-v6/internal.module.css"
+    },
+    {
+      "from": "app/(marketing)/about/page.tsx",
+      "to": "components/site-v6/internal.module.css"
+    },
+    {
+      "from": "app/(marketing)/cases/[slug]/page.tsx",
+      "to": "content/cases.ts"
+    },
+    {
+      "from": "app/(marketing)/cases/[slug]/page.tsx",
+      "to": "lib/seo.ts"
+    },
+    {
+      "from": "app/(marketing)/cases/[slug]/page.tsx",
+      "to": "components/site-v6/Consultation.tsx"
+    },
+    {
+      "from": "app/(marketing)/cases/[slug]/page.tsx",
+      "to": "components/site-v6/InternalViews.tsx"
+    },
+    {
+      "from": "app/(marketing)/cases/[slug]/page.tsx",
+      "to": "components/site-v6/internal.module.css"
+    },
+    {
+      "from": "app/(marketing)/cases/page.tsx",
+      "to": "lib/seo.ts"
+    },
+    {
+      "from": "app/(marketing)/cases/page.tsx",
+      "to": "components/site-v6/InternalCases.tsx"
+    },
+    {
+      "from": "components/site-v6/InternalCases.tsx",
+      "to": "components/site-v6/CaseExplorer.tsx"
+    },
+    {
+      "from": "components/site-v6/InternalCases.tsx",
+      "to": "content/cases.ts"
+    },
+    {
+      "from": "components/site-v6/InternalCases.tsx",
+      "to": "components/site-v6/internal.module.css"
+    },
+    {
+      "from": "components/site-v6/InternalCases.tsx",
+      "to": "components/review-v6/review.module.css"
+    },
+    {
+      "from": "app/(marketing)/cases/page.tsx",
+      "to": "components/site-v6/InternalViews.tsx"
+    },
+    {
+      "from": "app/(marketing)/cases/page.tsx",
+      "to": "components/site-v6/internal.module.css"
+    },
+    {
+      "from": "app/(marketing)/consent/page.tsx",
+      "to": "content/legal/consent.json"
+    },
+    {
+      "from": "app/(marketing)/consent/page.tsx",
+      "to": "components/site-v6/LegalDocument.tsx"
+    },
+    {
+      "from": "components/site-v6/LegalDocument.tsx",
+      "to": "components/site-v6/InternalViews.tsx"
+    },
+    {
+      "from": "components/site-v6/LegalDocument.tsx",
+      "to": "components/site-v6/internal.module.css"
+    },
+    {
+      "from": "components/site-v6/LegalDocument.tsx",
+      "to": "components/site-v6/legal.module.css"
+    },
+    {
+      "from": "components/site-v6/LegalDocument.tsx",
+      "to": "components/site-v6/CookieNotice.tsx"
+    },
+    {
+      "from": "components/site-v6/CookieNotice.tsx",
+      "to": "content/legal/cookies.json"
+    },
+    {
+      "from": "components/site-v6/CookieNotice.tsx",
+      "to": "components/site-v6/legal.module.css"
+    },
+    {
+      "from": "app/(marketing)/consent/page.tsx",
+      "to": "lib/seo.ts"
+    },
+    {
+      "from": "app/(marketing)/cookies/page.tsx",
+      "to": "content/legal/cookies.json"
+    },
+    {
+      "from": "app/(marketing)/cookies/page.tsx",
+      "to": "components/site-v6/LegalDocument.tsx"
+    },
+    {
+      "from": "app/(marketing)/cookies/page.tsx",
+      "to": "lib/seo.ts"
+    },
+    {
+      "from": "app/(marketing)/custom-development/page.tsx",
+      "to": "content/site-copy.ru.json"
+    },
+    {
+      "from": "app/(marketing)/custom-development/page.tsx",
+      "to": "content/cases.ts"
+    },
+    {
+      "from": "app/(marketing)/custom-development/page.tsx",
+      "to": "lib/seo.ts"
+    },
+    {
+      "from": "app/(marketing)/custom-development/page.tsx",
+      "to": "components/site-v6/Consultation.tsx"
+    },
+    {
+      "from": "app/(marketing)/custom-development/page.tsx",
+      "to": "components/site-v6/InternalViews.tsx"
+    },
+    {
+      "from": "app/(marketing)/custom-development/page.tsx",
+      "to": "components/site-v6/InternalTopics.tsx"
+    },
+    {
+      "from": "components/site-v6/InternalTopics.tsx",
+      "to": "components/site-v6/internal.module.css"
+    },
+    {
+      "from": "app/(marketing)/custom-development/page.tsx",
+      "to": "components/site-v6/internal.module.css"
+    },
+    {
+      "from": "app/(marketing)/page.tsx",
+      "to": "components/site-v6/Home.tsx"
+    },
+    {
+      "from": "components/site-v6/Home.tsx",
+      "to": "components/site-v6/ApprovedViews.tsx"
+    },
+    {
+      "from": "components/site-v6/ApprovedViews.tsx",
+      "to": "components/review-v6/review.module.css"
+    },
+    {
+      "from": "components/site-v6/ApprovedViews.tsx",
+      "to": "components/site-v6/adapter.module.css"
+    },
+    {
+      "from": "components/site-v6/ApprovedViews.tsx",
+      "to": "components/site-v6/HeroStory.tsx"
+    },
+    {
+      "from": "components/site-v6/ApprovedViews.tsx",
+      "to": "components/site-v6/Consultation.tsx"
+    },
+    {
+      "from": "components/site-v6/Home.tsx",
+      "to": "components/review-v6/StoryExperience.tsx"
+    },
+    {
+      "from": "components/review-v6/StoryExperience.tsx",
+      "to": "components/review-v6/story-content.ts"
+    },
+    {
+      "from": "components/review-v6/StoryExperience.tsx",
+      "to": "components/review-v6/StoryCopy.tsx"
+    },
+    {
+      "from": "components/review-v6/StoryCopy.tsx",
+      "to": "components/review-v6/story-content.ts"
+    },
+    {
+      "from": "components/review-v6/StoryCopy.tsx",
+      "to": "components/review-v6/content.module.css"
+    },
+    {
+      "from": "components/review-v6/StoryCopy.tsx",
+      "to": "components/review-v6/review.module.css"
+    },
+    {
+      "from": "components/review-v6/StoryExperience.tsx",
+      "to": "components/review-v6/StoryAtmosphere.tsx"
+    },
+    {
+      "from": "components/review-v6/StoryAtmosphere.tsx",
+      "to": "components/review-v6/content.module.css"
+    },
+    {
+      "from": "components/review-v6/StoryExperience.tsx",
+      "to": "components/review-v6/content.module.css"
+    },
+    {
+      "from": "components/review-v6/StoryExperience.tsx",
+      "to": "components/review-v6/review.module.css"
+    },
+    {
+      "from": "components/site-v6/Home.tsx",
+      "to": "components/site-v6/Consultation.tsx"
+    },
+    {
+      "from": "components/site-v6/Home.tsx",
+      "to": "components/site-v6/Sections.tsx"
+    },
+    {
+      "from": "components/site-v6/Sections.tsx",
+      "to": "content/cases.ts"
+    },
+    {
+      "from": "components/site-v6/Sections.tsx",
+      "to": "components/site-v6/content.ts"
+    },
+    {
+      "from": "components/site-v6/content.ts",
+      "to": "content/stage-b.json"
+    },
+    {
+      "from": "components/site-v6/Sections.tsx",
+      "to": "components/site-v6/Consultation.tsx"
+    },
+    {
+      "from": "components/site-v6/Sections.tsx",
+      "to": "components/site-v6/Calculator.tsx"
+    },
+    {
+      "from": "components/site-v6/Calculator.tsx",
+      "to": "content/calculator-spec.json"
+    },
+    {
+      "from": "components/site-v6/Calculator.tsx",
+      "to": "lib/calculator-extension.ts"
+    },
+    {
+      "from": "lib/calculator-extension.ts",
+      "to": "lib/calculator.ts"
+    },
+    {
+      "from": "components/site-v6/Calculator.tsx",
+      "to": "components/site-v6/sections.module.css"
+    },
+    {
+      "from": "components/site-v6/Sections.tsx",
+      "to": "components/site-v6/sections.module.css"
+    },
+    {
+      "from": "components/site-v6/Home.tsx",
+      "to": "components/site-v6/B1Sections.tsx"
+    },
+    {
+      "from": "components/site-v6/B1Sections.tsx",
+      "to": "components/site-v6/CaseExplorer.tsx"
+    },
+    {
+      "from": "components/site-v6/B1Sections.tsx",
+      "to": "components/site-v6/Consultation.tsx"
+    },
+    {
+      "from": "components/site-v6/B1Sections.tsx",
+      "to": "components/site-v6/Calculator.tsx"
+    },
+    {
+      "from": "components/site-v6/B1Sections.tsx",
+      "to": "components/site-v6/b1.module.css"
+    },
+    {
+      "from": "components/site-v6/B1Sections.tsx",
+      "to": "components/review-v6/review.module.css"
+    },
+    {
+      "from": "app/(marketing)/partners/page.tsx",
+      "to": "content/site-copy.ru.json"
+    },
+    {
+      "from": "app/(marketing)/partners/page.tsx",
+      "to": "lib/seo.ts"
+    },
+    {
+      "from": "app/(marketing)/partners/page.tsx",
+      "to": "components/site-v6/Consultation.tsx"
+    },
+    {
+      "from": "app/(marketing)/partners/page.tsx",
+      "to": "components/site-v6/InternalViews.tsx"
+    },
+    {
+      "from": "app/(marketing)/partners/page.tsx",
+      "to": "components/site-v6/InternalTopics.tsx"
+    },
+    {
+      "from": "app/(marketing)/partners/page.tsx",
+      "to": "components/site-v6/internal.module.css"
+    },
+    {
+      "from": "app/(marketing)/privacy/page.tsx",
+      "to": "content/legal/privacy.json"
+    },
+    {
+      "from": "app/(marketing)/privacy/page.tsx",
+      "to": "components/site-v6/LegalDocument.tsx"
+    },
+    {
+      "from": "app/(marketing)/privacy/page.tsx",
+      "to": "lib/seo.ts"
+    },
+    {
+      "from": "app/(marketing)/products/[slug]/page.tsx",
+      "to": "content/products.ts"
+    },
+    {
+      "from": "content/products.ts",
+      "to": "content/site-copy.ru.json"
+    },
+    {
+      "from": "app/(marketing)/products/[slug]/page.tsx",
+      "to": "content/cases.ts"
+    },
+    {
+      "from": "app/(marketing)/products/[slug]/page.tsx",
+      "to": "lib/seo.ts"
+    },
+    {
+      "from": "app/(marketing)/products/[slug]/page.tsx",
+      "to": "components/site-v6/Consultation.tsx"
+    },
+    {
+      "from": "app/(marketing)/products/[slug]/page.tsx",
+      "to": "components/site-v6/InternalViews.tsx"
+    },
+    {
+      "from": "app/(marketing)/products/[slug]/page.tsx",
+      "to": "components/site-v6/InternalTopics.tsx"
+    },
+    {
+      "from": "app/(marketing)/products/[slug]/page.tsx",
+      "to": "components/site-v6/internal.module.css"
+    },
+    {
+      "from": "app/api/lead/route.ts",
+      "to": "lib/rate-limit.ts"
+    },
+    {
+      "from": "app/api/lead/route.ts",
+      "to": "lib/lead-handler.ts"
+    },
+    {
+      "from": "lib/lead-handler.ts",
+      "to": "lib/consent.ts"
+    },
+    {
+      "from": "lib/lead-handler.ts",
+      "to": "lib/validation.ts"
+    },
+    {
+      "from": "lib/lead-handler.ts",
+      "to": "content/site.ts"
+    },
+    {
+      "from": "app/demo/route.ts",
+      "to": "lib/demo-redirect.ts"
+    },
+    {
+      "from": "app/layout.tsx",
+      "to": "app/fonts.ts"
+    },
+    {
+      "from": "app/layout.tsx",
+      "to": "content/site.ts"
+    },
+    {
+      "from": "app/layout.tsx",
+      "to": "lib/seo.ts"
+    },
+    {
+      "from": "app/layout.tsx",
+      "to": "app/globals.css"
+    },
+    {
+      "from": "app/review/v6/page.tsx",
+      "to": "lib/design-review.ts"
+    },
+    {
+      "from": "app/review/v6/page.tsx",
+      "to": "components/review-v6/ReviewV6.tsx"
+    },
+    {
+      "from": "components/review-v6/ReviewV6.tsx",
+      "to": "components/review-v6/review.module.css"
+    },
+    {
+      "from": "components/review-v6/ReviewV6.tsx",
+      "to": "components/review-v6/HeroStory.tsx"
+    },
+    {
+      "from": "components/review-v6/HeroStory.tsx",
+      "to": "components/review-v6/glass/useHeroGlass.ts"
+    },
+    {
+      "from": "components/review-v6/glass/useHeroGlass.ts",
+      "to": "components/review-v6/glass/hero-motion.ts"
+    },
+    {
+      "from": "components/review-v6/glass/useHeroGlass.ts",
+      "to": "components/review-v6/glass/session.ts"
+    },
+    {
+      "from": "components/review-v6/HeroStory.tsx",
+      "to": "components/review-v6/glass/StoryBackdrop.tsx"
+    },
+    {
+      "from": "components/review-v6/HeroStory.tsx",
+      "to": "components/review-v6/review.module.css"
+    },
+    {
+      "from": "components/review-v6/HeroStory.tsx",
+      "to": "components/review-v6/glass/hero-motion.ts"
+    },
+    {
+      "from": "components/review-v6/ReviewV6.tsx",
+      "to": "components/review-v6/StoryExperience.tsx"
+    },
+    {
+      "from": "app/robots.ts",
+      "to": "lib/seo.ts"
+    },
+    {
+      "from": "app/sitemap.ts",
+      "to": "content/products.ts"
+    },
+    {
+      "from": "app/sitemap.ts",
+      "to": "content/cases.ts"
+    },
+    {
+      "from": "app/sitemap.ts",
+      "to": "lib/seo.ts"
+    }
+  ],
+  "packages": [
+    "@glass-sdk/liquid-glass/dom",
+    "@glass-sdk/liquid-glass/gpu",
+    "@glass-sdk/liquid-glass/styles.css",
+    "next",
+    "next/font/local",
+    "next/headers",
+    "next/image",
+    "next/link",
+    "next/navigation",
+    "node:crypto",
+    "react",
+    "zod"
+  ]
+}

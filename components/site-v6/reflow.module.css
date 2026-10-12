@@ -1,0 +1,10 @@
+/* B4 measured accessibility fixes: no font reduction, clipping or new composition.
+   Long enlarged words must not impose an intrinsic minimum on B1's existing tracks. */
+.publicPage :global([data-b1-start]),.publicPage :global([data-b1-cases]){overflow-wrap:anywhere}
+.publicPage :global([data-b1-start])>div>div>div{min-inline-size:0}
+/* The skip link is intentionally offscreen until focused, then fully readable. */
+.skipLink:global(.skip-link){max-inline-size:calc(100% - 32px);overflow-wrap:anywhere;top:0;transform:translateY(calc(-100% - 16px))}
+.skipLink:global(.skip-link):focus{top:12px;transform:none}
+
+.publicPage header nav[aria-label="Основная навигация"]{flex-wrap:wrap;min-inline-size:0}
+.publicPage header nav[aria-label="Основная навигация"] a{white-space:normal;overflow-wrap:anywhere;max-inline-size:100%}

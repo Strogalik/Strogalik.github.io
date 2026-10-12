@@ -1,0 +1,19 @@
+/* B7 visual presence only; PrivacyStore remains the decision owner. */
+.panel{position:fixed;z-index:50;inset:auto 24px calc(20px + env(safe-area-inset-bottom) + var(--keyboard-bottom,0px)) auto;box-sizing:border-box;width:min(552px,calc(100% - 48px));padding:18px 20px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:16px;background:rgb(250 252 255 / 96%);color:#000926;border:1px solid #c3d6e8;border-radius:22px;box-shadow:0 6px 22px #0009261a;backdrop-filter:blur(12px);font:400 1rem/1.5 var(--font-inter),sans-serif;overflow-wrap:anywhere}
+.panel[hidden]{display:none}.panel[data-presence=exit]{pointer-events:none}
+.panel h2{font:600 1.125rem/1.35 var(--font-montserrat),sans-serif;margin:0 0 6px}
+.panel p{font-size:1rem;line-height:1.5;margin:0 0 6px;color:#394962}
+.panel a{display:inline-block;min-height:32px;align-content:center;font-size:1rem;line-height:1.5;color:#0f52ba;text-decoration:underline;text-underline-offset:3px}
+.panel button{min-height:44px;min-width:0;max-width:100%;background:#0f52ba;color:#fff;border:1px solid #0f52ba;border-radius:12px;padding:10px 14px;font:600 1rem/1.4 var(--font-inter),sans-serif;cursor:pointer;overflow-wrap:anywhere}
+.panel button:hover{background:#000926;border-color:#000926}.panel button:disabled{cursor:wait}
+.panel :focus-visible{outline:3px solid #0f52ba;outline-offset:3px}
+.panel[data-available=true]{width:min(664px,calc(100% - 48px));grid-template-columns:minmax(0,1fr)}
+.actions{display:flex;flex-wrap:wrap;gap:10px}.actions button{flex:1 1 190px}
+@media(max-width:600px){.panel,.panel[data-available=true]{inset-inline:12px;width:auto;padding:14px 16px;gap:10px;border-radius:20px;bottom:calc(12px + env(safe-area-inset-bottom) + var(--keyboard-bottom,0px));grid-template-columns:minmax(0,1fr)}.panel:not([data-available=true]){grid-template-columns:minmax(0,1fr) auto}.panel h2{font-size:1rem}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions button{padding:10px 8px;font-weight:500}}
+@media(max-height:550px){.panel{position:sticky;inset:auto;margin:16px 12px;width:auto!important}.panel[data-presence=exit]{display:none}}
+@media(prefers-reduced-transparency:reduce),(prefers-contrast:more){.panel{background:#fafcff;backdrop-filter:none}}
+@supports not (backdrop-filter:blur(1px)){.panel{background:#fafcff}}
+@media(forced-colors:active){.panel{background:Canvas;color:CanvasText;border-color:CanvasText;backdrop-filter:none;box-shadow:none}.panel p{color:CanvasText}.panel a{color:LinkText}.panel button{color:ButtonText;background:ButtonFace;border-color:ButtonText}}
+@media print{.panel{display:none}}
+
+.panel[data-flow=true]{position:static;margin:16px 12px 16px auto;inset:auto}

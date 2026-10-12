@@ -1,0 +1,22 @@
+{
+  "version": "V6-A4.8",
+  "status": "awaiting_owner_approval",
+  "stageBStarted": false,
+  "publicDeploy": false,
+  "checkedAt": "2026-10-10T03:25:52.700355+00:00",
+  "tests": {
+    "unit": 17,
+    "browser": 60,
+    "failed": 0
+  },
+  "auto": "CSS",
+  "sdk": "diagnostic only",
+  "remainingChecks": [
+    "Fresh native Safari (Mac locked)",
+    "Actual browser zoom200% (same blocker)",
+    "Physical iOS/Android",
+    "Firefox",
+    "screen reader",
+    "physical GPU loss"
+  ]
+}

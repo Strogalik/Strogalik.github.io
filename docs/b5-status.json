@@ -1,0 +1,14 @@
+{
+  "version": "V6 B5",
+  "status": "awaiting_owner_review",
+  "stageBStarted": true,
+  "publicDeploy": false,
+  "analyticsLiveEnabled": false,
+  "launchReady": false,
+  "L1": "implemented",
+  "L2": "implemented",
+  "L3": "prepared/default-disabled",
+  "L4": "unverified technical path",
+  "L5": "implemented",
+  "L6": "implemented"
+}

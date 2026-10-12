@@ -1,0 +1,28 @@
+import {chromium} from 'playwright';
+import {mkdir,writeFile,rename} from 'node:fs/promises';
+const root='qa/v6-a3',url='http://127.0.0.1:3200/review/v6';
+await mkdir(`${root}/motion`,{recursive:true});await mkdir(`${root}/video`,{recursive:true});
+const browser=await chromium.launch(),results=[],motions=[];
+const topics=['crm-history','crm-next-step','oms-continuity','oms-responsibility','custom-process','custom-solution'];
+async function choose(p,id){if(p.viewportSize().width<=900)await p.getByRole('button',{name:{crm:'CRM',oms:'OMS',custom:'Разработка'}[id.split('-')[0]],exact:true}).click();await p.locator(`button[data-topic="${id}"]`).click();}
+async function measure(p){return p.evaluate(()=>{const box=s=>{const e=document.querySelector(s);return e?e.getBoundingClientRect().toJSON():null;};return{scroll:scrollY,pageWidth:document.documentElement.scrollWidth,meta:box('[data-a3-meta]'),nav:box('[data-a3-group]'),copy:box('[data-a3-copy]'),intro:box('[data-a3-intro-copy]'),introBlock:box('[data-a3-intro]'),paper:box('[data-a3-visual-anchor]'),disclosure:box('[class*=disclosureBody]'),rise:document.querySelector('[data-a3-copy]').style.getPropertyValue('--disclosure-rise')};});}
+const sizes=[[1920,1080],[1728,960],[1440,900],[1366,768],[1180,820],[1024,768],[1250,900],[1251,900],[900,900],[901,900],[768,1024],[430,932],[390,844],[360,800],[320,740],[844,390]];
+for(const [width,height] of sizes){const p=await browser.newPage({viewport:{width,height},reducedMotion:'reduce'});await p.goto(url);await p.evaluate(()=>document.fonts.ready);
+ for(const id of topics){await choose(p,id);await p.locator('#products').evaluate(e=>e.scrollIntoView({behavior:'instant'}));await p.mouse.move(0,0);await p.evaluate(()=>document.activeElement?.blur());const closed=await measure(p);let opened=null;
+ if([1920,1728,1440,1366,430,390].includes(width)){await p.locator('[data-a3-disclosure]').click();opened=await measure(p);await p.screenshot({path:`${root}/motion/${id}-open-${width}.png`});await p.locator('[data-a3-disclosure]').click();await p.screenshot({path:`${root}/motion/${id}-closed-${width}.png`});}
+ const axis=Math.abs(closed.intro.x+closed.intro.width/2-closed.paper.x-closed.paper.width/2),top=Math.abs(closed.meta.top-closed.nav.top),gap=closed.paper.left-closed.copy.right;
+ results.push({width,height,topic:id,closed,opened,checks:{noHorizontalOverflow:closed.pageWidth<=width,wideTop:width<=1250||top<=4,wideAxis:width<=1250||axis<=8,wideGap:width<=1250||gap>=(width>=1440?48:32)},axis,top,gap});
+ }
+ await p.close();
+}
+// Actual browser recordings and frame series, including intermediate paints.
+for(const width of [1920,390]){const height=width===1920?1080:844;const c=await browser.newContext({viewport:{width,height},reducedMotion:'no-preference',recordVideo:{dir:`${root}/video`,size:{width,height}}});const p=await c.newPage();await p.goto(url);await p.evaluate(()=>document.fonts.ready);
+ if(width===1920){const button=p.locator('header [class*=headerBlue]').first();const shot=async name=>{const state=await button.evaluate(e=>({opacity:getComputedStyle(e,'::before').opacity,gradient:getComputedStyle(e).backgroundImage,box:e.getBoundingClientRect().toJSON()}));const cdp=await c.newCDPSession(p);const {data}=await cdp.send('Page.captureScreenshot',{format:'png',clip:{x:state.box.x,y:state.box.y,width:state.box.width,height:state.box.height,scale:1},captureBeyondViewport:false});await writeFile(`${root}/motion/header-${name}.png`,Buffer.from(data,'base64'));await cdp.detach();motions.push({name:`header-${name}`,state});};await p.mouse.move(0,0);await shot('normal');await button.hover();await p.waitForTimeout(35);await shot('enter');await p.waitForTimeout(200);await shot('hover');await p.mouse.move(0,0);await p.waitForTimeout(35);await shot('exit');await p.waitForTimeout(200);await shot('normal-return');await button.hover();await p.waitForTimeout(45);await p.mouse.move(0,0);await p.waitForTimeout(35);await button.hover();await p.waitForTimeout(220);await p.mouse.move(0,0);await p.waitForTimeout(250);}
+ await p.locator('#solution').getByRole('link',{name:'Как работает TMS'}).click();
+ for(const id of topics){await choose(p,id);await p.waitForTimeout(450);}
+ await p.locator('#products').evaluate(e=>e.scrollIntoView({behavior:'instant'}));if(width===390)await p.locator('[data-a3-disclosure]').scrollIntoViewIfNeeded();await p.waitForTimeout(400);
+ const trigger=p.locator('[data-a3-disclosure]');const frame=async(name)=>{motions.push({name:`disclosure-${width}-${name}`,state:await measure(p)});await p.screenshot({path:`${root}/motion/disclosure-${width}-${name}.png`,animations:'allow'});};
+ await frame('closed');await trigger.click();await p.waitForTimeout(65);await frame('opening');await p.waitForTimeout(300);await frame('open');await trigger.click();await p.waitForTimeout(65);await frame('closing');await p.waitForTimeout(300);await frame('closed-return');await trigger.click();await p.waitForTimeout(45);await trigger.click();await p.waitForTimeout(350);await trigger.click();await choose(p,'crm-history');await p.waitForTimeout(500);
+ const video=p.video();await c.close();await rename(await video.path(),`${root}/video/a3-motion-${width}.webm`);
+}
+await writeFile(`${root}/layout-geometry.json`,JSON.stringify({date:new Date().toISOString(),status:results.every(r=>Object.values(r.checks).every(Boolean))?'PASS':'FAIL',sizes,results},null,2));await writeFile(`${root}/motion.json`,JSON.stringify(motions,null,2));await browser.close();console.log(`${results.length} scene/viewport measurements; fresh disclosure and hover videos/frames.`);

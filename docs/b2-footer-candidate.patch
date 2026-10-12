@@ -1,0 +1,9 @@
+--- a/components/review-v6/review.module.css
++++ b/components/review-v6/review.module.css
+@@ -212,3 +212,6 @@
+ .footerNav a{min-width:0;max-width:100%;overflow-wrap:anywhere}
+ 
+ @media(max-width:70rem){.footerBottom{align-items:start;flex-direction:column}}
++
++/* Candidate only: allow contact text to wrap when user text size requires it. */
++.footerContacts > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; white-space: normal; }

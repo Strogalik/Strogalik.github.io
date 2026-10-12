@@ -1,0 +1,15 @@
+{
+  "designBaseline": "A4.8",
+  "designApproval": "approved_by_owner",
+  "stageBStarted": true,
+  "stageBStatus": "partial",
+  "publicDeploy": false,
+  "reason": "Requested routes and integrations implemented; frozen footer needs an explicit accessibility exception for combined 200% text enlargement and spacing.",
+  "launchBlockers": [
+    "Approve and verify narrow frozen-footer accessibility exception.",
+    "Approve complete privacy/consent/legal text and storage/recipient terms.",
+    "Configure and verify real delivery endpoint/secret in target environment. No real sends performed.",
+    "Approve production origin, indexing and hosting preserving /auto/ and /nedv/.",
+    "Physical mobile devices and full native-browser matrix not verified."
+  ]
+}

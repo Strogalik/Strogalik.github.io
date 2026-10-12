@@ -1,0 +1,11 @@
+{
+  "version": "V6 B4",
+  "status": "awaiting_owner_review",
+  "stageBStarted": true,
+  "publicDeploy": false,
+  "launchReady": false,
+  "design": "local B4 complete; owner review pending",
+  "technical": "local verification complete; production integration not verified",
+  "content": "owner text preserved; L1–L6 unresolved",
+  "launch": "blocked pending owner legal and production configuration decisions"
+}

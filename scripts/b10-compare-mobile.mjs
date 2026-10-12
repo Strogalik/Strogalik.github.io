@@ -1,0 +1,4 @@
+import fs from'node:fs/promises';import sharp from'sharp';
+const dir='qa/v6-b10',files=(await fs.readdir(`${dir}/before-calculator`)).filter(x=>x.startsWith('card-'));const rows=[];
+for(const name of files){const a=await sharp(`${dir}/before-calculator/${name}`).ensureAlpha().raw().toBuffer({resolveWithObject:true}),b=await sharp(`${dir}/after-calculator/${name}`).ensureAlpha().raw().toBuffer({resolveWithObject:true});rows.push({name,exact:a.info.width===b.info.width&&a.info.height===b.info.height&&a.data.equals(b.data),before:{w:a.info.width,h:a.info.height},after:{w:b.info.width,h:b.info.height}})}
+const result={method:'Exact decoded RGBA comparison of whole calculator at every <=900px capture; no masks, no normalization inside card.',count:rows.length,exact:rows.filter(x=>x.exact).length,rows};await fs.writeFile(`${dir}/mobile-preservation.json`,JSON.stringify(result,null,2));console.log(result.count,result.exact);

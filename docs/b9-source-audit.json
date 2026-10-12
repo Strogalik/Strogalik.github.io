@@ -1,0 +1,438 @@
+{
+  "iteration": "B9",
+  "status": "awaiting_owner_review",
+  "stageBStarted": true,
+  "faqPromotion": true,
+  "publicDeploy": false,
+  "source": "current local project; pre-B9 snapshot 403 files; no Git reset/init",
+  "protectedAudit": {
+    "schema": "TMS-B9-scope-report-v1",
+    "scope_pass": true,
+    "changes": [
+      {
+        "path": "README.md",
+        "status": "changed",
+        "before": "bda9c2db59b94ea4068220956f7f400f51718bdce6a432ecab3243b0de6a5ce1",
+        "after": "eabaad407ad0d0e71142d0c7002560d157883a05ae0f7deb721a4d6e72706617",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "RELEASE_MANIFEST.json",
+        "status": "changed",
+        "before": "15898352139e656ddd9e9718ef176dbd99a6ad2f085acd4a143e3b977b7c4248",
+        "after": "b0c3cca56f40c56b0007289aa542bbf89834171306a604d18faaf0cca423a798",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "components/b9-stability/IntrinsicSlot.tsx",
+        "status": "added",
+        "before": null,
+        "after": "ba52333e44f7bf53de8b0fd05035c573d4f653bba3cfa34f0e8d5ea79bf2b249",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "components/b9-stability/intrinsic.module.css",
+        "status": "added",
+        "before": null,
+        "after": "b3b0738e57d7597e008f791e2b11a3556ce916cbfbb910811a6946931cb9886d",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "components/b9-stability/scenes.module.css",
+        "status": "added",
+        "before": null,
+        "after": "d47352178c9de62c4b89c0b90db0a4f74cc79edbf6ff258f15af9e67f947ba04",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "components/case-motion/cases.module.css",
+        "status": "changed",
+        "before": "bd511f24b77edb1ebf236de94706b8a80c1a03371cab81630ea731e4b967c115",
+        "after": "859dd7e4d4889c2e5ac4bb1a1e686267f178c698b1c34e172ab1f0f83f3e0a90",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "components/case-motion/useCaseMotion.ts",
+        "status": "changed",
+        "before": "12d1d3ea39ed8d5dc1882d379185081a3aa89f3bcd2ccc5993a77c2bb8a3927a",
+        "after": "802987ba4f6e6719f2d89dc03a3d3a2bb3653af1ca4a002e442d4a40acac3bd8",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "components/faq-spotlight/FaqSpotlight.tsx",
+        "status": "changed",
+        "before": "2365e067f90aa80a94d3f95f8d96d09cb1dc8209a61ff3f87a6b2f8658f7d88b",
+        "after": "6ebf95c278c229d10d66f3d61157017b8565c0bf2012ff04f6b30755ce42590f",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "components/site-v6/B1Sections.tsx",
+        "status": "changed",
+        "before": "832edb877ef34f44881fe33a2016fd3d9268f082cc18840ee71d13649079fac9",
+        "after": "5817dbe7fa0f60ae4b6c23d91a0d5d1d691644c185622cf17b7d1f57d9d1a50a",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "components/site-v6/Calculator.tsx",
+        "status": "changed",
+        "before": "3ad9a3bfce3146ad10870d8278abfc57a90b1050f141c0599b2eb70f8dd52750",
+        "after": "f27ec58b94e7c9e6dcc575676427f4c17133e16e66c26d04939cddac574528c4",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "components/site-v6/calculator-motion.module.css",
+        "status": "changed",
+        "before": "e08a5e3c3faff20f43393f1b69dd5821a4fca2a7120baa6450325a4f6930f2dd",
+        "after": "a1a584600788f4d3e8f05daac2993d318f1eafd57373b9a798430732b4687f52",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "content/calculator-ui.b9.ru.json",
+        "status": "added",
+        "before": null,
+        "after": "d8886e01cebd5b6fba1ec1a03c4309543872990f60ddab485b0eee4a9bf93f1a",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "docs/b9-design-review.md",
+        "status": "added",
+        "before": null,
+        "after": "017b09412ddb7c541c7bf37fd82e14305a59e40463ba6bdae1387522d0b5ff64",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "scripts/b9-capture-preserved.mjs",
+        "status": "added",
+        "before": null,
+        "after": "6da92cb5a76c119e67f0bce26721a7a5d5faa8494227d5b2755a30de1f431c4c",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "scripts/b9-compare.mjs",
+        "status": "added",
+        "before": null,
+        "after": "fbe45880998e99146a8d1c6616c6da8afef1f38c3526adfcc0e6661e22023a98",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "scripts/b9-extra-evidence.mjs",
+        "status": "added",
+        "before": null,
+        "after": "4dc0030d7dc5e37dd523319b0ad20fc9454263cd2676b57fdcccc11b09e4b802",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "scripts/b9-gallery-check.mjs",
+        "status": "added",
+        "before": null,
+        "after": "df895064e564374a64d94b0c294caabd8f7b5faf227dbefe64b5d24b923101f9",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "scripts/b9-gallery.mjs",
+        "status": "added",
+        "before": null,
+        "after": "51a9146047527749f800ef0d4cca51817ce2ff3987733e163221b3a17a80406e",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "scripts/b9-motion-evidence.mjs",
+        "status": "added",
+        "before": null,
+        "after": "bc4c837e8cccbd98dd265094cbc923cba2b825bd7bb443a4fc0be9531275c6a3",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "scripts/b9-scenes.mjs",
+        "status": "added",
+        "before": null,
+        "after": "7a9f4a434bed9d668d264635df6634ce87068fd9fccd977655e2fbd8aaa41548",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/b1.spec.ts",
+        "status": "changed",
+        "before": "a7193b2a1637b0cfda1338d390015f496e341ccb4c6f6a524825919129643265",
+        "after": "a6c3d29fb6679ae2bfee4f341d9c391bef1ed2a858f685302c12fd92d05a8aa8",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/b4.spec.ts",
+        "status": "changed",
+        "before": "b3cf3c2044b83ac9c9b88363f7779894bfff3030d0897459376eaf0cf19b5596",
+        "after": "b5ac4876252e44712a367199bbbd40f893bff689e73dd9da0bf7182b50e45b98",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/b6-faq.spec.ts",
+        "status": "changed",
+        "before": "67e210f5ced93f17f89c1a13de47b9e49ec256112f444c165d6b2e6a7ba73c39",
+        "after": "238f13cd1a4ef5bc3fd95ab145d7143aaac8de3e6d5e391344b389d7dda66008",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/b7.spec.ts",
+        "status": "changed",
+        "before": "8109a16e0beee83ca23acf3f054d9fe3c7fbe04194904347ca6e071d975e3c42",
+        "after": "718aa7d6931f0d91fd65e3be2910dad818b054eba8c7ae7238b4009d677f255e",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/b8.spec.ts",
+        "status": "changed",
+        "before": "98bcfa336ff161dfa4c000f91ed09a7d72e357123503441a3508bb03ddda061f",
+        "after": "6cb4b8de8807cd89c1c474bcbb3bae951be75593f66974a00356981c59549a22",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/b9-math.test.ts",
+        "status": "added",
+        "before": null,
+        "after": "de63e35f7ca1c0f2bc87f267b7965de88640ad8cfdc48f421489988a828aaef2",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/b9.playwright.config.ts",
+        "status": "added",
+        "before": null,
+        "after": "f884b7680db2d324cb8a7a0d527d5124b7f6d3ae9b0f7b6555d8245d74b04fe3",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/b9.spec.ts",
+        "status": "added",
+        "before": null,
+        "after": "e1dc7bd078d747afcf10a4cb4cbf3b8ddea4f0dfafd0022d24eff7f0a14624dd",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/b9/math-vectors.json",
+        "status": "added",
+        "before": null,
+        "after": "f24504874daf13d255011b34d7d9460acf7340e36bce8593d5c4647d8de699cd",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/site.spec.ts",
+        "status": "changed",
+        "before": "eb424e217fc3a78130e3f081de6d86ba700af969a8cf6f0ee773c93e66826e43",
+        "after": "428ee2df3609c961ba0f17b310fdd8475080776bda033789cdf96f84570ebf53",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/stage-b.spec.ts",
+        "status": "changed",
+        "before": "abdc63eabacb27360f6dafb6fd4e742a42d2d418df7dfd4c2574c2a4781defd7",
+        "after": "f4e72aad53608e12c2a094bb97a28f12585b9e24507aebfa9b398e9f5741d451",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      },
+      {
+        "path": "tests/visual.spec.ts",
+        "status": "changed",
+        "before": "504f67364678fc5c301e4d3bb7e5b811714104112d44066052df455c88d9d573",
+        "after": "ac5373f2a6ec85e1ac3c2dc6125b47319def2eda31f7c346a30d8019e6579428",
+        "allowed_file_scope": true,
+        "manual_diff_review_required": true
+      }
+    ],
+    "violations": [],
+    "note": "Only file scope was checked. Inspect allowed diffs and rendered UI; do not rewrite the baseline."
+  },
+  "packageAndLockUnchanged": true,
+  "fontsPreserved": true,
+  "changedFiles": [
+    {
+      "path": "README.md",
+      "before": "bda9c2db59b94ea4068220956f7f400f51718bdce6a432ecab3243b0de6a5ce1",
+      "after": "eabaad407ad0d0e71142d0c7002560d157883a05ae0f7deb721a4d6e72706617"
+    },
+    {
+      "path": "RELEASE_MANIFEST.json",
+      "before": "15898352139e656ddd9e9718ef176dbd99a6ad2f085acd4a143e3b977b7c4248",
+      "after": "b0c3cca56f40c56b0007289aa542bbf89834171306a604d18faaf0cca423a798"
+    },
+    {
+      "path": "components/b9-stability/IntrinsicSlot.tsx",
+      "before": null,
+      "after": "ba52333e44f7bf53de8b0fd05035c573d4f653bba3cfa34f0e8d5ea79bf2b249"
+    },
+    {
+      "path": "components/b9-stability/intrinsic.module.css",
+      "before": null,
+      "after": "b3b0738e57d7597e008f791e2b11a3556ce916cbfbb910811a6946931cb9886d"
+    },
+    {
+      "path": "components/b9-stability/scenes.module.css",
+      "before": null,
+      "after": "d47352178c9de62c4b89c0b90db0a4f74cc79edbf6ff258f15af9e67f947ba04"
+    },
+    {
+      "path": "components/case-motion/cases.module.css",
+      "before": "bd511f24b77edb1ebf236de94706b8a80c1a03371cab81630ea731e4b967c115",
+      "after": "859dd7e4d4889c2e5ac4bb1a1e686267f178c698b1c34e172ab1f0f83f3e0a90"
+    },
+    {
+      "path": "components/case-motion/useCaseMotion.ts",
+      "before": "12d1d3ea39ed8d5dc1882d379185081a3aa89f3bcd2ccc5993a77c2bb8a3927a",
+      "after": "802987ba4f6e6719f2d89dc03a3d3a2bb3653af1ca4a002e442d4a40acac3bd8"
+    },
+    {
+      "path": "components/faq-spotlight/FaqSpotlight.tsx",
+      "before": "2365e067f90aa80a94d3f95f8d96d09cb1dc8209a61ff3f87a6b2f8658f7d88b",
+      "after": "6ebf95c278c229d10d66f3d61157017b8565c0bf2012ff04f6b30755ce42590f"
+    },
+    {
+      "path": "components/site-v6/B1Sections.tsx",
+      "before": "832edb877ef34f44881fe33a2016fd3d9268f082cc18840ee71d13649079fac9",
+      "after": "5817dbe7fa0f60ae4b6c23d91a0d5d1d691644c185622cf17b7d1f57d9d1a50a"
+    },
+    {
+      "path": "components/site-v6/Calculator.tsx",
+      "before": "3ad9a3bfce3146ad10870d8278abfc57a90b1050f141c0599b2eb70f8dd52750",
+      "after": "f27ec58b94e7c9e6dcc575676427f4c17133e16e66c26d04939cddac574528c4"
+    },
+    {
+      "path": "components/site-v6/calculator-motion.module.css",
+      "before": "e08a5e3c3faff20f43393f1b69dd5821a4fca2a7120baa6450325a4f6930f2dd",
+      "after": "a1a584600788f4d3e8f05daac2993d318f1eafd57373b9a798430732b4687f52"
+    },
+    {
+      "path": "content/calculator-ui.b9.ru.json",
+      "before": null,
+      "after": "d8886e01cebd5b6fba1ec1a03c4309543872990f60ddab485b0eee4a9bf93f1a"
+    },
+    {
+      "path": "docs/b9-design-review.md",
+      "before": null,
+      "after": "017b09412ddb7c541c7bf37fd82e14305a59e40463ba6bdae1387522d0b5ff64"
+    },
+    {
+      "path": "scripts/b9-capture-preserved.mjs",
+      "before": null,
+      "after": "6da92cb5a76c119e67f0bce26721a7a5d5faa8494227d5b2755a30de1f431c4c"
+    },
+    {
+      "path": "scripts/b9-compare.mjs",
+      "before": null,
+      "after": "fbe45880998e99146a8d1c6616c6da8afef1f38c3526adfcc0e6661e22023a98"
+    },
+    {
+      "path": "scripts/b9-extra-evidence.mjs",
+      "before": null,
+      "after": "4dc0030d7dc5e37dd523319b0ad20fc9454263cd2676b57fdcccc11b09e4b802"
+    },
+    {
+      "path": "scripts/b9-gallery-check.mjs",
+      "before": null,
+      "after": "df895064e564374a64d94b0c294caabd8f7b5faf227dbefe64b5d24b923101f9"
+    },
+    {
+      "path": "scripts/b9-gallery.mjs",
+      "before": null,
+      "after": "51a9146047527749f800ef0d4cca51817ce2ff3987733e163221b3a17a80406e"
+    },
+    {
+      "path": "scripts/b9-motion-evidence.mjs",
+      "before": null,
+      "after": "bc4c837e8cccbd98dd265094cbc923cba2b825bd7bb443a4fc0be9531275c6a3"
+    },
+    {
+      "path": "scripts/b9-scenes.mjs",
+      "before": null,
+      "after": "7a9f4a434bed9d668d264635df6634ce87068fd9fccd977655e2fbd8aaa41548"
+    },
+    {
+      "path": "tests/b1.spec.ts",
+      "before": "a7193b2a1637b0cfda1338d390015f496e341ccb4c6f6a524825919129643265",
+      "after": "a6c3d29fb6679ae2bfee4f341d9c391bef1ed2a858f685302c12fd92d05a8aa8"
+    },
+    {
+      "path": "tests/b4.spec.ts",
+      "before": "b3cf3c2044b83ac9c9b88363f7779894bfff3030d0897459376eaf0cf19b5596",
+      "after": "b5ac4876252e44712a367199bbbd40f893bff689e73dd9da0bf7182b50e45b98"
+    },
+    {
+      "path": "tests/b6-faq.spec.ts",
+      "before": "67e210f5ced93f17f89c1a13de47b9e49ec256112f444c165d6b2e6a7ba73c39",
+      "after": "238f13cd1a4ef5bc3fd95ab145d7143aaac8de3e6d5e391344b389d7dda66008"
+    },
+    {
+      "path": "tests/b7.spec.ts",
+      "before": "8109a16e0beee83ca23acf3f054d9fe3c7fbe04194904347ca6e071d975e3c42",
+      "after": "718aa7d6931f0d91fd65e3be2910dad818b054eba8c7ae7238b4009d677f255e"
+    },
+    {
+      "path": "tests/b8.spec.ts",
+      "before": "98bcfa336ff161dfa4c000f91ed09a7d72e357123503441a3508bb03ddda061f",
+      "after": "6cb4b8de8807cd89c1c474bcbb3bae951be75593f66974a00356981c59549a22"
+    },
+    {
+      "path": "tests/b9/math-vectors.json",
+      "before": null,
+      "after": "f24504874daf13d255011b34d7d9460acf7340e36bce8593d5c4647d8de699cd"
+    },
+    {
+      "path": "tests/b9-math.test.ts",
+      "before": null,
+      "after": "de63e35f7ca1c0f2bc87f267b7965de88640ad8cfdc48f421489988a828aaef2"
+    },
+    {
+      "path": "tests/b9.playwright.config.ts",
+      "before": null,
+      "after": "f884b7680db2d324cb8a7a0d527d5124b7f6d3ae9b0f7b6555d8245d74b04fe3"
+    },
+    {
+      "path": "tests/b9.spec.ts",
+      "before": null,
+      "after": "e1dc7bd078d747afcf10a4cb4cbf3b8ddea4f0dfafd0022d24eff7f0a14624dd"
+    },
+    {
+      "path": "tests/site.spec.ts",
+      "before": "eb424e217fc3a78130e3f081de6d86ba700af969a8cf6f0ee773c93e66826e43",
+      "after": "428ee2df3609c961ba0f17b310fdd8475080776bda033789cdf96f84570ebf53"
+    },
+    {
+      "path": "tests/stage-b.spec.ts",
+      "before": "abdc63eabacb27360f6dafb6fd4e742a42d2d418df7dfd4c2574c2a4781defd7",
+      "after": "f4e72aad53608e12c2a094bb97a28f12585b9e24507aebfa9b398e9f5741d451"
+    },
+    {
+      "path": "tests/visual.spec.ts",
+      "before": "504f67364678fc5c301e4d3bb7e5b811714104112d44066052df455c88d9d573",
+      "after": "ac5373f2a6ec85e1ac3c2dc6125b47319def2eda31f7c346a30d8019e6579428"
+    }
+  ],
+  "excludedFromAuditSelfHash": true,
+  "generatedDeclarationExcludedFromPatch": "next-env.d.ts is generated by Next and unchanged; included in full source, omitted from the patch"
+}

@@ -1,0 +1,2 @@
+import {defineConfig,devices} from '@playwright/test';
+export default defineConfig({testDir:'.',testMatch:'b8.spec.ts',timeout:60000,workers:2,reporter:[['list'],['json',{outputFile:'../qa/v6-b8/test-results.json'}]],outputDir:'../qa/v6-b8/test-artifacts',use:{baseURL:'http://127.0.0.1:3200',trace:'retain-on-failure',screenshot:'only-on-failure'},projects:[{name:'chromium',use:{...devices['Desktop Chrome'],viewport:{width:1440,height:900}}}]});

@@ -1,0 +1,5 @@
+import {spawnSync} from 'node:child_process';
+import {writeFile} from 'node:fs/promises';
+const results=[];
+for(const value of ['false','true']){const code="const {noIndex}=require('./lib/seo.ts');const {default:robots}=require('./app/robots.ts');console.log(JSON.stringify({noIndex,robots:robots()}))";const run=spawnSync(process.execPath,['--import','tsx','-e',code],{encoding:'utf8',env:{...process.env,NEXT_PUBLIC_NOINDEX:value}});if(run.status!==0)throw new Error(run.stderr);const data=JSON.parse(run.stdout);const pass=data.noIndex===(value==='true')&&(value==='true'?data.robots.rules.disallow==='/':data.robots.rules.allow==='/'&&data.robots.rules.disallow==='/api/');results.push({value,...data,pass});}
+const status=results.every(r=>r.pass)?'PASS':'FAIL';await writeFile('qa/v5/noindex.json',JSON.stringify({date:new Date().toISOString(),status,scope:'Isolated module imports for both flag values; separate staging HTML build not run',results},null,2));console.log(status);process.exitCode=status==='PASS'?0:1;

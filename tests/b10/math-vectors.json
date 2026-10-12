@@ -1,0 +1,266 @@
+[
+  {
+    "id": "sales-default",
+    "fn": "conversionScenario",
+    "args": [
+      "400",
+      "10",
+      "12"
+    ],
+    "expected": {
+      "baseDeals": 40,
+      "scenarioDeals": 48,
+      "deltaDeals": 8,
+      "deltaPercentagePoints": 2
+    }
+  },
+  {
+    "id": "sales-negative-delta",
+    "fn": "conversionScenario",
+    "args": [
+      "400",
+      "12",
+      "10"
+    ],
+    "expected": {
+      "baseDeals": 48,
+      "scenarioDeals": 40,
+      "deltaDeals": -8,
+      "deltaPercentagePoints": -2
+    }
+  },
+  {
+    "id": "sales-fraction",
+    "fn": "conversionScenario",
+    "args": [
+      "3",
+      "10",
+      "20"
+    ],
+    "expected": {
+      "baseDeals": 0.3,
+      "scenarioDeals": 0.6,
+      "deltaDeals": 0.3,
+      "deltaPercentagePoints": 10
+    }
+  },
+  {
+    "id": "sales-zero",
+    "fn": "conversionScenario",
+    "args": [
+      "0",
+      "10",
+      "12"
+    ],
+    "expected": {
+      "baseDeals": 0,
+      "scenarioDeals": 0,
+      "deltaDeals": 0,
+      "deltaPercentagePoints": 2
+    }
+  },
+  {
+    "id": "sales-revenue",
+    "fn": "conversionScenario",
+    "args": [
+      "400",
+      "10",
+      "12",
+      "50000"
+    ],
+    "expected": {
+      "deltaDeals": 8,
+      "deltaRevenue": 400000
+    }
+  },
+  {
+    "id": "sales-revenue-negative",
+    "fn": "conversionScenario",
+    "args": [
+      "400",
+      "12",
+      "10",
+      "50000"
+    ],
+    "expected": {
+      "deltaDeals": -8,
+      "deltaRevenue": -400000
+    }
+  },
+  {
+    "id": "comma-rate",
+    "fn": "conversionScenario",
+    "args": [
+      "400",
+      "10,5",
+      "12"
+    ],
+    "expected": {
+      "baseDeals": 42,
+      "scenarioDeals": 48,
+      "deltaDeals": 6,
+      "deltaPercentagePoints": 1.5
+    }
+  },
+  {
+    "id": "time-default",
+    "fn": "timeScenario",
+    "args": [
+      "5",
+      "30",
+      "22"
+    ],
+    "expected": {
+      "currentHours": 55
+    }
+  },
+  {
+    "id": "time-zero",
+    "fn": "timeScenario",
+    "args": [
+      "0",
+      "30",
+      "22"
+    ],
+    "expected": {
+      "currentHours": 0
+    }
+  },
+  {
+    "id": "time-release-value",
+    "fn": "timeScenario",
+    "args": [
+      "5",
+      "30",
+      "22",
+      "50",
+      "1000"
+    ],
+    "expected": {
+      "currentHours": 55,
+      "possibleReleasedHours": 27.5,
+      "timeResourceValue": 27500
+    }
+  },
+  {
+    "id": "time-explicit-zero-share",
+    "fn": "timeScenario",
+    "args": [
+      "5",
+      "30",
+      "22",
+      "0",
+      "1000"
+    ],
+    "expected": {
+      "possibleReleasedHours": 0,
+      "timeResourceValue": 0
+    }
+  },
+  {
+    "id": "hour-no-share",
+    "fn": "timeScenario",
+    "args": [
+      "5",
+      "30",
+      "22",
+      "",
+      "1000"
+    ],
+    "expected": {
+      "currentHours": 55
+    },
+    "absent": [
+      "possibleReleasedHours",
+      "timeResourceValue"
+    ]
+  },
+  {
+    "id": "blank-required",
+    "fn": "conversionScenario",
+    "args": [
+      "",
+      "10",
+      "12"
+    ],
+    "throws": true
+  },
+  {
+    "id": "negative-input",
+    "fn": "conversionScenario",
+    "args": [
+      "-1",
+      "10",
+      "12"
+    ],
+    "throws": true
+  },
+  {
+    "id": "rate-over100",
+    "fn": "conversionScenario",
+    "args": [
+      "400",
+      "10",
+      "101"
+    ],
+    "throws": true
+  },
+  {
+    "id": "time-share-over100",
+    "fn": "timeScenario",
+    "args": [
+      "5",
+      "30",
+      "22",
+      "101"
+    ],
+    "throws": true
+  },
+  {
+    "id": "nonnumeric",
+    "fn": "timeScenario",
+    "args": [
+      "abc",
+      "30",
+      "22"
+    ],
+    "throws": true
+  },
+  {
+    "id": "numeric-infinity",
+    "fn": "conversionScenario",
+    "args": [
+      "Infinity",
+      "10",
+      "12"
+    ],
+    "throws": true
+  },
+  {
+    "id": "overflow",
+    "fn": "timeScenario",
+    "args": [
+      "1e308",
+      "1e308",
+      "22"
+    ],
+    "throws": true
+  },
+  {
+    "id": "owner-b9-screenshot",
+    "fn": "conversionScenario",
+    "args": [
+      "400",
+      "34",
+      "44",
+      "30000"
+    ],
+    "expected": {
+      "baseDeals": 136,
+      "scenarioDeals": 176,
+      "deltaDeals": 40,
+      "deltaPercentagePoints": 10,
+      "deltaRevenue": 1200000
+    }
+  }
+]

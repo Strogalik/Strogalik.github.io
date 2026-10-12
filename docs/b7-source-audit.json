@@ -1,0 +1,203 @@
+{
+  "iteration": "B7",
+  "status": "awaiting_owner_review",
+  "stageBStarted": true,
+  "faqPromotion": true,
+  "publicDeploy": false,
+  "source": "current local project; pre-B7 snapshot 372 files; no Git reset/init",
+  "protectedAudit": {
+    "checked": 33,
+    "issues": [],
+    "meaning": "Mismatch is an audit signal, never an instruction to overwrite newer work."
+  },
+  "packageAndLockUnchanged": true,
+  "fontsPreserved": true,
+  "changedFiles": [
+    {
+      "path": "README.md",
+      "before": "9e3c77b4e900d80fb475d379597d0d8f5d54b935f34bc07cd1d5776d4895ec64",
+      "after": "e6e913c68f5a135e777fc2fe4d9f5e489b3ac75cce685eba2564e62d0b141a1a"
+    },
+    {
+      "path": "RELEASE_MANIFEST.json",
+      "before": "8755a4cfad02e66576b173f0814b8b5be44343e97f7480ebdf05400c5ed70f86",
+      "after": "763644c274c6cb9faf84913fa34241dfedd669b5188c9ce01b9293831bbcfb75"
+    },
+    {
+      "path": "components/faq-spotlight/FaqSpotlight.tsx",
+      "before": "59ed71f453c8c2a2f90c3d1931f1f90b89752dfc8c49abe4891aa5038cef5a5f",
+      "after": "2365e067f90aa80a94d3f95f8d96d09cb1dc8209a61ff3f87a6b2f8658f7d88b"
+    },
+    {
+      "path": "components/motion/native-motion.css",
+      "before": null,
+      "after": "725ade230fc35f523929397b43d799f2a3462cdf4098ba1e7c4c3b34d2708905"
+    },
+    {
+      "path": "components/motion/useLayoutMotion.ts",
+      "before": null,
+      "after": "6de63882e0380c5e30e611569f90b1a66d420bd9490b16387f6fc0b918c50849"
+    },
+    {
+      "path": "components/review-v6/StoryExperience.tsx",
+      "before": "0a11532fd96a205f9310c2a8f3b6e165a6fef9c0ecc337f3e769a300279f8d83",
+      "after": "61ee45902e8c483361250bfba55b3e3894ef33b46c60bce0a93c41a8ff999e94"
+    },
+    {
+      "path": "components/review-v6/content.module.css",
+      "before": "cc68198ea7eba9bb18ccea971c27820f00657e9e7a299d9a9b748b69d8ea1814",
+      "after": "8bc3485388bab80ece188fbccca863a544bcb7d9e441eae311af4ab248647dcb"
+    },
+    {
+      "path": "components/site-v6/ApprovedViews.tsx",
+      "before": "6251592bafdb35c6c05dcfa4cc59643de3410623af4f4e5e775f28ac02f4d4c0",
+      "after": "5ee6111c3278811c9f9dda653fd8f31f64883f0a1e7ea7a34b91cc691a9d605c"
+    },
+    {
+      "path": "components/site-v6/B1Sections.tsx",
+      "before": "7e6f626f3edd06b992df1cac6c7b784c448f302b2b2c5246f95c58cc8d2bb9d1",
+      "after": "677c79e4cded023353618539c1cff6af3215965561cc38a0ef989debc175b88a"
+    },
+    {
+      "path": "components/site-v6/Calculator.tsx",
+      "before": "4a84fe0a47555f81eaf75a52d0bd7d923b8267951670de6c76f00a69245b73e2",
+      "after": "3ad9a3bfce3146ad10870d8278abfc57a90b1050f141c0599b2eb70f8dd52750"
+    },
+    {
+      "path": "components/site-v6/CaseExplorer.tsx",
+      "before": "fbc83e9768d9dc3a0e6907bf03013f1ed34b426418ac67d9ea0102ae174aa933",
+      "after": "43e77e79b87d1c566e11eb9a44479048b677c5d5b8ca9e7df8fd85e8ca0d2026"
+    },
+    {
+      "path": "components/site-v6/Consultation.tsx",
+      "before": "bdaea8c872101fecc42002002fbdb36964902b6f2d6b1a94be67f8aa47f00bb1",
+      "after": "1e634f4c05b2a516bce6ac7ae68c886112ca4cbd001ba81e1382688f2120714a"
+    },
+    {
+      "path": "components/site-v6/CookieNotice.tsx",
+      "before": "233999f3dfcd1b363c6acbde975e7ed0fe4ad586db17f9e95d7471bc46c9f6c2",
+      "after": "a98f539355604a664594656d3f690360a037c6d2ee73f6f999d0f59c53447e4b"
+    },
+    {
+      "path": "components/site-v6/Home.tsx",
+      "before": "dffc80a06eb66e7d7a850592824357d06567584bc2d27b3725fec744ab3f1782",
+      "after": "dd149f071ada7c1b6089dbefc46fd5c68daf9ce85a802282bf00bba024c42ffc"
+    },
+    {
+      "path": "components/site-v6/InternalCases.tsx",
+      "before": "bb76d5a1bb885a8c0d3665e716e75eb407af5f75627ceaa60e8b0b8185915a93",
+      "after": "98480f6069ea8acb0367aaefdc475c9eaf78ddeea76a7ac7164d98d5d123d813"
+    },
+    {
+      "path": "components/site-v6/InternalTopics.tsx",
+      "before": "599d60ad2dcf3feda1655608d575c169148498200e594d3d799be544a547d760",
+      "after": "8a7387752bca451b8ebe035ead8b8651a3155a8aff7c4b9df2cbd040721823cb"
+    },
+    {
+      "path": "components/site-v6/b1.module.css",
+      "before": "9c41a89e400e5bc2de10a8a4f1c7aeb7988225d13283899558809e960bbb670d",
+      "after": "18c1a9fb0222e5dd110c204fe820555f9cb2defbf6ddb79597031d90339e2c20"
+    },
+    {
+      "path": "components/site-v6/calculator-motion.module.css",
+      "before": null,
+      "after": "e08a5e3c3faff20f43393f1b69dd5821a4fca2a7120baa6450325a4f6930f2dd"
+    },
+    {
+      "path": "components/site-v6/cookie-notice.module.css",
+      "before": null,
+      "after": "eaf3df3dbb43ad031e5e5aee56ca8d4c03a1c103bacc9b402d46bf2823b6017e"
+    },
+    {
+      "path": "components/site-v6/internal.module.css",
+      "before": "6c77b42c4bdd9a05719132f0fba37bd1980a97ada929a0ea37a7d579d985489f",
+      "after": "1a8855862d948195b4966d9b717e5c06c35e173d6cbf9b7412b3ffbf5f1537bf"
+    },
+    {
+      "path": "content/legal/privacy-ui.json",
+      "before": "aff658bb303237cb964ad90ec58e839f6bb3b3480fd811658f19adb4a22e5cb3",
+      "after": "f53df3dbcd88df56a877329d60ffeaf4ec902f4c23d55ba998cd7f8a3faff8c1"
+    },
+    {
+      "path": "docs/b7-cookie-preservation.md",
+      "before": null,
+      "after": "c88c02c38ce2e68fb01de5f3149129a1632fd9e9223af3c4a9891f1446419bf2"
+    },
+    {
+      "path": "docs/b7-motion-review.md",
+      "before": null,
+      "after": "ec3bbd95a09f1137abc572454baaaecb57879151c849f6e18d6ce34b0b5fa13b"
+    },
+    {
+      "path": "scripts/b7-before-extra.mjs",
+      "before": null,
+      "after": "ffd41d461b37605e19b749e10c2b24259cc988648bcc3642fda973a36857d43e"
+    },
+    {
+      "path": "scripts/b7-capture-preserved.mjs",
+      "before": null,
+      "after": "3d2fba184aa69bb65bd9e8f236bb79c6666106173f6419c92f1972428f058a62"
+    },
+    {
+      "path": "scripts/b7-cookie-video.mjs",
+      "before": null,
+      "after": "e964a63d8f6cf4990d2752616eba17c7597cc5cf7f5877c71f2bc67ff9b6cda3"
+    },
+    {
+      "path": "scripts/b7-evidence.mjs",
+      "before": null,
+      "after": "75f4ae7537084a05cd9598ab1864b3e41f81fd8dcc09149f04697941d815a0a9"
+    },
+    {
+      "path": "scripts/b7-gallery.mjs",
+      "before": null,
+      "after": "58bf957d457e533058f566f0ea076aa9619be6efce387bcacdb4e6b1534940af"
+    },
+    {
+      "path": "scripts/b7-smoke.mjs",
+      "before": null,
+      "after": "f6580e7a354d3e0c706ecd69cf7ba767172fbae5392a63bf0eb49671934a2aa4"
+    },
+    {
+      "path": "tests/b4.spec.ts",
+      "before": "30b51bd02fa419538a303513ecfea4e66c3be87cb7aee3ceed8ed7be830c5daf",
+      "after": "3b547ed9a0bfdfeafcad2f7bedffb022f884730972553a0e477dca4a3eb2b664"
+    },
+    {
+      "path": "tests/b5.spec.ts",
+      "before": "29abcde7c01160b7c847b983b6ebab43b9d0c005ebd662a1e3911a85ae199120",
+      "after": "24cd2e3c076b9b347e4a55c1ff40b3bc3acf5b92e1fd00b2ab000603aa284ce0"
+    },
+    {
+      "path": "tests/b6-faq.spec.ts",
+      "before": "88cb15fad16726c261c3fd517e1c454754a2f274ac300470ad29cad23414d679",
+      "after": "67e210f5ced93f17f89c1a13de47b9e49ec256112f444c165d6b2e6a7ba73c39"
+    },
+    {
+      "path": "tests/b6-faq.test.ts",
+      "before": "fbeb7e571d13117f4534e5e517f0e1c55d3b43a53b6c1f0be72006135429165a",
+      "after": "362f6f339e00eeb765d1ad07cf46af26d00b5fafad1433a91d6f0f49ad990d2d"
+    },
+    {
+      "path": "tests/b7-cookies.spec.ts",
+      "before": null,
+      "after": "ee53331fe41455ef42ed9282a430f91a5375f39a95b5b71c6a12f03fd511f0c9"
+    },
+    {
+      "path": "tests/b7.playwright.config.ts",
+      "before": null,
+      "after": "1bb9105a3794a7651b97871ee265155a47a6817b00b58fc4ec6ac34c38c8e79c"
+    },
+    {
+      "path": "tests/b7.spec.ts",
+      "before": null,
+      "after": "8109a16e0beee83ca23acf3f054d9fe3c7fbe04194904347ca6e071d975e3c42"
+    },
+    {
+      "path": "tests/stage-b.spec.ts",
+      "before": "ffcc7ad3e7a6c793af7b51f0be6ded0c8958d12e30fb4824de4b5f22a7835e41",
+      "after": "abdc63eabacb27360f6dafb6fd4e742a42d2d418df7dfd4c2574c2a4781defd7"
+    }
+  ],
+  "excludedFromAuditSelfHash": true
+}

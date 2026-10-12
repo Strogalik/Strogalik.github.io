@@ -1,0 +1,15 @@
+import {chromium,webkit} from 'playwright';
+import {mkdir,writeFile,rename} from 'node:fs/promises';
+await mkdir('qa/v4/video',{recursive:true});await mkdir('qa/v4/after',{recursive:true});
+const browser=await chromium.launch();const context=await browser.newContext({viewport:{width:1366,height:768},reducedMotion:'reduce',recordVideo:{dir:'qa/v4/video',size:{width:1366,height:768}}});const page=await context.newPage();
+await page.goto('http://127.0.0.1:3100/demo?product=crm-oms');await page.locator('.workspace').scrollIntoViewIfNeeded();await page.waitForTimeout(900);await page.locator('[data-record-id=DEMO-D-01]').click();await page.waitForTimeout(900);await page.getByRole('button',{name:'Передать в работу'}).click();await page.waitForTimeout(900);await page.locator('[data-task-id="ORDER-DEMO-D-01-T1"] button').click();await page.waitForTimeout(900);await page.getByLabel('Ответственный: Проверить состав').selectOption('DEMO-U-03');await page.locator('[data-task-id="ORDER-DEMO-D-01-T2"] button').click();await page.waitForTimeout(900);await page.locator('.workspace').getByRole('tab',{name:'Календарь',exact:true}).click();await page.locator('.work-calendar').scrollIntoViewIfNeeded();await page.waitForTimeout(900);const video=page.video();await context.close();await rename(await video.path(),'qa/v4/video/key-scenario.webm');
+for(const [name,path,width,height] of [['hero-short','/',1280,720],['hero-large','/',1920,1080],['school-result','/cases/online-school',390,844],['portal-result','/cases/flooring-manufacturer',390,844],['zoom-reflow','/demo?product=oms',640,360]]){
+ const p=await browser.newPage({viewport:{width,height},reducedMotion:'reduce'});await p.goto('http://127.0.0.1:3100'+path);await p.evaluate(()=>document.fonts.ready);
+ if(name==='school-result'){await p.getByRole('button',{name:'Показать подготовленный ответ'}).click();await p.getByRole('button',{name:'Записать на занятие'}).click();await p.locator('.sandbox-result').scrollIntoViewIfNeeded();}
+ if(name==='portal-result'){await p.getByRole('button',{name:'Оформить учебный заказ'}).click();await p.getByRole('button',{name:'Посмотреть учебный документ'}).click();await p.locator('.demo-document').scrollIntoViewIfNeeded();}
+ if(name==='zoom-reflow'){await p.locator('[data-record-id=DEMO-O-01]').click();await p.locator('[data-task-id=DEMO-T-02] button').focus();}
+ await p.screenshot({path:`qa/v4/after/${name}.png`});await p.close();
+}
+const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const n=await nojs.newPage();await n.goto('http://127.0.0.1:3100/');await n.screenshot({path:'qa/v4/after/nojs-mobile.png',fullPage:true});await nojs.close();await browser.close();
+try{const b=await webkit.launch();await b.close();await writeFile('qa/v4/webkit.json',JSON.stringify({status:'AVAILABLE; browser scenarios not run'}));}catch{await writeFile('qa/v4/webkit.json',JSON.stringify({status:'NOT RUN',reason:'WebKit executable is not installed'}));}
+console.log('Recorded actual key scenario; extra desktop, mobile, no-JS and reflow screenshots saved.');

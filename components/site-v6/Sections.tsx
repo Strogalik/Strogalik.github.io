@@ -1,0 +1,19 @@
+import Link from 'next/link';
+import type {ReactNode} from 'react';
+import {cases,type CaseStudy} from '@/content/cases';
+import content from './content';
+import {Action} from './Consultation';
+import {Calculator} from './Calculator';
+import s from './sections.module.css';
+import f from './faq.module.css';
+import d from './disclosure.module.css';
+import {DisclosureIcon} from './DisclosureIcon';
+export function Heading({kicker,title,children}:{kicker:string;title:string;children?:ReactNode}){return <div className={s.heading}><p className={s.kicker}>{kicker}</p><h2>{title}</h2>{children&&<p>{children}</p>}</div>;}
+export function CaseGrid({items=cases}:{items?:CaseStudy[]}){return <div className={s.cases}>{items.map(c=><article className={s.case} key={c.slug}><span className={s.caseLabel}>{c.industry}</span><h3>{c.title}</h3><p>{c.summary}</p><div className={s.metric}><strong>{c.primaryMetric.value}</strong><span>{c.primaryMetric.label}</span><span>{c.primaryMetric.period||'Период в материалах не указан'}</span><p className={s.fine}>{c.primaryMetric.context}</p></div><Link className={s.link} href={`/cases/${c.slug}`}>Задача, решение и границы результата →</Link></article>)}</div>;}
+export function CasesSection(){return <section className={s.section} id="cases"><div className={s.container}><Heading kicker={content.cases.eyebrow} title={content.cases.heading}>{content.cases.body}</Heading><CaseGrid/><p className={s.sectionNote}>Обезличенные индивидуальные внедрения из материалов проектов. Результаты зависят от исходных условий; интеграции и показатели не определяют состав или результат каждого SaaS-тарифа.</p><div className={s.actions}><Link className={s.link} href="/cases">Все кейсы →</Link></div></div></section>;}
+export function CalculatorSection(){return <section className={`${s.section} ${s.paper}`} id="calculator"><div className={s.container}><Heading kicker={content.calculator.eyebrow} title={content.calculator.heading}>{content.calculator.body}</Heading><Calculator/></div></section>;}
+export function Steps({items}:{items:{heading:string;body:string}[]}){return <ol className={s.steps}>{items.map(x=><li key={x.heading}><h3>{x.heading}</h3><p>{x.body}</p></li>)}</ol>;}
+export function Cooperation(){const c=content.cooperation;return <section className={s.section} id="cooperation"><div className={s.container}><Heading kicker={c.eyebrow} title={c.heading}/><Steps items={c.steps}/><div className={s.actions}><Action/></div><div className={s.partner}><div><h3>{c.partnerHeading}</h3><p>{c.partnerBody}</p></div><Link className={s.link} href={c.partnerHref}>{c.partnerLink} →</Link></div></div></section>;}
+export function FAQ(){return <section className={s.section} id="faq"><div className={`${s.container} ${f.layout}`}><div className={f.intro}><Heading kicker={content.faq.eyebrow} title={content.faq.heading}/></div><div className={f.items}>{content.faq.items.map(x=><details className={`${f.panel} ${d.disclosure}`} key={x.question}><summary className={`${d.trigger} ${f.summary}`}><span>{x.question}</span><DisclosureIcon/></summary><p className={f.answer}>{x.answer}</p></details>)}</div></div></section>;}
+export function FinalCTA(){return <section className={s.final} id="contact"><div className={`${s.container} ${s.finalInner}`}><div><h2>{content.finalCTA.heading}</h2><p>{content.finalCTA.note}</p></div><div><Action/></div></div></section>;}
+export function PageHero({label,title,body,children}:{label:string;title:string;body:string;children?:ReactNode}){return <section className={s.pageHero}><div className={s.container}><nav className={s.breadcrumb} aria-label="Хлебные крошки"><Link href="/">Главная</Link><span aria-hidden="true">/</span><span>{label}</span></nav><p className={s.kicker}>{label}</p><h1>{title}</h1><p className={s.intro}>{body}</p>{children}</div></section>;}

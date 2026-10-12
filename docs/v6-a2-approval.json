@@ -1,0 +1,37 @@
+{
+  "revision": "V6-A2",
+  "status": "awaiting_owner_approval",
+  "stageBStarted": false,
+  "ownerApproved": false,
+  "preparedAt": "2026-10-07T02:26:48.710163+00:00",
+  "previewUrl": "http://127.0.0.1:3200/review/v6",
+  "report": "docs/v6-a2-design-review.md",
+  "sourceAudit": "docs/v6-a2-source-audit.md",
+  "gallery": "qa/v6-a2/index.html",
+  "video": "qa/v6-a2/video/design-review.webm",
+  "codeSha256": {
+    "components/review-v6/ReviewV6.tsx": "363ce58d62b22c3a574a63161bae7c305942d3a7f97dbd5629db65358f94fbfb",
+    "components/review-v6/review.module.css": "a24fdae62638bac0dd539f88588e8ee8e3eee02737ef313f5b2c8f004de2da91",
+    "components/review-v6/HeroStory.tsx": "88b80f63c292b95acf7d2c9796db5701fcbc8415de9b6312789c6260b52b0918",
+    "components/review-v6/StoryExperience.tsx": "f07d34505a40ef5db027091e9e4fad4ab60408936ec0ef3f61244588cbcfdd56",
+    "components/review-v6/StoryScene.tsx": "c249225438fc093a951f5327cef6195674a88f9b7c2a80eae38e9f49b13cec63",
+    "components/review-v6/story.module.css": "516b74e24459cb17578f232cdc8f89b72b316deb5e7fe603d37d26a8b132cad6",
+    "components/review-v6/story-content.ts": "4dd213804df3031c5511e2c7b2a20665117aa7053725f08954f984d5eaf2d662"
+  },
+  "verification": {
+    "build": "PASS",
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unitPassed": 11,
+    "browserPassed": 21,
+    "contrastSamplesPassed": 23,
+    "axeScans": 8,
+    "desktopMobileViewports": 10,
+    "allSixScenesAtEachViewport": true,
+    "textReflow": "640 CSS px + root font 200% and increased spacing",
+    "nativeBrowserZoom": "NOT RUN — IAB shortcut did not change measured viewport/DPR",
+    "webkit": "NOT RUN — executable unavailable",
+    "safari": "NOT RUN — native interaction interrupted; no test window confirmed"
+  },
+  "nextAction": "Explicit owner approval or further A2 revisions. No automatic Stage B."
+}

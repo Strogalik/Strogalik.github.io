@@ -1,0 +1,25 @@
+{
+  "version": "V6-A4.6",
+  "status": "awaiting_owner_approval",
+  "stageBStarted": false,
+  "publicDeploy": false,
+  "checkedAt": "2026-10-09T15:44:01.384885+00:00",
+  "sdkStatus": "verified_chromium_desktop",
+  "motion": "stationary lenses + sampled light",
+  "P1": "deferred",
+  "tests": {
+    "unit": 17,
+    "browser": 51,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0
+  },
+  "limits": [
+    "Safari/WebKit binary unavailable",
+    "Firefox not tested",
+    "No physical mobile devices",
+    "No screen reader",
+    "Actual browser zoom not verified; 200% text reflow verified",
+    "No physical GPU device-loss test"
+  ]
+}

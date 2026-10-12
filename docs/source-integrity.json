@@ -1,0 +1,20 @@
+{
+  "package-lock.json": "1e373c5e256f4ddacc5633fc45d063e29ed2290f1d817a6bb1d751668cc2d76e",
+  "public/brand/tms-logo.png": "9959d3b99e42cb43797243f8cdeabce05f6ca7a192215a2f7f7bc6f1f098355a",
+  "public/fonts/Inter.woff2": "c5246db5f5d672480b81c6b7c152b48926aa1d26a7ce03f74640bb581f2fe086",
+  "public/fonts/Montserrat.woff2": "e4cb0587f8628d629ec6f3021e33812418cc355a9aaf22095d547124a2a273a8",
+  "public/fonts/Inter.ttf": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+  "public/fonts/Montserrat.ttf": "0f7b311b2f3279e4eef9b2f968bcdbab6e28f4daeb1f049f4f278a902bcd82f7",
+  "content/cases.public.json": "d5c29d992518d2e0010a0e759e9b0da1b13a7d77fe2a0d2ba5a509a7324f48b9",
+  "content/calculator-spec.json": "2f953daf17aec8105a03ce6ced3e0289b9278882bfbb89f0170921f8e9df2c21",
+  "lib/calculator.ts": "c8a73ff713e58b4f68e9f24161b48c0982cb78219ac3c5e10963f8b198a7231e",
+  "components/Calculator.tsx": "6e540bc708919a57ae50bcc9b884102d84e2ddb2aa1b9fb8b67d8842ac44b80e",
+  "components/LeadProvider.tsx": "d383fdd6410e648892b7cfa32e4fa14929ace3b0446910be172e7137775388f8",
+  "lib/lead-handler.ts": "acbb1a403c3b8e34b09df4324986be8c49925552095fcb42556046a665fd4682",
+  "lib/validation.ts": "b4ec5a08c5115ad968cad87d49a6f277b25a693b7df3e3b2d3ff6646f9daeee8",
+  "lib/utm.ts": "9bd84bd7e85d11203b6ea124f4b0c71389427c00dc274c259ec2e2fa45a60297",
+  "lib/rate-limit.ts": "3f4286e0d2a8e8c4ce15d253236e785872e2a650c73409e4c6a9dbed053b0333",
+  "lib/demo-state.ts": "fd77851d48412b2ae5810a2f8dbf51861f907d3c4bc3874a5ae6793dbb411f09",
+  "lib/case-demo.ts": "7519f45ef6fb02ba87cb9329f3f5e11921028fc09918c4ee58afecbd0a5ee20b",
+  "content/demo.seed.json": "d27f42cf430897678564c95128c3cfb1af8880a062bd162f1d7849bf15c0cde7"
+}

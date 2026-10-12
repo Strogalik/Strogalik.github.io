@@ -1,0 +1,46 @@
+{
+  "version": "V6-A4.7",
+  "status": "awaiting_owner_approval",
+  "stageBStarted": false,
+  "publicDeploy": false,
+  "checkedAt": "2026-10-10T01:44:33.577871+00:00",
+  "autoRenderer": "CSS",
+  "sdk": "diagnostic-only: optical gain <=2/255; clipping changes soft shadow",
+  "tests": {
+    "unit": 17,
+    "browser": 53,
+    "failed": 0
+  },
+  "safari": {
+    "checkedAt": "2026-10-10T01:44:33.577871+00:00",
+    "browser": "Safari 27.2",
+    "os": "macOS 27.2 (26B5091g)",
+    "method": "Native Safari through CUA; normal window, no flags/settings changed",
+    "query": "v=a4.7&glass=auto",
+    "state": "fallback",
+    "reason": "unverified-engine",
+    "renderer": "CSS",
+    "checks": [
+      "Completed story visible",
+      "Pause button changed to Resume",
+      "Hero CSS / auto visually inspected",
+      "Footer at 100%",
+      "Actual page zoom 200% confirmed by Safari Page Menu; Hero and footer inspected; restored 100%"
+    ],
+    "screenshots": "safari/",
+    "notTested": [
+      "Safari forced SDK",
+      "physical iOS Safari",
+      "Safari automated full matrix"
+    ]
+  },
+  "limits": [
+    "No physical phone",
+    "No Firefox",
+    "No screen reader",
+    "Playwright WebKit binary absent",
+    "No physical GPU device loss",
+    "Not mathematically zero CLS; measured 6.17283950617284e-06",
+    "12 tiny raster differences at width1024; source and internal geometry unchanged"
+  ]
+}

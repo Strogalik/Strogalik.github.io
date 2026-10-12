@@ -1,0 +1,22 @@
+{
+  "iteration": "V6 B6",
+  "base": "Actual current B5 workspace; no historical source replacement",
+  "taskPack": "TMS_CODEX_V6_B6_FAQ_SPOTLIGHT.zip",
+  "packSha256": "7ce3b663d20f9b4741f9ba39a48103e575128afd41f14d9e5377d61335217b5d",
+  "verifiedPackManifestEntries": 49,
+  "publicFaqSource": "content/stage-b.json#/faq/items",
+  "publicFaqSourceSha256": "5d4aa12b5077728dd0c02d5a8c10ef1643e00ff2b9b73e935b7fca0b1cd4a5a0",
+  "binding": "components/faq-spotlight/content.ts",
+  "uiMetadata": "components/faq-spotlight/metadata.json",
+  "textPolicy": "Four exact existing Q/A; labels and curated aliases only; no generated promises or answers",
+  "referencePolicy": "Eight visual references inspected privately; none shipped",
+  "externalResearch": "Primary Apple/W3C/MDN design/API documents; links in review report",
+  "existingSources": {
+    "checked": 354,
+    "changed": []
+  },
+  "newExternalDependencies": 0,
+  "publicPromotion": false,
+  "reviewRoute": "/review/faq",
+  "safety": "Dedicated loopback process; explicit analyticsOff; B5 review path exclusion; webhook and legal delivery gate OFF; synthetic localhost success only"
+}

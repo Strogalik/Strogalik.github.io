@@ -1,0 +1,46 @@
+import {test,expect,type Page} from '@playwright/test';
+import {mkdir,writeFile} from 'node:fs/promises';
+const root='qa/v6-b5';
+const sizes=[[1920,1080],[1728,960],[1512,780],[1440,760],[1366,650],[1024,768],[768,1024],[430,932],[390,844],[360,800],[320,740],[844,390]];
+const spacing='*{line-height:1.5!important;letter-spacing:.12em!important;word-spacing:.16em!important}p{margin-bottom:2em!important}';
+const styles={normal:'',spacing,text200:'html{font-size:200%}',combined:'html{font-size:200%}'+spacing};
+async function ready(page:Page){await page.goto('/');await page.evaluate(()=>document.fonts.ready);await expect(page.locator('header')).toHaveAttribute('data-scrolled');}
+test.beforeEach(async({page})=>{await page.addInitScript(()=>localStorage.setItem('tms:cookie-notice:v1','closed'));});
+
+for(const [mode,css]of Object.entries(styles))test(`B4 footer continuous resize, axes and all text: ${mode}`,async({page})=>{
+ test.setTimeout(120000);await ready(page);if(css)await page.addStyleTag({content:css});await mkdir(`${root}/footer`,{recursive:true});const rows=[];
+ const widths=[...new Set([...Array.from({length:53},(_,i)=>400+i*20),...sizes.map(x=>x[0]),600,601,700,701,900,901,1100,1101,1120,1121])].sort((a,b)=>b-a);
+ for(const width of widths){const height=sizes.find(x=>x[0]===width)?.[1]??900;await page.setViewportSize({width,height});await page.locator('footer').evaluate(e=>e.scrollIntoView({behavior:'instant'}));
+  const row=await page.locator('footer').evaluate(e=>{const rect=(selector:string)=>e.querySelector(selector)!.getBoundingClientRect().toJSON();const bad:unknown[]=[];const walker=document.createTreeWalker(e,NodeFilter.SHOW_TEXT);while(walker.nextNode()){const n=walker.currentNode;if(!n.textContent?.trim())continue;const range=document.createRange();range.selectNodeContents(n);for(const r of range.getClientRects())if(r.x<-.5||r.right>innerWidth+.5)bad.push({text:n.textContent,x:r.x,right:r.right});}return{width:innerWidth,scroll:document.documentElement.scrollWidth,brand:rect('[data-footer-brand]'),legal:rect('[data-footer-legal]'),contacts:rect('[data-footer-contacts]'),firstLink:rect('a[href="/privacy"]'),documents:rect('nav[aria-label="Юридические документы"]'),subtitle:!!e.querySelector('small')?.checkVisibility(),bad};});
+  expect(row.legal.x,`legal axis ${width}`).toBe(row.brand.x);expect(row.firstLink.x,`document group axis ${width}`).toBe(row.documents.x);expect(row.subtitle).toBe(true);expect(row.bad,`text fit ${width}`).toEqual([]);expect(row.scroll,`whole page ${width}`).toBeLessThanOrEqual(width);rows.push(row);
+  if(sizes.some(x=>x[0]===width))await page.screenshot({path:`${root}/footer/${mode}-${width}.png`});
+ }
+ await writeFile(`${root}/footer/${mode}.json`,JSON.stringify(rows,null,2));
+ for(const path of['privacy','consent','cookies','about','partners','custom-development'])await expect(page.locator(`footer a[href="/${path}"]`)).toHaveCount(1);
+ await expect(page.locator('footer').getByRole('link',{name:'tmsasub.store',exact:true})).toHaveAttribute('href','/');
+});
+
+// B7 supersedes native FAQ disclosures and always-open compact inputs.
+for(const width of [1440,390])test(`B7 promoted FAQ keyboard and resize ${width}`,async({page})=>{
+ await page.setViewportSize({width,height:900});await ready(page);const faq=page.locator('#faq');await expect(faq.locator('[data-faq-topic]')).toHaveCount(4);
+ for(const id of ['products','custom','pricing','meeting']){const topic=faq.locator(`[data-faq-topic=${id}]`);await topic.focus();await page.keyboard.press('Enter');await expect(topic).toHaveAttribute('aria-pressed','true');await expect(faq.locator('[data-faq-answer] p')).toBeVisible();}
+ await page.setViewportSize({width:width===1440?390:1440,height:900});await expect(faq.locator('[data-faq-topic=meeting]')).toHaveAttribute('aria-pressed','true');await page.emulateMedia({reducedMotion:'reduce'});await faq.locator('[data-faq-topic=products]').click();expect(await faq.evaluate(e=>e.getAnimations({subtree:true}).length)).toBe(0);
+});
+test('B7 no-JS FAQ all answers and honest static calculator',async({browser})=>{
+ const c=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}}),page=await c.newPage();await page.goto('http://127.0.0.1:3100/');await expect(page.locator('[data-faq-static] article')).toHaveCount(4);for(const article of await page.locator('[data-faq-static] article').all())await expect(article).toBeVisible();await expect(page.getByRole('combobox')).toHaveCount(0);expect(await page.locator('[data-calculator]').innerText()).toContain('Статичный пример');await c.close();
+});
+
+for(const[mode,css]of Object.entries(styles))test(`B4 both calculator models, optional values and text fit: ${mode}`,async({page})=>{
+ test.setTimeout(90000);await ready(page);if(css)await page.addStyleTag({content:css});await mkdir(`${root}/calculator`,{recursive:true});const results=[];
+ for(const width of[320,360,390,430,768,1440]){await page.setViewportSize({width,height:900});const calc=page.locator('[data-calculator]');if(width<=900&&await calc.getAttribute('data-editing')==='false')await calc.getByRole('button',{name:'Изменить данные'}).click();await calc.getByRole('button',{name:'Продажи',exact:true}).click();await page.locator('#calc-requests').fill('400');await page.locator('#calc-baseRate').fill('12');await page.locator('#calc-scenarioRate').fill('10');if(await calc.locator('[data-calc-inputs] details').getAttribute('open')===null)await calc.locator('[data-calc-inputs] summary').click();await page.locator('#calc-averageDealValue').fill('999999999');await expect(calc.locator('.calculator-result')).toContainText('-8');
+  for(const time of [false,true]){if(time){await calc.getByRole('button',{name:'Команда',exact:true}).click();await page.locator('#calc-automationSharePercent').fill('50');await page.locator('#calc-hourValue').fill('1000');await expect(calc.locator('.calculator-result')).toContainText('27,5');}
+   await calc.evaluate(e=>e.scrollIntoView({behavior:'instant'}));const measured=await calc.evaluate(e=>{const bad:unknown[]=[];const walker=document.createTreeWalker(e,NodeFilter.SHOW_TEXT);while(walker.nextNode()){const n=walker.currentNode,p=n.parentElement!;if(!n.textContent?.trim()||!p.checkVisibility()||['SCRIPT','STYLE','NOSCRIPT'].includes(p.tagName))continue;const range=document.createRange();range.selectNodeContents(n);for(const r of range.getClientRects())if(r.x<0||r.right>innerWidth+1)bad.push({text:n.textContent,right:r.right});}return{scroll:document.documentElement.scrollWidth,bad};});expect(measured.bad).toEqual([]);expect(measured.scroll).toBeLessThanOrEqual(width);results.push({width,time,...measured});if([320,390,1440].includes(width))await page.screenshot({path:`${root}/calculator/${mode}-${time?'time':'sales'}-${width}.png`});
+  }
+  await calc.getByRole('button',{name:'Продажи',exact:true}).click();await expect(page.locator('#calc-averageDealValue')).toHaveValue('999999999');await page.locator('#calc-requests').fill('invalid');await expect(calc.getByRole('alert')).toBeVisible();await page.locator('#calc-requests').fill('400');if(width<=900){await calc.getByRole('button',{name:'Готово'}).click();await expect(page.locator('#calc-editor')).toBeHidden();await expect(calc.getByRole('button',{name:'Изменить данные'})).toBeFocused();}else{await calc.locator('[data-calc-inputs] summary').focus();await page.keyboard.press('Space');await expect(page.locator('#calc-averageDealValue')).toBeHidden();await expect(calc.locator('[data-calc-inputs] summary svg path').last()).not.toHaveCSS('display','none');}
+ }
+ await writeFile(`${root}/calculator/${mode}.json`,JSON.stringify(results,null,2));
+});
+
+test('B4 genuine 404 has one shell and no duplicate main',async({page})=>{for(const path of['/not-a-page','/products/not-a-product','/cases/not-a-case','/demo/workspace']){const r=await page.goto(path);expect(r?.status()).toBe(404);await expect(page.locator('header')).toHaveCount(1);await expect(page.locator('main')).toHaveCount(1);await expect(page.locator('#main')).toHaveCount(1);await expect(page.locator('footer')).toHaveCount(1);await expect(page.getByRole('heading',{name:'Страница не найдена'})).toBeVisible();}});
+
+test('B4 enlarged skip-link and menu remain accessible',async({page})=>{await page.setViewportSize({width:320,height:740});await ready(page);await page.addStyleTag({content:styles.combined});await page.locator('.skip-link').focus();const r=(await page.locator('.skip-link').boundingBox())!;expect(r.x).toBeGreaterThanOrEqual(0);expect(r.x+r.width).toBeLessThanOrEqual(320);expect(r.y).toBeGreaterThanOrEqual(0);await page.keyboard.press('Enter');await expect(page).toHaveURL(/#main$/);await expect(page.locator('main h1')).toBeFocused();await page.keyboard.press('Tab');await expect(page.locator('main button').first()).toBeFocused();await page.getByRole('button',{name:'Меню',exact:true}).focus();const menu=(await page.getByRole('button',{name:'Меню',exact:true}).boundingBox())!;expect(menu.x+menu.width).toBeLessThanOrEqual(320);await page.keyboard.press('Enter');await expect(page.getByRole('navigation',{name:'Мобильная навигация'})).toBeVisible();await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'Меню',exact:true})).toBeFocused();});

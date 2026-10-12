@@ -1,0 +1,43 @@
+/* B10.1: only the compact range. Desktop Studio begins at 901px. */
+@media(max-width:900px){
+ .shell.shell{display:flex;flex-direction:column;position:relative;isolation:isolate;background:var(--tms-paper);border:1px solid rgb(166 197 215 / 65%);border-radius:26px;box-shadow:0 6px 18px rgb(0 9 38 / 7%),inset 0 1px 0 white;backdrop-filter:none}
+ .shell.shell>div:first-child{padding:20px 20px 0}
+ .shell.shell [data-calc-modes]{position:relative;isolation:isolate;width:min(288px,100%);margin:0 auto;padding:4px;gap:0;border-radius:15px;background:var(--tms-ice);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .shell.shell [data-calc-modes]::before{content:'';position:absolute;inset:4px auto 4px 4px;width:calc(50% - 4px);border:1px solid rgb(166 197 215 / 75%);border-radius:11px;background:var(--tms-white);transition:translate 200ms cubic-bezier(.22,.75,.25,1)}
+ .shell.shell [data-calc-modes]:has(button:last-child[aria-pressed=true])::before{translate:100% 0}
+ .shell.shell [data-calc-modes] button{position:relative;z-index:1;min-height:44px;max-height:none;min-width:0;padding:9px 6px;border:1px solid transparent;border-radius:11px;background:transparent;color:var(--tms-navy);font-size:1rem;line-height:1.5;overflow-wrap:anywhere}
+ .shell.shell [data-calc-modes] button[aria-pressed=true]{background:transparent;color:var(--tms-sapphire);font-weight:600}
+ .shell.shell>[data-calc-result]{border-radius:0;background:transparent;padding:18px 20px 12px;gap:8px}
+ .shell.shell>[data-calc-result]>p:first-child{font-size:.9375rem;line-height:1.5;font-weight:500;color:var(--tms-muted)!important}
+ .shell.shell [data-calc-title],.shell.shell [data-calc-unit],.shell.shell [data-calc-result] p{font-size:1rem;line-height:1.5}
+ .shell.shell [data-calc-value]{font-size:3rem;line-height:1.12;margin-block:4px;opacity:1}
+ .shell.shell [data-calc-note]{margin-top:0!important}
+ .shell.shell>[data-calc-result]+div{padding:0 20px 18px;gap:10px}
+ .shell.shell>[data-calc-result]+div p{font-size:.9375rem;line-height:1.5}
+ .shell.shell>[data-calc-result]+div button,.shell.shell [id="calc-editor"]>button{background:var(--tms-white);border:1px solid var(--tms-powder);border-radius:12px;color:var(--tms-sapphire);min-height:46px;padding:10px 14px;font-size:1rem;line-height:1.5}
+ .shell.shell>[data-calc-inputs]{background:rgb(214 230 243 / 30%);border-radius:0;padding:20px;border-top:1px solid var(--tms-ice)}
+ .shell.shell [data-calc-fields]{grid-template-columns:minmax(0,1fr);gap:16px}
+ .shell.shell input{min-height:48px;font-size:1.125rem;background:var(--tms-white);font-variant-numeric:tabular-nums}
+ .shell.shell [data-calc-inputs] details>summary{margin-top:8px}
+ .shell.shell [data-calc-inputs] details>summary>[aria-hidden]{display:none}
+ .shell.shell [data-calc-extra-unit]{white-space:nowrap}
+ .shell.shell [data-calc-method]{background:transparent;padding:6px 20px;margin:0;border-radius:0 0 25px 25px}
+ .shell.shell [data-calc-method]>div{padding-bottom:20px}
+ .shell.shell noscript p{border-radius:0 0 25px 25px}
+ @supports(interpolate-size:allow-keywords){
+  .shell [data-calc-method]{interpolate-size:allow-keywords}
+  .shell [data-calc-method]::details-content{block-size:0;overflow:clip;transition:block-size 260ms cubic-bezier(.22,.75,.25,1),content-visibility 260ms allow-discrete}
+  .shell [data-calc-method][open]::details-content{block-size:auto}
+ }
+}
+@media(min-width:601px) and (max-width:900px){
+ .shell.shell{max-width:640px;margin-inline:auto}
+}
+@media(max-width:900px) and (prefers-reduced-motion:reduce){.shell.shell [data-calc-modes]::before,.shell [data-calc-method]::details-content{transition:none}}
+@media(max-width:900px) and (forced-colors:active){
+ .shell.shell{background:Canvas;border-color:CanvasText;box-shadow:none}
+ .shell.shell [data-calc-modes],.shell.shell>[data-calc-inputs]{background:Canvas}
+ .shell.shell [data-calc-modes]::before{background:Highlight;border-color:Highlight;forced-color-adjust:none}
+ .shell.shell [data-calc-modes] button[aria-pressed=true]{color:HighlightText;forced-color-adjust:none}
+ .shell.shell>[data-calc-result]+div button,.shell.shell [id="calc-editor"]>button{color:ButtonText;background:ButtonFace;border-color:ButtonText}
+}

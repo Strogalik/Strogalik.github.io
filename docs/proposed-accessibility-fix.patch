@@ -1,0 +1,7 @@
+# PROPOSAL ONLY — NOT APPLIED. Requires an explicit exception to the A4.8 freeze.
+# Browser-only probe: 1440px + 200% root text + increased text spacing:
+# document width 1475px -> 1440px. Repeat default pixel comparisons before applying.
+--- a/components/review-v6/review.module.css
++++ b/components/review-v6/review.module.css
+@@
++.footerContacts > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; white-space: normal; }

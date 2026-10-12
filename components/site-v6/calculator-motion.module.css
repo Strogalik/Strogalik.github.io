@@ -1,0 +1,58 @@
+/* One editor and result; only their layout changes on compact screens. */
+.calculator{grid-template-rows:auto 1fr}
+.modeArea{grid-column:1;grid-row:1;padding:24px 24px 0;min-width:0}
+.calculator .inputs{grid-column:1;grid-row:2;padding-top:0;border-radius:0 0 0 24px}
+.calculator [data-calc-result]{grid-column:2;grid-row:1 / span 2;font-variant-numeric:tabular-nums}
+.compactControls,.done,.compactNote,.example{display:none}
+.live{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:normal;overflow-wrap:anywhere;left:0;top:0}
+.calculator[data-ready=false] .modeArea,.calculator[data-ready=false] .inputs,.calculator[data-ready=false] .compactControls{display:none}
+.calculator[data-ready=false] [data-calc-result],.calculator noscript{grid-column:1/-1}
+.editor{min-width:0}.editor details{position:relative}
+@media(max-width:900px){
+ .calculator{display:flex;flex-direction:column}
+ .modeArea{padding:20px 20px 0;order:0}
+ .calculator [data-calc-modes]{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:0}
+ .calculator [data-calc-modes] button{font-size:1rem;line-height:1.4;padding:10px 8px}
+ .calculator [data-calc-result]{order:1;padding:20px 20px 12px;gap:8px;border-radius:0;background:transparent;justify-content:start}
+ .calculator [data-calc-result] strong{font-size:2.75rem}
+ .example{display:block;font-size:1rem;font-weight:600;color:var(--tms-sapphire)!important}
+ .compactNote{display:block;font-size:1rem;line-height:1.5}
+ .formula{display:none}
+ .calculator .disclaimer{font-size:1rem;line-height:1.5}
+ .compactControls{display:grid;gap:12px;order:2;padding:0 20px 20px;min-width:0}
+ .compactControls p{font-size:1rem;line-height:1.5;color:var(--tms-muted);overflow-wrap:anywhere}
+ .compactControls button,.done{min-height:48px;border:1px solid var(--tms-sapphire);border-radius:12px;background:white;color:var(--tms-sapphire);padding:12px 16px;font:600 1rem/1.5 var(--font-inter),sans-serif;cursor:pointer;max-width:100%}
+ .calculator .inputs{order:3;padding:0 20px 20px;border-radius:0}
+ .calculator[data-editing=false] .inputs{display:none}
+ .editor details>summary{pointer-events:none;color:var(--tms-muted);font-weight:500}
+ .editor details>summary svg{display:none}
+ .done{display:block;margin-top:20px}
+ .calculator noscript{order:4}
+}
+@media(forced-colors:active){.compactControls button,.done{border-color:ButtonText;color:ButtonText;background:ButtonFace}}
+
+@media(max-width:900px){.calculator.calculator [data-calc-result]{padding:20px 20px 12px;gap:8px}.calculator.calculator [data-calc-result] strong{margin-block:0}}
+
+/* B9: intrinsic text slots, one live editor/result, equal base columns. */
+.calculator{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto 1fr auto}
+.calculator [data-calc-result]{justify-content:flex-start}
+.calculator [data-calc-modes]{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.calculator [data-calc-modes] button{font-size:1rem;line-height:1.5;min-height:46px;padding:10px 8px}
+.calculator .method{grid-column:1/-1;margin:0;border-top:1px solid var(--tms-ice);padding:12px 24px;min-width:0}
+.method>summary{min-height:44px;color:var(--tms-sapphire)}
+.method>div{max-width:76ch;padding-block:16px;font-size:1rem;color:var(--tms-muted)}
+.method ul{padding-left:24px}.method li+li,.method p{margin-top:12px}
+.calculator [data-calc-note]{font-size:1rem;line-height:1.5}
+.calculator [data-calc-result] [data-b9-reserve] p{font-size:inherit}
+@media(max-width:900px){.calculator{display:flex}.calculator .method{order:4;padding:8px 20px}.calculator [data-calc-modes] button{min-height:46px;line-height:1.5}.calculator [data-calc-result]>[data-b9-slot]:empty{display:none}}
+
+/* The short copy must also shorten the real compact card, including its method control. */
+@media(max-width:900px){
+ .calculator .emptyComparison{display:none}
+ .calculator [data-calc-note]{margin-top:0!important}
+ .calculator.calculator [data-calc-result]{padding-top:16px}
+ .compactControls{padding-bottom:16px}
+ .compactControls button,.done{padding-block:10px}
+ .calculator .method{padding-block:4px}
+}
+@media(max-width:900px){.calculator.calculator [data-calc-note]{margin-top:0!important}}

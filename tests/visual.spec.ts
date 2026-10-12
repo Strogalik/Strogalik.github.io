@@ -1,0 +1,15 @@
+import {test,expect,type Page,type Locator} from '@playwright/test';
+import {mkdir} from 'node:fs/promises';
+async function settle(page:Page){await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>{(document.activeElement as HTMLElement)?.blur();window.scrollTo({top:0,behavior:'instant'});});await page.waitForTimeout(250);}
+async function shot(page:Page,el:Locator,path:string){const v=page.viewportSize()!;const h=(await el.boundingBox())!.height;await page.setViewportSize({width:v.width,height:Math.max(v.height,Math.ceil(h)+160)});await page.evaluate(()=> (document.activeElement as HTMLElement)?.blur());await el.evaluate(e=>window.scrollTo({top:e.getBoundingClientRect().top+scrollY-90,behavior:'instant'}));await page.waitForTimeout(150);await el.screenshot({path});await page.setViewportSize(v);}
+for(const [label,width,height] of [['desktop',1440,900],['mobile',390,844]] as const)test(`B1 regression screenshots ${label}`,async({page})=>{
+ await mkdir('qa/v6-b5/regression-pages',{recursive:true});await page.setViewportSize({width,height});await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:`qa/v6-b5/regression-pages/home-${label}.png`});
+ for(const selector of ['#products','#cases','#calculator','#cooperation','#faq','footer'])await shot(page,page.locator(selector),`qa/v6-b5/regression-pages/${selector.replace(/[#.]/g,'')}-${label}.png`);
+ await page.getByRole('button',{name:'Команда',exact:true}).click();await shot(page,page.locator('#calculator'),`qa/v6-b5/regression-pages/calculator-manual-${label}.png`);
+ for(const slug of ['crm','oms','crm-oms']){await page.goto(`/products/${slug}`);await settle(page);await page.screenshot({path:`qa/v6-b5/regression-pages/page-${slug}-${label}.png`,fullPage:true});}
+ for(const slug of ['b2b-wholesale','flooring-manufacturer','online-school']){await page.goto(`/cases/${slug}`);await settle(page);await page.screenshot({path:`qa/v6-b5/regression-pages/case-${slug}-${label}.png`,fullPage:true});}
+ for(const slug of ['about','partners','custom-development','privacy','consent','cookies']){await page.goto('/'+slug);await settle(page);await page.screenshot({path:`qa/v6-b5/regression-pages/${slug}-${label}.png`,fullPage:true});}
+ await page.goto('/');await page.locator('#solution').getByRole('button',{name:'Обсудить задачу'}).click();await page.screenshot({path:`qa/v6-b5/regression-pages/form-${label}.png`});await page.getByRole('button',{name:'Отправить запрос'}).click();await page.screenshot({path:`qa/v6-b5/regression-pages/form-error-${label}.png`});await page.getByRole('dialog').getByRole('button',{name:'Отправить запрос'}).focus();const submit=(await page.getByRole('dialog').getByRole('button',{name:'Отправить запрос'}).boundingBox())!;expect(submit.y+submit.height).toBeLessThanOrEqual(height+1);await page.screenshot({path:`qa/v6-b5/regression-pages/form-bottom-${label}.png`});
+});
+
+test.beforeEach(async({page})=>{await page.addInitScript(()=>{try{localStorage.setItem('tms:cookie-notice:v1','closed');}catch{}});});

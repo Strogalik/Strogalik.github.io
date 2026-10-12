@@ -1,0 +1,20 @@
+[
+  {
+    "document": "privacy",
+    "source": "legal/owner/privacy.document.json",
+    "sha256": "943a6d77457149718aba3eba229022460702437c207afbd0144a55cd0bc80a41",
+    "publicSha256": "943a6d77457149718aba3eba229022460702437c207afbd0144a55cd0bc80a41"
+  },
+  {
+    "document": "consent",
+    "source": "legal/owner/consent.document.json",
+    "sha256": "0cb9ad7d453a25bf4ef956a5ae27c791d0cf27200a0cbb6ce02ba8598133d84e",
+    "publicSha256": "0cb9ad7d453a25bf4ef956a5ae27c791d0cf27200a0cbb6ce02ba8598133d84e"
+  },
+  {
+    "document": "cookies",
+    "source": "legal/owner/cookies.document.json",
+    "sha256": "e348c4a38c922e1eac6be87e4a4635d64a366f4c8055ffc73e26813457e92d43",
+    "publicSha256": "e348c4a38c922e1eac6be87e4a4635d64a366f4c8055ffc73e26813457e92d43"
+  }
+]

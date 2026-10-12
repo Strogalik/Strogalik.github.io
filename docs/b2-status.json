@@ -1,0 +1,23 @@
+{
+  "revision": "V6 B2",
+  "date": "2026-10-11T02:18:50.404113+00:00",
+  "designBaseline": "A4.8",
+  "designApproval": "approved_by_owner",
+  "homeRevision": "B1",
+  "homeDesignApproval": "approved_by_owner",
+  "stageBStarted": true,
+  "stageBStatus": "partial",
+  "implementationStatus": "internal_pages_and_navigation_implemented",
+  "qaStatus": "partial_105_browser_pass_3_footer_fail",
+  "launchStatus": "blocked",
+  "publicDeploy": false,
+  "footerException": "awaiting_separate_owner_permission",
+  "blockers": [
+    "Protected footer overflow at text200% + spacing: /, /products/crm, /cases/flooring-manufacturer",
+    "Legal text and production delivery compatibility not approved/configured",
+    "Production origin/indexing and preservation of external /auto/ and /nedv/ need hosting verification",
+    "Full native browser/device/screen-reader matrix not complete",
+    "Four historical B1 footer raster deltas remain unexplained"
+  ],
+  "dependencyAudit": "5 high records in one transitive lint/dev chain; unchanged lockfile; needs separate assessment"
+}

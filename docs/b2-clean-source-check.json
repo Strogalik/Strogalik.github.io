@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-11T02:21:43.880181+00:00",
+  "status": "PASS: isolated extracted source install/build/types and 15-route smoke",
+  "source": "Fresh TMS_V6_source.zip from current working tree",
+  "directory": "work/b2-clean/tms-site",
+  "commands": [
+    "npm ci",
+    "npm run build",
+    "npm run typecheck",
+    "PORT=3210 npm run start",
+    "Chromium smoke on 15 routes"
+  ],
+  "install": "PASS; audit reports 5 high records in one lint/dev dependency chain, see review",
+  "build": "PASS",
+  "types": "PASS",
+  "fontBootstrap": "Source ZIP has no font binaries; prepare-fonts changes app/fonts.ts only in extracted copy to pinned npm imports",
+  "fontEvidence": {
+    "body": "Inter, Arial, sans-serif",
+    "h1": "Montserrat, sans-serif",
+    "loaded": "loaded"
+  },
+  "remoteFontRequests": 0,
+  "visualLimit": "Original WOFF2 and npm packaged font metrics/bytes may differ. Clean CRM screenshot inspected; not asserted pixel-identical. Working original fonts unchanged.",
+  "rawLogs": "Separate B2 review archive: clean-install.log, clean-build.log, clean-types.log, clean-smoke.json",
+  "finalArchiveVerification": "Runtime/config/content match the clean build except generated app/fonts.ts; final manifest and final archive checksum in delivery checksums. Final archive is re-extracted and build/types rerun."
+}

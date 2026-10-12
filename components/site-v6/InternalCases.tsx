@@ -1,0 +1,9 @@
+'use client';
+import {CaseOpenLink} from './CaseExplorer';
+import {useLayoutMotion} from '../motion/useLayoutMotion';
+import {useState} from 'react';
+import {cases} from '@/content/cases';
+import s from './internal.module.css';
+import approved from '../review-v6/review.module.css';
+const choices=[{slug:'b2b-wholesale',name:'Оптовая торговля',caption:'История клиента и повторные контакты'},{slug:'flooring-manufacturer',name:'Производство',caption:'Заказы, статусы и документы'},{slug:'online-school',name:'Образование',caption:'Обращение и запись на занятие'}];
+export function InternalCases(){const [active,setActive]=useState('flooring-manufacturer');const {root:motionRoot,prepare:prepareMotion}=useLayoutMotion(active,{ghosts:true});return <div ref={motionRoot} className={s.caseSelection} data-case-selection>{choices.map(choice=>{const c=cases.find(x=>x.slug===choice.slug)!;return <details data-motion-size name="case-index" key={c.slug} open={active===c.slug}><summary aria-controls={`case-index-${c.slug}`} onClick={e=>{e.preventDefault();e.currentTarget.focus({preventScroll:true});if(active!==c.slug){prepareMotion();setActive(c.slug);}}}>{choice.name}<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M10 4v12" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg></summary><div id={`case-index-${c.slug}`} data-motion-copy className={s.indexStory}><p>{choice.caption}</p><div className={s.indexDetail}><p className={s.caseLabel}>{c.industry}</p><h2>{c.title}</h2><p>{c.summary}</p><p className={s.scope}>Отдельное внедрение. Результаты, периоды и ограничения — в разборе проекта.</p><CaseOpenLink slug={c.slug} className={`${approved.button} ${approved.secondary}`}>Разбор проекта</CaseOpenLink></div></div></details>;})}</div>;}

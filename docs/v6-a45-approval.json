@@ -1,0 +1,22 @@
+{
+  "version": "V6-A4.5",
+  "status": "awaiting_owner_approval",
+  "stageBStarted": false,
+  "publicDeploy": false,
+  "sdkStatus": "verified_chromium_desktop",
+  "P1": "deferred",
+  "checkedAt": "2026-10-09T14:43:38.641396+00:00",
+  "tests": {
+    "unit": 17,
+    "browser": 48,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0
+  },
+  "limits": [
+    "WebKit binary unavailable; Safari not verified",
+    "No physical mobile devices",
+    "Actual browser zoom not verified; 200% text reflow verified",
+    "No screen reader or physical device-lost test"
+  ]
+}
